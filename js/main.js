@@ -35,6 +35,48 @@
   });
 })();
 
+// ── EVENTOS DINÁMICOS ──
+(function() {
+  const homeList  = document.getElementById('eventos-home');
+  const agendaList = document.getElementById('eventos-agenda');
+  if (!homeList && !agendaList) return;
+
+  fetch('/eventos.json')
+    .then(r => r.json())
+    .then(eventos => {
+      if (homeList) {
+        homeList.innerHTML = eventos.map(e => `
+          <div class="evento">
+            <div class="evento-fecha">
+              <div class="evento-dia">${e.dia}</div>
+              <div class="evento-mes">${e.mes}</div>
+            </div>
+            <div class="evento-info">
+              <h3>${e.titulo}</h3>
+              <p>${e.info}</p>
+            </div>
+            <a href="${e.url}" class="evento-btn">Más info →</a>
+          </div>`).join('');
+      }
+      if (agendaList) {
+        agendaList.innerHTML = eventos.map(e => `
+          <div style="display:grid;grid-template-columns:100px 1fr;gap:0;border-radius:20px;overflow:hidden;background:var(--arena-oscura)">
+            <div style="background:var(--tierra-noche);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px">
+              <span style="font-size:36px;font-weight:800;color:var(--ambar);line-height:1">${e.dia}</span>
+              <span style="font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--texto-sutil);margin-top:4px">${e.mes}</span>
+            </div>
+            <div style="padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+              <div>
+                <h3 style="font-size:18px;color:var(--tierra-noche);margin-bottom:6px">${e.titulo}</h3>
+                <p style="font-size:14px;color:var(--texto-secundario);font-weight:400">${e.info}</p>
+              </div>
+              <a href="${e.wa}" target="_blank" rel="noopener" style="font-size:12px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:7px 16px;border-radius:100px;white-space:nowrap;text-decoration:none">Reservar →</a>
+            </div>
+          </div>`).join('');
+      }
+    });
+})();
+
 // ── AÑO DINÁMICO ──
 document.querySelectorAll('.ano-actual').forEach(el => {
   el.textContent = new Date().getFullYear();
