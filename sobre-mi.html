@@ -19,7 +19,9 @@
   .timeline-content h3 { font-size: 16px; color: var(--tierra-noche); margin-bottom: 8px; }
   .timeline-content p { font-size: 13px; color: var(--texto-secundario); line-height: 1.75; font-weight: 400; }
   .timeline-logos { display: flex; align-items: center; justify-content: center; gap: 40px; padding-top: 40px; border-top: 1px solid rgba(42,28,8,0.1); margin-top: 8px; }
-  .timeline-logos img { height: 56px; width: auto; object-fit: contain; opacity: 0.8; transition: opacity 0.2s; }
+  .timeline-logos img { width: auto; object-fit: contain; opacity: 0.8; transition: opacity 0.2s; }
+  .timeline-logos img:first-child { height: 80px; }
+  .timeline-logos img:last-child { height: 64px; }
   .timeline-logos img:hover { opacity: 0.9; }
   @media (max-width: 900px) {
     .timeline-items { grid-template-columns: 1fr; }
