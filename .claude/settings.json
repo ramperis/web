@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$env:PATH = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine') + ';' + [System.Environment]::GetEnvironmentVariable('PATH', 'User'); Set-Location 'c:\\Users\\errea\\Desktop\\Web'; git add .; $status = git status --porcelain; if ($status) { git commit -m 'actualizacion'; git push origin main } 2>$null",
+            "statusMessage": "Subiendo cambios a GitHub...",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
