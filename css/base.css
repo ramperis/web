@@ -466,9 +466,8 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
 /* ── ITEMS CON PUNTO ── */
 .items-grid {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 2), minmax(0, 460px));
+  grid-template-columns: repeat(var(--cols, 2), 1fr);
   gap: 24px;
-  justify-content: center;
 }
 
 .item-card {
