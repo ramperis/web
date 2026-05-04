@@ -3,7 +3,10 @@
     "dia": "15",
     "mes": "May",
     "titulo": "Baño de sonido en Luna nueva",
-    "info": "Breath & Sound · Casa Lenta · 19:00h",
+    "hora": "19:00h",
+    "marca": "Breath & Sound",
+    "espacio": "Casa Lenta",
+    "lugar": "Valencia",
     "url": "/agenda/breath-sound-mayo",
     "wa": "https://wa.me/34617847196"
   }

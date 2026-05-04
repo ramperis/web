@@ -45,7 +45,10 @@
     .then(r => r.json())
     .then(eventos => {
       if (homeList) {
-        homeList.innerHTML = eventos.map(e => `
+        homeList.innerHTML = eventos.map(e => {
+          const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
+          const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
+          return `
           <div class="evento">
             <div class="evento-fecha">
               <div class="evento-dia">${e.dia}</div>
@@ -53,13 +56,18 @@
             </div>
             <div class="evento-info">
               <h3>${e.titulo}</h3>
-              <p>${e.info}</p>
+              ${linea2 ? `<p>${linea2}</p>` : ''}
+              ${linea3 ? `<p style="font-size:13px;opacity:0.7">${linea3}</p>` : ''}
             </div>
             <a href="${e.url}" class="evento-btn">Más info →</a>
-          </div>`).join('');
+          </div>`;
+        }).join('');
       }
       if (agendaList) {
-        agendaList.innerHTML = eventos.map(e => `
+        agendaList.innerHTML = eventos.map(e => {
+          const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
+          const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
+          return `
           <div style="display:grid;grid-template-columns:100px 1fr;gap:0;border-radius:20px;overflow:hidden;background:var(--arena-oscura)">
             <div style="background:var(--tierra-noche);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px">
               <span style="font-size:36px;font-weight:800;color:var(--ambar);line-height:1">${e.dia}</span>
@@ -67,12 +75,14 @@
             </div>
             <div style="padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px">
               <div>
-                <h3 style="font-size:18px;color:var(--tierra-noche);margin-bottom:6px">${e.titulo}</h3>
-                <p style="font-size:14px;color:var(--texto-secundario);font-weight:400">${e.info}</p>
+                <h3 style="font-size:18px;color:var(--tierra-noche);margin-bottom:4px">${e.titulo}</h3>
+                ${linea2 ? `<p style="font-size:14px;color:var(--texto-secundario);font-weight:400;margin-bottom:2px">${linea2}</p>` : ''}
+                ${linea3 ? `<p style="font-size:12px;color:var(--texto-secundario);opacity:0.7;font-weight:400">${linea3}</p>` : ''}
               </div>
-              <a href="${e.wa}" target="_blank" rel="noopener" style="font-size:12px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:7px 16px;border-radius:100px;white-space:nowrap;text-decoration:none">Reservar →</a>
+              <a href="${e.url}" style="font-size:12px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:7px 16px;border-radius:100px;white-space:nowrap;text-decoration:none">Más info →</a>
             </div>
-          </div>`).join('');
+          </div>`;
+        }).join('');
       }
     });
 })();
