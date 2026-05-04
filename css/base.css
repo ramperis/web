@@ -295,7 +295,7 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
 .seccion-header .lead {
   font-size: 15px;
   color: var(--texto-secundario);
-  max-width: 520px;
+  max-width: 720px;
   margin-top: 10px;
   font-weight: 400;
 }
