@@ -1,4 +1,36 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/servicios",
+      "destination": "/sesiones",
+      "permanent": true
+    },
+    {
+      "source": "/servicios/",
+      "destination": "/sesiones",
+      "permanent": true
+    },
+    {
+      "source": "/circulos-de-hombres-valencia",
+      "destination": "/circulos-hombres",
+      "permanent": true
+    },
+    {
+      "source": "/circulos-de-hombres-valencia/",
+      "destination": "/circulos-hombres",
+      "permanent": true
+    },
+    {
+      "source": "/breathwork-valencia",
+      "destination": "/breathwork",
+      "permanent": true
+    },
+    {
+      "source": "/breathwork-valencia/",
+      "destination": "/breathwork",
+      "permanent": true
+    }
+  ]
 }
