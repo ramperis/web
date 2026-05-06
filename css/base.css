@@ -701,6 +701,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 .footer-col a:hover { color: var(--texto-claro); }
 
 .footer-social { display: flex; gap: 12px; }
+.footer-social-inline { display: none; }
 
 .footer-social a {
   width: 36px;
@@ -758,9 +759,17 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
   .hero { height: 55vh; }
 }
 
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-grid > div:first-child { grid-row: 1 / 3; }
+  .footer-col-redes { display: none; }
+  .footer-social-inline { display: flex; margin-top: 20px; }
+  .footer-bottom { flex-wrap: nowrap; }
+  .footer-bottom > span:last-child { display: none; }
+}
+
 @media (max-width: 520px) {
   .pasos-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
   .hero-h1 { font-size: 32px; }
   .cta-botones { flex-direction: column; align-items: center; }
 }
