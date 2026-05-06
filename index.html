@@ -84,6 +84,30 @@
     .evento { grid-template-columns: 60px 1fr; }
     .evento-btn { display: none; }
   }
+
+  /* Instagram section */
+  .ig-section { background: var(--arena-oscura); padding: 80px 24px 96px; }
+  .ig-inner { max-width: 1200px; margin: 0 auto; }
+  .ig-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; gap: 16px; flex-wrap: wrap; }
+  .ig-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texto-sutil); margin-bottom: 8px; }
+  .ig-title { font-size: clamp(22px, 3vw, 30px); font-weight: 800; color: var(--texto-principal); line-height: 1.2; }
+  .ig-title span { color: var(--verde-oliva); }
+  .ig-cta { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: var(--texto-claro); background: var(--verde-oliva); padding: 12px 22px; border-radius: 100px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s, transform 0.2s; white-space: nowrap; flex-shrink: 0; }
+  .ig-cta:hover { background: var(--tierra-media); transform: translateY(-1px); }
+  .ig-cta svg { width: 16px; height: 16px; fill: var(--texto-claro); }
+  .ig-divider { width: 48px; height: 2px; background: var(--ambar); margin-bottom: 40px; }
+  .ig-placeholder { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .ig-placeholder-item { aspect-ratio: 1; background: var(--arena); border-radius: 10px; animation: shimmer 1.8s ease-in-out infinite; }
+  .ig-placeholder-item:nth-child(odd) { animation-delay: 0.3s; }
+  @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  behold-widget { --behold-column-count: 6; --behold-gap: 10px; --behold-border-radius: 10px; display: block; width: 100%; }
+  @media (max-width: 768px) {
+    .ig-section { padding: 60px 20px 72px; }
+    behold-widget { --behold-column-count: 3; --behold-gap: 6px; --behold-border-radius: 8px; }
+    .ig-placeholder { grid-template-columns: repeat(3, 1fr); }
+    .ig-placeholder-item:nth-child(n+4) { display: none; }
+  }
+  @media (max-width: 480px) { .ig-header { flex-direction: column; align-items: flex-start; } }
 </style>
 <script type="application/ld+json">
 {
@@ -301,6 +325,34 @@
   <div class="eventos-lista" id="eventos-home"></div>
 </section>
 
+<!-- INSTAGRAM -->
+<section class="ig-section">
+  <div class="ig-inner">
+    <div class="ig-header">
+      <div>
+        <p class="ig-label">Sígueme en Instagram</p>
+        <h2 class="ig-title">El camino, <span>en imágenes.</span></h2>
+      </div>
+      <a href="https://instagram.com/ram_peris" target="_blank" rel="noopener" class="ig-cta">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @ram_peris
+      </a>
+    </div>
+    <div class="ig-divider"></div>
+    <div class="ig-widget-wrap">
+      <div class="ig-placeholder" id="ig-placeholder">
+        <div class="ig-placeholder-item"></div>
+        <div class="ig-placeholder-item"></div>
+        <div class="ig-placeholder-item"></div>
+        <div class="ig-placeholder-item"></div>
+        <div class="ig-placeholder-item"></div>
+        <div class="ig-placeholder-item"></div>
+      </div>
+      <behold-widget feed-id="3TORikDglatEXG4CAj42"></behold-widget>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-final">
   <span class="section-label">Reservar</span>
@@ -354,5 +406,19 @@
   </div>
 </footer>
 <script src="js/main.js"></script>
+<script>
+  (() => {
+    const d = document, s = d.createElement("script");
+    s.type = "module";
+    s.src = "https://w.behold.so/widget.js";
+    s.onload = () => {
+      setTimeout(() => {
+        const placeholder = document.getElementById('ig-placeholder');
+        if (placeholder) placeholder.style.display = 'none';
+      }, 800);
+    };
+    d.head.append(s);
+  })();
+</script>
 </body>
 </html>
