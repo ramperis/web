@@ -51,6 +51,16 @@
       "source": "/circulos-hombres-valencia/",
       "destination": "/circulos-hombres",
       "permanent": true
+    },
+    {
+      "source": "/bano-sonido-valencia",
+      "destination": "/bano-sonido",
+      "permanent": true
+    },
+    {
+      "source": "/bano-sonido-valencia/",
+      "destination": "/bano-sonido",
+      "permanent": true
     }
   ]
 }
