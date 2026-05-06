@@ -31,6 +31,26 @@
       "source": "/breathwork-valencia/",
       "destination": "/breathwork",
       "permanent": true
+    },
+    {
+      "source": "/activacion-energetica",
+      "destination": "/sesiones",
+      "permanent": true
+    },
+    {
+      "source": "/activacion-energetica/",
+      "destination": "/sesiones",
+      "permanent": true
+    },
+    {
+      "source": "/circulos-hombres-valencia",
+      "destination": "/circulos-hombres",
+      "permanent": true
+    },
+    {
+      "source": "/circulos-hombres-valencia/",
+      "destination": "/circulos-hombres",
+      "permanent": true
     }
   ]
 }
