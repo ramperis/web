@@ -85,6 +85,83 @@
     .evento-btn { display: none; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+      "@id": "https://ramperis.com/#business",
+      "name": "Ram Peris | Soundhealing & Breathwork",
+      "url": "https://ramperis.com",
+      "logo": "https://ramperis.com/img/logo-oscuro.png",
+      "image": "https://ramperis.com/img/ram-peris-facilitador-presencia-bienestar.jpg",
+      "description": "Facilitador de breathwork, baños de sonido y círculos de hombres en Valencia. Sesiones individuales y grupales para liberar tensión, reconectar con tu cuerpo y volver a tu centro.",
+      "telephone": "+34617847196",
+      "email": "hola@ramperis.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressRegion": "Comunidad Valenciana",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.4699,
+        "longitude": -0.3763
+      },
+      "areaServed": [{ "@type": "City", "name": "Valencia" }],
+      "sameAs": [
+        "https://www.instagram.com/ram_peris",
+        "https://www.tiktok.com/@ram_peris"
+      ],
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Ram Peris",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Baño de sonido", "url": "https://ramperis.com/bano-sonido-valencia" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Breathwork", "url": "https://ramperis.com/breathwork-valencia" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Masaje vibracional", "url": "https://ramperis.com/masaje-vibracional" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Círculos de hombres", "url": "https://ramperis.com/circulos-hombres-valencia" } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ramperis.com/#ram",
+      "name": "Ram Peris",
+      "givenName": "Ramón",
+      "familyName": "Peris",
+      "url": "https://ramperis.com/sobre-mi",
+      "image": "https://ramperis.com/img/ram-peris-facilitador-presencia-bienestar.jpg",
+      "jobTitle": "Breathwork & Sound Facilitator",
+      "description": "Facilitador de breathwork y sonido certificado IBF. Sesiones de baños de sonido, breathwork, masaje vibracional y círculos de hombres en Valencia.",
+      "knowsAbout": ["Breathwork", "Sound Therapy", "Baños de sonido", "Masaje vibracional", "Círculos de hombres"],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "Breathwork Training 100h – IBF Certified", "credentialCategory": "certificate", "recognizedBy": { "@type": "Organization", "name": "International Breathwork Foundation" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Sound Therapy Training 50h", "credentialCategory": "certificate" },
+        { "@type": "EducationalOccupationalCredential", "name": "Men's Leadership Program 70h", "credentialCategory": "certificate", "recognizedBy": { "@type": "Organization", "name": "Hijos de la Tierra" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Kundalini Activation Training 50h", "credentialCategory": "certificate", "recognizedBy": { "@type": "Organization", "name": "Serpent Temple" } }
+      ],
+      "worksFor": { "@id": "https://ramperis.com/#business" },
+      "sameAs": ["https://www.instagram.com/ram_peris"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ramperis.com/#website",
+      "url": "https://ramperis.com",
+      "name": "Ram Peris",
+      "publisher": { "@id": "https://ramperis.com/#ram" }
+    }
+  ]
+}
+</script>
 </head><body>
 <nav id="nav" class="nav-light">
   <a href="/" class="nav-logo">
