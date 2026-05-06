@@ -20,6 +20,16 @@
 
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 
+  links.querySelectorAll('.nav-dropdown > a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        e.stopPropagation();
+        a.closest('.nav-dropdown').classList.toggle('expanded');
+      }
+    });
+  });
+
   document.addEventListener('click', (e) => {
     if (!btn.contains(e.target) && !links.contains(e.target)) close();
   });
