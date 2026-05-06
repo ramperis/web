@@ -86,8 +86,8 @@
   }
 
   /* Instagram section */
-  .ig-section { background: var(--arena-oscura); padding: 80px 24px 96px; }
-  .ig-inner { max-width: 1200px; margin: 0 auto; }
+  .ig-section { background: var(--arena-oscura); padding: 80px 0 96px; }
+  .ig-inner { max-width: 100%; padding-left: 163.8px; padding-right: 163.8px; }
   .ig-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; gap: 16px; flex-wrap: wrap; }
   .ig-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texto-sutil); margin-bottom: 8px; }
   .ig-title { font-size: clamp(22px, 3vw, 30px); font-weight: 800; color: var(--texto-principal); line-height: 1.2; }
@@ -102,7 +102,8 @@
   @keyframes shimmer { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
   behold-widget { --behold-column-count: 6; --behold-gap: 10px; --behold-border-radius: 10px; display: block; width: 100%; }
   @media (max-width: 768px) {
-    .ig-section { padding: 60px 20px 72px; }
+    .ig-section { padding: 60px 0 72px; }
+    .ig-inner { padding-left: 24px; padding-right: 24px; }
     behold-widget { --behold-column-count: 3; --behold-gap: 6px; --behold-border-radius: 8px; }
     .ig-placeholder { grid-template-columns: repeat(3, 1fr); }
     .ig-placeholder-item:nth-child(n+4) { display: none; }
