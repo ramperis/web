@@ -1,3 +1,30 @@
+// ── NAV HAMBURGER ──
+(function() {
+  const btn = document.querySelector('.nav-hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+
+  function close() {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const opening = !links.classList.contains('open');
+    links.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', opening);
+  });
+
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !links.contains(e.target)) close();
+  });
+})();
+
 // ── NAV SCROLL ──
 (function() {
   const nav = document.getElementById('nav');
