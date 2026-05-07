@@ -61,6 +61,11 @@
       "source": "/bano-sonido-valencia/",
       "destination": "/bano-sonido",
       "permanent": true
+    },
+    {
+      "source": "/agenda/eternity-junio",
+      "destination": "/agenda",
+      "permanent": true
     }
   ]
 }
