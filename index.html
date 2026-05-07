@@ -35,33 +35,6 @@
   .sesion-card p { font-size: 14px; color: var(--texto-secundario); line-height: 1.7; margin-bottom: 20px; font-weight: 400; }
   .sesion-link { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--verde-oliva); display: inline-flex; align-items: center; gap: 6px; }
 
-  /* Testimonios - scroll automático infinito */
-  .testimonios-wrap { overflow: hidden; position: relative; margin-top: 32px; }
-  .testimonios-wrap::before,
-  .testimonios-wrap::after {
-    content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none;
-  }
-  .testimonios-wrap::before { left: 0; background: linear-gradient(to right, var(--arena-oscura), transparent); }
-  .testimonios-wrap::after { right: 0; background: linear-gradient(to left, var(--arena-oscura), transparent); }
-  .testimonios-track {
-    display: flex; gap: 16px;
-    animation: scroll-testimonios 40s linear infinite;
-    width: max-content;
-  }
-  .testimonios-track:hover { animation-play-state: paused; }
-  @keyframes scroll-testimonios {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .testimonio {
-    width: 360px; flex-shrink: 0;
-    background: var(--arena); border-radius: 20px;
-    padding: 24px 28px;
-    box-shadow: 0 2px 16px rgba(42,28,8,0.06);
-  }
-  .testimonio-comilla { font-size: 32px; font-weight: 800; color: var(--ambar); opacity: 0.3; line-height: 0.8; display: block; margin-bottom: 10px; font-family: Georgia, serif; }
-  .testimonio p { font-size: 14px; color: var(--texto-principal); line-height: 1.7; font-style: italic; margin-bottom: 16px; font-weight: 400; }
-  .testimonio cite { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ambar); font-style: normal; }
 
   /* Agenda */
   .eventos-lista { border-top: 1px solid rgba(42,28,8,0.12); margin-top: 8px; }
