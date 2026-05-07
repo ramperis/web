@@ -841,7 +841,9 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
     z-index: 999;
     animation: menuIn 0.22s ease;
   }
-  .nav-links.open > li > a {
+  .nav-links.open > li > a,
+  nav.nav-light .nav-links.open > li > a,
+  nav.nav-light:not(.scrolled) .nav-links.open > li > a {
     display: block;
     padding: 13px 0;
     font-size: 15px;
