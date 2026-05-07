@@ -18,7 +18,11 @@
     btn.setAttribute('aria-expanded', opening);
   });
 
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  links.querySelectorAll('a').forEach(a => {
+    if (!a.parentElement.classList.contains('nav-dropdown')) {
+      a.addEventListener('click', close);
+    }
+  });
 
   links.querySelectorAll('.nav-dropdown > a').forEach(a => {
     a.addEventListener('click', (e) => {
