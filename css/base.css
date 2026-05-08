@@ -857,6 +857,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
     z-index: 999;
     animation: menuIn 0.22s ease;
   }
+  .nav-links.open > li { width: 100%; }
   .nav-links.open > li > a,
   nav.nav-light .nav-links.open > li > a,
   nav.nav-light:not(.scrolled) .nav-links.open > li > a {

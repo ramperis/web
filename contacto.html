@@ -9,6 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
+<style>
+  @media (max-width: 768px) {
+    #contacto-hero {
+      grid-template-columns: 1fr !important;
+      padding: 80px 6vw 60px !important;
+      gap: 40px !important;
+    }
+  }
+</style>
 
 <link rel="canonical" href="https://ramperis.com/contacto">
 <meta name="robots" content="index, follow">
@@ -42,7 +51,7 @@
   <button class="nav-hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
-<section style="background:var(--tierra-noche);padding:120px 8vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+<section id="contacto-hero" style="background:var(--tierra-noche);padding:120px 8vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
   <div class="fade-up">
     <span class="section-label">Contacto</span>
     <h1 style="font-size:clamp(36px,5vw,60px);font-weight:800;color:var(--texto-claro);letter-spacing:-0.03em;margin-bottom:20px">Hablemos.<br>Estoy aquí.</h1>
