@@ -870,13 +870,14 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
   }
   .nav-links.open > li:last-child > a { border-bottom: none; }
   .nav-links.open .nav-cta {
-    display: flex;
-    padding: 12px 22px;
-    margin-top: 24px;
-    width: 100%;
-    justify-content: center;
-    border-bottom: none !important;
-    color: var(--texto-claro) !important;
+    background: none !important;
+    border-radius: 0 !important;
+    padding: 13px 0 !important;
+    margin-top: 0 !important;
+    color: var(--texto-principal) !important;
+    letter-spacing: 0.08em !important;
+    justify-content: flex-start !important;
+    border-bottom: 1px solid rgba(42,28,8,0.07) !important;
   }
   .nav-links.open .nav-dropdown-menu {
     display: none;
