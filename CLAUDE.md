@@ -51,6 +51,10 @@ Cuando el usuario diga "ya tienes las imágenes del post":
 3. Sustituir los placeholders `<figure class="post-img">` por `<img src="/img/blog/nombre.jpg" alt="...">` con ALT optimizado
 4. La imagen del encabezado va en el `<div class="post-header-img">`
 
+## Enlaces internos en posts del blog
+
+Un post nunca puede tener dos enlaces hacia la misma URL. Si al redactar o revisar un post aparece una URL duplicada, se elimina el enlace que esté más abajo en el contenido y se conserva el primero.
+
 ## Cuando se elimine un post del blog
 
 1. Añadir redirección en `vercel.json`: `"source": "/blog/slug-eliminado"` → `"destination": "/blog"`
