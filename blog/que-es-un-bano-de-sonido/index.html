@@ -19,7 +19,7 @@
 <style>
   .progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: var(--ambar); z-index: 200; transition: width 0.1s linear; }
 
-  .post-header { max-width: 1200px; margin: 0 auto; padding: 64px 48px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .post-header { max-width: 1200px; margin: 0 auto; padding: 88px 48px 56px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
   .post-meta-top { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
   .post-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ambar); }
   .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--texto-sutil); }
@@ -66,8 +66,13 @@
   .toc-item a:hover, .toc-item.active a { background: rgba(42,28,8,0.07); color: var(--texto-principal); }
   .toc-item.active a { font-weight: 600; border-left: 2px solid var(--ambar); padding-left: 8px; }
 
-  .sidebar-cta { background: var(--verde-oliva); border-radius: 16px; padding: 20px; text-align: center; }
-  .sidebar-cta-text { font-size: 13px; color: rgba(245,238,216,0.7); line-height: 1.5; margin-bottom: 14px; }
+  .sidebar-cta { background: var(--verde-oliva); border-radius: 16px; padding: 24px; text-align: center; }
+  .sidebar-cta-text { font-size: 13px; color: rgba(245,238,216,0.7); line-height: 1.6; margin-bottom: 16px; }
+  .sidebar-cta input[type="email"] { width: 100%; box-sizing: border-box; background: rgba(245,238,216,0.1); border: 1px solid rgba(245,238,216,0.15); border-radius: 10px; padding: 11px 14px; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--texto-claro); outline: none; margin-bottom: 10px; transition: border-color 0.2s; }
+  .sidebar-cta input[type="email"]::placeholder { color: rgba(245,238,216,0.35); }
+  .sidebar-cta input[type="email"]:focus { border-color: rgba(245,238,216,0.4); }
+  .sidebar-cta button[type="submit"] { width: 100%; background: var(--ambar); border: none; border-radius: 10px; padding: 12px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #fff; cursor: pointer; transition: opacity 0.2s; }
+  .sidebar-cta button[type="submit"]:hover { opacity: 0.88; }
 
   .related-section { background: var(--arena-oscura); padding: 64px 48px; }
   .related-inner { max-width: 1200px; margin: 0 auto; }
@@ -153,7 +158,7 @@
 
     <h2 id="que-es">Qué es un baño de sonido</h2>
 
-    <p>Un baño de sonido es una experiencia inmersiva en la que el cuerpo y la mente son envueltos por las vibraciones y frecuencias producidas por instrumentos acústicos como gongs, cuencos tibetanos, cuencos de cuarzo, handpan o flautas.</p>
+    <p>Un <a href="/bano-sonido">baño de sonido</a> es una experiencia inmersiva en la que el cuerpo y la mente son envueltos por las vibraciones y frecuencias producidas por instrumentos acústicos como gongs, cuencos tibetanos, cuencos de cuarzo, handpan o flautas.</p>
     <p>La persona se recuesta o se sienta cómodamente, cierra los ojos y recibe el sonido. No hay nada que hacer bien ni mal. No hay posturas, ni técnica, ni esfuerzo. El sonido hace el trabajo.</p>
     <p>El término "baño" no es metáfora de spa. Describe con precisión lo que ocurre: igual que el agua rodea y envuelve el cuerpo, las ondas sonoras lo rodean y lo atraviesan. El 60-70% del cuerpo humano es agua. El agua conduce el sonido cinco veces más rápido que el aire. Las vibraciones no solo se escuchan, se sienten físicamente en los tejidos, los músculos y los órganos.</p>
 
@@ -391,7 +396,7 @@
 
     <p>Un baño de sonido no es magia. Es física, fisiología y, en parte, la simple y difícil acción de parar.</p>
     <p>El sonido hace algo que pocas cosas consiguen: entra por el cuerpo antes de que la mente decida si quiere dejarlo pasar. No pide permiso. No requiere que lo entiendas. Solo necesita que te tumbes y que dejes que ocurra.</p>
-    <p>Si quieres probarlo, en <a href="/bano-sonido">/bano-sonido</a> tienes toda la información sobre sesiones de baño de sonido en Valencia: formatos, instrumentos, próximas fechas y cómo reservar.</p>
+    <p>Si llevas tiempo funcionando sin realmente descansar, si tu mente no para aunque tu cuerpo esté quieto, si la meditación te parece inalcanzable —un <a href="/bano-sonido">baño de sonido</a> puede ser el punto de partida que estabas buscando.</p>
 
   </article>
 
@@ -426,8 +431,11 @@
     </div>
 
     <div class="sidebar-cta">
-      <p class="sidebar-cta-text">¿Quieres probarlo?<br>Escríbeme y hablamos sin compromiso.</p>
-      <a href="https://wa.me/34617847196" class="btn-primario" target="_blank" rel="noopener">Reservar sesión</a>
+      <p class="sidebar-cta-text">Nuevos artículos, directo al correo. Sin spam. Solo cuando haya algo que valga la pena.</p>
+      <form>
+        <input type="email" placeholder="tu@email.com" required>
+        <button type="submit">Suscribirme</button>
+      </form>
     </div>
 
   </aside>
