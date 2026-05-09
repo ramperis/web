@@ -33,10 +33,12 @@
   .blog-grid-section { padding: 56px 48px 96px; }
   .blog-grid-inner { max-width: 1200px; margin: 0 auto; }
   .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .blog-card:first-child { grid-column: span 2; }
-  .blog-card:first-child .card-img { aspect-ratio: 16/9; }
-  .blog-card:first-child .card-title { font-size: 22px; }
+  .blog-grid--single { display: block; }
   .blog-card { text-decoration: none; display: flex; flex-direction: column; }
+  .blog-card--featured { flex-direction: row; gap: 40px; align-items: flex-start; background: var(--arena-oscura); border-radius: 20px; padding: 32px; }
+  .blog-card--featured .card-img { flex: 0 0 42%; margin-bottom: 0; aspect-ratio: 4/3; }
+  .blog-card--featured .card-body { flex: 1; padding-top: 4px; }
+  .blog-card--featured .card-title { font-size: 22px; }
   .card-img { width: 100%; aspect-ratio: 4/3; border-radius: 16px; overflow: hidden; background: var(--arena-oscura); margin-bottom: 16px; }
   .card-img-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, var(--tierra-media) 0%, var(--tierra-noche) 100%); display: flex; align-items: center; justify-content: center; font-size: 32px; opacity: 0.6; }
   .card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
@@ -54,18 +56,13 @@
   .btn-wa { display: inline-flex; align-items: center; gap: 8px; background: var(--arena); color: var(--texto-principal); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; padding: 14px 28px; border-radius: 100px; text-decoration: none; transition: transform 0.2s; }
   .btn-wa:hover { transform: translateY(-2px); }
 
-  @media (max-width: 900px) {
-    .blog-grid { grid-template-columns: repeat(2, 1fr); }
-    .blog-card:first-child { grid-column: span 2; }
-  }
   @media (max-width: 640px) {
     .blog-hero { padding: 48px 24px; }
     .cats-bar { padding: 0 24px; }
     .blog-grid-section { padding: 40px 24px 72px; }
     .blog-grid { grid-template-columns: 1fr; gap: 40px; }
-    .blog-card:first-child { grid-column: span 1; }
-    .blog-card:first-child .card-img { aspect-ratio: 4/3; }
-    .blog-card:first-child .card-title { font-size: 17px; }
+    .blog-card--featured { flex-direction: column; padding: 20px; }
+    .blog-card--featured .card-img { flex: none; width: 100%; }
     .blog-cta { padding: 56px 24px; }
   }
 </style>
@@ -117,71 +114,21 @@
 
 <section class="blog-grid-section">
   <div class="blog-grid-inner">
-    <div class="blog-grid">
+    <div class="blog-grid blog-grid--single">
 
-      <a href="/blog/que-es-un-bano-de-sonido" class="blog-card">
+      <a href="/blog/que-es-un-bano-de-sonido" class="blog-card blog-card--featured">
         <div class="card-img">
           <div class="card-img-placeholder">🎵</div>
         </div>
-        <div class="card-meta">
-          <span class="card-cat">Baño de sonido</span>
-          <span class="card-dot"></span>
-          <span class="card-time">12 min de lectura</span>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-cat">Baño de sonido</span>
+            <span class="card-dot"></span>
+            <span class="card-time">12 min de lectura</span>
+          </div>
+          <h2 class="card-title">Qué es un baño de sonido: guía completa con ciencia, instrumentos y beneficios</h2>
+          <p class="card-excerpt">No es un concierto. No es meditación guiada. Qué le ocurre a tu cuerpo y a tu mente cuando recibes un baño de sonido, y por qué el sistema nervioso responde cuando la mente no puede.</p>
         </div>
-        <h2 class="card-title">Qué es un baño de sonido: guía completa con ciencia, instrumentos y beneficios</h2>
-        <p class="card-excerpt">No es un concierto. No es meditación guiada. Qué le ocurre a tu cuerpo y a tu mente cuando recibes un baño de sonido, y por qué el sistema nervioso responde cuando la mente no puede.</p>
-      </a>
-
-      <a href="/blog/que-es-el-breathwork" class="blog-card">
-        <div class="card-img">
-          <div class="card-img-placeholder">🌬️</div>
-        </div>
-        <div class="card-meta">
-          <span class="card-cat">Breathwork</span>
-          <span class="card-dot"></span>
-          <span class="card-time">7 min de lectura</span>
-        </div>
-        <h2 class="card-title">Qué es el breathwork y por qué cambia algo que no esperabas</h2>
-        <p class="card-excerpt">No es meditación. No es yoga. Es movimiento interno. Llevas toda la vida respirando — pero no así.</p>
-      </a>
-
-      <a href="/blog/circulos-de-hombres" class="blog-card">
-        <div class="card-img">
-          <div class="card-img-placeholder">🔥</div>
-        </div>
-        <div class="card-meta">
-          <span class="card-cat">Masculinidad</span>
-          <span class="card-dot"></span>
-          <span class="card-time">6 min de lectura</span>
-        </div>
-        <h2 class="card-title">Por qué los hombres necesitan espacios donde no tener que parecer que todo va bien</h2>
-        <p class="card-excerpt">No es terapia. No es autoayuda. Es un espacio donde bajar la máscara sin que nadie te diga lo que tienes que sentir.</p>
-      </a>
-
-      <a href="/blog/nepal-india-sri-lanka" class="blog-card">
-        <div class="card-img">
-          <div class="card-img-placeholder">🌍</div>
-        </div>
-        <div class="card-meta">
-          <span class="card-cat">Viajes</span>
-          <span class="card-dot"></span>
-          <span class="card-time">9 min de lectura</span>
-        </div>
-        <h2 class="card-title">Cuatro meses en Nepal, India y Sri Lanka. Lo que me traje de vuelta.</h2>
-        <p class="card-excerpt">No fui a buscar nada concreto. Pero algo encontré. Un proceso que no podría haber pasado de otra manera.</p>
-      </a>
-
-      <a href="/blog/burnout-y-presencia" class="blog-card">
-        <div class="card-img">
-          <div class="card-img-placeholder">🌿</div>
-        </div>
-        <div class="card-meta">
-          <span class="card-cat">Presencia</span>
-          <span class="card-dot"></span>
-          <span class="card-time">5 min de lectura</span>
-        </div>
-        <h2 class="card-title">Con 33 años, todo a la vez. Algo reventó.</h2>
-        <p class="card-excerpt">El cuerpo lo sabía antes que yo. El burnout no llegó de golpe — llevaba años construyéndose en silencio.</p>
       </a>
 
     </div>
