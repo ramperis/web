@@ -39,6 +39,15 @@ Al recibir un post, Claude Code debe:
 5. Añadir la tarjeta del post en `/blog/index.html` con título, categoría, tiempo de lectura y extracto (primeras 2 líneas del cuerpo)
 6. El slug de la URL se genera desde el título: minúsculas, sin acentos, espacios sustituidos por guiones
 
+## Imágenes del blog
+
+Las imágenes van en `/img/blog/` con el slug del post como prefijo:
+
+- `bano-sonido-header.jpg` → imagen del encabezado del post
+- `bano-sonido-img-1.jpg`, `bano-sonido-img-2.jpg`… → imágenes del cuerpo
+
+Cuando el usuario diga "añadí las fotos de [post]", sustituir los placeholders `<figure class="post-img">` por `<img src="/img/blog/slug-img-N.jpg" alt="...">` en el mismo orden. La imagen del encabezado va en el `<div class="post-header-img">`.
+
 ## Cuando se elimine un post del blog
 
 1. Añadir redirección en `vercel.json`: `"source": "/blog/slug-eliminado"` → `"destination": "/blog"`
