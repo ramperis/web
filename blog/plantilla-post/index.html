@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[TÍTULO DEL POST] — Ram Peris</title>
+<meta name="description" content="[META DESCRIPCIÓN]">
+<link rel="canonical" href="https://ramperis.com/blog/[SLUG]">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[TÍTULO] · Ram Peris">
+<meta property="og:description" content="[META DESCRIPCIÓN]">
+<meta property="og:url" content="https://ramperis.com/blog/[SLUG]">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/base.css">
+<style>
+  .progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: var(--ambar); z-index: 200; transition: width 0.1s linear; }
+
+  .nav-back { font-size: 12px; font-weight: 600; color: var(--texto-sutil); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+  .nav-back:hover { color: var(--texto-principal); }
+
+  .post-header { max-width: 1200px; margin: 0 auto; padding: 56px 48px 40px; }
+  .post-meta-top { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .post-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ambar); }
+  .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--texto-sutil); }
+  .post-date { font-size: 11px; color: var(--texto-sutil); }
+  .post-time { font-size: 11px; color: var(--texto-sutil); }
+  .post-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; color: var(--texto-principal); max-width: 680px; margin-bottom: 20px; }
+  .post-excerpt { font-size: 16px; color: var(--texto-secundario); line-height: 1.65; max-width: 600px; font-style: italic; font-weight: 300; }
+
+  .post-featured-img { max-width: 1200px; margin: 0 auto; padding: 0 48px 48px; }
+  .post-featured-img img, .post-featured-img .img-placeholder { width: 100%; aspect-ratio: 21/9; object-fit: cover; border-radius: 20px; display: block; background: linear-gradient(135deg, var(--tierra-media) 0%, var(--tierra-noche) 100%); }
+  .img-placeholder { display: flex; align-items: center; justify-content: center; font-size: 48px; opacity: 0.5; }
+
+  .post-body-wrap { max-width: 1200px; margin: 0 auto; padding: 0 48px 96px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+
+  .post-content { min-width: 0; }
+  .post-content h2 { font-size: 22px; font-weight: 800; color: var(--texto-principal); margin: 40px 0 16px; line-height: 1.3; scroll-margin-top: 100px; }
+  .post-content h3 { font-size: 17px; font-weight: 700; color: var(--texto-principal); margin: 28px 0 12px; scroll-margin-top: 100px; }
+  .post-content p { font-size: 16px; line-height: 1.8; color: var(--texto-secundario); margin-bottom: 20px; }
+  .post-content p:first-child { font-size: 18px; line-height: 1.75; color: var(--texto-principal); font-weight: 400; }
+  .post-content blockquote { border-left: 3px solid var(--ambar); padding: 4px 0 4px 24px; margin: 32px 0; }
+  .post-content blockquote p { font-size: 18px; font-style: italic; font-weight: 300; color: var(--texto-principal); margin: 0; font-size: 16px; }
+  .post-content ul, .post-content ol { padding-left: 20px; margin-bottom: 20px; }
+  .post-content li { font-size: 16px; line-height: 1.75; color: var(--texto-secundario); margin-bottom: 6px; }
+  .post-content strong { font-weight: 700; color: var(--texto-principal); }
+  .post-content hr { border: none; border-top: 1px solid rgba(42,28,8,0.1); margin: 40px 0; }
+  .post-content a { color: var(--ambar); text-decoration: none; }
+  .post-content a:hover { text-decoration: underline; }
+
+  .post-img { margin: 36px 0; }
+  .post-img img, .post-img .post-img-placeholder { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 16px; display: block; background: linear-gradient(135deg, var(--tierra-media) 0%, var(--tierra-noche) 100%); }
+  .post-img-placeholder { display: flex; align-items: center; justify-content: center; font-size: 40px; opacity: 0.5; }
+  .post-img figcaption { font-size: 12px; color: var(--texto-sutil); text-align: center; margin-top: 10px; font-style: italic; }
+
+  .post-sidebar { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 24px; }
+
+  .sidebar-author { background: var(--arena-oscura); border-radius: 16px; padding: 20px; display: flex; align-items: center; gap: 14px; }
+  .author-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--tierra-media); flex-shrink: 0; overflow: hidden; }
+  .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .author-name { font-size: 13px; font-weight: 700; color: var(--texto-principal); margin-bottom: 2px; }
+  .author-role { font-size: 11px; color: var(--texto-sutil); }
+
+  .sidebar-toc { background: var(--arena-oscura); border-radius: 16px; padding: 20px; }
+  .toc-title { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-sutil); margin-bottom: 14px; }
+  .toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+  .toc-item a { display: block; font-size: 13px; color: var(--texto-secundario); text-decoration: none; padding: 6px 10px; border-radius: 8px; transition: background 0.15s, color 0.15s; line-height: 1.4; }
+  .toc-item a:hover, .toc-item.active a { background: rgba(42,28,8,0.07); color: var(--texto-principal); }
+  .toc-item.active a { font-weight: 600; border-left: 2px solid var(--ambar); padding-left: 8px; }
+
+  .sidebar-cta { background: var(--verde-oliva); border-radius: 16px; padding: 20px; text-align: center; }
+  .sidebar-cta-text { font-size: 13px; color: rgba(245,238,216,0.7); line-height: 1.5; margin-bottom: 14px; }
+
+  .related-section { background: var(--arena-oscura); padding: 64px 48px; }
+  .related-inner { max-width: 1200px; margin: 0 auto; }
+  .related-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texto-sutil); margin-bottom: 8px; }
+  .related-title { font-size: 22px; font-weight: 800; color: var(--texto-principal); margin-bottom: 32px; }
+  .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .related-card { text-decoration: none; background: var(--arena); border-radius: 16px; overflow: hidden; transition: transform 0.2s; }
+  .related-card:hover { transform: translateY(-3px); }
+  .related-img { aspect-ratio: 16/9; background: var(--tierra-media); display: flex; align-items: center; justify-content: center; font-size: 28px; opacity: 0.6; }
+  .related-body { padding: 16px; }
+  .related-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ambar); margin-bottom: 6px; }
+  .related-post-title { font-size: 14px; font-weight: 700; color: var(--texto-principal); line-height: 1.4; }
+
+  @media (max-width: 900px) {
+    .post-body-wrap { grid-template-columns: 1fr; gap: 0; }
+    .post-sidebar { position: static; order: -1; flex-direction: row; flex-wrap: wrap; margin-bottom: 40px; }
+    .sidebar-toc { display: none; }
+    .sidebar-author { flex: 1; min-width: 200px; }
+    .sidebar-cta { width: 100%; }
+    .related-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .post-header { padding: 40px 24px 32px; }
+    .post-featured-img { padding: 0 24px 32px; }
+    .post-featured-img img, .post-featured-img .img-placeholder { aspect-ratio: 16/9; }
+    .post-body-wrap { padding: 0 24px 72px; }
+    .related-section { padding: 48px 24px; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav id="nav" class="nav-solid">
+  <a href="/" class="nav-logo">
+    <img src="/img/logo-oscuro.png" alt="Ram Peris" class="logo-oscuro">
+    <img src="/img/logo-claro.png" alt="Ram Peris" class="logo-claro">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-dropdown">
+      <a href="/sesiones">Sesiones</a>
+      <div class="nav-dropdown-menu">
+        <a href="/bano-sonido">Baño de sonido</a>
+        <a href="/breathwork">Breathwork</a>
+        <a href="/masaje-vibracional">Masaje vibracional</a>
+        <a href="/circulos-hombres">Círculos de hombres</a>
+      </div>
+    </li>
+    <li><a href="/sobre-mi">Sobre mí</a></li>
+    <li><a href="/agenda">Próximas fechas</a></li>
+    <li><a href="/empresas">Empresas</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="post-header">
+  <div class="post-meta-top">
+    <span class="post-cat">[CATEGORÍA]</span>
+    <span class="meta-dot"></span>
+    <span class="post-date">[FECHA]</span>
+    <span class="meta-dot"></span>
+    <span class="post-time">[X] min de lectura</span>
+  </div>
+  <h1 class="post-title">[TÍTULO DEL POST]</h1>
+  <p class="post-excerpt">[EXTRACTO — primeras líneas del artículo]</p>
+</header>
+
+<div class="post-featured-img">
+  <div class="img-placeholder">🎵</div>
+</div>
+
+<div class="post-body-wrap">
+
+  <article class="post-content">
+
+    <p>[Primer párrafo — se muestra más grande automáticamente]</p>
+
+    <h2 id="seccion-1">[H2 sección 1]</h2>
+    <p>[Contenido...]</p>
+
+    <blockquote>
+      <p>[Cita destacada]</p>
+    </blockquote>
+
+    <h2 id="seccion-2">[H2 sección 2]</h2>
+    <p>[Contenido...]</p>
+
+    <figure class="post-img">
+      <div class="post-img-placeholder">🎵</div>
+      <figcaption>[Pie de foto]</figcaption>
+    </figure>
+
+    <h2 id="seccion-3">[H2 sección 3]</h2>
+    <p>[Contenido...]</p>
+
+    <hr>
+
+    <p>[Párrafo de cierre]</p>
+
+  </article>
+
+  <aside class="post-sidebar">
+
+    <div class="sidebar-author">
+      <div class="author-avatar">
+        <img src="/img/ram-peris-facilitador-exterior-valencia.jpg" alt="Ram Peris">
+      </div>
+      <div>
+        <p class="author-name">Ram Peris</p>
+        <p class="author-role">Facilitador de breathwork y sonido</p>
+      </div>
+    </div>
+
+    <div class="sidebar-toc">
+      <p class="toc-title">En este artículo</p>
+      <ul class="toc-list">
+        <li class="toc-item active"><a href="#seccion-1">[Sección 1]</a></li>
+        <li class="toc-item"><a href="#seccion-2">[Sección 2]</a></li>
+        <li class="toc-item"><a href="#seccion-3">[Sección 3]</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-cta">
+      <p class="sidebar-cta-text">¿Quieres probarlo?<br>Escríbeme y hablamos sin compromiso.</p>
+      <a href="https://wa.me/34617847196" class="btn-primario" target="_blank" rel="noopener">Reservar sesión</a>
+    </div>
+
+  </aside>
+
+</div>
+
+<section class="related-section">
+  <div class="related-inner">
+    <p class="related-label">Seguir leyendo</p>
+    <h2 class="related-title">Puede que también te interese.</h2>
+    <div class="related-grid">
+      <a href="/blog/que-es-el-breathwork" class="related-card">
+        <div class="related-img">🌬️</div>
+        <div class="related-body">
+          <p class="related-cat">Breathwork</p>
+          <p class="related-post-title">Qué es el breathwork y por qué cambia algo que no esperabas</p>
+        </div>
+      </a>
+      <a href="/blog/circulos-de-hombres" class="related-card">
+        <div class="related-img">🔥</div>
+        <div class="related-body">
+          <p class="related-cat">Masculinidad</p>
+          <p class="related-post-title">Por qué los hombres necesitan espacios donde no tener que parecer que todo va bien</p>
+        </div>
+      </a>
+      <a href="/blog/burnout-y-presencia" class="related-card">
+        <div class="related-img">🌿</div>
+        <div class="related-body">
+          <p class="related-cat">Presencia</p>
+          <p class="related-post-title">Con 33 años, todo a la vez. Algo reventó.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="/" class="footer-logo">
+        <img src="/img/logo-claro.png" alt="Ram Peris">
+      </a>
+      <p class="footer-desc">Facilitador de bienestar.</p>
+      <div class="footer-social footer-social-inline">
+        <a href="https://instagram.com/ram_peris" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://tiktok.com/@ram_peris" target="_blank" rel="noopener" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sesiones</h4>
+      <ul>
+        <li><a href="/bano-sonido">Baño de sonido</a></li>
+        <li><a href="/breathwork">Breathwork</a></li>
+        <li><a href="/masaje-vibracional">Masaje vibracional</a></li>
+        <li><a href="/circulos-hombres">Círculos de hombres</a></li>
+        <li><a href="/empresas">Empresas</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/agenda">Agenda</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-col-redes">
+      <h4>Redes</h4>
+      <div class="footer-social">
+        <a href="https://instagram.com/ram_peris" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://tiktok.com/@ram_peris" target="_blank" rel="noopener" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span class="ano-actual"></span> Ram Peris</span>
+    <div class="footer-legal">
+      <a href="/aviso-legal">Aviso legal</a>
+      <a href="/politica-privacidad">Privacidad</a>
+      <a href="/politica-cookies">Cookies</a>
+    </div>
+    <span>hola@ramperis.com</span>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+<script>
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop || document.body.scrollTop;
+    const total = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+
+  const headings = document.querySelectorAll('.post-content h2[id]');
+  const tocItems = document.querySelectorAll('.toc-item');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocItems.forEach(item => item.classList.remove('active'));
+        const active = document.querySelector(`.toc-item a[href="#${entry.target.id}"]`);
+        if (active) active.parentElement.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  headings.forEach(h => observer.observe(h));
+</script>
+</body>
+</html>

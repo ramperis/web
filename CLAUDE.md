@@ -24,6 +24,29 @@ Hacer siempre los cuatro pasos juntos, nunca eliminar el archivo sin añadir la 
 
 Hacer siempre los tres pasos juntos.
 
+## Cuando se cree un post del blog
+
+El usuario pasará el contenido del post en texto plano con este formato:
+- Primera línea: título SEO
+- Segunda línea: metadatos (URL, categoría, tiempo de lectura)
+- El resto: cuerpo del artículo con secciones separadas por títulos
+
+Al recibir un post, Claude Code debe:
+1. Crear `/blog/slug-del-post/index.html` basado en `/blog/plantilla-post/index.html`
+2. Sustituir el título, categoría, fecha, tiempo de lectura y cuerpo del artículo
+3. Generar el TOC del sidebar automáticamente a partir de los H2 del contenido
+4. Añadir placeholders de imagen `<figure class="post-img">` entre secciones (una imagen cada 2-3 secciones aproximadamente)
+5. Añadir la tarjeta del post en `/blog/index.html` con título, categoría, tiempo de lectura y extracto (primeras 2 líneas del cuerpo)
+6. El slug de la URL se genera desde el título: minúsculas, sin acentos, espacios sustituidos por guiones
+
+## Cuando se elimine un post del blog
+
+1. Añadir redirección en `vercel.json`: `"source": "/blog/slug-eliminado"` → `"destination": "/blog"`
+2. Eliminar la carpeta `/blog/slug-eliminado/`
+3. Eliminar la tarjeta del post en `/blog/index.html`
+
+Hacer siempre los tres pasos juntos.
+
 ## Formato de un evento
 
 - Título del evento
