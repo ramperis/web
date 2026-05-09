@@ -41,12 +41,15 @@ Al recibir un post, Claude Code debe:
 
 ## Imágenes del blog
 
-Las imágenes van en `/img/blog/` con el slug del post como prefijo:
+Las imágenes van en `/img/blog/` con nombres descriptivos en formato SEO (minúsculas, guiones, keywords relevantes). El usuario las deja en `C:\Users\errea\Desktop\Web\img\blog\` y Claude Code las copia al proyecto con el nombre correcto.
 
-- `bano-sonido-header.jpg` → imagen del encabezado del post
-- `bano-sonido-img-1.jpg`, `bano-sonido-img-2.jpg`… → imágenes del cuerpo
+Convención de nombres: `bano-sonido-[descripcion-breve].jpg`
 
-Cuando el usuario diga "añadí las fotos de [post]", sustituir los placeholders `<figure class="post-img">` por `<img src="/img/blog/slug-img-N.jpg" alt="...">` en el mismo orden. La imagen del encabezado va en el `<div class="post-header-img">`.
+Cuando el usuario diga "ya tienes las imágenes del post":
+1. Leer cada imagen visualmente para entender qué muestra
+2. Copiar a `/img/blog/` con nombre SEO descriptivo
+3. Sustituir los placeholders `<figure class="post-img">` por `<img src="/img/blog/nombre.jpg" alt="...">` con ALT optimizado
+4. La imagen del encabezado va en el `<div class="post-header-img">`
 
 ## Cuando se elimine un post del blog
 
