@@ -829,7 +829,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
     border-bottom: 1px solid rgba(245,238,216,0.1);
   }
   .footer-desc { display: none; }
-  .footer-social-inline { display: flex; margin-top: 0; }
+  .footer-social-inline { margin-top: 0; }
   .footer-grid > .footer-col:nth-child(2) { grid-area: sesiones; }
   .footer-grid > .footer-col:nth-child(3) { grid-area: navegar; }
   .footer-col-redes { grid-area: newsletter; padding-top: 28px; border-top: 1px solid rgba(245,238,216,0.1); }
