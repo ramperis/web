@@ -761,14 +761,12 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 }
 .footer-social a:hover { border-color: var(--ambar); color: var(--ambar); }
 
-.footer-newsletter { border-top: 1px solid rgba(245,238,216,0.08); margin-top: 48px; padding-top: 40px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-.footer-newsletter-title { font-size: 13px; font-weight: 700; color: var(--texto-claro); white-space: nowrap; }
-.footer-newsletter-text { font-size: 13px; color: var(--texto-sutil); flex: 1; min-width: 180px; line-height: 1.6; }
-.footer-newsletter-form { display: flex; gap: 8px; flex-shrink: 0; }
-.footer-newsletter-form input[type="email"] { background: rgba(245,238,216,0.08); border: 1px solid rgba(245,238,216,0.12); border-radius: 8px; padding: 10px 14px; font-family: inherit; font-size: 13px; color: var(--texto-claro); outline: none; width: 210px; transition: border-color 0.2s; }
+.footer-newsletter-text { font-size: 13px; color: var(--texto-sutil); line-height: 1.6; margin-bottom: 12px; }
+.footer-newsletter-form { display: flex; flex-direction: column; gap: 8px; }
+.footer-newsletter-form input[type="email"] { background: rgba(245,238,216,0.08); border: 1px solid rgba(245,238,216,0.12); border-radius: 8px; padding: 10px 14px; font-family: inherit; font-size: 13px; color: var(--texto-claro); outline: none; width: 100%; transition: border-color 0.2s; }
 .footer-newsletter-form input[type="email"]::placeholder { color: rgba(245,238,216,0.3); }
 .footer-newsletter-form input[type="email"]:focus { border-color: rgba(245,238,216,0.3); }
-.footer-newsletter-form button[type="submit"] { background: var(--ambar); border: none; border-radius: 8px; padding: 10px 18px; font-family: inherit; font-size: 13px; font-weight: 700; color: #fff; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+.footer-newsletter-form button[type="submit"] { background: var(--ambar); border: none; border-radius: 8px; padding: 10px 18px; font-family: inherit; font-size: 13px; font-weight: 700; color: #fff; cursor: pointer; transition: opacity 0.2s; }
 .footer-newsletter-form button[type="submit"]:hover { opacity: 0.88; }
 
 .footer-bottom {
