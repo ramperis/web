@@ -208,6 +208,10 @@
     btn.addEventListener('click', () => {
       document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.blog-card').forEach(card => {
+        card.style.display = (filter === 'todo' || card.dataset.cat === filter) ? '' : 'none';
+      });
     });
   });
 </script>
