@@ -32,6 +32,10 @@
   .blog-grid-section { padding: 56px 8vw 96px; }
   .blog-grid-inner { max-width: 1200px; margin: 0 auto; }
   .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  @media (min-width: 1400px) {
+    .blog-grid-inner { max-width: 1600px; }
+    .blog-grid { grid-template-columns: repeat(4, 1fr); }
+  }
   .blog-grid--single { display: block; }
   .blog-card { text-decoration: none; display: flex; flex-direction: column; }
   .blog-card--featured { flex-direction: row; gap: 40px; align-items: flex-start; background: var(--arena-oscura); border-radius: 20px; padding: 32px; }
