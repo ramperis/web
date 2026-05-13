@@ -51,9 +51,15 @@ Cuando el usuario diga "ya tienes las imágenes del post":
 3. Sustituir los placeholders `<figure class="post-img">` por `<img src="/img/blog/nombre.jpg" alt="...">` con ALT optimizado
 4. La imagen del encabezado va en el `<div class="post-header-img">`
 
+## Formato de listas en posts del blog
+
+Cuando un post incluya bloques de elementos enumerables del mismo tipo (tipos, clases, técnicas, categorías, fases, instrumentos, etc.), numerarlos visualmente dentro de su subsección. Usar `<ol><li>` o prefijo numérico en el `<h3>` según el contexto. Esto aplica tanto al crear posts nuevos como al revisar posts existentes.
+
 ## Enlaces internos en posts del blog
 
 Un post nunca puede tener dos enlaces hacia la misma URL. Si al redactar o revisar un post aparece una URL duplicada, se elimina el enlace que esté más abajo en el contenido y se conserva el primero.
+
+Al crear un post, pensar activamente en qué páginas del sitio son relevantes para el tema y añadir enlaces internos naturales. Ejemplos: un post sobre cuencos tibetanos enlaza a `/masaje-vibracional`; un post sobre breathwork enlaza a `/breathwork`; un post sobre sonoterapia enlaza a `/bano-sonido`.
 
 ## Cuando se elimine un post del blog
 
