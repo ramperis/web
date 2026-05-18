@@ -603,6 +603,25 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
   font-weight: 400;
 }
 
+/* ── TESTIMONIOS ── */
+.testimonios-wrap { overflow: hidden; position: relative; margin-top: 32px; }
+.testimonios-wrap::before,
+.testimonios-wrap::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none;
+}
+.testimonios-wrap::before { left: 0; background: linear-gradient(to right, var(--arena-oscura), transparent); }
+.testimonios-wrap::after { right: 0; background: linear-gradient(to left, var(--arena-oscura), transparent); }
+.testimonios-track {
+  display: flex; gap: 16px;
+  animation: scroll-testimonios 40s linear infinite;
+  width: max-content;
+}
+.testimonios-track:hover { animation-play-state: paused; }
+@keyframes scroll-testimonios {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.testimonios-track .review-card { width: 360px; flex-shrink: 0; }
 
 /* ── SESIONES GRID ── */
 .sesiones-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
