@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /politica-privacidad
+Disallow: /politica-cookies
+Disallow: /aviso-legal
+
+Sitemap: https://ramperis.com/sitemap.xml
