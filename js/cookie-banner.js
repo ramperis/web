@@ -24,7 +24,7 @@ const GA4_ID = 'G-GQYQ4HTEL1';
     #rp-cb {
       position: fixed;
       bottom: 1.5rem;
-      left: 1.5rem;
+      right: 1.5rem;
       z-index: 9999;
       width: min(320px, calc(100vw - 3rem));
       background: ${C.dark};
