@@ -9,5 +9,49 @@
     "lugar": "Valencia",
     "url": "/agenda/breath-sound-mayo",
     "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "27",
+    "mes": "May",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "Donación consciente",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-27-mayo",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "31",
+    "mes": "May",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "30 €",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-31-mayo",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "13",
+    "mes": "Jun",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "30 €",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-13-junio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "28",
+    "mes": "Jun",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "30 €",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-28-junio",
+    "wa": "https://wa.me/34617847196"
   }
 ]
