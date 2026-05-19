@@ -1,6 +1,6 @@
 /**
  * Cookie Consent Banner · ramperis.com
- * Tarjeta · Esquina inferior izquierda · GA4 + Vercel Analytics
+ * Tarjeta · Esquina inferior derecha · GA4 + Vercel Analytics
  * Sin dependencias · Gratuito · LSSI + RGPD + AEPD 2023
  */
 
