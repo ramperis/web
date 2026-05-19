@@ -137,7 +137,7 @@ const GA4_ID = 'G-GQYQ4HTEL1';
     }
 
     @media (max-height: 500px) {
-      #rp-cb { bottom: .75rem; left: .75rem; }
+      #rp-cb { bottom: .75rem; right: .75rem; }
     }
   `;
 
