@@ -79,6 +79,16 @@
       "source": "/agenda/eternity-junio",
       "destination": "/agenda",
       "permanent": true
+    },
+    {
+      "source": "/politica-privacidad",
+      "destination": "/privacidad",
+      "permanent": true
+    },
+    {
+      "source": "/politica-cookies",
+      "destination": "/cookies",
+      "permanent": true
     }
   ]
 }
