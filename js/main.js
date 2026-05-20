@@ -136,9 +136,11 @@
           const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
 
           const outer = el('div');
+          outer.className = 'agenda-card';
           outer.style.cssText = 'display:grid;grid-template-columns:100px 1fr;gap:0;border-radius:20px;overflow:hidden;background:var(--arena-oscura)';
 
           const dateCol = el('div');
+          dateCol.className = 'agenda-date-col';
           dateCol.style.cssText = 'background:var(--tierra-noche);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px';
           const diaSpan = el('span', e.dia);
           diaSpan.style.cssText = 'font-size:36px;font-weight:800;color:var(--ambar);line-height:1';
@@ -148,6 +150,7 @@
           dateCol.appendChild(mesSpan);
 
           const body = el('div');
+          body.className = 'agenda-body';
           body.style.cssText = 'padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px';
           const inner = el('div');
           const h3 = el('h3', e.titulo);
@@ -155,11 +158,13 @@
           inner.appendChild(h3);
           if (linea2) {
             const p2 = el('p', linea2);
+            p2.className = 'agenda-meta';
             p2.style.cssText = 'font-size:14px;color:var(--texto-secundario);font-weight:400;margin-bottom:2px';
             inner.appendChild(p2);
           }
           if (linea3) {
             const p3 = el('p', linea3);
+            p3.className = 'agenda-meta';
             p3.style.cssText = 'font-size:12px;color:var(--texto-secundario);opacity:0.7;font-weight:400';
             inner.appendChild(p3);
           }
