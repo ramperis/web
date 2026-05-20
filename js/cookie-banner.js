@@ -222,12 +222,8 @@
     wrap.innerHTML = html;
     document.body.appendChild(wrap);
 
-    // Si ya hay consentimiento guardado, aplicarlo sin mostrar banner
-    const existing = getConsent();
-    if (existing !== null) {
-      applyConsent(existing);
-      return;
-    }
+    // Si ya hay consentimiento guardado, no mostrar banner
+    if (getConsent() !== null) return;
 
     // Primera visita — mostrar banner
     document.getElementById('rp-cb').style.display = 'block';
