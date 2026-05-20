@@ -1,18 +1,7 @@
 /**
  * Cookie Consent Banner · ramperis.com
- * Versión GTM · dataLayer events · Sin carga directa de GA4
+ * Gestión visual de consentimiento · guarda preferencia en localStorage
  * LSSI + RGPD + AEPD 2023
- *
- * PREREQUISITO: El snippet de GTM debe estar ya en el <head> de todas las páginas.
- *
- * INTEGRACIÓN:
- * 1. Sube a /public/js/cookie-banner.js
- * 2. Añade antes de </body> en TODAS las páginas:
- *    <script src="/js/cookie-banner.js"></script>
- * 3. En GTM: crea un trigger sobre el evento 'cookies_accepted'
- *    y condiciona tus tags de GA4 a ese trigger.
- * 4. Añade en el footer:
- *    <a href="#" onclick="CookieConsent.manage();return false;">Gestionar cookies</a>
  */
 
 (function () {
