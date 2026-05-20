@@ -229,12 +229,12 @@
     document.getElementById('rp-cb').style.display = 'block';
 
     document.getElementById('rp-btn-accept').addEventListener('click', () => {
-      applyConsent(saveConsent(true));
+      saveConsent(true);
       dismiss();
     });
 
     document.getElementById('rp-btn-reject').addEventListener('click', () => {
-      applyConsent(saveConsent(false));
+      saveConsent(false);
       dismiss();
     });
 
