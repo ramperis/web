@@ -243,8 +243,7 @@
     });
 
     document.getElementById('rp-btn-save').addEventListener('click', () => {
-      const a = document.getElementById('rp-sw-a').checked;
-      applyConsent(saveConsent(a));
+      saveConsent(document.getElementById('rp-sw-a').checked);
       dismiss();
     });
 
