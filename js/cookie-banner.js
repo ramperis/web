@@ -1,10 +1,19 @@
 /**
  * Cookie Consent Banner · ramperis.com
- * Tarjeta · Esquina inferior derecha · GA4 + Vercel Analytics
- * Sin dependencias · Gratuito · LSSI + RGPD + AEPD 2023
+ * Versión GTM · dataLayer events · Sin carga directa de GA4
+ * LSSI + RGPD + AEPD 2023
+ *
+ * PREREQUISITO: El snippet de GTM debe estar ya en el <head> de todas las páginas.
+ *
+ * INTEGRACIÓN:
+ * 1. Sube a /public/js/cookie-banner.js
+ * 2. Añade antes de </body> en TODAS las páginas:
+ *    <script src="/js/cookie-banner.js"></script>
+ * 3. En GTM: crea un trigger sobre el evento 'cookies_accepted'
+ *    y condiciona tus tags de GA4 a ese trigger.
+ * 4. Añade en el footer:
+ *    <a href="#" onclick="CookieConsent.manage();return false;">Gestionar cookies</a>
  */
-
-const GA4_ID = 'G-GQYQ4HTEL1';
 
 (function () {
   'use strict';
@@ -19,6 +28,47 @@ const GA4_ID = 'G-GQYQ4HTEL1';
     muted:  '#A09070',
     text:   '#C8BAA0',
   };
+
+  // ─── dataLayer helpers ────────────────────────────────────────────────────
+
+  function pushAccepted() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'cookies_accepted',
+      'analytics_consent': true
+    });
+  }
+
+  function pushRejected() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'cookies_rejected',
+      'analytics_consent': false
+    });
+  }
+
+  // ─── Consent helpers ──────────────────────────────────────────────────────
+
+  function getConsent() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch { return null; }
+  }
+
+  function saveConsent(analytics) {
+    const c = { analytics, ts: Date.now() };
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch {}
+    return c;
+  }
+
+  function applyConsent(c) {
+    if (!c) return;
+    if (c.analytics) {
+      pushAccepted();
+    } else {
+      pushRejected();
+    }
+  }
+
+  // ─── CSS ──────────────────────────────────────────────────────────────────
 
   const css = `
     #rp-cb {
@@ -96,7 +146,6 @@ const GA4_ID = 'G-GQYQ4HTEL1';
     }
     #rp-btn-manage:hover { color: ${C.muted}; }
 
-    /* Panel preferencias */
     #rp-prefs { display: none; }
     #rp-cb.expanded #rp-main  { display: none; }
     #rp-cb.expanded #rp-prefs { display: block; }
@@ -140,6 +189,8 @@ const GA4_ID = 'G-GQYQ4HTEL1';
       #rp-cb { bottom: .75rem; right: .75rem; }
     }
   `;
+
+  // ─── HTML ─────────────────────────────────────────────────────────────────
 
   const html = `
     <div id="rp-cb" role="dialog" aria-label="Preferencias de cookies" style="display:none">
@@ -189,44 +240,16 @@ const GA4_ID = 'G-GQYQ4HTEL1';
     </div>
   `;
 
-  function loadGA4() {
-    if (window.__rp_ga4) return;
-    window.__rp_ga4 = true;
-    const s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
-    s.async = true;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    gtag('js', new Date());
-    gtag('config', GA4_ID, {
-      anonymize_ip: true,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
-    });
-  }
+  // ─── UI ───────────────────────────────────────────────────────────────────
 
-  function loadVercel() {
-    window.dispatchEvent(new CustomEvent('rp:analytics:enabled'));
-  }
-
-  function getConsent() {
-    try { return JSON.parse(localStorage.getItem(KEY)); } catch { return null; }
-  }
-  function saveConsent(analytics) {
-    const c = { analytics, ts: Date.now() };
-    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch {}
-    return c;
-  }
-  function applyConsent(c) {
-    if (c && c.analytics) { loadGA4(); loadVercel(); }
-  }
   function dismiss() {
     const el = document.getElementById('rp-cb');
     if (!el) return;
     el.classList.add('hiding');
     setTimeout(() => { el.style.display = 'none'; el.classList.remove('hiding', 'expanded'); }, 220);
   }
+
+  // ─── Init ─────────────────────────────────────────────────────────────────
 
   function init() {
     const style = document.createElement('style');
@@ -237,26 +260,40 @@ const GA4_ID = 'G-GQYQ4HTEL1';
     wrap.innerHTML = html;
     document.body.appendChild(wrap);
 
+    // Si ya hay consentimiento guardado, aplicarlo sin mostrar banner
     const existing = getConsent();
-    if (existing !== null) { applyConsent(existing); return; }
+    if (existing !== null) {
+      applyConsent(existing);
+      return;
+    }
 
+    // Primera visita — mostrar banner
     document.getElementById('rp-cb').style.display = 'block';
 
     document.getElementById('rp-btn-accept').addEventListener('click', () => {
-      applyConsent(saveConsent(true)); dismiss();
+      applyConsent(saveConsent(true));
+      dismiss();
     });
+
     document.getElementById('rp-btn-reject').addEventListener('click', () => {
-      saveConsent(false); dismiss();
+      applyConsent(saveConsent(false));
+      dismiss();
     });
+
     document.getElementById('rp-btn-manage').addEventListener('click', () => {
       document.getElementById('rp-cb').classList.add('expanded');
     });
+
     document.getElementById('rp-btn-save').addEventListener('click', () => {
       const a = document.getElementById('rp-sw-a').checked;
-      applyConsent(saveConsent(a)); dismiss();
+      applyConsent(saveConsent(a));
+      dismiss();
     });
+
     document.addEventListener('keydown', e => { if (e.key === 'Escape') dismiss(); });
   }
+
+  // ─── API pública ──────────────────────────────────────────────────────────
 
   window.CookieConsent = {
     manage: function () {
@@ -268,7 +305,10 @@ const GA4_ID = 'G-GQYQ4HTEL1';
       el.style.display = 'block';
       el.classList.add('expanded');
     },
-    hasAnalytics: () => { const c = getConsent(); return c ? !!c.analytics : false; }
+    hasAnalytics: () => {
+      const c = getConsent();
+      return c ? !!c.analytics : false;
+    }
   };
 
   if (document.readyState === 'loading') {
@@ -276,4 +316,5 @@ const GA4_ID = 'G-GQYQ4HTEL1';
   } else {
     init();
   }
+
 })();
