@@ -18,24 +18,6 @@
     text:   '#C8BAA0',
   };
 
-  // ─── dataLayer helpers ────────────────────────────────────────────────────
-
-  function pushAccepted() {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'event': 'cookies_accepted',
-      'analytics_consent': true
-    });
-  }
-
-  function pushRejected() {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'event': 'cookies_rejected',
-      'analytics_consent': false
-    });
-  }
-
   // ─── Consent helpers ──────────────────────────────────────────────────────
 
   function getConsent() {
