@@ -30,15 +30,6 @@
     return c;
   }
 
-  function applyConsent(c) {
-    if (!c) return;
-    if (c.analytics) {
-      pushAccepted();
-    } else {
-      pushRejected();
-    }
-  }
-
   // ─── CSS ──────────────────────────────────────────────────────────────────
 
   const css = `
