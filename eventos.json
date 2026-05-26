@@ -1,16 +1,5 @@
 [
   {
-    "dia": "26",
-    "mes": "Jun",
-    "titulo": "Baño de sonido en Luna nueva",
-    "hora": "19:00h",
-    "marca": "Breath & Sound",
-    "espacio": "Casa Lenta",
-    "lugar": "Valencia",
-    "url": "/agenda/breath-sound-casa-lenta",
-    "wa": "https://wa.me/34617847196"
-  },
-  {
     "dia": "27",
     "mes": "May",
     "titulo": "Círculo de Hombres",
@@ -41,6 +30,17 @@
     "espacio": "Club Náutico",
     "lugar": "Valencia Mar · Valencia",
     "url": "/agenda/bano-sonido-paddle-surf-13-junio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "26",
+    "mes": "Jun",
+    "titulo": "Baño de sonido en Luna nueva",
+    "hora": "19:00h",
+    "marca": "Breath & Sound",
+    "espacio": "Casa Lenta",
+    "lugar": "Valencia",
+    "url": "/agenda/breath-sound-casa-lenta",
     "wa": "https://wa.me/34617847196"
   },
   {
