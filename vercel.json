@@ -81,6 +81,11 @@
       "permanent": true
     },
     {
+      "source": "/agenda/breath-sound-mayo",
+      "destination": "/agenda/breath-sound-casa-lenta",
+      "permanent": true
+    },
+    {
       "source": "/politica-privacidad",
       "destination": "/privacidad",
       "permanent": true
