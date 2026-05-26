@@ -105,7 +105,10 @@
           const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
           const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
 
-          const wrap  = el('div', null, 'evento');
+          const wrap  = document.createElement('a');
+          wrap.className = 'evento';
+          wrap.href = safeUrl(e.url);
+
           const fecha = el('div', null, 'evento-fecha');
           fecha.appendChild(el('div', e.dia, 'evento-dia'));
           fecha.appendChild(el('div', e.mes, 'evento-mes'));
@@ -119,12 +122,11 @@
             info.appendChild(p);
           }
 
-          const a = el('a', 'Más info →', 'evento-btn');
-          a.href = safeUrl(e.url);
+          const btn = el('span', 'Más info →', 'evento-btn');
 
           wrap.appendChild(fecha);
           wrap.appendChild(info);
-          wrap.appendChild(a);
+          wrap.appendChild(btn);
           homeList.appendChild(wrap);
         });
       }
