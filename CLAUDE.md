@@ -69,6 +69,25 @@ Al crear un post, pensar activamente en qué páginas del sitio son relevantes p
 
 Hacer siempre los tres pasos juntos.
 
+## Cuando se añada un producto de Amazon en un post
+
+Usar el componente así dentro del `.post-content`:
+
+```html
+<div class="amazon-product" data-asin="ASIN_DEL_PRODUCTO"></div>
+<p class="amazon-disclaimer">* Enlace de afiliado. Si compras a través de este enlace recibo una pequeña comisión sin coste adicional para ti.</p>
+```
+
+Y añadir en el `<head>` del post (antes de `</head>`):
+
+```html
+<script src="/js/amazon-box.js" defer></script>
+```
+
+- El ASIN son exactamente 10 caracteres alfanuméricos en mayúsculas (ej: `B08N5WRWNW`).
+- El párrafo `.amazon-disclaimer` se escribe siempre manualmente después del div — no lo inyecta el script.
+- Las credenciales (AMAZON_ACCESS_KEY, AMAZON_SECRET_KEY, AMAZON_ASSOCIATE_TAG) están en las variables de entorno de Vercel. Nunca incluirlas en ningún archivo del proyecto.
+
 ## Formato de un evento
 
 - Título del evento
