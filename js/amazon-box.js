@@ -38,12 +38,14 @@
 
     /* Footer */
     '.amazon-box-footer{display:flex;align-items:center;gap:12px;margin-top:auto;flex-wrap:wrap;}',
-    '.amazon-box-price{font-size:18px;font-weight:800;color:#1a1008;}',
-    '.amazon-box-btn{display:inline-block;background:#FF9900;',
-    'color:#fff!important;font-size:13px;font-weight:700;',
-    'padding:7px 16px;border-radius:20px;text-decoration:none!important;',
-    'transition:background .2s;white-space:nowrap;}',
-    '.amazon-box-btn:hover{background:#e68a00;}',
+    '.amazon-box-price{font-size:20px;font-weight:800;color:#1a1008;line-height:1;}',
+    '.amazon-box-price-sub{font-size:12px;font-weight:400;color:#a09070;margin-left:4px;}',
+    '.amazon-box-btn{display:inline-flex;align-items:center;gap:6px;background:#FF9900;',
+    'color:#111!important;font-size:12px;font-weight:700;',
+    'padding:8px 16px;border-radius:100px;text-decoration:none!important;',
+    'transition:filter .2s;white-space:nowrap;}',
+    '.amazon-box-btn:hover{filter:brightness(.92);}',
+    '.amazon-box-btn svg{width:12px;height:12px;flex-shrink:0;}',
 
     /* Skeleton */
     '@keyframes amz-skel{',
