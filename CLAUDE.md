@@ -122,22 +122,33 @@ Cada artículo de compra debe enlazar al artículo pilar informacional correspon
 
 ## Cuando se añada un producto de Amazon en un post
 
-Usar el componente así dentro del `.post-content`:
-
-```html
-<div class="amazon-product" data-asin="ASIN_DEL_PRODUCTO"></div>
-<p class="amazon-disclaimer">* Enlace de afiliado. Si compras a través de este enlace recibo una pequeña comisión sin coste adicional para ti.</p>
-```
-
-Y añadir en el `<head>` del post (antes de `</head>`):
+Usar cajas hardcodeadas con las clases CSS de `amazon-box.js`. Añadir en el `<head>` del post (antes de `</head>`) para que el script inyecte los estilos:
 
 ```html
 <script src="/js/amazon-box.js" defer></script>
 ```
 
-- El ASIN son exactamente 10 caracteres alfanuméricos en mayúsculas (ej: `B08N5WRWNW`).
-- El párrafo `.amazon-disclaimer` se escribe siempre manualmente después del div — no lo inyecta el script.
-- Las credenciales (AMAZON_ACCESS_KEY, AMAZON_SECRET_KEY, AMAZON_ASSOCIATE_TAG) están en las variables de entorno de Vercel. Nunca incluirlas en ningún archivo del proyecto.
+Estructura de cada caja dentro del `.post-content` (copiar SVGs de las variables `AMAZON_SVG` y `arrowSvg` en `/js/amazon-box.js`):
+
+```html
+<a class="amazon-box" href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">
+  <div class="amazon-box-inner">
+    <div class="amazon-box-img"><img src="URL_IMAGEN" alt="TÍTULO" loading="lazy"></div>
+    <div class="amazon-box-body">
+      <div class="amazon-box-badge">[SVG Amazon]<span>· Recomendado</span></div>
+      <p class="amazon-box-title">TÍTULO</p>
+      <p style="font-size:13px;color:#6b5a3e;margin:4px 0 0;line-height:1.4;">DESCRIPCIÓN BREVE</p>
+      <div class="amazon-box-footer">
+        <span class="amazon-box-price">~XXX€<span class="amazon-box-price-sub">en Amazon</span></span>
+        <span class="amazon-box-btn">Ver en Amazon [SVG flecha]</span>
+      </div>
+    </div>
+  </div>
+</a>
+```
+
+- Sin disclaimer por caja — el disclaimer del post va al final del `<article>`
+- El `<span class="amazon-box-price">` se omite si no hay precio disponible
 
 ## Formato de un evento
 
