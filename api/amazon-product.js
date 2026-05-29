@@ -113,26 +113,12 @@ module.exports = async function handler(req, res) {
 
   const authorization = buildAuthorization(AMAZON_ACCESS_KEY, AMAZON_SECRET_KEY, amzDate, canonicalRequest);
 
-  // Temporary debug: detect invalid header characters before the request
-  const badChars = [...authorization].filter(c => {
-    const code = c.charCodeAt(0);
-    return code < 32 || code > 126;
-  });
-  if (badChars.length > 0) {
-    return res.status(500).json({
-      error: 'Invalid chars in Authorization',
-      codes: badChars.map(c => c.charCodeAt(0)),
-      keyLen: AMAZON_ACCESS_KEY.length,
-      secretLen: AMAZON_SECRET_KEY.length,
-    });
-  }
-
   try {
     const data  = await papiRequest(payload, amzDate, authorization);
     const items = data?.ItemsResult?.Items;
 
     if (!items?.length) {
-      return res.status(404).json({ error: 'Producto no encontrado', debug: data });
+      return res.status(404).json({ error: 'Producto no encontrado' });
     }
 
     const item  = items[0];
