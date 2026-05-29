@@ -166,7 +166,7 @@
       '<div class="amazon-box-error">' +
         '<span>Producto no disponible. </span>' +
         '<a href="https://www.amazon.es/dp/' + esc(asin) + '" ' +
-          'target="_blank" rel="sponsored noopener noreferrer nofollow">' +
+          'target="_blank" rel="noopener noreferrer sponsored">' +
           'Ver en Amazon →</a>' +
       '</div>';
   }
