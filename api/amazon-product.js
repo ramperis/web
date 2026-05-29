@@ -74,7 +74,9 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'ASIN inválido' });
   }
 
-  const { AMAZON_ACCESS_KEY, AMAZON_SECRET_KEY, AMAZON_ASSOCIATE_TAG } = process.env;
+  const AMAZON_ACCESS_KEY  = process.env.AMAZON_ACCESS_KEY?.trim();
+  const AMAZON_SECRET_KEY  = process.env.AMAZON_SECRET_KEY?.trim();
+  const AMAZON_ASSOCIATE_TAG = process.env.AMAZON_ASSOCIATE_TAG?.trim();
   if (!AMAZON_ACCESS_KEY || !AMAZON_SECRET_KEY || !AMAZON_ASSOCIATE_TAG) {
     return res.status(500).json({ error: 'Configuración de Amazon incompleta' });
   }
