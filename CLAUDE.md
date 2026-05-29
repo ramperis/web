@@ -104,24 +104,6 @@ Todo artículo de compra/comparativa sigue esta estructura:
 9. FAQ (6-8 preguntas reales)
 10. Cierre + CTA — enlace a sesión en vivo si aplica
 
-### Formato de enlace de afiliado
-
-TAG-AFILIADO Amazon España = `ramperis-21`
-
-```html
-<a href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">Ver en Amazon</a>
-```
-
-Usar `rel="noopener noreferrer sponsored"` en todos los enlaces de afiliado. No usar `nofollow` en afiliados — `sponsored` es el estándar Google para links patrocinados.
-
-### Disclaimer obligatorio
-
-Siempre incluir al final del artículo (en cursiva):
-
-```
-Este artículo contiene enlaces de afiliado a Amazon [y/o Thomann]. Si compras a través de ellos, puedo recibir una pequeña comisión sin coste adicional para ti. Solo incluyo modelos que considero válidos según cada nivel.
-```
-
 ### Schema JSON-LD para artículos de afiliación
 
 Usar tipo `Article` (no `BlogPosting`) — es más adecuado para contenido comercial/comparativo.
