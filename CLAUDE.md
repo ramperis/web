@@ -69,6 +69,56 @@ Al crear un post, pensar activamente en qué páginas del sitio son relevantes p
 
 Hacer siempre los tres pasos juntos.
 
+## Artículos de afiliación con productos
+
+### Estructura del artículo de afiliación
+
+Todo artículo de compra/comparativa sigue esta estructura:
+1. Intro — el problema real del comprador
+2. Antes de comprar: X verdades — honestidad sobre el mercado
+3. Cómo elegir: criterios — condensado + enlace al artículo pilar informacional
+4. Tabla comparativa — todos los modelos de un vistazo
+5. Análisis modelo por modelo — organizados por nivel/precio
+6. Detección de calidad baja — sección de protección al comprador
+7. Dónde comprar — Amazon vs Thomann vs directo
+8. Accesorios — solo los imprescindibles
+9. FAQ (6-8 preguntas reales)
+10. Cierre + CTA — enlace a sesión en vivo si aplica
+
+### Formato de enlace de afiliado
+
+TAG-AFILIADO Amazon España = `ramperis-21`
+
+```html
+<a href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">Ver en Amazon</a>
+```
+
+Usar `rel="noopener noreferrer sponsored"` en todos los enlaces de afiliado. No usar `nofollow` en afiliados — `sponsored` es el estándar Google para links patrocinados.
+
+### Disclaimer obligatorio
+
+Siempre incluir al final del artículo (en cursiva):
+
+```
+Este artículo contiene enlaces de afiliado a Amazon [y/o Thomann]. Si compras a través de ellos, puedo recibir una pequeña comisión sin coste adicional para ti. Solo incluyo modelos que considero válidos según cada nivel.
+```
+
+### Schema JSON-LD para artículos de afiliación
+
+Usar tipo `Article` (no `BlogPosting`) — es más adecuado para contenido comercial/comparativo.
+
+### Interlinking entre artículos de afiliación y pilares
+
+Cada artículo de compra debe enlazar al artículo pilar informacional correspondiente. El pilar informacional debe enlazar al artículo de compra con anchor natural: "si quieres comprar uno, aquí tienes los mejores [producto] según nivel".
+
+### Reglas de contenido
+
+- Honestidad sobre las limitaciones de cada producto — credibilidad > comisión
+- Mencionar el artesano/opción ideal aunque no tenga enlace de afiliado
+- Verificar cada ASIN en Amazon antes de incluirlo
+- Precio aproximado, nunca exacto (cambia con frecuencia)
+- Máximo 6-7 productos por artículo
+
 ## Cuando se añada un producto de Amazon en un post
 
 Usar el componente así dentro del `.post-content`:
