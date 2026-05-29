@@ -116,7 +116,7 @@ module.exports = async function handler(req, res) {
     const items = data?.ItemsResult?.Items;
 
     if (!items?.length) {
-      return res.status(404).json({ error: 'Producto no encontrado' });
+      return res.status(404).json({ error: 'Producto no encontrado', debug: data });
     }
 
     const item  = items[0];
@@ -127,7 +127,10 @@ module.exports = async function handler(req, res) {
 
     return res.status(200).json({ title, image, price, url });
   } catch (err) {
-    console.error('[amazon-product]', err.message);
-    return res.status(502).json({ error: 'Error al consultar Amazon PA-API' });
+    console.error('[amazon-product]', err.message, err.stack);
+    return res.status(500).json({
+      error: err.message,
+      details: err.stack,
+    });
   }
 };
