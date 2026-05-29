@@ -127,14 +127,20 @@
     anchor.className = 'amazon-box';
     anchor.href = esc(d.url);
     anchor.target = '_blank';
-    anchor.rel = 'sponsored noopener noreferrer nofollow';
+    anchor.rel = 'noopener noreferrer sponsored';
 
     var img = d.image
       ? '<img src="' + esc(d.image) + '" alt="' + esc(d.title) + '" loading="lazy">'
       : '';
     var price = d.price
-      ? '<span class="amazon-box-price">' + esc(d.price) + '</span>'
+      ? '<span class="amazon-box-price">' + esc(d.price) +
+        '<span class="amazon-box-price-sub">en Amazon</span></span>'
       : '';
+    var arrowSvg =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">' +
+      '<path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>' +
+      '<path d="M15 3h6v6"/><path d="M10 14L21 3"/>' +
+      '</svg>';
 
     anchor.innerHTML =
       '<div class="amazon-box-inner">' +
@@ -147,7 +153,7 @@
           '<p class="amazon-box-title">' + esc(d.title) + '</p>' +
           '<div class="amazon-box-footer">' +
             price +
-            '<span class="amazon-box-btn">Ver en Amazon →</span>' +
+            '<span class="amazon-box-btn">Ver en Amazon ' + arrowSvg + '</span>' +
           '</div>' +
         '</div>' +
       '</div>';
