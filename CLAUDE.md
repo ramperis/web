@@ -71,6 +71,25 @@ Hacer siempre los tres pasos juntos.
 
 ## Artículos de afiliación con productos
 
+### Reglas generales para artículos con enlaces de afiliado
+
+En cualquier artículo del blog que contenga enlaces de afiliado (`rel="sponsored"`):
+
+- **No incluir bloque "Sobre el autor"** — se omite completamente.
+- **Disclaimer obligatorio** — añadir siempre esta línea al final del contenido del artículo, justo antes del cierre de `</article>`, en cursiva:
+
+```html
+<p><em>Artículo con enlaces de afiliado. Si compras a través de ellos recibo una pequeña comisión sin coste adicional para ti.</em></p>
+```
+
+- **Formato de enlace de afiliado Amazon** — siempre con esta estructura exacta:
+
+```html
+<a href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">Ver en Amazon</a>
+```
+
+Tag de afiliado Amazon España: `ramperis-21`. Usar `rel="noopener noreferrer sponsored"` — sin `nofollow`.
+
 ### Estructura del artículo de afiliación
 
 Todo artículo de compra/comparativa sigue esta estructura:
