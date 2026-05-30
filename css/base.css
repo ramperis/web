@@ -857,6 +857,8 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
     box-shadow: 0 8px 32px rgba(42,28,8,0.12);
     z-index: 999;
     animation: menuIn 0.22s ease;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
   }
   .nav-links.open > li { width: 100%; }
   .nav-links.open > li > a,
