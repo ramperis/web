@@ -34,7 +34,7 @@
 
     /* Title */
     '.amazon-box-title{font-size:15px;font-weight:700;',
-    'color:#1a1008;line-height:1.4;margin:0;}',
+    'color:#1a1008;line-height:1.4;margin:0 0 2px;}',
 
     /* Footer */
     '.amazon-box-footer{display:flex;align-items:center;gap:12px;margin-top:auto;flex-wrap:wrap;}',
