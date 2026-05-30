@@ -69,6 +69,15 @@ Un post nunca puede tener dos enlaces hacia la misma URL. Si al redactar o revis
 
 Al crear un post, pensar activamente en qué páginas del sitio son relevantes para el tema y añadir enlaces internos naturales. Ejemplos: un post sobre cuencos tibetanos enlaza a `/masaje-vibracional`; un post sobre breathwork enlaza a `/breathwork`; un post sobre sonoterapia enlaza a `/bano-sonido`.
 
+## Enlaces a páginas de servicios y sobre-mi
+
+Cada post debe enlazar de forma natural a al menos una página de servicio (`/bano-sonido`, `/breathwork`, `/masaje-vibracional`, `/circulos-hombres`) o a `/sobre-mi`, **dentro del cuerpo del artículo**, lo más arriba posible (idealmente en el primer tercio del texto).
+
+Reglas:
+- **Anchor text siempre distinto**: nunca repetir el mismo texto de enlace para la misma URL en distintos posts. Para `/bano-sonido` usar variaciones como "baño de sonido", "viaje sonoro", "baño con cuencos", "sesión de sonoterapia", "experiencia de sonido"... Para `/sobre-mi` usar "facilitador de breathwork", "facilitador de terapia de sonido", "sonoterapeuta", "facilitador de bienestar".
+- El enlace al servicio debe estar en el cuerpo, no solo al final. Un cierre tipo "Si quieres explorar..." es opcional y no debe repetirse igual en todos los posts.
+- Si el cuerpo ya enlaza al servicio relevante en un punto natural, el párrafo de cierre puede simplificarse o eliminarse.
+
 ## Cuando se elimine un post del blog
 
 1. Añadir redirección en `vercel.json`: `"source": "/blog/slug-eliminado"` → `"destination": "/blog"`
