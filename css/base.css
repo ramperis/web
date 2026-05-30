@@ -870,7 +870,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
     width: 100%;
   }
   .nav-links.open > li:last-child > a { border-bottom: none; }
-  .nav-links.open .nav-cta {
+  nav .nav-links.open .nav-cta {
     background: none !important;
     border-radius: 0 !important;
     padding: 13px 0 !important;
