@@ -194,6 +194,12 @@
   </url>
 
   <url>
+    <loc>https://ramperis.com/blog/tambor-chamanico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://ramperis.com/blog/tambor-de-lengua</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
