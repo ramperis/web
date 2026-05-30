@@ -39,6 +39,10 @@ Al recibir un post, Claude Code debe:
 5. Añadir la tarjeta del post en `/blog/index.html` con título, categoría, tiempo de lectura y extracto (primeras 2 líneas del cuerpo)
 6. El slug de la URL se genera desde el título: minúsculas, sin acentos, espacios sustituidos por guiones
 
+## Título de tarjeta = H1 del post
+
+El `card-title` en `/blog/index.html` debe ser siempre idéntico al `<h1 class="post-title">` del post. Cuando se cree o edite un post, verificar que ambos coinciden.
+
 ## Imagen de tarjeta = imagen principal del post
 
 La imagen de la tarjeta en `/blog/index.html` debe ser siempre la misma que la imagen principal (`post-header-img`) del post. Cuando se cambie la imagen principal de un post, actualizar también la tarjeta en el índice. Cuando se cree un post nuevo, usar la misma imagen en ambos sitios.
