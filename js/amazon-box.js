@@ -25,7 +25,7 @@
     '.amazon-box-img img{width:100%;height:100%;object-fit:contain;display:block;}',
 
     /* Body */
-    '.amazon-box-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px;}',
+    '.amazon-box-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;}',
 
     /* Badge: Amazon logo + label */
     '.amazon-box-badge{display:flex;align-items:center;gap:6px;',
