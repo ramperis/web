@@ -65,6 +65,8 @@ Cuando un post incluya bloques de elementos enumerables del mismo tipo (tipos, c
 
 ## Enlaces internos en posts del blog
 
+Los enlaces van siempre en el texto del párrafo, nunca dentro de un título (H1, H2, H3). Si un título menciona un término enlazable, el enlace va en el cuerpo del párrafo siguiente.
+
 Un post nunca puede tener dos enlaces hacia la misma URL. Si al redactar o revisar un post aparece una URL duplicada, se elimina el enlace que esté más abajo en el contenido y se conserva el primero.
 
 Al crear un post, pensar activamente en qué páginas del sitio son relevantes para el tema y añadir enlaces internos naturales. Ejemplos: un post sobre cuencos tibetanos enlaza a `/masaje-vibracional`; un post sobre breathwork enlaza a `/breathwork`; un post sobre sonoterapia enlaza a `/bano-sonido`.
