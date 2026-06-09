@@ -20,6 +20,10 @@
     {
       "source": "/blog/_plantilla.html",
       "destination": "/404.html"
+    },
+    {
+      "source": "/data/:path*",
+      "destination": "/404.html"
     }
   ],
   "redirects": [
