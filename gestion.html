@@ -253,7 +253,7 @@ function App() {
     setActivaId(s.id); setConfig({...s}); setVista("config");
   }
   function guardarConfig() {
-    upd(activaId, { nombre:config.nombre||"sin nombre", precioTotal:config.precioTotal, precioReserva:config.precioReserva, splitPct:config.splitPct });
+    upd(activaId, { nombre:config.nombre||"sin nombre", fecha:config.fecha||today(), precioTotal:config.precioTotal, precioReserva:config.precioReserva, splitPct:config.splitPct });
     setVista("sesion");
   }
 
