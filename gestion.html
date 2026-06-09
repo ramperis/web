@@ -331,6 +331,9 @@ function App() {
           <Lbl>nombre</Lbl>
           <input value={config.nombre} onChange={e => setConfig(p=>({...p,nombre:e.target.value}))} placeholder="ej. kundalini activation junio" style={inp()}/>
           <div style={{height:16}}/>
+          <Lbl>fecha</Lbl>
+          <input value={config.fecha} onChange={e => setConfig(p=>({...p,fecha:e.target.value}))} placeholder="ej. 09/06/2026" style={inp()}/>
+          <div style={{height:16}}/>
           <Lbl>precio por persona (€)</Lbl>
           <input value={config.precioTotal} onChange={e => setConfig(p=>({...p,precioTotal:e.target.value}))} placeholder="ej. 35" inputMode="decimal" style={inp()}/>
           <div style={{height:16}}/>
