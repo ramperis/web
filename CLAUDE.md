@@ -185,3 +185,17 @@ Estructura de cada caja dentro del `.post-content` (copiar SVGs de las variables
 - No hacer glob de `blog/*.html` ni `blog/**/*.html` salvo que se pida explícitamente.
 - El contenido del artículo lo proporciona el usuario directamente en el mensaje o indica el archivo MD concreto. Leer solo ese archivo.
 - Nunca leer todos los archivos del proyecto para buscar enlaces internos — el usuario indica explícitamente qué actualizar.
+
+## Estructura de archivos del blog
+
+- Todos los posts nuevos del blog se crean como archivos sueltos: `blog/slug.html`
+- No crear carpetas para posts — solo el archivo HTML directo
+- La plantilla base está en `blog/_plantilla.html`
+
+## Gestión de contexto — reglas importantes
+
+- Para crear nuevos posts del blog: leer SOLO `blog/_plantilla.html` como base. No leer otros archivos HTML del blog.
+- Para editar un post específico: leer SOLO ese archivo, no otros.
+- No hacer glob de `blog/*.html` salvo que se pida explícitamente.
+- El contenido de cada artículo nuevo está en `/outputs/blog-nombre.md`. Leer solo ese archivo.
+- Los prompts de cada artículo están en `/outputs/prompts/nombre.txt`. Leer solo ese archivo.
