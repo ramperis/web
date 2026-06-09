@@ -102,6 +102,11 @@
       "source": "/politica-cookies",
       "destination": "/cookies",
       "permanent": true
+    },
+    {
+      "source": "/blog/tambor-de-lengua",
+      "destination": "/blog/tambor-de-lengueta",
+      "permanent": true
     }
   ]
 }
