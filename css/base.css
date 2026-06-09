@@ -611,6 +611,8 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
 }
 .testimonios-wrap::before { left: 0; background: linear-gradient(to right, var(--arena-oscura), transparent); }
 .testimonios-wrap::after { right: 0; background: linear-gradient(to left, var(--arena-oscura), transparent); }
+.seccion-oscura .testimonios-wrap::before { background: linear-gradient(to right, var(--tierra-noche), transparent); }
+.seccion-oscura .testimonios-wrap::after { background: linear-gradient(to left, var(--tierra-noche), transparent); }
 .testimonios-track {
   display: flex; gap: 16px;
   animation: scroll-testimonios 40s linear infinite;
