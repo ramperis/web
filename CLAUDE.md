@@ -185,3 +185,11 @@ Estructura de cada caja dentro del `.post-content` (copiar SVGs de las variables
 - Tipo de sesión (Baño de sonido, Breathwork, Masaje vibracional, Círculo de hombres)
 - Lugar (nombre del espacio · ciudad)
 - Link de reserva o botón de contacto por WhatsApp
+
+## Gestión de contexto — crítico
+
+- Para crear un post nuevo: leer SOLO `blog/_plantilla.html`. No leer otros archivos HTML del blog salvo `blog/index.html` para añadir la tarjeta.
+- Para editar un post específico: leer SOLO ese archivo. No leer el resto del proyecto.
+- No hacer glob de `blog/*.html` ni `blog/**/*.html` salvo que se pida explícitamente.
+- El contenido del artículo lo proporciona el usuario directamente en el mensaje o indica el archivo MD concreto. Leer solo ese archivo.
+- Nunca leer todos los archivos del proyecto para buscar enlaces internos — el usuario indica explícitamente qué actualizar.
