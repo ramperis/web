@@ -625,6 +625,20 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
 }
 .testimonios-track .review-card { width: 360px; flex-shrink: 0; }
 
+/* ── TESTIMONIOS HEADER ── */
+.testimonios-header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+.reviews-rating-block { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+.rating-score { display: flex; align-items: baseline; gap: 8px; }
+.rating-number { font-size: 40px; font-weight: 800; color: var(--texto-principal); line-height: 1; }
+.rating-stars-big { display: flex; gap: 3px; }
+.star-big { font-size: 20px; color: #FBBC04; }
+.rating-meta { display: flex; align-items: center; gap: 8px; }
+.google-logo-small { font-size: 11px; color: var(--texto-sutil); font-weight: 500; }
+.rating-count { font-size: 11px; color: var(--texto-sutil); }
+.seccion-oscura .rating-number { color: var(--texto-claro); }
+.seccion-oscura .google-logo-small { color: rgba(245,238,216,0.5); }
+@media (max-width: 640px) { .testimonios-header { flex-direction: column; align-items: flex-start; } .reviews-rating-block { align-items: flex-start; } }
+
 /* ── REVIEW CARDS ── */
 .review-card { background: #ffffff; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.08); }
 .review-header { display: flex; align-items: center; gap: 12px; }
