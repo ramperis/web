@@ -49,6 +49,12 @@
           "nombre": "Lucia Soriano",
           "x2": true,
           "estado": "pendiente"
+        },
+        {
+          "id": "lizvnb6",
+          "nombre": "Mónica Urbina",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
