@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+Disallow: /gestion
+Disallow: /gestion-manifest.json
+Disallow: /api/
+Disallow: /data/
 Disallow: /politica-privacidad
 Disallow: /politica-cookies
 Disallow: /aviso-legal
