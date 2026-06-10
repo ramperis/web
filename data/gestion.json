@@ -13,6 +13,12 @@
           "nombre": "José Luis",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "ml0joqo",
+          "nombre": "Nicolás",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
