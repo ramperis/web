@@ -7,7 +7,14 @@
       "precioTotal": "30",
       "precioReserva": "10",
       "splitPct": 50,
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "cxfwwrd",
+          "nombre": "Cristina Villarin Pastor",
+          "x2": true,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "qeqq0gr",
