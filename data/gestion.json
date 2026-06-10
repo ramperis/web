@@ -31,6 +31,12 @@
           "nombre": "Danielle",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "ky7ejnw",
+          "nombre": "Manuela",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
