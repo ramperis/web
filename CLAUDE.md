@@ -169,17 +169,48 @@ Estructura de cada caja dentro del `.post-content` (copiar SVGs de las variables
 - Sin disclaimer por caja — el disclaimer del post va al final del `<article>`
 - El `<span class="amazon-box-price">` se omite si no hay precio disponible
 
+## Estructura exacta de bloque de producto con Amazon
+
+Cada producto en artículos de afiliación debe usar esta estructura HTML exacta. No improvisar.
+
+```html
+<div class="product-box">
+  <h3>N. NOMBRE DEL PRODUCTO</h3>
+  <a class="amazon-box" href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">
+    <div class="amazon-box-inner">
+      <div class="amazon-box-img"><img src="URL_IMAGEN_AMAZON" alt="NOMBRE" loading="lazy"></div>
+      <div class="amazon-box-body" style="gap:3px;">
+        <div class="amazon-box-badge" style="margin-bottom:0;padding-bottom:0;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height:14px;width:auto;vertical-align:middle;"><span>· Recomendado</span></div>
+        <p class="amazon-box-title" style="margin-bottom:0;">NOMBRE DEL PRODUCTO</p>
+        <div class="amazon-box-footer" style="margin-top:8px;">
+          <span class="amazon-box-price">~XXX€<span class="amazon-box-price-sub"> en Amazon</span></span>
+          <span class="amazon-box-btn">Ver en Amazon <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </a>
+  <p><strong>Lo bueno:</strong> TEXTO</p>
+  <p><strong>Lo limitado:</strong> TEXTO</p>
+  <div class="product-verdict"><p><strong>Veredicto:</strong> TEXTO</p></div>
+</div>
+```
+
+## Tabla comparativa con enlaces en artículos de afiliación
+
+La columna Modelo debe enlazar cada producto a su ASIN:
+
+```html
+<td><a href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">NOMBRE</a></td>
+```
+
 ## Checklist al crear un post con productos Amazon
 
-Antes de dar por terminado cualquier post que incluya cajas de Amazon, verificar:
-
-1. El `<head>` incluye `<script src="/js/amazon-box.js" defer></script>`
-2. Cada producto usa la estructura `.amazon-box` definida en `amazon-box.js` — nunca enlaces de texto plano
-3. La imagen de cada caja es una URL real de `m.media-amazon.com` — nunca un placeholder
-4. El disclaimer de afiliado está al final del `<article>`: `<p><em>Artículo con enlaces de afiliado. Si compras a través de ellos recibo una pequeña comisión sin coste adicional para ti.</em></p>`
-5. La entrada en `posts.json` tiene una imagen real que existe en `/img/blog/` — no una URL inventada
-
-Si alguno de estos puntos falla, corregirlo antes de hacer commit.
+1. `<head>` incluye `<script src="/js/amazon-box.js" defer></script>`
+2. Cada producto usa `<div class="product-box">` con la caja amazon-box ANTES de Lo bueno/Lo limitado/Veredicto
+3. Tabla comparativa enlaza cada modelo a su ASIN
+4. Imagen de cada caja: URL real de `m.media-amazon.com`
+5. Disclaimer al final del `<article>`: `<p><em>Artículo con enlaces de afiliado. Si compras a través de ellos recibo una pequeña comisión sin coste adicional para ti.</em></p>`
+6. Entrada en `posts.json` con imagen real que existe en `/img/blog/`
 
 ## Formato de un evento
 
