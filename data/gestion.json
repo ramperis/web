@@ -25,6 +25,12 @@
           "nombre": "Sergio Cruz",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "b37nu1i",
+          "nombre": "Daniela",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
