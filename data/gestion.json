@@ -7,7 +7,14 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 50,
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "4koho5u",
+          "nombre": "José Luis",
+          "x2": false,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "cphae79",
