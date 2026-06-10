@@ -43,6 +43,12 @@
           "nombre": "Rocio",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "s1t3bh2",
+          "nombre": "Lucia Soriano",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
