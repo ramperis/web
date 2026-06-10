@@ -1,6 +1,15 @@
 {
   "sesiones": [
     {
+      "id": "a3iom2w",
+      "nombre": "nueva sesión",
+      "fecha": "10/06/2026",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "asistentes": []
+    },
+    {
       "id": "qeqq0gr",
       "nombre": "Baño sonido SUP 28/06",
       "fecha": "28/06/2026",
