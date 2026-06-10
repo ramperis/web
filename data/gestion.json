@@ -37,6 +37,12 @@
           "nombre": "Manuela",
           "x2": true,
           "estado": "pendiente"
+        },
+        {
+          "id": "ls9zdf9",
+          "nombre": "Rocio",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
