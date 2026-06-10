@@ -25,6 +25,12 @@
           "nombre": "Sergio",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "xutpjow",
+          "nombre": "Marcel",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
