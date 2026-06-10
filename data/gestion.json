@@ -47,7 +47,7 @@
         {
           "id": "s1t3bh2",
           "nombre": "Lucia Soriano",
-          "x2": false,
+          "x2": true,
           "estado": "pendiente"
         }
       ]
