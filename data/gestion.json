@@ -55,6 +55,12 @@
           "nombre": "Mónica Urbina",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "d5djfzs",
+          "nombre": "Gabriela Caldas",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
