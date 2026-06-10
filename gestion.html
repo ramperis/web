@@ -64,6 +64,10 @@ function pendienteAs(a, s) {
   return 0;
 }
 function finanzas(s) {
+  if (s.tipo === "donacion") {
+    const don = parseFloat(s.donacion)||0;
+    return { cobrado: don, pendiente: 0, total: don, miParte: don*((s.splitPct||100)/100) };
+  }
   const act = s.asistentes.filter(a => a.estado !== "no viene");
   const cobrado   = act.reduce((n,a) => n + cobradoAs(a,s), 0);
   const pendiente = act.reduce((n,a) => n + pendienteAs(a,s), 0);
