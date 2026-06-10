@@ -7,7 +7,14 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 50,
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "v2kl2up",
+          "nombre": "Mari Carmen Bermell",
+          "x2": true,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "urvhpxj",
