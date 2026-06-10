@@ -19,6 +19,12 @@
           "nombre": "Nicolás",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "woi5wcl",
+          "nombre": "Sergio",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
