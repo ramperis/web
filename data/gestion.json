@@ -126,6 +126,12 @@
           "nombre": "Daniela",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "89dajt3",
+          "nombre": "Mayllelim",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
