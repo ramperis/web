@@ -279,9 +279,11 @@ function App() {
     setInputAs(""); setX2New(false);
   }
   function cycleAs(aid) {
+    const lista = activa.tipo === "donacion" ? ESTADOS_DONACION : ESTADOS;
     upd(activaId, { asistentes: activa.asistentes.map(a => {
       if (a.id !== aid) return a;
-      return {...a, estado: ESTADOS[(ESTADOS.indexOf(a.estado)+1) % ESTADOS.length]};
+      const idx = lista.indexOf(a.estado);
+      return {...a, estado: lista[(idx < 0 ? 0 : idx+1) % lista.length]};
     })});
   }
   function setEstadoAs(aid, estado) { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,estado}:a) }); }
