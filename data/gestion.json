@@ -1,3 +1,13 @@
 {
-  "sesiones": []
+  "sesiones": [
+    {
+      "id": "urvhpxj",
+      "nombre": "nueva sesión",
+      "fecha": "10/06/2026",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "asistentes": []
+    }
+  ]
 }
