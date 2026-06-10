@@ -35,7 +35,7 @@
         {
           "id": "ky7ejnw",
           "nombre": "Manuela",
-          "x2": false,
+          "x2": true,
           "estado": "pendiente"
         }
       ]
