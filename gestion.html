@@ -386,9 +386,9 @@ function App() {
         )}
         {sesiones.map(s => {
           const fin    = finanzas(s);
-          const activos= s.asistentes.filter(a=>a.estado!=="no viene").length;
+          const activos= s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
           const total  = s.asistentes.reduce((n,a)=>n+(a.x2?2:1),0);
-          const noV    = s.asistentes.filter(a=>a.estado==="no viene").length;
+          const noV    = s.asistentes.filter(a=>a.estado==="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
           return (
             <div key={s.id} style={{marginBottom:10}}>
               <div onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} style={{background:"#fff",borderRadius:14,padding:"14px 16px",cursor:"pointer",border:"1.5px solid #e0d8c8",display:"flex",alignItems:"center",justifyContent:"space-between",gap:12}}>
