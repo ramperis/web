@@ -7,7 +7,14 @@
       "precioTotal": "30",
       "precioReserva": "10",
       "splitPct": 50,
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "qui0f6d",
+          "nombre": "Angie Juliet Quesada Picado",
+          "x2": true,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "g25tqw7",
