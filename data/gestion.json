@@ -42,13 +42,13 @@
           "id": "53twzco",
           "nombre": "Joan",
           "x2": false,
-          "estado": "estuvo"
+          "estado": "no viene"
         },
         {
           "id": "dj3qh20",
           "nombre": "Diego Fernando",
           "x2": false,
-          "estado": "no viene"
+          "estado": "confirmado"
         }
       ],
       "tipo": "donacion"
