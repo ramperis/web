@@ -18,6 +18,12 @@
           "id": "cp7e9sy",
           "nombre": "Clara Perez Miranda",
           "x2": false,
+          "estado": "reserva"
+        },
+        {
+          "id": "4ndvlia",
+          "nombre": "Sergio Cruz",
+          "x2": false,
           "estado": "pendiente"
         }
       ]
