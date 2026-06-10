@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node generate-sitemap.js",
-    "sitemap": "node generate-sitemap.js"
+    "generate-blog": "node scripts/generate-blog-index.js",
+    "sitemap": "node generate-sitemap.js",
+    "build": "node scripts/generate-blog-index.js && node generate-sitemap.js"
   }
 }
