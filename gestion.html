@@ -351,12 +351,21 @@ function App() {
           <Lbl>fecha</Lbl>
           <input value={config.fecha} onChange={e => setConfig(p=>({...p,fecha:e.target.value}))} placeholder="ej. 09/06/2026" style={inp()}/>
           <div style={{height:16}}/>
+          <Lbl>tipo</Lbl>
+          <div style={{display:"flex",gap:8}}>
+            {[["precio","precio fijo"],["donacion","donación"]].map(([val,lbl]) => (
+              <button key={val} onClick={() => setConfig(p=>({...p,tipo:val}))} style={{flex:1,padding:"10px 0",borderRadius:10,border:`1.5px solid ${(config.tipo||"precio")===val?"#B87A3A":"#e0d8c8"}`,background:(config.tipo||"precio")===val?"#B87A3A":"#fff",color:(config.tipo||"precio")===val?"#F5F0E4":"#2E2010",fontWeight:800,fontSize:14,cursor:"pointer"}}>{lbl}</button>
+            ))}
+          </div>
+          <div style={{height:16}}/>
+          {(config.tipo||"precio") === "precio" && (<>
           <Lbl>precio por persona (€)</Lbl>
           <input value={config.precioTotal} onChange={e => setConfig(p=>({...p,precioTotal:e.target.value}))} placeholder="ej. 35" inputMode="decimal" style={inp()}/>
           <div style={{height:16}}/>
           <Lbl>precio reserva (€) <span style={{color:"#B87A3A",fontWeight:400}}>opcional</span></Lbl>
           <input value={config.precioReserva} onChange={e => setConfig(p=>({...p,precioReserva:e.target.value}))} placeholder="ej. 15" inputMode="decimal" style={inp()}/>
           <div style={{height:16}}/>
+          </>)}
           <Lbl>tu parte (%)</Lbl>
           <div style={{display:"flex",gap:8,marginTop:6}}>
             {[50,60,70,100].map(pct => (
