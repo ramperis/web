@@ -43,6 +43,12 @@
           "nombre": "Joan",
           "x2": false,
           "estado": "confirmado"
+        },
+        {
+          "id": "dj3qh20",
+          "nombre": "Diego Fernando",
+          "x2": false,
+          "estado": "pendiente"
         }
       ],
       "tipo": "donacion"
