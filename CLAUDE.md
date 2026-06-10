@@ -169,6 +169,18 @@ Estructura de cada caja dentro del `.post-content` (copiar SVGs de las variables
 - Sin disclaimer por caja — el disclaimer del post va al final del `<article>`
 - El `<span class="amazon-box-price">` se omite si no hay precio disponible
 
+## Checklist al crear un post con productos Amazon
+
+Antes de dar por terminado cualquier post que incluya cajas de Amazon, verificar:
+
+1. El `<head>` incluye `<script src="/js/amazon-box.js" defer></script>`
+2. Cada producto usa la estructura `.amazon-box` definida en `amazon-box.js` — nunca enlaces de texto plano
+3. La imagen de cada caja es una URL real de `m.media-amazon.com` — nunca un placeholder
+4. El disclaimer de afiliado está al final del `<article>`: `<p><em>Artículo con enlaces de afiliado. Si compras a través de ellos recibo una pequeña comisión sin coste adicional para ti.</em></p>`
+5. La entrada en `posts.json` tiene una imagen real que existe en `/img/blog/` — no una URL inventada
+
+Si alguno de estos puntos falla, corregirlo antes de hacer commit.
+
 ## Formato de un evento
 
 - Título del evento
