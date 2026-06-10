@@ -37,6 +37,12 @@
           "nombre": "Josue",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "53twzco",
+          "nombre": "Joan",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
