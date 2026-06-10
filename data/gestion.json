@@ -19,6 +19,12 @@
           "nombre": "Selene",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "9mersl3",
+          "nombre": "Maria Bolinches",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
