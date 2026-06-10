@@ -255,7 +255,7 @@ function App() {
 
   // ── SESIONES ──────────────────────────────────────────────────────────────
   function nuevaSesion() {
-    const s = { id:genId(), nombre:"nueva sesión", fecha:today(), precioTotal:"", precioReserva:"", splitPct:50, asistentes:[] };
+    const s = { id:genId(), nombre:"nueva sesión", fecha:today(), tipo:"precio", precioTotal:"", precioReserva:"", splitPct:50, donacion:"", asistentes:[] };
     setSes(prev => [s, ...prev]);
     setActivaId(s.id); setConfig({...s}); setVista("config");
   }
