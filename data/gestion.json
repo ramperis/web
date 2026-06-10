@@ -44,7 +44,8 @@
           "x2": false,
           "estado": "pendiente"
         }
-      ]
+      ],
+      "tipo": "donacion"
     },
     {
       "id": "cphae79",
