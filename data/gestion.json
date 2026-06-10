@@ -13,6 +13,12 @@
           "nombre": "Mari Carmen Bermell",
           "x2": true,
           "estado": "reserva"
+        },
+        {
+          "id": "cp7e9sy",
+          "nombre": "Clara Perez Miranda",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
