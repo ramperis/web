@@ -108,22 +108,24 @@ function Lbl({children}) {
 
 function AsRow({a, s, onCycle, onSet, onX2, onDel}) {
   const [open, setOpen] = useState(false);
-  const col      = COLOR[a.estado];
-  const cobrado  = cobradoAs(a, s);
-  const pendiente= pendienteAs(a, s);
-  const tP       = !!s.precioTotal;
+  const col       = COLOR[a.estado] || COLOR["pendiente"];
+  const cobrado   = cobradoAs(a, s);
+  const pendiente = pendienteAs(a, s);
+  const tP        = !!s.precioTotal;
+  const esDon     = s.tipo === "donacion";
+  const listaEstados = esDon ? ESTADOS_DONACION : ESTADOS;
   return (
     <div style={{marginBottom:8}}>
       <div style={{background:"#fff",borderRadius:open?"12px 12px 0 0":12,border:`1.5px solid ${col.border}`,display:"flex",alignItems:"center",overflow:"hidden"}}>
         <button onClick={onCycle} style={{background:col.bg,color:col.text,border:"none",padding:"12px 10px",fontSize:10,fontWeight:800,cursor:"pointer",minWidth:70,textAlign:"center",letterSpacing:0.3,flexShrink:0}}>
-          {LABEL[a.estado]}
+          {LABEL[a.estado] || a.estado}
         </button>
         <div style={{flex:1,padding:"0 8px"}}>
           <div style={{fontWeight:700,fontSize:15}}>
             {a.nombre}
-            {a.x2 && <span style={{fontSize:11,color:"#B87A3A",fontWeight:800,marginLeft:5}}>×2</span>}
+            {a.x2 && !esDon && <span style={{fontSize:11,color:"#B87A3A",fontWeight:800,marginLeft:5}}>×2</span>}
           </div>
-          {tP && (
+          {tP && !esDon && (
             <div style={{fontSize:11,marginTop:1}}>
               {cobrado   > 0 && <span style={{color:"#424029",fontWeight:700}}>{fmt(cobrado)} </span>}
               {pendiente > 0 && <span style={{color:"#B87A3A"}}>· {fmt(pendiente)} pendiente</span>}
@@ -135,12 +137,12 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel}) {
       </div>
       {open && (
         <div style={{background:"#fff",borderRadius:"0 0 12px 12px",border:"1.5px solid #e0d8c8",borderTop:"none",padding:"10px 12px",display:"flex",gap:8,flexWrap:"wrap"}}>
-          {ESTADOS.map(e => (
+          {listaEstados.map(e => (
             <button key={e} onClick={() => { onSet(e); setOpen(false); }} style={{...bsm(a.estado===e?COLOR[e].bg:"#F5F0E4",a.estado===e?COLOR[e].text:"#2E2010"),border:`1.5px solid ${a.estado===e?COLOR[e].border:"#e0d8c8"}`}}>
               {LABEL[e]}
             </button>
           ))}
-          <button onClick={() => { onX2(); setOpen(false); }} style={bsm(a.x2?"#B87A3A":"#F5F0E4",a.x2?"#F5F0E4":"#8a7a60")}>{a.x2?"quitar ×2":"añadir ×2"}</button>
+          {!esDon && <button onClick={() => { onX2(); setOpen(false); }} style={bsm(a.x2?"#B87A3A":"#F5F0E4",a.x2?"#F5F0E4":"#8a7a60")}>{a.x2?"quitar ×2":"añadir ×2"}</button>}
           <button onClick={() => { onDel(); setOpen(false); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
         </div>
       )}
