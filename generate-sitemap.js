@@ -7,7 +7,10 @@ const ROOT     = __dirname;
 
 const EXCLUDE = new Set([
   '404.html',
+  'gestion.html',
   'aviso-legal.html',
+  'privacidad.html',
+  'cookies.html',
   'politica-privacidad.html',
   'politica-cookies.html',
   'blog/_plantilla.html',
