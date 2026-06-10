@@ -423,7 +423,13 @@ function App() {
                 <div>
                   <div style={{fontWeight:800,fontSize:16}}>{s.nombre}</div>
                   <div style={{fontSize:12,color:"#8a7a60",marginTop:2}}>{s.fecha}</div>
-                  {s.precioTotal && fin.cobrado>0 && (
+                  {s.tipo === "donacion" && fin.cobrado>0 && (
+                    <div style={{fontSize:12,marginTop:3}}>
+                      <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} donación</span>
+                      <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
+                    </div>
+                  )}
+                  {s.tipo !== "donacion" && s.precioTotal && fin.cobrado>0 && (
                     <div style={{fontSize:12,marginTop:3}}>
                       <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} cobrado</span>
                       <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
