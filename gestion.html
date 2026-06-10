@@ -260,7 +260,15 @@ function App() {
     setActivaId(s.id); setConfig({...s}); setVista("config");
   }
   function guardarConfig() {
-    upd(activaId, { nombre:config.nombre||"sin nombre", fecha:config.fecha||today(), precioTotal:config.precioTotal, precioReserva:config.precioReserva, splitPct:config.splitPct });
+    const esDonacion = config.tipo === "donacion";
+    upd(activaId, {
+      nombre:       config.nombre||"sin nombre",
+      fecha:        config.fecha||today(),
+      tipo:         config.tipo||"precio",
+      precioTotal:  esDonacion ? "" : config.precioTotal,
+      precioReserva:esDonacion ? "" : config.precioReserva,
+      splitPct:     config.splitPct,
+    });
     setVista("sesion");
   }
 
