@@ -51,7 +51,8 @@
           "estado": "estuvo"
         }
       ],
-      "tipo": "donacion"
+      "tipo": "donacion",
+      "donacion": "38"
     },
     {
       "id": "cphae79",
