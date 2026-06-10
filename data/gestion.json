@@ -1,6 +1,15 @@
 {
   "sesiones": [
     {
+      "id": "cphae79",
+      "nombre": "nueva sesión",
+      "fecha": "10/06/2026",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "asistentes": []
+    },
+    {
       "id": "a3iom2w",
       "nombre": "Baño Sonido SUP 05/07",
       "fecha": "05/07/2026",
@@ -12,7 +21,7 @@
           "id": "cxfwwrd",
           "nombre": "Cristina Villarin Pastor",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
