@@ -23,7 +23,7 @@
         {
           "id": "9mersl3",
           "nombre": "Maria Bolinches",
-          "x2": false,
+          "x2": true,
           "estado": "pendiente"
         }
       ]
