@@ -73,6 +73,12 @@
           "nombre": "Francelis Briceño",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "swctfut",
+          "nombre": "Karina Márquez",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     }
