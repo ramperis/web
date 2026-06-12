@@ -145,6 +145,12 @@
           "nombre": "Mónica Urbina",
           "x2": true,
           "estado": "reserva"
+        },
+        {
+          "id": "frhjq51",
+          "nombre": "Jorge Muñoz",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
