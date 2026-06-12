@@ -139,6 +139,12 @@
           "nombre": "Mayllelim",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "wohhqj7",
+          "nombre": "Mónica Urbina",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
