@@ -33,6 +33,12 @@
           "nombre": "Ana Maria Azuaje Silva",
           "x2": true,
           "estado": "pendiente"
+        },
+        {
+          "id": "ofxlgby",
+          "nombre": "Roselba",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
