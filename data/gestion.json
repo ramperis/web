@@ -131,6 +131,12 @@
           "nombre": "Cristina Villarin Pastor",
           "x2": true,
           "estado": "reserva"
+        },
+        {
+          "id": "gysiwrl",
+          "nombre": "Andrea valiente haba",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
