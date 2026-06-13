@@ -2,11 +2,11 @@
   "sesiones": [
     {
       "id": "r5kotwc",
-      "nombre": "nueva sesión",
-      "fecha": "13/06/2026",
+      "nombre": "Baño sonido SUP 25/06",
+      "fecha": "25/06/2026",
       "tipo": "precio",
-      "precioTotal": "",
-      "precioReserva": "",
+      "precioTotal": "30",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": []
