@@ -15,6 +15,12 @@
           "nombre": "Anna Skorek",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "967vx4r",
+          "nombre": "Beatriz Garrido Calabuig",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
