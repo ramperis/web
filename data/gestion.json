@@ -157,6 +157,12 @@
           "nombre": "Andrea Argüelles",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "lvahrgq",
+          "nombre": "Sara Ruiz",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
