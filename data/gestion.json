@@ -9,7 +9,14 @@
       "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "uygyq5l",
+          "nombre": "Anna Skorek",
+          "x2": false,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "36qjf7k",
