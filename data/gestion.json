@@ -136,19 +136,19 @@
           "id": "gysiwrl",
           "nombre": "Andrea valiente haba",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "zescyfe",
           "nombre": "Andrea valiente haba",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "hfqekz1",
           "nombre": "Andrea valiente haba",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
