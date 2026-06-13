@@ -14,37 +14,37 @@
           "id": "uygyq5l",
           "nombre": "Anna Skorek",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "967vx4r",
           "nombre": "Beatriz Garrido Calabuig",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "msrlzq1",
           "nombre": "Giulia Valentino",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "j0ocbsz",
           "nombre": "Ana Maria Azuaje Silva",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "ofxlgby",
           "nombre": "Roselba",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "od91ees",
           "nombre": "Roselba",
           "x2": true,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
