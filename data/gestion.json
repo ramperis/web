@@ -151,6 +151,12 @@
           "nombre": "Jorge Muñoz",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "ljkzs07",
+          "nombre": "Andrea Argüelles",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
