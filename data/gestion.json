@@ -1,6 +1,17 @@
 {
   "sesiones": [
     {
+      "id": "r5kotwc",
+      "nombre": "nueva sesión",
+      "fecha": "13/06/2026",
+      "tipo": "precio",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "36qjf7k",
       "nombre": "Circulo hombres 10/06",
       "fecha": "10/06/2026",
