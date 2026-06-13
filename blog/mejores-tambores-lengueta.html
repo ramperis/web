@@ -533,7 +533,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     bar.style.width = (scrolled / total * 100) + '%';
   });
 
-  const headings = document.querySelectorAll('.post-content h2[id]');
+  const headings = document.querySelectorAll('.post-content h2[id], .post-content h3[id]');
   const tocItems = document.querySelectorAll('.toc-item');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
