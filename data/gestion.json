@@ -165,6 +165,12 @@
           "nombre": "Angie Juliet Quesada Picado",
           "x2": true,
           "estado": "completo"
+        },
+        {
+          "id": "hakbkii",
+          "nombre": "Isabella Batallas",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
