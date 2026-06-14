@@ -235,6 +235,12 @@
           "nombre": "Sara Ruiz",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "6rc9yoa",
+          "nombre": "Natalie",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
