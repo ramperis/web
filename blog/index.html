@@ -522,31 +522,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 <script src="/js/main.js"></script>
 <script>
-  const grid = document.querySelector('.blog-grid');
-  const cards = Array.from(document.querySelectorAll('.blog-card'));
+  (function () {
+    var cards = Array.from(document.querySelectorAll('.blog-card'));
 
-  function sortByDate(items) {
-    return items.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
-  }
-
-  function renderCards(filtered) {
-    sortByDate(filtered).forEach(card => grid.appendChild(card));
-  }
-
-  renderCards(cards);
-
-  document.querySelectorAll('.cat-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      const visible = cards.filter(card => filter === 'todo' || card.dataset.cat === filter);
-      const hidden = cards.filter(card => filter !== 'todo' && card.dataset.cat !== filter);
-      hidden.forEach(card => card.style.display = 'none');
-      visible.forEach(card => card.style.display = '');
-      renderCards(visible);
+    // Asigna order CSS según fecha descendente (más reciente = order más bajo)
+    var sorted = cards.slice().sort(function (a, b) {
+      return (b.dataset.date || '').localeCompare(a.dataset.date || '');
     });
-  });
+    sorted.forEach(function (card, i) { card.style.order = i; });
+
+    // Filtro por categoría
+    document.querySelectorAll('.cat-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.cat-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.dataset.filter;
+        cards.forEach(function (card) {
+          card.style.display = (filter === 'todo' || card.dataset.cat === filter) ? '' : 'none';
+        });
+      });
+    });
+  })();
 </script>
 <script src="/js/cookie-banner.js"></script>
 </body>
