@@ -242,3 +242,10 @@ La columna Modelo debe enlazar cada producto a su ASIN:
 - No hacer glob de `blog/*.html` salvo que se pida explícitamente.
 - El contenido de cada artículo nuevo está en `/outputs/blog-nombre.md`. Leer solo ese archivo.
 - Los prompts de cada artículo están en `/outputs/prompts/nombre.txt`. Leer solo ese archivo.
+
+## Sistema de publicación autónoma
+
+Los posts generados automáticamente se guardan en `/auto/keywords-done.json`.
+La cola de keywords pendientes está en `/auto/keywords-queue.json`.
+Para añadir una keyword nueva, añadir una entrada al array en `keywords-queue.json`.
+Para pausar el sistema, comentar el cron en `.github/workflows/auto-publish.yml`.
