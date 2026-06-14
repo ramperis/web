@@ -1,1 +1,290 @@
-[]
+[
+  {
+    "id": "palo-de-lluvia",
+    "keyword": "palo de lluvia",
+    "tipo": "mixto",
+    "keywords_secundarias": ["palo de lluvia instrumento", "palo de lluvia para que sirve", "palo de lluvia sonido"],
+    "long_tail": ["como hacer el palo de lluvia", "palo de lluvia chamanico", "palo de lluvia terapeutico", "palo de lluvia como se toca", "palo de lluvia amazon"],
+    "asins": [],
+    "notas": "1600/mes KD10. Mixto: informacional (qué es, historia, para qué sirve) + transaccional (comprar). KD muy bajo. Buena oportunidad."
+  },
+  {
+    "id": "djembe",
+    "keyword": "djembe",
+    "tipo": "mixto",
+    "keywords_secundarias": ["djembe instrumento", "djembe caracteristicas", "djembe artesanal", "comprar djembe"],
+    "long_tail": ["comprar djembe africano", "djembe barato", "djembe amazon", "curso de djembe", "djembe tamano adulto", "djembe para principiantes"],
+    "asins": [],
+    "notas": "1600/mes KD18. Mixto: informacional + transaccional. Necesita ASINs antes de escribir."
+  },
+  {
+    "id": "campana-de-viento",
+    "keyword": "campana de viento",
+    "tipo": "mixto",
+    "keywords_secundarias": ["campana de viento instrumento", "campana de viento decoracion", "campana de viento feng shui"],
+    "long_tail": ["campana de viento para jardin", "campana de viento metal", "campana de viento grande", "campana de viento musica", "campana de viento bamboo"],
+    "asins": [],
+    "notas": "880/mes KD12. Mixto. Completa cluster de instrumentos. Necesita ASINs."
+  },
+  {
+    "id": "koshi-chimes",
+    "keyword": "koshi chimes",
+    "tipo": "mixto",
+    "keywords_secundarias": ["koshi instrumento", "koshi campana", "comprar koshi chimes"],
+    "long_tail": ["koshi chimes elementa", "koshi chimes terra", "koshi chimes aqua", "koshi chimes aria", "koshi chimes ignis", "koshi chimes precio"],
+    "asins": [],
+    "notas": "110/mes KD38 koshi chimes + 170/mes KD8 koshi instrumento. Puede ir junto al artículo de campana de viento o separado. Evaluar al escribir."
+  },
+  {
+    "id": "respiracion-para-dormir",
+    "keyword": "respiracion para dormir",
+    "tipo": "informacional",
+    "keywords_secundarias": ["tecnicas de respiracion para dormir", "respiracion para dormir rapido", "ejercicios de respiracion para dormir"],
+    "long_tail": ["respiracion 4 7 8 para dormir", "respiracion diafragmatica para dormir", "como respirar para dormir mejor", "respiracion nasal para dormir"],
+    "asins": [],
+    "notas": "4400/mes KD34. Satélite breathwork. Alto volumen. Diferenciador: mecanismo fisiológico real (CO2, nervio vago) que la competencia no explica."
+  },
+  {
+    "id": "breathwork-efectos-secundarios",
+    "keyword": "breathwork efectos secundarios",
+    "tipo": "informacional",
+    "keywords_secundarias": ["efectos secundarios breathwork", "peligros del breathwork", "contraindicaciones breathwork"],
+    "long_tail": ["hormigueo breathwork", "mareo respiracion consciente", "tetania breathwork", "es peligroso el breathwork", "llorar durante breathwork"],
+    "asins": [],
+    "notas": "480/mes KD16. Satélite breathwork de máxima honestidad. E-E-A-T alto. La competencia lo evita — gran oportunidad de diferenciación."
+  },
+  {
+    "id": "tipos-de-respiracion",
+    "keyword": "tipos de respiracion",
+    "tipo": "informacional",
+    "keywords_secundarias": ["tipos de respiracion y sus caracteristicas", "tipos de respiracion consciente", "tipos de respiracion meditacion"],
+    "long_tail": ["ejercicios de respiracion", "respiracion diafragmatica", "respiracion toracica", "respiracion abdominal beneficios", "tipos de respiracion en yoga"],
+    "asins": [],
+    "notas": "590/mes KD39. Artículo pilar o hub de técnicas que enlace a todos los satélites ya publicados. Alto KD pero alta autoridad temática del dominio."
+  },
+  {
+    "id": "pranayama",
+    "keyword": "pranayama",
+    "tipo": "informacional",
+    "keywords_secundarias": ["pranayama ejercicios", "tipos de pranayama", "respiracion pranayama", "meditacion pranayama"],
+    "long_tail": ["bhramari pranayama", "bhastrika pranayama", "kapalabhati pranayama", "respiracion nadi shodhana", "shitali pranayama", "chandra bhedana pranayama", "beneficios de pranayama", "pranayama significado", "pranayama respiracion"],
+    "asins": [],
+    "notas": "390/mes KD10. Pilar de pranayama. Enlazar a /breathwork y a artículos de técnicas de respiración."
+  },
+  {
+    "id": "darbuka",
+    "keyword": "darbuka",
+    "tipo": "mixto",
+    "keywords_secundarias": ["darbuka instrumento", "darbuka instrumento origen", "darbuka precio"],
+    "long_tail": ["como tocar darbuka", "comprar darbuka", "darbuka turca", "darbuka thomann", "clases de darbuka", "parche darbuka"],
+    "asins": [],
+    "notas": "1900/mes KD22 darbuka + 390/mes KD9 darbuka instrumento. Alto volumen. Necesita ASINs."
+  },
+  {
+    "id": "kalimba",
+    "keyword": "kalimba",
+    "tipo": "mixto",
+    "keywords_secundarias": ["kalimba instrumento", "kalimba piano de pulgar", "comprar kalimba"],
+    "long_tail": ["kalimba para principiantes", "kalimba 17 teclas", "kalimba amazon", "kalimba como tocar", "kalimba notas", "kalimba madera"],
+    "asins": [],
+    "notas": "1000/mes KD32. Alto KD pero alto volumen. Mixto info+transaccional. Necesita ASINs."
+  },
+  {
+    "id": "bansuri",
+    "keyword": "bansuri",
+    "tipo": "mixto",
+    "keywords_secundarias": ["bansuri flauta", "bansuri instrumento", "comprar bansuri"],
+    "long_tail": ["bansuri flauta india", "bansuri precio", "bansuri como tocar", "bansuri amazon", "flauta de bambu india"],
+    "asins": [],
+    "notas": "390/mes KD11. Mixto info+transaccional. Encaja en cluster de instrumentos. Necesita ASINs."
+  },
+  {
+    "id": "shruti-box",
+    "keyword": "shruti box",
+    "tipo": "mixto",
+    "keywords_secundarias": ["shruti box instrumento", "comprar shruti box", "shruti box para que sirve"],
+    "long_tail": ["shruti box amazon", "shruti box thomann", "shruti box precio", "shruti box harmonium", "shruti box meditacion"],
+    "asins": [],
+    "notas": "Puede ir junto al artículo de harmonium o separado. Ver volumen real al escribir. Necesita ASINs."
+  },
+  {
+    "id": "arpa-de-cristal",
+    "keyword": "arpa de cristal",
+    "tipo": "mixto",
+    "keywords_secundarias": ["arpa de cristal instrumento", "arpa de cristal terapeutica", "comprar arpa de cristal"],
+    "long_tail": ["arpa de cristal precio", "arpa de cristal amazon", "arpa de cristal sonido", "arpa de cristal beneficios", "arpa de cristal vs cuenco de cuarzo"],
+    "asins": [],
+    "notas": "70/mes KD6. Mixto. Instrumento de sonoterapia con buen ángulo diferenciador. Necesita ASINs."
+  },
+  {
+    "id": "tambor-oceanico",
+    "keyword": "tambor oceanico",
+    "tipo": "mixto",
+    "keywords_secundarias": ["tambor del oceano", "ocean drum instrumento", "comprar tambor oceanico"],
+    "long_tail": ["tambor oceanico precio", "tambor oceanico amazon", "tambor oceanico remo", "ocean drum terapia", "tambor de lluvia vs ocean drum"],
+    "asins": [],
+    "notas": "210/mes KD9. Mixto. Complementa cluster de instrumentos chamánicos. Necesita ASINs."
+  },
+  {
+    "id": "sound-healing",
+    "keyword": "sound healing",
+    "tipo": "informacional",
+    "keywords_secundarias": ["sound healing que es", "terapia de sonido sound healing", "sound healing beneficios"],
+    "long_tail": ["sound healing valencia", "sound healing instrumentos", "sound healing cerca de mi", "que pasa en una sesion de sound healing", "sound healing evidencia cientifica"],
+    "asins": [],
+    "notas": "390/mes KD21 sound healing + 110/mes KD9 sound healing que es. En inglés para capturar búsquedas de extranjeros en España. Enlazar a /bano-sonido."
+  },
+  {
+    "id": "respiracion-consciente",
+    "keyword": "respiracion consciente",
+    "tipo": "informacional",
+    "keywords_secundarias": ["respiracion consciente tecnicas", "respiracion consciente beneficios", "que es la respiracion consciente"],
+    "long_tail": ["ejercicios de respiracion consciente", "respiracion consciente guiada", "respiracion consciente meditacion", "respiracion consciente ansiedad", "respiracion consciente para dormir"],
+    "asins": [],
+    "notas": "590/mes KD36. Satélite breathwork. Enlazar a /breathwork."
+  },
+  {
+    "id": "circulo-de-hombres",
+    "keyword": "circulo de hombres",
+    "tipo": "informacional",
+    "keywords_secundarias": ["que es un circulo de hombres", "circulo de hombres para que sirve", "mens circle"],
+    "long_tail": ["circulo de hombres valencia", "como funciona un circulo de hombres", "beneficios circulo de hombres", "circulo de hombres madrid", "men's work"],
+    "asins": [],
+    "notas": "90/mes KD3. Pilar informacional para /circulos-hombres. Ya tenemos la página de servicio — el artículo alimenta y enlaza a ella."
+  },
+  {
+    "id": "tipos-de-cuencos-tibetanos",
+    "keyword": "tipos de cuencos tibetanos",
+    "tipo": "informacional",
+    "keywords_secundarias": ["cuencos tibetanos tipos y usos", "diferencias cuencos tibetanos", "cuencos tibetanos clasificacion"],
+    "long_tail": ["cuenco tibetano jambati", "cuenco tibetano thadobati", "cuenco tibetano ultabati", "cuenco tibetano mani", "cuencos tibetanos 7 metales"],
+    "asins": [],
+    "notas": "30/mes KD0. Completa el cluster de cuencos tibetanos. Material ya investigado gracias a Escuela de Gong."
+  },
+  {
+    "id": "cuencos-tibetanos-7-metales-mito",
+    "keyword": "cuencos tibetanos 7 metales",
+    "tipo": "informacional",
+    "keywords_secundarias": ["cuencos tibetanos 7 metales composicion", "cuencos 7 metales mito", "cuencos tibetanos materiales reales"],
+    "long_tail": ["cuenco tibetano 7 planetas", "cuencos tibetanos aleacion", "cuencos tibetanos metal", "son reales los cuencos de 7 metales"],
+    "asins": [],
+    "notas": "20/mes KD0. Artículo de desmitificación similar al de chakras. Material ya investigado. Alto E-E-A-T."
+  },
+  {
+    "id": "mejores-cuencos-tibetanos",
+    "keyword": "mejores cuencos tibetanos",
+    "tipo": "transaccional",
+    "keywords_secundarias": ["cuenco tibetano calidad", "comprar cuenco tibetano bueno", "cuenco tibetano precio"],
+    "long_tail": ["cuenco tibetano principiantes", "cuenco tibetano profesional", "cuenco tibetano artesanal", "donde comprar cuenco tibetano", "cuenco tibetano amazon"],
+    "asins": [],
+    "notas": "110/mes KD6 cuenco tibetano precios. Artículo transaccional para completar cluster cuencos. Necesita ASINs de cuencos tibetanos de calidad."
+  },
+  {
+    "id": "retiros-espirituales-valencia",
+    "keyword": "retiros espirituales valencia",
+    "tipo": "informacional",
+    "keywords_secundarias": ["retiro espiritual valencia", "retiros espirituales en valencia", "retiros espirituales comunidad valenciana"],
+    "long_tail": ["retiro yoga valencia", "ecstatic dance valencia", "baño de gong valencia", "retiro de silencio valencia"],
+    "asins": [],
+    "notas": "480+170+110=760/mes acumulado. Artículo de posicionamiento de marca local. Ram como curador del ecosistema de bienestar valenciano. Actualizar cuando tenga retiro propio. Modelo de monetización: fichas patrocinadas / leads."
+  },
+  {
+    "id": "retiros-para-hombres",
+    "keyword": "retiros para hombres",
+    "tipo": "informacional",
+    "keywords_secundarias": ["retiro masculino", "retiro hombres españa", "retiro masculinidad consciente"],
+    "long_tail": ["retiro para hombres valencia", "retiro masculino meditacion", "retiro hombres naturaleza", "men's retreat españa"],
+    "asins": [],
+    "notas": "20/mes c/u KD bajo. Ram como facilitador de círculos de hombres. Modelo de monetización: fichas patrocinadas / leads. Artículo de posicionamiento a largo plazo."
+  },
+  {
+    "id": "tingsha",
+    "keyword": "tingsha",
+    "tipo": "mixto",
+    "keywords_secundarias": ["tingsha instrumento", "tingsha campanas tibetanas", "comprar tingsha"],
+    "long_tail": ["tingsha precio", "tingsha amazon", "tingsha para meditacion", "tingsha como usar", "crotalo tibetano vs tingsha"],
+    "asins": [],
+    "notas": "50/mes KD6 tingsha + 260/mes KD19 crotalos instrumento. Pueden ir juntos en un artículo. Accesorios de sonoterapia."
+  },
+  {
+    "id": "flauta-nativa-americana",
+    "keyword": "flauta nativa americana",
+    "tipo": "mixto",
+    "keywords_secundarias": ["native american flute", "flauta indigena americana", "comprar flauta nativa americana"],
+    "long_tail": ["flauta nativa americana precio", "flauta nativa americana amazon", "flauta nativa americana como tocar", "flauta nativa americana do menor", "flauta nativa americana madera"],
+    "asins": [],
+    "notas": "210/mes KD28. Alto KD. Instrumento de sonoterapia menos prioritario. Necesita ASINs."
+  },
+  {
+    "id": "didgeridoo",
+    "keyword": "didgeridoo",
+    "tipo": "mixto",
+    "keywords_secundarias": ["didgeridoo instrumento", "didgeridoo para que sirve", "comprar didgeridoo"],
+    "long_tail": ["didgeridoo precio", "didgeridoo amazon", "didgeridoo como tocar", "respiracion circular didgeridoo", "didgeridoo principiantes", "didgeridoo apnea del sueno"],
+    "asins": [],
+    "notas": "2900/mes KD20-24. Alto volumen pero instrumento que Ram no usa en sesiones. Valorar si tiene sentido para la marca. Si se hace, con honestidad sobre el ángulo."
+  },
+  {
+    "id": "handpan-precio",
+    "keyword": "handpan precio",
+    "tipo": "transaccional",
+    "keywords_secundarias": ["cuanto cuesta un handpan", "handpan economico", "handpan barato"],
+    "long_tail": ["cuanto vale un handpan", "handpan precio españa", "handpan de segunda mano", "handpan 500 euros", "handpan chino calidad"],
+    "asins": [],
+    "notas": "480/mes KD7. Transaccional puro. Podría ser un artículo separado del de mejores handpan o un H2 dentro de él. Ya tenemos mejores-handpan publicado — revisar si lo cubre."
+  },
+  {
+    "id": "makers-handpan-espana",
+    "keyword": "makers handpan españa",
+    "tipo": "informacional",
+    "keywords_secundarias": ["fabricantes handpan españa", "artesanos handpan", "handpan hecho en españa"],
+    "long_tail": ["fabricantes de handpan", "handpan neotone", "evatek handpan", "etsy handpan", "handpan electronico"],
+    "asins": [],
+    "notas": "Sin volumen alto pero alto valor de conversión. Artículo de directorio de makers artesanales en España. Sin afiliado."
+  },
+  {
+    "id": "breathwork-valencia",
+    "keyword": "breathwork valencia",
+    "tipo": "informacional",
+    "keywords_secundarias": ["sesiones de breathwork valencia", "clases de breathwork valencia", "facilitador breathwork valencia"],
+    "long_tail": ["breathwork online valencia", "breathwork grupal valencia", "taller de respiracion valencia", "breathwork certificado valencia"],
+    "asins": [],
+    "notas": "40/mes KD7. Localización. Puede ser una página de servicio o un artículo del blog. Ram ya tiene /breathwork — valorar si necesita artículo adicional."
+  },
+  {
+    "id": "bano-de-gong",
+    "keyword": "baño de gong",
+    "tipo": "informacional",
+    "keywords_secundarias": ["gong bath", "sesion de gong", "bano de sonido con gong"],
+    "long_tail": ["bano de gong valencia", "bano de gong que es", "bano de gong beneficios", "diferencia bano de gong y cuencos", "bano de gong contraindicaciones"],
+    "asins": [],
+    "notas": "590/mes KD9 baño de gong. Ya cubierto como H2 en gong-instrumento.html. Verificar si el H2 captura bien las keywords o si justifica artículo propio."
+  },
+  {
+    "id": "diapason",
+    "keyword": "diapasón",
+    "tipo": "informacional",
+    "keywords_secundarias": ["diapason terapeutico", "diapason musical", "diapason para que sirve"],
+    "long_tail": ["diapason 432 hz", "diapason 528 hz", "diapason 128 hz", "diapason weighted", "diapason terapia de sonido"],
+    "asins": [],
+    "notas": "5400/mes KD22. Keyword principal muy amplia — incluye diapasón musical (guitarra) y terapéutico. Ya tenemos diapason-terapeutico.html. Revisar si hay gap o canibalización."
+  },
+  {
+    "id": "sonajero-chamanico",
+    "keyword": "sonajero chamanico",
+    "tipo": "mixto",
+    "keywords_secundarias": ["sonajero chamanico instrumento", "chaman sonajero", "comprar sonajero chamanico"],
+    "long_tail": ["sonajero chamanico precio", "sonajero chamanico amazon", "sonajero chamanico para que sirve", "sonajero de semillas", "sonajero ritual"],
+    "asins": [],
+    "notas": "Accesorios chamánicos. Volumen bajo pero completa el cluster de instrumentos ceremoniales."
+  },
+  {
+    "id": "campana-tubular",
+    "keyword": "campana tubular",
+    "tipo": "mixto",
+    "keywords_secundarias": ["campana tubular instrumento", "tubular bells", "comprar campana tubular"],
+    "long_tail": ["campana tubular precio", "campana tubular amazon", "campana tubular terapeutica", "campana tubular para meditacion", "campana tubular thomann"],
+    "asins": [],
+    "notas": "390/mes KD7. Mixto. Instrumento de sonoterapia menos prioritario. Necesita ASINs."
+  }
+]
