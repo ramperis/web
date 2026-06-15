@@ -1,9 +1,0 @@
-{
-  "model": "claude-sonnet-4-6",
-  "max_tokens": 8000,
-  "schedule": "0 9 * * *",
-  "notify_email": "ram@ramperis.com",
-  "base_url": "https://ramperis.com/blog/",
-  "posts_per_day": 1,
-  "pause_on_error": true
-}
