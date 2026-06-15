@@ -1,290 +1,582 @@
 [
   {
-    "id": "palo-de-lluvia",
+    "id": 1,
     "keyword": "palo de lluvia",
     "tipo": "mixto",
-    "keywords_secundarias": ["palo de lluvia instrumento", "palo de lluvia para que sirve", "palo de lluvia sonido"],
-    "long_tail": ["como hacer el palo de lluvia", "palo de lluvia chamanico", "palo de lluvia terapeutico", "palo de lluvia como se toca", "palo de lluvia amazon"],
-    "asins": [],
-    "notas": "1600/mes KD10. Mixto: informacional (qué es, historia, para qué sirve) + transaccional (comprar). KD muy bajo. Buena oportunidad."
+    "keywords_secundarias": ["palo de lluvia instrumento", "instrumento de palo de lluvia", "palo de lluvia para que sirve", "palo de lluvia casero"],
+    "long_tail": ["como hacer el palo de lluvia", "historia del palo de lluvia", "de donde proviene el palo de lluvia", "palo de lluvia comprar", "amazon palo de lluvia"],
+    "asins": [
+      { "asin": "B0033PQVOS", "titulo": "Meinl Palo de Lluvia 40cm", "imagen": "https://m.media-amazon.com/images/I/815HXEKituL._AC_SL1500_.jpg", "precio": "~25€", "descripcion": "40cm · Bambú · Sonido de lluvia suave, ideal para meditación" },
+      { "asin": "B0033PQVOI", "titulo": "Meinl Palo de Lluvia Grande 100cm", "imagen": "https://m.media-amazon.com/images/I/71BixRBfcXL._SL1500_.jpg", "precio": "~45€", "descripcion": "100cm · Formato grande · Sonido de lluvia prolongado y envolvente" },
+      { "asin": "B07VP19RKG", "titulo": "Palo de Lluvia Bambú Tallado en Relieve", "imagen": "https://m.media-amazon.com/images/I/71SYpzEo29L._AC_SL1500_.jpg", "precio": "~20€", "descripcion": "Bambú con tallado artesanal en relieve · Acabado natural" },
+      { "asin": "B07VP1B11Z", "titulo": "Palo de Lluvia Bambú Pintado en Relieve", "imagen": "https://m.media-amazon.com/images/I/81UbBkNVj2L._AC_SL1500_.jpg", "precio": "~22€", "descripcion": "Bambú con tallado y pintura artesanal · Decoración tradicional" },
+      { "asin": "B0033PQVP2", "titulo": "Meinl Palo de Lluvia Mediano Pintado", "imagen": "https://m.media-amazon.com/images/I/61jJAifFjuL._AC_SL1500_.jpg", "precio": "~30€", "descripcion": "Bambú pintado a mano · Tamaño medio · Decoración artesanal" },
+      { "asin": "B0030YF0FS", "titulo": "Fuzeau Palo de Lluvia Cactus", "imagen": "https://m.media-amazon.com/images/I/61h2YUWrtbL._AC_SL1500_.jpg", "precio": "~35€", "descripcion": "Hecho de cactus seco · Sonido tradicional sudamericano" },
+      { "asin": "B07MZ7J47F", "titulo": "XDrum Palo de Lluvia 100cm", "imagen": "https://m.media-amazon.com/images/I/71hZaHdNEpL._AC_SL1500_.jpg", "precio": "~40€", "descripcion": "100cm · Bambú · Sonido continuo de larga duración" }
+    ],
+    "notas": "1600/mes KD10. Mixto: informacional (qué es, historia, para qué sirve) + transaccional (comprar). KD muy bajo. Buena oportunidad.",
+    "prioridad": "alta"
   },
   {
-    "id": "djembe",
+    "id": 2,
     "keyword": "djembe",
     "tipo": "mixto",
-    "keywords_secundarias": ["djembe instrumento", "djembe caracteristicas", "djembe artesanal", "comprar djembe"],
-    "long_tail": ["comprar djembe africano", "djembe barato", "djembe amazon", "curso de djembe", "djembe tamano adulto", "djembe para principiantes"],
-    "asins": [],
-    "notas": "1600/mes KD18. Mixto: informacional + transaccional. Necesita ASINs antes de escribir."
+    "keywords_secundarias": ["djembe instrumento", "instrumento musical djembe", "djembe africano", "tambores djembe"],
+    "long_tail": ["djembe caracteristicas", "djembe artesanal", "comprar djembe", "comprar djembe africano", "djembe barato", "djembe amazon", "curso de djembe"],
+    "asins": [
+      { "asin": "B004TSC21E", "titulo": "World Rhythm Djembé de Color", "imagen": "https://m.media-amazon.com/images/I/712ts5+8PBL._AC_SL1500_.jpg", "precio": "~50€", "descripcion": "Madera tallada con piel natural · Tamaño estándar para principiantes" },
+      { "asin": "B00HV7U8T8", "titulo": "Meinl Percussion Djembe XXS", "imagen": "https://m.media-amazon.com/images/I/81fQ3rog3PL._AC_SL1500_.jpg", "precio": "~70€", "descripcion": "Tamaño compacto · Marca reconocida · Buen sustain" },
+      { "asin": "B003YL1PHE", "titulo": "Djembe de Madera Artesanal", "imagen": "https://m.media-amazon.com/images/I/51JWPbpfnxL._AC_.jpg", "precio": "~90€", "descripcion": "Tallado artesanal en madera maciza · Piel de cabra natural" },
+      { "asin": "B005SQKG5U", "titulo": "Djembe Pintado a Mano de Buena Altura", "imagen": "https://m.media-amazon.com/images/I/71oH1A6DK6L._AC_SL1500_.jpg", "precio": "~75€", "descripcion": "Pintado a mano con colores tradicionales africanos · Tamaño alto" },
+      { "asin": "B08T3MLQSX", "titulo": "Meinl Percussion Djembe Carcasa Sintética", "imagen": "https://m.media-amazon.com/images/I/614Du1DSuxL._AC_SL1500_.jpg", "precio": "~110€", "descripcion": "Carcasa sintética resistente · Parche sintético, ideal climas húmedos" },
+      { "asin": "B07NDZ4BHY", "titulo": "Meinl Travel Djembe con Piel de Cabra", "imagen": "https://m.media-amazon.com/images/I/51LJ-zNN5-L._AC_SL1000_.jpg", "precio": "~85€", "descripcion": "Formato de viaje compacto · Piel de cabra · Fácil transporte" },
+      { "asin": "B004LRZC6A", "titulo": "Meinl HDJ3 Djembe de Madera con Piel de Cabra", "imagen": "https://m.media-amazon.com/images/I/81i0g+O2YFL._AC_SL1500_.jpg", "precio": "~95€", "descripcion": "Madera maciza con piel de cabra · Tamaño medio · Sonido cálido" },
+      { "asin": "B00IK9Z4N6", "titulo": "World Rhythm Djembe Tamaño 6", "imagen": "https://m.media-amazon.com/images/I/61ZvuypfcbL._AC_SL1500_.jpg", "precio": "~60€", "descripcion": "Tamaño compacto · Buena opción de entrada · Piel natural" },
+      { "asin": "B00BHVY19W", "titulo": "Ciffre Djembe Africano con Accesorios", "imagen": "https://m.media-amazon.com/images/I/8128WnoLl6L._AC_SL1500_.jpg", "precio": "~80€", "descripcion": "Incluye correa y bolsa · Madera tallada · Estilo africano tradicional" }
+    ],
+    "notas": "1600/mes KD18. Mixto: informacional + transaccional. Necesita ASINs antes de escribir.",
+    "prioridad": "alta"
   },
   {
-    "id": "campana-de-viento",
+    "id": 3,
     "keyword": "campana de viento",
     "tipo": "mixto",
-    "keywords_secundarias": ["campana de viento instrumento", "campana de viento decoracion", "campana de viento feng shui"],
-    "long_tail": ["campana de viento para jardin", "campana de viento metal", "campana de viento grande", "campana de viento musica", "campana de viento bamboo"],
-    "asins": [],
-    "notas": "880/mes KD12. Mixto. Completa cluster de instrumentos. Necesita ASINs."
+    "keywords_secundarias": ["campanas de viento", "campana de viento japonesa", "carrillon de viento", "campanas de viento feng shui", "campana tubular", "campana tubular instrumento", "campana metalica tubular"],
+    "long_tail": ["como se llaman las campanas de viento", "campanas de viento comprar", "campana de viento de bambu", "campana de viento de madera", "campanas que suenan con el viento", "donde colgar las campanas de viento", "carrillon musical amazon", "campana tubular precio"],
+    "asins": [
+      { "asin": "B08B59KBZZ", "titulo": "RDUTUOK Campanillas de Viento de Madera", "imagen": "https://m.media-amazon.com/images/I/71TRO-KqgnL._AC_SL1500_.jpg", "precio": "~15€", "descripcion": "Madera natural · Sonido suave y relajante · Ideal para exterior" },
+      { "asin": "B0F13LPHFT", "titulo": "Campanillas de Viento Decorativas para Exterior", "imagen": "https://m.media-amazon.com/images/I/51SbaS-GiQL._AC_SL1500_.jpg", "precio": "~14€", "descripcion": "Diseño decorativo · Tamaño compacto · Para balcón o jardín" },
+      { "asin": "B0BZRD3T6V", "titulo": "Carrillón de Viento para Exterior", "imagen": "https://m.media-amazon.com/images/I/61dZbVxI84L._AC_SL1500_.jpg", "precio": "~20€", "descripcion": "Metal y madera · Tonos profundos · Resistente a la intemperie" },
+      { "asin": "B07H94QSBH", "titulo": "Campanas de Viento Musicales Relajantes", "imagen": "https://m.media-amazon.com/images/I/61SkkzpHoSL._AC_SL1002_.jpg", "precio": "~18€", "descripcion": "Diseño artesanal · Sonido relajante · Decoración para exterior" },
+      { "asin": "B07T45MCWZ", "titulo": "ASTARIN Campanas de Viento de Tono Profundo", "imagen": "https://m.media-amazon.com/images/I/71k-AQNxEdL._AC_SL1500_.jpg", "precio": "~32€", "descripcion": "Tubos metálicos de tono profundo · Resistente a la intemperie" },
+      { "asin": "B09F2DZ351", "titulo": "Campanas de Viento Decorativas", "imagen": "https://m.media-amazon.com/images/I/81ZqSNXs10L._AC_SL1500_.jpg", "precio": "~25€", "descripcion": "Diseño decorativo agradable · Sonido suave · Para exterior" },
+      { "asin": "B01N009LJ9", "titulo": "Nature's Melody Campana de Viento Aureole", "imagen": "https://m.media-amazon.com/images/I/8107UIEoRrL._AC_SL1500_.jpg", "precio": "~45€", "descripcion": "Tubos afinados de aluminio · Sonido armónico profundo, calidad superior" },
+      { "asin": "B07H969CFQ", "titulo": "ASTARIN Campanas de Viento Exteriores Profundas", "imagen": "https://m.media-amazon.com/images/I/71zF8Rym7tL._AC_SL1000_.jpg", "precio": "~30€", "descripcion": "Tubos metálicos · Tono profundo · Para jardín o terraza" },
+      { "asin": "B0C9X4YJT9", "titulo": "DONGDA Campanas de Viento Interior/Exterior", "imagen": "https://m.media-amazon.com/images/I/61I-mn7vuOL._AC_SL1500_.jpg", "precio": "~20€", "descripcion": "Versátil para interior y exterior · Sonido relajante" }
+    ],
+    "notas": "880/mes KD12. Mixto. Completa cluster de instrumentos. Necesita ASINs. Incluye también keywords de 'campana tubular' (390/mes KD7) como variación semántica — mencionar campanas tubulares como tipo/variante dentro del artículo.",
+    "prioridad": "alta"
   },
   {
-    "id": "koshi-chimes",
+    "id": 4,
     "keyword": "koshi chimes",
     "tipo": "mixto",
-    "keywords_secundarias": ["koshi instrumento", "koshi campana", "comprar koshi chimes"],
-    "long_tail": ["koshi chimes elementa", "koshi chimes terra", "koshi chimes aqua", "koshi chimes aria", "koshi chimes ignis", "koshi chimes precio"],
-    "asins": [],
-    "notas": "110/mes KD38 koshi chimes + 170/mes KD8 koshi instrumento. Puede ir junto al artículo de campana de viento o separado. Evaluar al escribir."
+    "keywords_secundarias": ["campanas koshi", "carillon koshi", "campanas de viento koshi", "koshi instrumento"],
+    "long_tail": ["koshi chimes amazon", "campanas koshi precios"],
+    "asins": [
+      { "asin": "B00OG2A1DO", "titulo": "Koshi Chimes Tierra", "imagen": "https://m.media-amazon.com/images/I/61DWJOfWM3L._AC_SL1200_.jpg", "precio": "~35€", "descripcion": "Carrillón Koshi original · Afinación elemento Tierra · Sonido cálido" },
+      { "asin": "B007JUW340", "titulo": "Koshi Chimes Aqua", "imagen": "https://m.media-amazon.com/images/I/411ODIBn5pL._AC_SL1500_.jpg", "precio": "~35€", "descripcion": "Carrillón Koshi original · Afinación elemento Agua · Sonido cristalino" },
+      { "asin": "B00OG2ABOI", "titulo": "Koshi Chimes Ignis", "imagen": "https://m.media-amazon.com/images/I/61DWJOfWM3L._AC_SL1200_.jpg", "precio": "~35€", "descripcion": "Carrillón Koshi original · Afinación elemento Fuego · Sonido brillante" },
+      { "asin": "B01006GENA", "titulo": "Koshi Set Ignis y Terra de Regalo", "imagen": "https://m.media-amazon.com/images/I/71-bw8hBPHL._AC_SL1500_.jpg", "precio": "~65€", "descripcion": "Pack de dos carillones Koshi · Combinación Fuego y Tierra" },
+      { "asin": "B0FQ623WG7", "titulo": "Bolsa de Viento para Koshi Zaphir", "imagen": "https://m.media-amazon.com/images/I/41sPKE0401L._AC_.jpg", "precio": "~12€", "descripcion": "Accesorio para activar el sonido del Koshi sin viento natural" }
+    ],
+    "notas": "110/mes KD38 koshi chimes + 170/mes KD8 koshi instrumento. Puede ir junto al artículo de campana de viento o separado. Evaluar al escribir.",
+    "prioridad": "alta"
   },
   {
-    "id": "respiracion-para-dormir",
+    "id": 5,
     "keyword": "respiracion para dormir",
     "tipo": "informacional",
-    "keywords_secundarias": ["tecnicas de respiracion para dormir", "respiracion para dormir rapido", "ejercicios de respiracion para dormir"],
-    "long_tail": ["respiracion 4 7 8 para dormir", "respiracion diafragmatica para dormir", "como respirar para dormir mejor", "respiracion nasal para dormir"],
+    "keywords_secundarias": ["tecnica de respiracion para dormir", "respiracion militar para dormir", "tecnica respiracion dormir"],
+    "long_tail": ["respiracion militar para dormir", "pranayama para dormir", "meditacion guiada respiracion consciente"],
     "asins": [],
-    "notas": "4400/mes KD34. Satélite breathwork. Alto volumen. Diferenciador: mecanismo fisiológico real (CO2, nervio vago) que la competencia no explica."
+    "notas": "480/mes KD20. Satélite de breathwork. Enlazar a /breathwork.",
+    "prioridad": "alta"
   },
   {
-    "id": "breathwork-efectos-secundarios",
+    "id": 6,
     "keyword": "breathwork efectos secundarios",
     "tipo": "informacional",
-    "keywords_secundarias": ["efectos secundarios breathwork", "peligros del breathwork", "contraindicaciones breathwork"],
-    "long_tail": ["hormigueo breathwork", "mareo respiracion consciente", "tetania breathwork", "es peligroso el breathwork", "llorar durante breathwork"],
+    "keywords_secundarias": ["breathwork opiniones", "breathwork ejercicios", "beneficios breathwork"],
+    "long_tail": ["que es breathwork y para que sirve", "breathwork en español", "beneficios de la respiracion consciente"],
     "asins": [],
-    "notas": "480/mes KD16. Satélite breathwork de máxima honestidad. E-E-A-T alto. La competencia lo evita — gran oportunidad de diferenciación."
+    "notas": "70/mes KD22 efectos secundarios + 50/mes KD22 opiniones. Artículo de honestidad y E-E-A-T. Enlazar a /breathwork.",
+    "prioridad": "alta"
   },
   {
-    "id": "tipos-de-respiracion",
+    "id": 7,
     "keyword": "tipos de respiracion",
     "tipo": "informacional",
-    "keywords_secundarias": ["tipos de respiracion y sus caracteristicas", "tipos de respiracion consciente", "tipos de respiracion meditacion"],
-    "long_tail": ["ejercicios de respiracion", "respiracion diafragmatica", "respiracion toracica", "respiracion abdominal beneficios", "tipos de respiracion en yoga"],
+    "keywords_secundarias": ["ejercicios de respiracion", "respiracion consciente", "respiracion para relajarse"],
+    "long_tail": ["ejercicios de respiracion para relajarse", "videos de ejercicios de respiracion", "videos de relajacion y respiracion"],
     "asins": [],
-    "notas": "590/mes KD39. Artículo pilar o hub de técnicas que enlace a todos los satélites ya publicados. Alto KD pero alta autoridad temática del dominio."
+    "notas": "590/mes KD39. Artículo pilar o hub de técnicas que enlace a todos los satélites ya publicados. Alto KD pero alta autoridad temática del dominio.",
+    "prioridad": "alta"
   },
   {
-    "id": "pranayama",
-    "keyword": "pranayama",
+    "id": 8,
+    "keyword": "pranayama que es",
     "tipo": "informacional",
     "keywords_secundarias": ["pranayama ejercicios", "tipos de pranayama", "respiracion pranayama", "meditacion pranayama"],
     "long_tail": ["bhramari pranayama", "bhastrika pranayama", "kapalabhati pranayama", "respiracion nadi shodhana", "shitali pranayama", "chandra bhedana pranayama", "beneficios de pranayama", "pranayama significado", "pranayama respiracion"],
     "asins": [],
-    "notas": "390/mes KD10. Pilar de pranayama. Enlazar a /breathwork y a artículos de técnicas de respiración."
+    "notas": "390/mes KD10. Pilar de pranayama. Enlazar a /breathwork y a artículos de técnicas de respiración.",
+    "prioridad": "alta"
   },
   {
-    "id": "darbuka",
+    "id": 9,
     "keyword": "darbuka",
     "tipo": "mixto",
     "keywords_secundarias": ["darbuka instrumento", "darbuka instrumento origen", "darbuka precio"],
     "long_tail": ["como tocar darbuka", "comprar darbuka", "darbuka turca", "darbuka thomann", "clases de darbuka", "parche darbuka"],
-    "asins": [],
-    "notas": "1900/mes KD22 darbuka + 390/mes KD9 darbuka instrumento. Alto volumen. Necesita ASINs."
+    "asins": [
+      { "asin": "B01K309LC4", "titulo": "Darbuka Egipcia con Afinación", "imagen": "https://m.media-amazon.com/images/I/61mRLc6aSCS._AC_SL1200_.jpg", "precio": "~60€", "descripcion": "Aluminio fundido · Parche sintético afinable · Sonido brillante" },
+      { "asin": "B093JHZYWC", "titulo": "Darbuka Profesional Orientalische Gold", "imagen": "https://m.media-amazon.com/images/I/61-f+2zeL3L._AC_SL1200_.jpg", "precio": "~95€", "descripcion": "Acabado dorado · Cuerpo de aluminio · Calidad profesional" },
+      { "asin": "B002EA6TAY", "titulo": "Vatan Darbuka Egipcia Estilo Imitación", "imagen": "https://m.media-amazon.com/images/I/51ib2IzZPvL._AC_SL1200_.jpg", "precio": "~70€", "descripcion": "Cuerpo de aluminio con acabado decorativo · Parche sintético" },
+      { "asin": "B00PS7VQLW", "titulo": "Vatan Darbuka Egipcia 3025", "imagen": "https://m.media-amazon.com/images/I/51I84JvV4HL._AC_SL1401_.jpg", "precio": "~75€", "descripcion": "Modelo clásico Vatan · Cuerpo de aluminio · Sonido tradicional" },
+      { "asin": "B0CL51ZB21", "titulo": "Wambooka Diamond Darbuka Policarbonato", "imagen": "https://m.media-amazon.com/images/I/71OsVFJXqWL._AC_SL1500_.jpg", "precio": "~140€", "descripcion": "Cuerpo de policarbonato transparente · Sonido potente y definido, gama alta" },
+      { "asin": "B084LRB8LD", "titulo": "VD Vatan Darbuka Orientalische", "imagen": "https://m.media-amazon.com/images/I/81N3UbJO5mL._AC_SL1500_.jpg", "precio": "~80€", "descripcion": "Diseño oriental clásico · Aluminio con grabados · Parche sintético" },
+      { "asin": "B007CPU2WC", "titulo": "Meinl Percussion Darbuka Carcasa Sintética", "imagen": "https://m.media-amazon.com/images/I/71YYMx1pAEL._AC_SL1500_.jpg", "precio": "~85€", "descripcion": "Carcasa sintética resistente · Marca reconocida en percusión" },
+      { "asin": "B019ZPBBMG", "titulo": "Darbuka Doumbek Tombak Afinable", "imagen": "https://m.media-amazon.com/images/I/71Gx6vceySL._AC_SL1500_.jpg", "precio": "~65€", "descripcion": "Modelo afinable · Estilo tradicional tombak · Buena opción de entrada" }
+    ],
+    "notas": "1900/mes KD22 darbuka + 390/mes KD9 darbuka instrumento. Alto volumen. Necesita ASINs.",
+    "prioridad": "alta"
   },
   {
-    "id": "kalimba",
-    "keyword": "kalimba",
+    "id": 10,
+    "keyword": "kalimba instrumento",
     "tipo": "mixto",
-    "keywords_secundarias": ["kalimba instrumento", "kalimba piano de pulgar", "comprar kalimba"],
-    "long_tail": ["kalimba para principiantes", "kalimba 17 teclas", "kalimba amazon", "kalimba como tocar", "kalimba notas", "kalimba madera"],
-    "asins": [],
-    "notas": "1000/mes KD32. Alto KD pero alto volumen. Mixto info+transaccional. Necesita ASINs."
+    "keywords_secundarias": ["kalimba instrumento musical", "kalimba amazon", "comprar kalimba"],
+    "long_tail": ["comprar kalimba", "kalimba amazon"],
+    "asins": [
+      { "asin": "B08LYY2HM6", "titulo": "Kalimba 17 Teclas para Principiantes", "imagen": "https://m.media-amazon.com/images/I/81yzE8UjZ0L._AC_SL1500_.jpg", "precio": "~25€", "descripcion": "17 teclas · Madera de caoba · Incluye libro de partituras y afinador" },
+      { "asin": "B08C7H7CXN", "titulo": "Rayzm Kalimba Africana con Accesorios", "imagen": "https://m.media-amazon.com/images/I/71h1Ryy+9QL._AC_SL1500_.jpg", "precio": "~30€", "descripcion": "17 teclas · Kit completo con bolsa, martillo afinador y pegatinas" },
+      { "asin": "B0897N6JR8", "titulo": "LingTing Kalimba 17 Teclas", "imagen": "https://m.media-amazon.com/images/I/71CeafsZQpL._AC_SL1000_.jpg", "precio": "~28€", "descripcion": "17 teclas · Madera maciza · Sonido cálido para principiantes" },
+      { "asin": "B08G834KNH", "titulo": "Nabance Kalimba con Accesorios Completos", "imagen": "https://m.media-amazon.com/images/I/71KHChdWvRL._AC_SL1500_.jpg", "precio": "~32€", "descripcion": "Kit completo · Apto principiantes y profesionales · Incluye funda" },
+      { "asin": "B00275G7FI", "titulo": "Meinl Percussion Kalimba Tamaño Medio", "imagen": "https://m.media-amazon.com/images/I/81YuZGRb+OL._AC_SL1500_.jpg", "precio": "~45€", "descripcion": "Marca reconocida en percusión · Tamaño medio · Buen acabado" },
+      { "asin": "B0040QGRY8", "titulo": "Hokema Kalimba 5 Notas", "imagen": "https://m.media-amazon.com/images/I/911ovVxWtiS._AC_SL1500_.jpg", "precio": "~50€", "descripcion": "Marca alemana de referencia · 5 notas · Sonido cálido, gama media-alta" },
+      { "asin": "B08747SW89", "titulo": "Cancionero y Protector para Kalimba", "imagen": "https://m.media-amazon.com/images/I/81unziWlrOL._AC_SL1500_.jpg", "precio": "~10€", "descripcion": "Accesorio: cancionero portátil con protector y guía de afinación" }
+    ],
+    "notas": "1000/mes KD32. Alto KD pero alto volumen. Mixto info+transaccional. Necesita ASINs.",
+    "prioridad": "alta"
   },
   {
-    "id": "bansuri",
+    "id": 11,
     "keyword": "bansuri",
     "tipo": "mixto",
-    "keywords_secundarias": ["bansuri flauta", "bansuri instrumento", "comprar bansuri"],
-    "long_tail": ["bansuri flauta india", "bansuri precio", "bansuri como tocar", "bansuri amazon", "flauta de bambu india"],
-    "asins": [],
-    "notas": "390/mes KD11. Mixto info+transaccional. Encaja en cluster de instrumentos. Necesita ASINs."
+    "keywords_secundarias": ["bansuri instrumento", "flauta bansuri", "flauta india bansuri"],
+    "long_tail": ["bansuri comprar", "flauta bansuri comprar", "flauta bansuri notas", "flauta bansuri como tocar", "flauta de bambu bansuri", "flauta india bansuri"],
+    "asins": [
+      { "asin": "B08RXWLWR7", "titulo": "Foxit Flauta Bansuri de Bambú", "imagen": "https://m.media-amazon.com/images/I/61n6ft2fqjL._AC_SL1500_.jpg", "precio": "~25€", "descripcion": "Bambú natural · Para diestros · Incluye bolsa de transporte" },
+      { "asin": "B06W9M68NW", "titulo": "Bansuri de Concierto para Profesionales", "imagen": "https://m.media-amazon.com/images/I/61nx21kbGIL._AC_SL1500_.jpg", "precio": "~40€", "descripcion": "Bambú natural de concierto · Apta para principiantes y profesionales" },
+      { "asin": "B084265N48", "titulo": "Bansuri Natural de Bambú con Funda", "imagen": "https://m.media-amazon.com/images/I/71mNT-aTizL._AC_SL1500_.jpg", "precio": "~30€", "descripcion": "Bambú natural · Incluye funda de transporte" },
+      { "asin": "B06XMXMS6M", "titulo": "Bansuri Transversal para Principiantes y Profesionales", "imagen": "https://m.media-amazon.com/images/I/61VjxaCjrnL._AC_SL1500_.jpg", "precio": "~35€", "descripcion": "Flauta transversal de bambú · Apta para todos los niveles" },
+      { "asin": "B06X3XQFCV", "titulo": "eRadius Bansuri de Bambú Indio Profesional", "imagen": "https://m.media-amazon.com/images/I/51ykhnd33KL._AC_SL1500_.jpg", "precio": "~45€", "descripcion": "Bambú indio auténtico · Calidad profesional · Afinación tradicional" },
+      { "asin": "B0D381BGLX", "titulo": "Radhe Flutes Bansuri Profesional con Funda", "imagen": "https://m.media-amazon.com/images/I/61B6vw-x7jL._AC_SL1500_.jpg", "precio": "~55€", "descripcion": "Marca india especializada · Incluye funda de terciopelo · Para diestros" },
+      { "asin": "B01NC2WZ0V", "titulo": "SG Musical Bansuri Escala Estándar", "imagen": "https://m.media-amazon.com/images/I/31dhhELQPbL._AC_.jpg", "precio": "~20€", "descripcion": "Modelo económico · Escala estándar · Buena opción de entrada" },
+      { "asin": "B0BRVG2CTK", "titulo": "Radhe Flutes Bansuri con Cubierta de Terciopelo", "imagen": "https://m.media-amazon.com/images/I/61LdA8gRHfL._AC_SL1500_.jpg", "precio": "~50€", "descripcion": "Acabado premium con cubierta de terciopelo · Para diestros" }
+    ],
+    "notas": "390/mes KD11. Mixto info+transaccional. Encaja en cluster de instrumentos. Necesita ASINs.",
+    "prioridad": "alta"
   },
   {
-    "id": "shruti-box",
+    "id": 12,
     "keyword": "shruti box",
     "tipo": "mixto",
-    "keywords_secundarias": ["shruti box instrumento", "comprar shruti box", "shruti box para que sirve"],
-    "long_tail": ["shruti box amazon", "shruti box thomann", "shruti box precio", "shruti box harmonium", "shruti box meditacion"],
-    "asins": [],
-    "notas": "Puede ir junto al artículo de harmonium o separado. Ver volumen real al escribir. Necesita ASINs."
+    "keywords_secundarias": ["harmonium shruti box", "shruti box instrumento", "shruti box comprar"],
+    "long_tail": ["como tocar shruti box", "shruti box amazon", "shruti box precio", "shruti box 432 hz", "harmonium vs shruti box", "donde comprar shruti box"],
+    "asins": [
+      { "asin": "B0CW3G846L", "titulo": "Shruti Box Afinada con Funda Acolchada", "imagen": "https://m.media-amazon.com/images/I/71fw-8HhzcL._AC_SL1500_.jpg", "precio": "~110€", "descripcion": "Madera maciza · Afinación estándar · Incluye funda de transporte" },
+      { "asin": "B0CW3HC5G9", "titulo": "Shruti Box Grande 440Hz/432Hz", "imagen": "https://m.media-amazon.com/images/I/71KAWH-kZJL._AC_SL1500_.jpg", "precio": "~140€", "descripcion": "Tamaño grande · Doble afinación 440Hz y 432Hz · Sonido envolvente" },
+      { "asin": "B0076VZCVS", "titulo": "Shruti Box Profesional Estilo Harmonio", "imagen": "https://m.media-amazon.com/images/I/711pqf8AHuL._AC_SL1280_.jpg", "precio": "~130€", "descripcion": "Madera tradicional india · Estética estilo harmonio · Calidad profesional" },
+      { "asin": "B0CPMGJ2DW", "titulo": "TATTVA Shruti Box Profesional Mediana", "imagen": "https://m.media-amazon.com/images/I/81lhk5UMJsL._AC_SL1500_.jpg", "precio": "~120€", "descripcion": "Marca india reconocida · Tamaño mediano · Buen equilibrio calidad-precio" },
+      { "asin": "B0CW3G3F8B", "titulo": "Shruti Box de Madera de Teca para Kirtan", "imagen": "https://m.media-amazon.com/images/I/51BpoOihgoL._AC_.jpg", "precio": "~125€", "descripcion": "Madera de teca · Pensada para kirtan y cantos devocionales" }
+    ],
+    "notas": "Puede ir junto al artículo de harmonium o separado. Ver volumen real al escribir. Necesita ASINs.",
+    "prioridad": "alta"
   },
   {
-    "id": "arpa-de-cristal",
+    "id": 13,
     "keyword": "arpa de cristal",
     "tipo": "mixto",
-    "keywords_secundarias": ["arpa de cristal instrumento", "arpa de cristal terapeutica", "comprar arpa de cristal"],
-    "long_tail": ["arpa de cristal precio", "arpa de cristal amazon", "arpa de cristal sonido", "arpa de cristal beneficios", "arpa de cristal vs cuenco de cuarzo"],
-    "asins": [],
-    "notas": "70/mes KD6. Mixto. Instrumento de sonoterapia con buen ángulo diferenciador. Necesita ASINs."
+    "keywords_secundarias": ["arpa de cristal de cuarzo"],
+    "long_tail": ["arpa de cristal precio", "arpa de cristal de cuarzo"],
+    "asins": [
+      { "asin": "B0DSTWL5LZ", "titulo": "ULEZUAR Arpa de Cristal para Meditación", "imagen": "https://m.media-amazon.com/images/I/71pH-2hcxdL._AC_SL1500_.jpg", "precio": "~65€", "descripcion": "Diseño curativo · Para equilibrio emocional y meditación" },
+      { "asin": "B0GZQ3566V", "titulo": "JozyJul Arpa de Cristal de Aluminio", "imagen": "https://m.media-amazon.com/images/I/71UfAgpCIOL._AC_SL1500_.jpg", "precio": "~70€", "descripcion": "Escala CDEFGABC · Aluminio · Para sonoterapia y meditación" },
+      { "asin": "B0H2DP1HK2", "titulo": "KRYANFEN Arpa de Cristal Triangular", "imagen": "https://m.media-amazon.com/images/I/71D4YzncC8L._AC_SL1500_.jpg", "precio": "~90€", "descripcion": "Diseño triangular transparente · Uso terapéutico" },
+      { "asin": "B0GZPND5D9", "titulo": "JozyJul Arpa de Cristal de Cuarzo Coloreado", "imagen": "https://m.media-amazon.com/images/I/715VGyb6V2L._AC_SL1500_.jpg", "precio": "~75€", "descripcion": "Acabado de cuarzo coloreado · Diseño decorativo y terapéutico" },
+      { "asin": "B0GZQ8Y1H2", "titulo": "JozyJul Arpa de Cristal Afinación Estándar", "imagen": "https://m.media-amazon.com/images/I/71kSnPSGAIL._AC_SL1500_.jpg", "precio": "~75€", "descripcion": "Afinación estándar · Tamaño compacto · Buena relación calidad-precio" },
+      { "asin": "B0GRH972MP", "titulo": "Arpa de Cristal con Set de Meditación", "imagen": "https://m.media-amazon.com/images/I/71hSYIpi9OL._AC_SL1500_.jpg", "precio": "~80€", "descripcion": "Incluye accesorios para meditación · Acabado transparente" },
+      { "asin": "B0FXPTT3T1", "titulo": "LSBHPPD Arpa de Cristal Aleación Terapéutica", "imagen": "https://m.media-amazon.com/images/I/71m1jhO+1tL._AC_SL1500_.jpg", "precio": "~85€", "descripcion": "Aleación resistente · Diseño terapéutico para meditación" }
+    ],
+    "notas": "70/mes KD6. Mixto. Instrumento de sonoterapia con buen ángulo diferenciador. Necesita ASINs.",
+    "prioridad": "media"
   },
   {
-    "id": "tambor-oceanico",
+    "id": 14,
     "keyword": "tambor oceanico",
     "tipo": "mixto",
-    "keywords_secundarias": ["tambor del oceano", "ocean drum instrumento", "comprar tambor oceanico"],
-    "long_tail": ["tambor oceanico precio", "tambor oceanico amazon", "tambor oceanico remo", "ocean drum terapia", "tambor de lluvia vs ocean drum"],
-    "asins": [],
-    "notas": "210/mes KD9. Mixto. Complementa cluster de instrumentos chamánicos. Necesita ASINs."
+    "keywords_secundarias": ["tambor oceanico comprar", "tambor oceanico amazon", "tambor oceanico precio"],
+    "long_tail": ["diferencias entre tambores chamanicos y oceanicos", "mejores tambores oceanico", "tambor oceanico meinl"],
+    "asins": [
+      { "asin": "B09W12SWXP", "titulo": "Tambor Oceánico Ondulado de Percusión", "imagen": "https://m.media-amazon.com/images/I/61LMNiPC8WL._AC_SL1500_.jpg", "precio": "~28€", "descripcion": "Doble parche con bolas internas · Imita el sonido de las olas" },
+      { "asin": "B00BURBK4W", "titulo": "Fuzeau Ocean Drum 25cm", "imagen": "https://m.media-amazon.com/images/I/81+jpabBeiL._AC_SL1500_.jpg", "precio": "~40€", "descripcion": "25cm de diámetro · Marca francesa especializada · Sonido envolvente" },
+      { "asin": "B09W14V3KR", "titulo": "Tambor Oceánico de Percusión Musical", "imagen": "https://m.media-amazon.com/images/I/71QHd01jeuL._AC_SL1500_.jpg", "precio": "~30€", "descripcion": "Doble parche transparente con bolas metálicas · Imita el sonido del mar" },
+      { "asin": "B0030Y8Y0Q", "titulo": "Fuzeau Ocean Tambor", "imagen": "https://m.media-amazon.com/images/I/818qKvhiU9S._AC_SL1500_.jpg", "precio": "~38€", "descripcion": "Marca francesa · Tamaño estándar · Sonido relajante de olas" },
+      { "asin": "B00275G73A", "titulo": "Meinl Percussion Pandero Ocean Drum 16\"", "imagen": "https://m.media-amazon.com/images/I/71uHwW8V3dL._AC_SL1500_.jpg", "precio": "~60€", "descripcion": "16 pulgadas · Marca reconocida · Sonido profundo y envolvente" },
+      { "asin": "B0DJVMFV34", "titulo": "Tambor Oceánico para Meditación y Relajación", "imagen": "https://m.media-amazon.com/images/I/61pnDQm7EDL._AC_SL1200_.jpg", "precio": "~25€", "descripcion": "Diseño compacto · Ideal para sesiones de relajación" },
+      { "asin": "B0077QM0Q2", "titulo": "Tambor Fuzeau Ocean 20cm", "imagen": "https://m.media-amazon.com/images/I/71nO7ZFV64L._AC_SL1500_.jpg", "precio": "~32€", "descripcion": "20cm · Tamaño manejable · Sonido suave de olas" },
+      { "asin": "B000KTSKMQ", "titulo": "Remo Ocean Drum", "imagen": "https://m.media-amazon.com/images/I/91HuN-g3DqL._AC_SL1500_.jpg", "precio": "~75€", "descripcion": "Marca de referencia en percusión terapéutica · Gama alta, sonido muy realista" }
+    ],
+    "notas": "210/mes KD9. Mixto. Complementa cluster de instrumentos chamánicos. Necesita ASINs.",
+    "prioridad": "media"
   },
   {
-    "id": "sound-healing",
+    "id": 15,
     "keyword": "sound healing",
     "tipo": "informacional",
-    "keywords_secundarias": ["sound healing que es", "terapia de sonido sound healing", "sound healing beneficios"],
-    "long_tail": ["sound healing valencia", "sound healing instrumentos", "sound healing cerca de mi", "que pasa en una sesion de sound healing", "sound healing evidencia cientifica"],
+    "keywords_secundarias": ["sound healing que es", "sound healing instrumentos", "terapia de sonido", "sonoterapia que es"],
+    "long_tail": ["sound healing treatment", "sleep sound healing", "que es la terapia de sonido", "beneficios de la terapia de sonido", "instrumentos de sonoterapia"],
     "asins": [],
-    "notas": "390/mes KD21 sound healing + 110/mes KD9 sound healing que es. En inglés para capturar búsquedas de extranjeros en España. Enlazar a /bano-sonido."
+    "notas": "390/mes KD21 sound healing + 110/mes KD9 sound healing que es. En inglés para capturar búsquedas de extranjeros en España. Enlazar a /bano-sonido.",
+    "prioridad": "media"
   },
   {
-    "id": "respiracion-consciente",
+    "id": 16,
     "keyword": "respiracion consciente",
     "tipo": "informacional",
-    "keywords_secundarias": ["respiracion consciente tecnicas", "respiracion consciente beneficios", "que es la respiracion consciente"],
-    "long_tail": ["ejercicios de respiracion consciente", "respiracion consciente guiada", "respiracion consciente meditacion", "respiracion consciente ansiedad", "respiracion consciente para dormir"],
+    "keywords_secundarias": ["respiracion guiada", "respiracion circular", "curso de respiracion consciente"],
+    "long_tail": ["como hacer respiracion consciente", "ejercicios de respiracion consciente", "meditacion guiada respiracion consciente", "beneficios de la respiracion consciente", "workshop de respiracion consciente"],
     "asins": [],
-    "notas": "590/mes KD36. Satélite breathwork. Enlazar a /breathwork."
+    "notas": "590/mes KD36. Satélite breathwork. Enlazar a /breathwork.",
+    "prioridad": "media"
   },
   {
-    "id": "circulo-de-hombres",
+    "id": 17,
     "keyword": "circulo de hombres",
     "tipo": "informacional",
-    "keywords_secundarias": ["que es un circulo de hombres", "circulo de hombres para que sirve", "mens circle"],
-    "long_tail": ["circulo de hombres valencia", "como funciona un circulo de hombres", "beneficios circulo de hombres", "circulo de hombres madrid", "men's work"],
+    "keywords_secundarias": ["circulo de hombres en valencia", "que es un circulo de hombres"],
+    "long_tail": ["como estructurar un circulo de hombres", "opiniones circulo de hombres", "circulo de hombres en valencia"],
     "asins": [],
-    "notas": "90/mes KD3. Pilar informacional para /circulos-hombres. Ya tenemos la página de servicio — el artículo alimenta y enlaza a ella."
+    "notas": "90/mes KD3. Pilar informacional para /circulos-hombres. Ya tenemos la página de servicio — el artículo alimenta y enlaza a ella.",
+    "prioridad": "media"
   },
   {
-    "id": "tipos-de-cuencos-tibetanos",
+    "id": 18,
     "keyword": "tipos de cuencos tibetanos",
     "tipo": "informacional",
-    "keywords_secundarias": ["cuencos tibetanos tipos y usos", "diferencias cuencos tibetanos", "cuencos tibetanos clasificacion"],
-    "long_tail": ["cuenco tibetano jambati", "cuenco tibetano thadobati", "cuenco tibetano ultabati", "cuenco tibetano mani", "cuencos tibetanos 7 metales"],
+    "keywords_secundarias": ["cuencos tibetanos full moon", "set cuencos tibetanos"],
+    "long_tail": ["tipos de cuencos tibetanos", "jambati cuenco", "thadobati cuenco", "cuenco mani tibetano"],
     "asins": [],
-    "notas": "30/mes KD0. Completa el cluster de cuencos tibetanos. Material ya investigado gracias a Escuela de Gong."
+    "notas": "30/mes KD0. Completa el cluster de cuencos tibetanos. Material ya investigado gracias a Escuela de Gong.",
+    "prioridad": "media"
   },
   {
-    "id": "cuencos-tibetanos-7-metales-mito",
-    "keyword": "cuencos tibetanos 7 metales",
+    "id": 19,
+    "keyword": "cuencos tibetanos 7 metales mito",
     "tipo": "informacional",
-    "keywords_secundarias": ["cuencos tibetanos 7 metales composicion", "cuencos 7 metales mito", "cuencos tibetanos materiales reales"],
-    "long_tail": ["cuenco tibetano 7 planetas", "cuencos tibetanos aleacion", "cuencos tibetanos metal", "son reales los cuencos de 7 metales"],
+    "keywords_secundarias": ["cuenco de 7 metales", "cuenco tibetano de 7 metales precio"],
+    "long_tail": ["cuenco de 7 metales", "cuenco tibetano 7 metales precio", "los 7 metales cuencos tibetanos"],
     "asins": [],
-    "notas": "20/mes KD0. Artículo de desmitificación similar al de chakras. Material ya investigado. Alto E-E-A-T."
+    "notas": "20/mes KD0. Artículo de desmitificación similar al de chakras. Material ya investigado. Alto E-E-A-T.",
+    "prioridad": "media"
   },
   {
-    "id": "mejores-cuencos-tibetanos",
+    "id": 20,
     "keyword": "mejores cuencos tibetanos",
     "tipo": "transaccional",
-    "keywords_secundarias": ["cuenco tibetano calidad", "comprar cuenco tibetano bueno", "cuenco tibetano precio"],
-    "long_tail": ["cuenco tibetano principiantes", "cuenco tibetano profesional", "cuenco tibetano artesanal", "donde comprar cuenco tibetano", "cuenco tibetano amazon"],
-    "asins": [],
-    "notas": "110/mes KD6 cuenco tibetano precios. Artículo transaccional para completar cluster cuencos. Necesita ASINs de cuencos tibetanos de calidad."
+    "keywords_secundarias": ["cuenco tibetano precios", "comprar cuencos tibetanos online", "cuencos tibetanos donde comprar", "amazon cuencos tibetanos"],
+    "long_tail": ["como elegir cuenco tibetano", "comprar cuencos tibetanos antiguos", "comprar cuenco tibetano 7 metales", "baqueta para cuenco tibetano", "cojin para cuenco tibetano"],
+    "asins": [
+      { "asin": "B08BK3WSH6", "titulo": "Cuenco Tibetano Grande para Meditación Profesional", "imagen": "https://m.media-amazon.com/images/I/61LYPuoNQ3L._AC_SL1000_.jpg", "precio": "~45€", "descripcion": "Tamaño grande · Acabado martillado a mano · Incluye baqueta y cojín" },
+      { "asin": "B087NTXWZX", "titulo": "Cuenco Tibetano para Meditación con Accesorios", "imagen": "https://m.media-amazon.com/images/I/41PhraOa8YL._AC_.jpg", "precio": "~35€", "descripcion": "Tamaño mediano · Incluye baqueta y cojín · Buena opción de entrada" },
+      { "asin": "B08X3LBLXC", "titulo": "Cuenco Tibetano Martillado del Himalaya", "imagen": "https://m.media-amazon.com/images/I/61Upqh0uC3L._AC_SL1372_.jpg", "precio": "~55€", "descripcion": "Martillado artesanalmente · Estilo tradicional del Himalaya · Sonido profundo" },
+      { "asin": "B07MVMLV9P", "titulo": "Cuenco Tibetano de Varios Metales Artesanal", "imagen": "https://m.media-amazon.com/images/I/81pzhNtqyJL._AC_SL1500_.jpg", "precio": "~65€", "descripcion": "Aleación de varios metales · Hecho a mano · Incluye baqueta y cojín" }
+    ],
+    "notas": "110/mes KD6 cuenco tibetano precios. Artículo transaccional para completar cluster cuencos. Necesita ASINs de cuencos tibetanos de calidad.",
+    "prioridad": "media"
   },
   {
-    "id": "retiros-espirituales-valencia",
+    "id": 21,
     "keyword": "retiros espirituales valencia",
     "tipo": "informacional",
     "keywords_secundarias": ["retiro espiritual valencia", "retiros espirituales en valencia", "retiros espirituales comunidad valenciana"],
     "long_tail": ["retiro yoga valencia", "ecstatic dance valencia", "baño de gong valencia", "retiro de silencio valencia"],
     "asins": [],
-    "notas": "480+170+110=760/mes acumulado. Artículo de posicionamiento de marca local. Ram como curador del ecosistema de bienestar valenciano. Actualizar cuando tenga retiro propio. Modelo de monetización: fichas patrocinadas / leads."
+    "notas": "480+170+110=760/mes acumulado. Artículo de posicionamiento de marca local. Ram como curador del ecosistema de bienestar valenciano. Actualizar cuando tenga retiro propio. Modelo de monetización: fichas patrocinadas / leads.",
+    "prioridad": "media"
   },
   {
-    "id": "retiros-para-hombres",
+    "id": 22,
     "keyword": "retiros para hombres",
     "tipo": "informacional",
-    "keywords_secundarias": ["retiro masculino", "retiro hombres españa", "retiro masculinidad consciente"],
-    "long_tail": ["retiro para hombres valencia", "retiro masculino meditacion", "retiro hombres naturaleza", "men's retreat españa"],
+    "keywords_secundarias": ["retiro de hombres", "retiro espiritual para hombres", "retiros espirituales para hombres"],
+    "long_tail": ["retiro tantra hombres", "retiros en monasterios para hombres", "retiro hombres españa"],
     "asins": [],
-    "notas": "20/mes c/u KD bajo. Ram como facilitador de círculos de hombres. Modelo de monetización: fichas patrocinadas / leads. Artículo de posicionamiento a largo plazo."
+    "notas": "20/mes c/u KD bajo. Ram como facilitador de círculos de hombres. Modelo de monetización: fichas patrocinadas / leads. Artículo de posicionamiento a largo plazo.",
+    "prioridad": "media"
   },
   {
-    "id": "tingsha",
+    "id": 23,
     "keyword": "tingsha",
     "tipo": "mixto",
-    "keywords_secundarias": ["tingsha instrumento", "tingsha campanas tibetanas", "comprar tingsha"],
-    "long_tail": ["tingsha precio", "tingsha amazon", "tingsha para meditacion", "tingsha como usar", "crotalo tibetano vs tingsha"],
-    "asins": [],
-    "notas": "50/mes KD6 tingsha + 260/mes KD19 crotalos instrumento. Pueden ir juntos en un artículo. Accesorios de sonoterapia."
+    "keywords_secundarias": ["campana tingsha", "campanas tibetanas tingsha", "platillos tibetanos tingsha", "crotalos instrumento"],
+    "long_tail": ["tingshas o crótalos tibetanos", "tingshas tibetanas para que sirve", "comprar crotalos", "tingshas comprar", "como usar los tingshas"],
+    "asins": [
+      { "asin": "B091HQ29Y4", "titulo": "Ajuny Platillos Tingsha para Meditación", "imagen": "https://m.media-amazon.com/images/I/91OsAIBMTyL._AC_SL1500_.jpg", "precio": "~18€", "descripcion": "Aleación de bronce · Sonido brillante y agudo · Para meditación e inicio de prácticas" },
+      { "asin": "B0BMQGTMYG", "titulo": "Qcwwy Platillos Tingsha para Relajación", "imagen": "https://m.media-amazon.com/images/I/61-gnF-9gqL._AC_SL1500_.jpg", "precio": "~16€", "descripcion": "Diseño tradicional · Sonido relajante · Incluye funda" },
+      { "asin": "B00D48Y3YY", "titulo": "Címbalos Tibetanos de Sonido Mate", "imagen": "https://m.media-amazon.com/images/I/61izaHJaGqL._AC_SL1223_.jpg", "precio": "~20€", "descripcion": "Acabado mate · Sonido más suave que el tradicional · Para masaje sonoro" },
+      { "asin": "B0BJD1F7NR", "titulo": "Campana Tingsha Tibetana para Mindfulness", "imagen": "https://m.media-amazon.com/images/I/81rNSmcjyCL._AC_SL1500_.jpg", "precio": "~20€", "descripcion": "Diseño tradicional tibetano · Incluye funda y cordón de cuero" },
+      { "asin": "B01FEXQJX4", "titulo": "Dharma Store Platillos Tibetanos con Símbolos", "imagen": "https://m.media-amazon.com/images/I/81SccKllVtL._AC_SL1500_.jpg", "precio": "~22€", "descripcion": "Grabados con símbolos tradicionales · Sonido limpio y resonante" },
+      { "asin": "B0D79B95J3", "titulo": "Ajuny Campanas Tibetanas para Meditación", "imagen": "https://m.media-amazon.com/images/I/91XhmzvC1vL._AC_SL1500_.jpg", "precio": "~19€", "descripcion": "Diseño tradicional · Set completo con funda incluida" },
+      { "asin": "B07WDFLBGV", "titulo": "Tingsha Gandhara con Grabado de Dragón", "imagen": "https://m.media-amazon.com/images/I/81Nhsfoq-jL._AC_SL1500_.jpg", "precio": "~24€", "descripcion": "Grabado decorativo de dragón · Sonido tradicional tibetano" }
+    ],
+    "notas": "50/mes KD6 tingsha + 260/mes KD19 crotalos instrumento. Pueden ir juntos en un artículo. Accesorios de sonoterapia.",
+    "prioridad": "media"
   },
   {
-    "id": "flauta-nativa-americana",
+    "id": 24,
     "keyword": "flauta nativa americana",
     "tipo": "mixto",
-    "keywords_secundarias": ["native american flute", "flauta indigena americana", "comprar flauta nativa americana"],
-    "long_tail": ["flauta nativa americana precio", "flauta nativa americana amazon", "flauta nativa americana como tocar", "flauta nativa americana do menor", "flauta nativa americana madera"],
-    "asins": [],
-    "notas": "210/mes KD28. Alto KD. Instrumento de sonoterapia menos prioritario. Necesita ASINs."
+    "keywords_secundarias": ["flauta nativa americana comprar", "flauta nativa americana precio"],
+    "long_tail": ["aprender a tocar flauta nativa americana", "flauta nativa americana doble", "beneficios de la flauta nativa", "comprar flauta nativa americana españa"],
+    "asins": [
+      { "asin": "B0CXT28Z1P", "titulo": "Flauta Nativa Americana de Madera", "imagen": "https://m.media-amazon.com/images/I/41SeaVDBxXL._AC_SL1200_.jpg", "precio": "~35€", "descripcion": "Madera natural · Repertorio tradicional nativo americano" },
+      { "asin": "B0DLKJJCH2", "titulo": "Flauta Nativa Americana Corta de Palisandro", "imagen": "https://m.media-amazon.com/images/I/614r+BCLh9L._AC_SL1500_.jpg", "precio": "~45€", "descripcion": "Palisandro · Formato corto, tono más agudo" },
+      { "asin": "B07J6HKRF1", "titulo": "Flauta Nativa Americana Larga de Palisandro", "imagen": "https://m.media-amazon.com/images/I/61qx0MWDr2L._AC_SL1500_.jpg", "precio": "~60€", "descripcion": "Palisandro · Formato largo, tono más grave · Calidad superior" },
+      { "asin": "B0BMJYVX1L", "titulo": "Flauta Bajo de Nogal 432Hz", "imagen": "https://m.media-amazon.com/images/I/51xtWThQplL._AC_SL1250_.jpg", "precio": "~80€", "descripcion": "Madera de nogal · Afinación 432Hz · Tono bajo y envolvente" },
+      { "asin": "B0C3K3FVKL", "titulo": "Flauta Curativa Nativa Americana 432Hz", "imagen": "https://m.media-amazon.com/images/I/51OsqzrvHWS._AC_SL1250_.jpg", "precio": "~70€", "descripcion": "Afinación 432Hz · Pensada para sonoterapia y meditación" }
+    ],
+    "notas": "210/mes KD28. Alto KD. Instrumento de sonoterapia menos prioritario. Necesita ASINs.",
+    "prioridad": "baja"
   },
   {
-    "id": "didgeridoo",
+    "id": 25,
     "keyword": "didgeridoo",
     "tipo": "mixto",
-    "keywords_secundarias": ["didgeridoo instrumento", "didgeridoo para que sirve", "comprar didgeridoo"],
-    "long_tail": ["didgeridoo precio", "didgeridoo amazon", "didgeridoo como tocar", "respiracion circular didgeridoo", "didgeridoo principiantes", "didgeridoo apnea del sueno"],
-    "asins": [],
-    "notas": "2900/mes KD20-24. Alto volumen pero instrumento que Ram no usa en sesiones. Valorar si tiene sentido para la marca. Si se hace, con honestidad sobre el ángulo."
+    "keywords_secundarias": ["instrument didgeridoo", "didgeridoo beneficios", "didgeridoo caracteristicas"],
+    "long_tail": ["didgeridoo de donde es", "didgeridoo historia", "como se toca el didgeridoo", "didgeridoo comprar", "didgeridoo instrumento precio", "didgeridoo de viaje", "aprender a tocar el didgeridoo", "clases de didgeridoo"],
+    "asins": [
+      { "asin": "B08213WYZY", "titulo": "Australian Treasures Didgeridoo PRO", "imagen": "https://m.media-amazon.com/images/I/81G7Co0TSDL._AC_SL1500_.jpg", "precio": "~90€", "descripcion": "Madera tradicional australiana · Incluye bolsa de transporte" },
+      { "asin": "B07RKG9C58", "titulo": "Australian Treasures Didgeridoo Tradicional", "imagen": "https://m.media-amazon.com/images/I/41h8CPq6rxL._AC_.jpg", "precio": "~80€", "descripcion": "Madera australiana tradicional · Sonido auténtico" },
+      { "asin": "B00B2PJ6O8", "titulo": "Meinl Didgeridoo de Viaje Plegable", "imagen": "https://m.media-amazon.com/images/I/71+w5r-YG2L._AC_SL1287_.jpg", "precio": "~60€", "descripcion": "Formato compacto de viaje · Fácil de transportar" },
+      { "asin": "B07J451PHF", "titulo": "World Rhythm Didgeridoo Australiano Pintado", "imagen": "https://m.media-amazon.com/images/I/61i9RYNzWxL._AC_SL1500_.jpg", "precio": "~75€", "descripcion": "Decoración pintada a mano · Madera natural · Sonido tradicional" },
+      { "asin": "B00IG6ZA14", "titulo": "Australian Treasures Didgeridoo Natural con Bolsa", "imagen": "https://m.media-amazon.com/images/I/81sprSTMTxL._AC_SL1500_.jpg", "precio": "~85€", "descripcion": "Acabado natural · Incluye bolsa de transporte" },
+      { "asin": "B00IK9Y75C", "titulo": "World Rhythm Didgeridoo Decorado con Serpiente", "imagen": "https://m.media-amazon.com/images/I/61eRthg0tgL._AC_SL1500_.jpg", "precio": "~78€", "descripcion": "Decoración tradicional con motivo de serpiente" },
+      { "asin": "B0054D80FA", "titulo": "Toca Didgeridoo Curvado Gecko", "imagen": "https://m.media-amazon.com/images/I/51XgXZgS2KL._AC_SL1500_.jpg", "precio": "~95€", "descripcion": "Diseño curvado · Decoración gecko · Marca reconocida en percusión" },
+      { "asin": "B003Z2YI8K", "titulo": "Didgeridoo con Boquilla para Principiantes", "imagen": "https://m.media-amazon.com/images/I/91GCv8wTdmL._AC_SL1500_.jpg", "precio": "~65€", "descripcion": "Incluye instrucciones · Apto para principiantes" },
+      { "asin": "B00B2PJ6MK", "titulo": "Meinl Percussion Didgeridoo 61cm", "imagen": "https://m.media-amazon.com/images/I/41x5UkbW2bL._AC_SL1000_.jpg", "precio": "~70€", "descripcion": "61cm · Marca reconocida · Buen equilibrio calidad-precio" }
+    ],
+    "notas": "2900/mes KD20-24. Alto volumen pero instrumento que Ram no usa en sesiones. Valorar si tiene sentido para la marca. Si se hace, con honestidad sobre el ángulo.",
+    "prioridad": "baja"
   },
   {
-    "id": "handpan-precio",
-    "keyword": "handpan precio",
-    "tipo": "transaccional",
-    "keywords_secundarias": ["cuanto cuesta un handpan", "handpan economico", "handpan barato"],
-    "long_tail": ["cuanto vale un handpan", "handpan precio españa", "handpan de segunda mano", "handpan 500 euros", "handpan chino calidad"],
-    "asins": [],
-    "notas": "480/mes KD7. Transaccional puro. Podría ser un artículo separado del de mejores handpan o un H2 dentro de él. Ya tenemos mejores-handpan publicado — revisar si lo cubre."
-  },
-  {
-    "id": "makers-handpan-espana",
+    "id": 27,
     "keyword": "makers handpan españa",
     "tipo": "informacional",
-    "keywords_secundarias": ["fabricantes handpan españa", "artesanos handpan", "handpan hecho en españa"],
+    "keywords_secundarias": ["fabricantes de handpan", "handpan madrid", "handpan mallorca"],
     "long_tail": ["fabricantes de handpan", "handpan neotone", "evatek handpan", "etsy handpan", "handpan electronico"],
     "asins": [],
-    "notas": "Sin volumen alto pero alto valor de conversión. Artículo de directorio de makers artesanales en España. Sin afiliado."
+    "notas": "Sin volumen alto pero alto valor de conversión. Artículo de directorio de makers artesanales en España. Sin afiliado.",
+    "prioridad": "baja"
   },
   {
-    "id": "breathwork-valencia",
+    "id": 28,
     "keyword": "breathwork valencia",
     "tipo": "informacional",
-    "keywords_secundarias": ["sesiones de breathwork valencia", "clases de breathwork valencia", "facilitador breathwork valencia"],
-    "long_tail": ["breathwork online valencia", "breathwork grupal valencia", "taller de respiracion valencia", "breathwork certificado valencia"],
+    "keywords_secundarias": ["curso de breathwork", "workshop de respiracion barcelona"],
+    "long_tail": ["breathwork valencia", "curso de respiracion consciente"],
     "asins": [],
-    "notas": "40/mes KD7. Localización. Puede ser una página de servicio o un artículo del blog. Ram ya tiene /breathwork — valorar si necesita artículo adicional."
+    "notas": "40/mes KD7. Localización. Puede ser una página de servicio o un artículo del blog. Ram ya tiene /breathwork — valorar si necesita artículo adicional.",
+    "prioridad": "baja"
   },
   {
-    "id": "bano-de-gong",
+    "id": 29,
     "keyword": "baño de gong",
     "tipo": "informacional",
-    "keywords_secundarias": ["gong bath", "sesion de gong", "bano de sonido con gong"],
-    "long_tail": ["bano de gong valencia", "bano de gong que es", "bano de gong beneficios", "diferencia bano de gong y cuencos", "bano de gong contraindicaciones"],
+    "keywords_secundarias": ["baño de gong beneficios", "baño de gong precio", "baño de gong efectos secundarios"],
+    "long_tail": ["baño de gong que es", "baño de gong para que sirve", "baño de gong contraindicaciones", "baño de gong valencia", "efectos del baño de gong", "terapia baño de gong", "baños de gong y cuencos tibetanos"],
     "asins": [],
-    "notas": "590/mes KD9 baño de gong. Ya cubierto como H2 en gong-instrumento.html. Verificar si el H2 captura bien las keywords o si justifica artículo propio."
+    "notas": "590/mes KD9 baño de gong. Ya cubierto como H2 en gong-instrumento.html. Verificar si el H2 captura bien las keywords o si justifica artículo propio.",
+    "prioridad": "baja"
   },
   {
-    "id": "diapason",
-    "keyword": "diapasón",
-    "tipo": "informacional",
-    "keywords_secundarias": ["diapason terapeutico", "diapason musical", "diapason para que sirve"],
-    "long_tail": ["diapason 432 hz", "diapason 528 hz", "diapason 128 hz", "diapason weighted", "diapason terapia de sonido"],
-    "asins": [],
-    "notas": "5400/mes KD22. Keyword principal muy amplia — incluye diapasón musical (guitarra) y terapéutico. Ya tenemos diapason-terapeutico.html. Revisar si hay gap o canibalización."
-  },
-  {
-    "id": "sonajero-chamanico",
+    "id": 31,
     "keyword": "sonajero chamanico",
     "tipo": "mixto",
-    "keywords_secundarias": ["sonajero chamanico instrumento", "chaman sonajero", "comprar sonajero chamanico"],
-    "long_tail": ["sonajero chamanico precio", "sonajero chamanico amazon", "sonajero chamanico para que sirve", "sonajero de semillas", "sonajero ritual"],
-    "asins": [],
-    "notas": "Accesorios chamánicos. Volumen bajo pero completa el cluster de instrumentos ceremoniales."
+    "keywords_secundarias": ["sonajero de mano", "sonajero de semillas", "maracas de semillas", "instrumento maraca"],
+    "long_tail": ["sonajero chamanico", "maracas con semillas", "comprar maracas", "donde comprar sonajeros chamanicos", "instrumento sonajero con semillas rellenas"],
+    "asins": [
+      { "asin": "B000EELEC0", "titulo": "Toca Shaker de Semillas", "imagen": "https://m.media-amazon.com/images/I/91L9G4Q7IfL._AC_SL1050_.jpg", "precio": "~15€", "descripcion": "Calabaza con semillas naturales · Marca reconocida en percusión" },
+      { "asin": "B0CCX2CH47", "titulo": "Sonajero Chamánico de Instrumentos Africanos", "imagen": "https://m.media-amazon.com/images/I/71AHCkEcpIL._AC_SL1500_.jpg", "precio": "~16€", "descripcion": "Estilo tradicional africano · Semillas naturales" },
+      { "asin": "B0147CTR1Y", "titulo": "Maracas de Coco Pintadas a Mano", "imagen": "https://m.media-amazon.com/images/I/71ppOM8mVML._AC_SL1296_.jpg", "precio": "~14€", "descripcion": "Coco natural pintado a mano · Diseño colorido" },
+      { "asin": "B07VN92N3C", "titulo": "Coctelera Auténtica de Percusión", "imagen": "https://m.media-amazon.com/images/I/713H2QE6ihL._AC_SL1500_.jpg", "precio": "~13€", "descripcion": "Diseño tradicional · Sonido suave para acompañamiento" },
+      { "asin": "B0G8JJZQ7L", "titulo": "Sonajero Chamánico para Meditación", "imagen": "https://m.media-amazon.com/images/I/71GBcl-DvkL._AC_SL1500_.jpg", "precio": "~18€", "descripcion": "Diseño tradicional chamánico · Semillas naturales · Uso ceremonial" },
+      { "asin": "B0DMP4J4LZ", "titulo": "Sonajero de Calabaza Chamánica", "imagen": "https://m.media-amazon.com/images/I/31S9yulBX2L._AC_.jpg", "precio": "~16€", "descripcion": "Calabaza natural · Estilo chamánico tradicional" },
+      { "asin": "B0GZVHRN7K", "titulo": "Sonajero de Semillas Naturales Decorativo", "imagen": "https://m.media-amazon.com/images/I/71QyS6-913L._AC_SL1500_.jpg", "precio": "~17€", "descripcion": "Semillas naturales · Diseño decorativo · Sonido suave" },
+      { "asin": "B09M7DTKMG", "titulo": "Maraca Ceremonial Estilo Shaman", "imagen": "https://m.media-amazon.com/images/I/61Kw7dged1L._AC_SX695_.jpg", "precio": "~20€", "descripcion": "Diseño ceremonial · Sonido suave para círculos y rituales" }
+    ],
+    "notas": "Accesorios chamánicos. Volumen bajo pero completa el cluster de instrumentos ceremoniales.",
+    "prioridad": "baja"
   },
   {
-    "id": "campana-tubular",
-    "keyword": "campana tubular",
+    "id": 33,
+    "keyword": "palo santo",
     "tipo": "mixto",
-    "keywords_secundarias": ["campana tubular instrumento", "tubular bells", "comprar campana tubular"],
-    "long_tail": ["campana tubular precio", "campana tubular amazon", "campana tubular terapeutica", "campana tubular para meditacion", "campana tubular thomann"],
+    "keywords_secundarias": ["palo santo para que sirve", "para que sirve el palo santo", "palo santo como usar", "como usar palo santo"],
+    "long_tail": ["palo santo comprar", "donde comprar palo santo", "incienso palo santo", "que dias quemar palo santo", "como quemar palo santo", "palo santo contraindicaciones", "palo santo propiedades", "quemador palo santo", "amazon palo santo", "arbol de palo santo", "como limpiar a una persona con palo santo", "ritual palo santo"],
+    "asins": [
+      { "asin": "B0BZ8QXFYC", "titulo": "Palo Santo Incienso Natural Auténtico", "imagen": "https://m.media-amazon.com/images/I/71AKEyMFqEL._AC_SL1500_.jpg", "precio": "~15€", "descripcion": "Madera de palo santo 100% natural de Ecuador/Perú · Varios palitos" },
+      { "asin": "B0FL9S31FY", "titulo": "Palo Santo Natural en Palitos", "imagen": "https://m.media-amazon.com/images/I/61Fcyt7seGL._AC_SL1189_.jpg", "precio": "~13€", "descripcion": "Palitos de palo santo natural · Para sahumar y limpiar espacios" },
+      { "asin": "B0CLDLKZGY", "titulo": "Palo Santo y Salvia Blanca para Quemar", "imagen": "https://m.media-amazon.com/images/I/71QAB74HdLL._AC_SL1500_.jpg", "precio": "~18€", "descripcion": "Combina palo santo y salvia blanca · Set para limpieza energética" },
+      { "asin": "B0DV3QZR6C", "titulo": "Palo Santo 400g en Palos", "imagen": "https://m.media-amazon.com/images/I/41Em9v+IhNL._AC_.jpg", "precio": "~22€", "descripcion": "Formato grande de 400g · Varios palos de tamaño medio" },
+      { "asin": "B0GD1B2S7R", "titulo": "ZONSUSE Quemador de Incienso para Aromaterapia", "imagen": "https://m.media-amazon.com/images/I/61SB+0-s0pL._AC_SL1500_.jpg", "precio": "~12€", "descripcion": "Quemador decorativo resistente al calor · Apto para palo santo y resinas" },
+      { "asin": "B0CXY98KW5", "titulo": "Palo Santo de Madera para Aromaterapia", "imagen": "https://m.media-amazon.com/images/I/81TMJvyELHL._AC_SL1500_.jpg", "precio": "~16€", "descripcion": "Madera natural · Para aromaterapia y rituales de limpieza" }
+    ],
+    "notas": "14800/mes KD17 — el mayor volumen de todo el listado. Mixto: info (qué es, para qué sirve, cómo usar, contraindicaciones) + transaccional (dónde comprar, quemadores). Sin conexión temática forzada con breathwork — encaja como contenido de \"preparar tu espacio antes de una sesión\". Test de validación para posible ecommerce. Necesita ASINs de palo santo + quemadores.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 34,
+    "keyword": "sahumerio",
+    "tipo": "mixto",
+    "keywords_secundarias": ["que es un sahumerio", "sahumerio que es", "los sahumerios para que sirven", "como usar los sahumerios"],
+    "long_tail": ["limpieza con sahumerios", "sahumerios significado espiritual", "que sahumerios usar para limpiar la casa", "porta sahumerios", "quemador de sahumerio", "conos sahumerios", "comprar sahumerios online", "comprar sahumerios", "como hacer sahumerios naturales", "como encender un sahumerio en casa", "como apagar un sahumerio correctamente", "bolas de sahumerio", "bomba de sahumerio", "artemisa sahumerio", "para que sirve el sahumerio de romero"],
+    "asins": [
+      { "asin": "B0G52BGXMH", "titulo": "AROMASENSES Set de Sahumerios con Selenita", "imagen": "https://m.media-amazon.com/images/I/6167tTR2fZL._AC_SL1000_.jpg", "precio": "~20€", "descripcion": "Incluye varilla de selenita · Set completo para ritual de limpieza" },
+      { "asin": "B08KTN2C68", "titulo": "COPALOSANTO Sahumerio de Protección Espiritual", "imagen": "https://m.media-amazon.com/images/I/81mp5R8HRIL._AC_SL1500_.jpg", "precio": "~16€", "descripcion": "Mezcla tradicional para protección energética · Formato sahumerio" },
+      { "asin": "B0B5VKTY8M", "titulo": "MUT22 Salvia Blanca Sagrada para Quemar", "imagen": "https://m.media-amazon.com/images/I/71WYTeRNBoL._AC_SL1500_.jpg", "precio": "~12€", "descripcion": "Salvia blanca sagrada · Atado tradicional de limpieza" },
+      { "asin": "B0DGG1V8GQ", "titulo": "Incienso de Larga Duración para Limpieza Energética", "imagen": "https://m.media-amazon.com/images/I/81q0KagZr4L._AC_SL1500_.jpg", "precio": "~15€", "descripcion": "Combustión larga · Diseñado para rituales de limpieza" },
+      { "asin": "B0CK85YTP9", "titulo": "Salvia Blanca en Atados para Sahumerio", "imagen": "https://m.media-amazon.com/images/I/7143Jko8wsL._AC_SL1016_.jpg", "precio": "~10€", "descripcion": "Atados de salvia blanca seca · Uso tradicional de limpieza energética" },
+      { "asin": "B0D4VNMTB1", "titulo": "MUT22 Sahumerio de Salvia Blanca con Flores", "imagen": "https://m.media-amazon.com/images/I/81asDsc1p1L._AC_SL1500_.jpg", "precio": "~14€", "descripcion": "Salvia blanca con flores secas · Atado decorativo" },
+      { "asin": "B0CLYTB4P5", "titulo": "Salvia Blanca para Quemar y Purificar", "imagen": "https://m.media-amazon.com/images/I/81Hskc3wlWL._AC_SL1500_.jpg", "precio": "~11€", "descripcion": "Salvia blanca seca · Para purificación de espacios" },
+      { "asin": "B0DJ4BMZ9K", "titulo": "Sahumerios para Protección Energética Definitiva", "imagen": "https://m.media-amazon.com/images/I/61C9i7K0olL._SL1499_.jpg", "precio": "~19€", "descripcion": "Set completo de sahumerios variados para protección espiritual" }
+    ],
+    "notas": "2400/mes KD11. Puede ir junto con copal o como artículo propio. Mismo ángulo: limpieza de espacios. Necesita ASINs.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 35,
+    "keyword": "copal incienso",
+    "tipo": "mixto",
+    "keywords_secundarias": ["copal que es", "incienso copal", "incienso copal para que sirve", "planta copal", "copal blanco", "resina de copal"],
+    "long_tail": ["arbol copal", "arbol del copal", "como quemar copal", "como quemar copal en resina", "como quemar copal con carbon", "como se utiliza el copal", "donde conseguir copal", "comprar copal en españa", "beneficios del copal", "copal planta medicinal", "copal y sandalo para que sirve", "aceite copal", "aceite de copal para que sirve", "a que huele el copal", "inciensos copal"],
+    "asins": [
+      { "asin": "B0BGT4FHMY", "titulo": "Aromasenses Incienso de Sahumerio Orgánico con Copal", "imagen": "https://m.media-amazon.com/images/I/61Cvs3mmcwL._AC_SL1000_.jpg", "precio": "~10€", "descripcion": "Mezcla orgánica con copal · Formato varilla" },
+      { "asin": "B0FB9LBBBG", "titulo": "Incienso Blanco de México Resellable", "imagen": "https://m.media-amazon.com/images/I/91-3758OOlL._AC_SL1500_.jpg", "precio": "~14€", "descripcion": "Resina blanca tradicional mexicana · Envase resellable" },
+      { "asin": "B0GTYWNXBB", "titulo": "Incienso de Copal Natural de Indonesia", "imagen": "https://m.media-amazon.com/images/I/61no5-2qtzL._AC_SL1264_.jpg", "precio": "~12€", "descripcion": "Resina de copal natural · Origen tradicional, para quemar con carbón" },
+      { "asin": "B0D9FJXRQ4", "titulo": "Incienso Natural en Cajetilla", "imagen": "https://m.media-amazon.com/images/I/818izLvcG2L._AC_SL1500_.jpg", "precio": "~9€", "descripcion": "Varias varillas naturales · Formato cajetilla práctico" },
+      { "asin": "B08CVV1D48", "titulo": "Incienso de Iglesia con Resina Protium", "imagen": "https://m.media-amazon.com/images/I/51SB8gHcupL._AC_SL1000_.jpg", "precio": "~13€", "descripcion": "Resina tipo Protium · Aroma tradicional de incienso de iglesia" },
+      { "asin": "B0GZ4B71YR", "titulo": "Incienso Aromático para Meditación Energética", "imagen": "https://m.media-amazon.com/images/I/71Y1xsTjFIL._AC_SL1500_.jpg", "precio": "~11€", "descripcion": "Aroma diseñado para espacios de meditación" }
+    ],
+    "notas": "320/mes KD8 copal incienso + 260/mes KD0 copal que es. Complementa el cluster de palo santo/sahumerios — mismo ángulo de limpieza ritual. Necesita ASINs.",
+    "prioridad": "media"
+  },
+  {
+    "id": 36,
+    "keyword": "lampara de sal",
+    "tipo": "mixto",
+    "keywords_secundarias": ["lampara de sal del himalaya", "lamparas de sal", "lampara de sal beneficios", "lampara de sal para que sirve", "beneficios lampara de sal"],
+    "long_tail": ["lamparas de sal beneficios y contraindicaciones", "lamparas de sal son peligrosas", "lampara de sal significado", "significado de lamparas de sal", "lampara de sal amazon", "lamparas de sal precios", "bombilla lampara de sal", "bombillas lampara de sal", "lampara de sal grande", "lamparas de sal grandes", "lampara de sal natura", "lámpara de sal auténtica", "lámpara de sal beneficios espirituales", "lamparas de sal propiedades"],
+    "asins": [
+      { "asin": "B0BZZ6KMHP", "titulo": "Lámpara de Sal del Himalaya con Bombilla Incluida", "imagen": "https://m.media-amazon.com/images/I/81t6yBj0JlL._AC_SL1500_.jpg", "precio": "~25€", "descripcion": "Sal natural del Himalaya · Incluye bombilla y cable · Tamaño mediano" },
+      { "asin": "B0C94KLY4G", "titulo": "Lámpara de Sal Natural Artesanal con Interruptor", "imagen": "https://m.media-amazon.com/images/I/81LTMS9LZpL._AC_SL1500_.jpg", "precio": "~28€", "descripcion": "Tallada artesanalmente · Interruptor en cable · Base de madera" },
+      { "asin": "B06XD15WXY", "titulo": "Lámpara de Sal del Himalaya con Regulador de Intensidad", "imagen": "https://m.media-amazon.com/images/I/71-Js4E5l4L._AC_SL1500_.jpg", "precio": "~30€", "descripcion": "Regulador de intensidad incorporado · Tamaño mediano-grande" },
+      { "asin": "B084M77TFQ", "titulo": "AROMASENSES Lámpara de Sal del Himalaya con Base de Madera", "imagen": "https://m.media-amazon.com/images/I/412+1hkiIlL._AC_.jpg", "precio": "~26€", "descripcion": "Base de madera · Incluye bombilla · Acabado natural" },
+      { "asin": "B07MRFXLK6", "titulo": "Lámpara de Sal Natural del Himalaya para Mesa", "imagen": "https://m.media-amazon.com/images/I/71JSKcC2wuS._AC_SL1500_.jpg", "precio": "~22€", "descripcion": "Tamaño compacto para mesa · Enchufe incluido" },
+      { "asin": "B0DQVGQJRW", "titulo": "Legami Lámpara de Cromoterapia con Sal del Himalaya", "imagen": "https://m.media-amazon.com/images/I/71quuIwIyPL._AC_SL1500_.jpg", "precio": "~24€", "descripcion": "Función cromoterapia con cambio de luces · Diseño moderno" }
+    ],
+    "notas": "6600/mes KD15 — segundo mayor volumen del listado. Mixto: honestidad necesaria sobre \"son peligrosas\" y beneficios reales vs marketing. Conexión natural: ambiente para espacios de meditación/sesiones. Necesita ASINs.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 37,
+    "keyword": "ocarina",
+    "tipo": "mixto",
+    "keywords_secundarias": ["que es una ocarina", "ocarina instrumento", "ocarina instrumento musical", "historia de la ocarina", "de donde proviene la ocarina", "de donde es la ocarina", "de que esta hecha la ocarina"],
+    "long_tail": ["como se toca la ocarina", "como suena la ocarina", "como soplar la ocarina", "ocarina notas", "ocarina doble", "comprar ocarina", "donde comprar una ocarina", "cuanto cuesta una ocarina", "como limpiar una ocarina", "como afinar una ocarina", "afinador de ocarina", "flauta de ocarina", "electronic ocarina"],
+    "asins": [
+      { "asin": "B0DBQJCD5F", "titulo": "Ocarina de Cerámica para Principiantes", "imagen": "https://m.media-amazon.com/images/I/61leDPT-XFL._AC_SL1500_.jpg", "precio": "~18€", "descripcion": "12 agujeros · Cerámica · Incluye funda acolchada y partituras" },
+      { "asin": "B00HVBVR1W", "titulo": "Ocarina Tradicional Peruana", "imagen": "https://m.media-amazon.com/images/I/81mc8eKN-GL._AC_SL1500_.jpg", "precio": "~20€", "descripcion": "Estilo tradicional peruano · Sonido cálido característico" },
+      { "asin": "B0148EQYA8", "titulo": "Ohuhu Ocarina de Cerámica con Instrucciones", "imagen": "https://m.media-amazon.com/images/I/61sVE-d1S2L._AC_SL1500_.jpg", "precio": "~16€", "descripcion": "Incluye libro de instrucciones · Cerámica esmaltada · Para principiantes" },
+      { "asin": "B07ZCLPPNL", "titulo": "AKLOT Ocarina de Cerámica con Funda Protectora", "imagen": "https://m.media-amazon.com/images/I/51ZQKsP2CJL._AC_SL1200_.jpg", "precio": "~17€", "descripcion": "12 agujeros · Incluye funda protectora · Buena calidad de fabricación" },
+      { "asin": "B09JFF32BM", "titulo": "Alnicov Ocarina Esmaltada para Principiantes", "imagen": "https://m.media-amazon.com/images/I/51XFHbfgIiL._AC_SL1001_.jpg", "precio": "~15€", "descripcion": "Acabado esmaltado · 12 agujeros · Apta para principiantes" }
+    ],
+    "notas": "6600/mes KD26. Alto volumen, KD medio. Instrumento musical — encaja en cluster de instrumentos aunque Ram no lo use en sesiones. Necesita ASINs.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 38,
+    "keyword": "arpa de boca",
+    "tipo": "mixto",
+    "keywords_secundarias": ["arpa boca", "arpa de boca instrumento", "arpa de boca origen", "como se toca el arpa de boca"],
+    "long_tail": ["arpa de boca comprar", "arpa de boca precio", "arpa de boca amazon", "arpa de boca thomann"],
+    "asins": [
+      { "asin": "B01GOTZ7PS", "titulo": "Arpa de Boca Traunmuller Original", "imagen": "https://m.media-amazon.com/images/I/41d-yCchYAL._AC_.jpg", "precio": "~25€", "descripcion": "Fabricación austriaca tradicional · Sonido potente y resonante" },
+      { "asin": "B002TUIWHW", "titulo": "Fuzeau Arpa de Boca de Colores", "imagen": "https://m.media-amazon.com/images/I/71cQ0EiEoTL._AC_SL1500_.jpg", "precio": "~15€", "descripcion": "Modelo económico · Varios colores · Buena opción para iniciarse" }
+    ],
+    "notas": "1300/mes KD33 + 110/mes KD13. Instrumento de meditación/trance — muy alineado con el mundo de Ram (sonoterapia, estados alterados). KD algo alto pero volumen compensa. Necesita ASINs.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 39,
+    "keyword": "cacao ceremonial",
+    "tipo": "mixto",
+    "keywords_secundarias": ["ceremonia del cacao", "ceremonia de cacao", "que es la ceremonia del cacao", "como es la ceremonia del cacao", "ceremonia del cacao en que consiste"],
+    "long_tail": ["cacao ceremonial comprar", "comprar cacao ceremonial", "cacao ceremonial españa", "donde comprar cacao ceremonial", "cacao ceremonial amazon", "contraindicaciones del cacao ceremonial", "ceremonia del cacao efectos", "efectos del cacao ceremonial", "beneficios del cacao ceremonial", "beneficios de la ceremonia del cacao", "como preparar cacao ceremonial", "como preparar el cacao ceremonial", "como se prepara el cacao ceremonial", "receta de cacao ceremonial", "dosis de cacao ceremonial", "como hacer una ceremonia de cacao", "como guiar una ceremonia de cacao", "altar ceremonia de cacao", "ritual ceremonia cacao", "curso ceremonia de cacao", "formacion ceremonia de cacao"],
+    "asins": [
+      { "asin": "B086HR5V6N", "titulo": "Cacao Ceremonial de Venezuela", "imagen": "https://m.media-amazon.com/images/I/71oaTN2VdTL._AC_SL1500_.jpg", "precio": "~25€", "descripcion": "100% cacao puro de Venezuela · Formato pasta para ceremonia" },
+      { "asin": "B0DB86TKSH", "titulo": "FULL POWER Cacao Ceremonial", "imagen": "https://m.media-amazon.com/images/I/716vg7+XzwL._AC_SL1080_.jpg", "precio": "~28€", "descripcion": "Cacao puro para ceremonia · Formato reconfortante tradicional" },
+      { "asin": "B0FPCY2J1K", "titulo": "Pasta de Cacao Ceremonial Ecuatoriano 500g", "imagen": "https://m.media-amazon.com/images/I/81Wj7fWWDPL._AC_SL1500_.jpg", "precio": "~30€", "descripcion": "500g · Cacao ecuatoriano puro · Formato pasta tradicional" },
+      { "asin": "B07DFPSNGJ", "titulo": "Cacao Ceremonial Ecológico Cultivado", "imagen": "https://m.media-amazon.com/images/I/61LxWuWVaTL._AC_SL1000_.jpg", "precio": "~26€", "descripcion": "Cultivo ecológico certificado · Variedad Theobroma cacao pura" },
+      { "asin": "B07G2LL51C", "titulo": "Cacao Ceremonial Ecológico Superalimento", "imagen": "https://m.media-amazon.com/images/I/61-glc1o8TL._AC_SL1000_.jpg", "precio": "~24€", "descripcion": "Cultivo ecológico · Rico en antioxidantes naturales" },
+      { "asin": "B0DM3Q3RDK", "titulo": "Cacao Ceremonial Ecológico Criollo", "imagen": "https://m.media-amazon.com/images/I/61ilDr8t+mL._AC_SL1056_.jpg", "precio": "~27€", "descripcion": "Variedad criollo · Cultivo ecológico · Sabor más suave y aromático" },
+      { "asin": "B0B5XTRBGR", "titulo": "Cacao Ceremonial Rawster 200g", "imagen": "https://m.media-amazon.com/images/I/61Iu5vdUvpL._AC_SL1500_.jpg", "precio": "~18€", "descripcion": "200g · Marca especializada en cacao ceremonial · Cultivo orgánico" }
+    ],
+    "notas": "590/mes KD9 cacao ceremonial + 390/mes KD13 ceremonia del cacao + mucho long tail KD0. Ángulo perfecto para Ram: conecta con círculos, ceremonias grupales, masculinidad consciente. Posible integración futura en círculos de hombres o retiros propios. Necesita ASINs de cacao ceremonial.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 40,
+    "keyword": "flor de loto azul",
+    "tipo": "mixto",
+    "keywords_secundarias": ["loto azul egipcio", "flores de loto azul", "flor de loto azul significado", "flor de loto azul efectos", "flor de loto azul propiedades"],
+    "long_tail": ["flor de loto azul comprar", "comprar flor de loto azul", "comprar loto azul españa", "comprar loto azul", "loto azul españa", "loto azul herbolario", "flor de loto azul donde comprar", "flor de loto azul precio", "extracto de loto azul", "aceite de loto azul", "aceite esencial de loto azul", "flor de loto azul significado espiritual", "flor de loto azul beneficios", "loto azul efectos"],
+    "asins": [
+      { "asin": "B0CKFJMGTC", "titulo": "Flor de Loto Azul Seca para Infusión", "imagen": "https://m.media-amazon.com/images/I/61DDRI37OvL._AC_SL1080_.jpg", "precio": "~15€", "descripcion": "Flores secas de calidad superior · Para infusión tradicional" }
+    ],
+    "notas": "390/mes KD19 + mucho long tail KD0. Nicho específico relacionado con rituales/ceremonias — mismo ángulo que cacao ceremonial. Necesita ASINs.",
+    "prioridad": "media"
+  },
+  {
+    "id": 41,
+    "keyword": "libros de masculinidad",
+    "tipo": "transaccional",
+    "keywords_secundarias": ["libros para hombres", "libro de masculinidad", "libros de psicologia masculina", "libros de sexualidad masculina", "libros de empoderamiento masculino"],
+    "long_tail": ["libros para regalar a un hombre", "el hombre consciente", "masculinidad sagrada", "masculinidad consciente", "sexualidad sagrada masculina", "sexualidad consciente hombres", "sagrado femenino y masculino", "el sagrado masculino", "libro de nuevas masculinidades", "talleres de masculinidad consciente", "encuentro de hombres conscientes", "conocer hombres conscientes"],
     "asins": [],
-    "notas": "390/mes KD7. Mixto. Instrumento de sonoterapia menos prioritario. Necesita ASINs."
+    "notas": "260/mes KD28 + mucho long tail KD0. Directamente conectado con /circulos-hombres. Artículo de recomendación de libros con afiliado + enlace natural a círculos de hombres. Necesita ASINs de libros.",
+    "prioridad": "alta"
+  },
+  {
+    "id": 42,
+    "keyword": "libros de yoga y meditacion",
+    "tipo": "transaccional",
+    "keywords_secundarias": ["libros de yoga", "libro yoga", "libros meditacion", "libros sobre meditacion", "libros sobre yoga", "mejores libros de yoga"],
+    "long_tail": ["libro de yoga", "mejores libros de mindfulness", "mejores libros de autoconocimiento", "el mejor libro de yoga para principiantes", "cual es el mejor libro de yoga", "amazon libros yoga", "el gran libro del yoga", "el gran libro de la respiracion", "el camino del yoga libro", "anatomia del yoga libro", "aprendo yoga libro", "ashtanga yoga libro", "bhakti yoga libro", "bikram yoga libro", "chakra yoga libro", "claves del yoga libro", "el espejo del yoga libro", "el libro completo del yoga", "libro meditacion mindfulness", "libro meditacion brian weiss", "jacobo grinberg libro meditacion", "yoga facial libro", "10 mejores libros de espiritualidad"],
+    "asins": [],
+    "notas": "260/mes KD15 + 260/mes KD11 + enorme long tail KD0. Cluster de libros muy amplio. Podría ser un artículo \"mejores libros de yoga y meditación\" + otro de \"libros sobre respiración/breathwork\". Necesita ASINs.",
+    "prioridad": "media"
+  },
+  {
+    "id": 43,
+    "keyword": "libros sobre respiracion",
+    "tipo": "transaccional",
+    "keywords_secundarias": ["libro sobre respiracion", "la respiracion libro", "libros sobre la respiracion"],
+    "long_tail": ["breathwork libro", "respiracion holotropica libro", "el pequeño libro de la respiracion", "respiracion prohibida libro", "respiracion ovarica libro", "aristoteles libro de la respiracion"],
+    "asins": [],
+    "notas": "30/mes KD0 + long tail KD0. Cluster pequeño pero directamente alineado con breathwork — máxima relevancia temática. Podría fusionarse con #42 o ir separado para mantener foco. Necesita ASINs.",
+    "prioridad": "media"
+  },
+  {
+    "id": 44,
+    "keyword": "wayunki",
+    "tipo": "informacional",
+    "keywords_secundarias": ["wayunki instrument"],
+    "long_tail": [],
+    "asins": [],
+    "notas": "40/mes KD0. Instrumento específico relacionado con medicina/ceremonias. Volumen bajo pero KD0 — posicionamiento fácil. Evaluar relevancia real para la marca antes de priorizar.",
+    "prioridad": "baja"
   }
 ]
