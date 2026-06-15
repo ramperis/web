@@ -100,7 +100,7 @@
         }
       ],
       "tipo": "donacion",
-      "donacion": "38"
+      "donacion": ""
     },
     {
       "id": "cphae79",
@@ -186,25 +186,25 @@
           "id": "v2kl2up",
           "nombre": "Mari Carmen Bermell",
           "x2": true,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "cp7e9sy",
           "nombre": "Clara Perez Miranda",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "4ndvlia",
           "nombre": "Sergio Cruz",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "b37nu1i",
           "nombre": "Daniela",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "89dajt3",
@@ -216,37 +216,37 @@
           "id": "wohhqj7",
           "nombre": "Mónica Urbina",
           "x2": true,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "frhjq51",
           "nombre": "Jorge Muñoz",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "ljkzs07",
           "nombre": "Andrea Argüelles",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "lvahrgq",
           "nombre": "Sara Ruiz",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "6rc9yoa",
           "nombre": "Natalie",
           "x2": true,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "ke5heg4",
           "nombre": "Jacqueline",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
