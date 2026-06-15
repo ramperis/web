@@ -1,23 +1,8 @@
 [
   {
-    "id": "palo-de-lluvia",
+    "id": 1,
     "keyword": "palo de lluvia",
-    "tipo": "mixto",
-    "keywords_secundarias": [
-      "palo de lluvia instrumento",
-      "palo de lluvia para que sirve",
-      "palo de lluvia sonido"
-    ],
-    "long_tail": [
-      "como hacer el palo de lluvia",
-      "palo de lluvia chamanico",
-      "palo de lluvia terapeutico",
-      "palo de lluvia como se toca",
-      "palo de lluvia amazon"
-    ],
-    "asins": [],
-    "notas": "1600/mes KD10. Mixto: informacional (qué es, historia, para qué sirve) + transaccional (comprar). KD muy bajo. Buena oportunidad.",
-    "published_at": "2026-06-15T09:01:16.245Z",
-    "slug": "palo-de-lluvia"
+    "slug": "palo-de-lluvia",
+    "published_at": "2026-06-15"
   }
 ]
