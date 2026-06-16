@@ -33,6 +33,17 @@
     "wa": "https://wa.me/34617847196"
   },
   {
+    "dia": "24",
+    "mes": "Jun",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-24-junio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
     "dia": "26",
     "mes": "Jun",
     "titulo": "Baño de sonido",
@@ -52,6 +63,138 @@
     "espacio": "Club Náutico",
     "lugar": "Valencia Mar · Valencia",
     "url": "/agenda/bano-sonido-paddle-surf-28-junio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "05",
+    "mes": "Jul",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-5-julio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "08",
+    "mes": "Jul",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-8-julio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "10",
+    "mes": "Jul",
+    "titulo": "Baño de sonido",
+    "hora": "19:00h",
+    "marca": "Breath & Sound",
+    "espacio": "The Sanctuary",
+    "lugar": "Valencia",
+    "url": "/agenda/breath-sound-sanctuary-10-julio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "19",
+    "mes": "Jul",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-19-julio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "22",
+    "mes": "Jul",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-22-julio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "02",
+    "mes": "Ago",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-2-agosto",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "05",
+    "mes": "Ago",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-5-agosto",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "16",
+    "mes": "Ago",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-16-agosto",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "19",
+    "mes": "Ago",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-19-agosto",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "30",
+    "mes": "Ago",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-30-agosto",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "02",
+    "mes": "Sep",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-2-septiembre",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "16",
+    "mes": "Sep",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-16-septiembre",
     "wa": "https://wa.me/34617847196"
   }
 ]
