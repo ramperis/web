@@ -96,12 +96,32 @@
     } catch { return '/agenda'; }
   }
 
+  const MESES = { Ene:0, Feb:1, Mar:2, Abr:3, May:4, Jun:5, Jul:6, Ago:7, Sep:8, Oct:9, Nov:10, Dic:11 };
+  function eventoDate(e) {
+    const hoy = new Date();
+    const y = hoy.getFullYear();
+    const m = MESES[e.mes] ?? 0;
+    const d = parseInt(e.dia, 10);
+    const fecha = new Date(y, m, d);
+    // si la fecha ya pasó hace más de 6 meses, probablemente es del año que viene
+    if (hoy - fecha > 180 * 86400000) return new Date(y + 1, m, d);
+    return fecha;
+  }
+
   fetch('/eventos.json')
     .then(r => r.json())
     .then(eventos => {
+      const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+      const futuros = eventos.filter(e => eventoDate(e) >= hoy);
+      const pasados = eventos.filter(e => eventoDate(e) < hoy).reverse();
+      const MIN = 4;
+      const relleno = futuros.length < MIN ? pasados.slice(0, MIN - futuros.length) : [];
+      const displayAgenda = [...futuros, ...relleno];
+      const displayHome = displayAgenda.slice(0, MIN);
+
       if (homeList) {
         homeList.innerHTML = '';
-        eventos.slice(0, 4).forEach(e => {
+        displayHome.forEach(e => {
           const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
           const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
 
