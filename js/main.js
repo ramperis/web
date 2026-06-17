@@ -139,41 +139,41 @@
 
           const outer = el('div');
           outer.className = 'agenda-card';
-          outer.style.cssText = 'display:grid;grid-template-columns:100px 1fr;gap:0;border-radius:20px;overflow:hidden;background:var(--arena-oscura)';
+          outer.style.cssText = 'display:grid;grid-template-columns:72px 1fr;gap:0;border-radius:16px;overflow:hidden;background:var(--arena-oscura)';
 
           const dateCol = el('div');
           dateCol.className = 'agenda-date-col';
-          dateCol.style.cssText = 'background:var(--tierra-noche);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px';
+          dateCol.style.cssText = 'background:var(--tierra-noche);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 10px';
           const diaSpan = el('span', e.dia);
-          diaSpan.style.cssText = 'font-size:36px;font-weight:800;color:var(--ambar);line-height:1';
+          diaSpan.style.cssText = 'font-size:26px;font-weight:800;color:var(--ambar);line-height:1';
           const mesSpan = el('span', e.mes);
-          mesSpan.style.cssText = 'font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--texto-sutil);margin-top:4px';
+          mesSpan.style.cssText = 'font-size:9px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--texto-sutil);margin-top:3px';
           dateCol.appendChild(diaSpan);
           dateCol.appendChild(mesSpan);
 
           const body = el('div');
           body.className = 'agenda-body';
-          body.style.cssText = 'padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px';
+          body.style.cssText = 'padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px';
           const inner = el('div');
           const h3 = el('h3', e.titulo);
-          h3.style.cssText = 'font-size:18px;color:var(--tierra-noche);margin-bottom:4px';
+          h3.style.cssText = 'font-size:15px;color:var(--tierra-noche);margin-bottom:2px;font-weight:600';
           inner.appendChild(h3);
           if (linea2) {
             const p2 = el('p', linea2);
             p2.className = 'agenda-meta';
-            p2.style.cssText = 'font-size:14px;color:var(--texto-secundario);font-weight:400;margin-bottom:2px';
+            p2.style.cssText = 'font-size:12px;color:var(--texto-secundario);font-weight:400;margin-bottom:1px';
             inner.appendChild(p2);
           }
           if (linea3) {
             const p3 = el('p', linea3);
             p3.className = 'agenda-meta';
-            p3.style.cssText = 'font-size:12px;color:var(--texto-secundario);opacity:0.7;font-weight:400';
+            p3.style.cssText = 'font-size:11px;color:var(--texto-secundario);opacity:0.7;font-weight:400';
             inner.appendChild(p3);
           }
 
-          const a = el('a', 'Más info →');
+          const a = el('a', 'Ver →');
           a.href = safeUrl(e.url);
-          a.style.cssText = 'font-size:12px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:7px 16px;border-radius:100px;white-space:nowrap;text-decoration:none';
+          a.style.cssText = 'font-size:11px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:5px 12px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0';
 
           body.appendChild(inner);
           body.appendChild(a);
