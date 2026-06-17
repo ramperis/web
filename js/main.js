@@ -153,7 +153,7 @@
 
       if (agendaList) {
         agendaList.innerHTML = '';
-        eventos.forEach(e => {
+        displayAgenda.forEach(e => {
           const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
           const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
 
