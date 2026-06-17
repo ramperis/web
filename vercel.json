@@ -117,6 +117,11 @@
       "source": "/blog/tambor-de-lengua",
       "destination": "/blog/tambor-de-lengueta",
       "permanent": true
+    },
+    {
+      "source": "/agenda/breath-sound-sanctuary-10-julio",
+      "destination": "/agenda/breath-sound-sanctuary",
+      "permanent": true
     }
   ]
 }
