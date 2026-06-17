@@ -101,7 +101,7 @@
     .then(eventos => {
       if (homeList) {
         homeList.innerHTML = '';
-        eventos.forEach(e => {
+        eventos.slice(0, 4).forEach(e => {
           const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
           const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
 
