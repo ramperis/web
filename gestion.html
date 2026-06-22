@@ -444,10 +444,11 @@ function App() {
   // ── PIPELINE DESKTOP ─────────────────────────────────────────────────────
   if (!isMobile && vista === "sesiones") {
     const hoy  = new Date(); hoy.setHours(0,0,0,0);
-    const en45 = new Date(hoy); en45.setDate(hoy.getDate() + 45);
-    const pasadas  = sesiones.filter(s => parseFecha(s.fecha) < hoy);
-    const proximas = sesiones.filter(s => { const f = parseFecha(s.fecha); return f >= hoy && f <= en45; });
-    const futuras  = sesiones.filter(s => parseFecha(s.fecha) > en45);
+    const en14 = new Date(hoy); en14.setDate(hoy.getDate() + 14);
+    const byFecha = (a, b) => parseFecha(a.fecha) - parseFecha(b.fecha);
+    const pasadas  = sesiones.filter(s => parseFecha(s.fecha) < hoy).sort((a,b) => parseFecha(b.fecha) - parseFecha(a.fecha));
+    const proximas = sesiones.filter(s => { const f = parseFecha(s.fecha); return f >= hoy && f <= en14; }).sort(byFecha);
+    const futuras  = sesiones.filter(s => parseFecha(s.fecha) > en14).sort(byFecha);
     const ColHdr = ({label, count, color}) => (
       <div style={{fontSize:10,letterSpacing:1.8,textTransform:"uppercase",fontWeight:800,color,marginBottom:14,paddingBottom:8,borderBottom:`2px solid ${color}`}}>
         {label} <span style={{opacity:0.5}}>· {count}</span>
