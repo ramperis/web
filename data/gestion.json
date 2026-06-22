@@ -9,7 +9,14 @@
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "w730o2f",
+          "nombre": "Alba Diaz Nieto",
+          "x2": false,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "evc2sw3",
