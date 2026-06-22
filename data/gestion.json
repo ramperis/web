@@ -51,6 +51,12 @@
           "nombre": "Raúl",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "5lfeu15",
+          "nombre": "* Sandra",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
