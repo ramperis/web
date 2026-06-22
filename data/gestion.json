@@ -45,6 +45,12 @@
           "nombre": "Judith",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "u59e1oo",
+          "nombre": "Raúl",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
