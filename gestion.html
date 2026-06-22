@@ -165,6 +165,27 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel}) {
   );
 }
 
+// ── PIPELINE CARD (desktop) ───────────────────────────────────────────────────
+function PipelineCard({ s, onClick }) {
+  const fin     = finanzas(s);
+  const activos = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
+  const total   = s.asistentes.reduce((n,a) => n+(a.x2?2:1), 0);
+  const noV     = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
+  return (
+    <div onClick={onClick} style={{background:"#fff",borderRadius:12,padding:"12px 14px",cursor:"pointer",border:"1.5px solid #e0d8c8",marginBottom:8}}>
+      <div style={{fontWeight:800,fontSize:14,marginBottom:2,color:"#2E2010"}}>{s.nombre}</div>
+      <div style={{fontSize:11,color:"#8a7a60",marginBottom:8}}>{s.fecha}</div>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:6}}>
+        <div style={{display:"flex",gap:4}}>
+          <Pill label={`${activos}/${total}`} color="#424029"/>
+          {noV > 0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
+        </div>
+        {fin.miParte > 0 && <span style={{fontSize:12,color:"#B87A3A",fontWeight:800}}>{fmt(fin.miParte)} tuyo</span>}
+      </div>
+    </div>
+  );
+}
+
 // ── SYNC INDICATOR ───────────────────────────────────────────────────────────
 function SyncBar({state, onRetry}) {
   if (state === 'idle') return null;
