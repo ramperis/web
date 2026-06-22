@@ -27,6 +27,12 @@
           "nombre": "Nicolas",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "9puq7oz",
+          "nombre": "Marcel",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
