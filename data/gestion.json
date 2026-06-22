@@ -15,6 +15,12 @@
           "nombre": "Arturo",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "pwv6us2",
+          "nombre": "Christopher",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
