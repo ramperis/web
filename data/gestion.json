@@ -9,7 +9,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "uelzuzs",
+          "nombre": "Arturo",
+          "x2": false,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "r5kotwc",
