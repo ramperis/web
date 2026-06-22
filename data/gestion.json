@@ -21,6 +21,12 @@
           "nombre": "Christopher",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "15393ei",
+          "nombre": "Nicolas",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
