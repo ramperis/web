@@ -96,6 +96,24 @@ function parseFecha(f) {
   return new Date(+y, +m - 1, +d);
 }
 
+function inferTipoEvento(nombre) {
+  const n = (nombre||"").toLowerCase();
+  if (n.includes("circulo") || n.includes("círculo") || n.includes("hombre")) return "circulo";
+  if (n.includes("sup") || n.includes("paddle") || n.includes("bano sonido") || n.includes("baño sonido")) return "bano-sup";
+  if (n.includes("breath") || n.includes("sound")) return "breath-sound";
+  return "otro";
+}
+function getMes(fecha) {
+  const f = parseFecha(fecha);
+  if (isNaN(f.getTime())) return "Sin fecha";
+  const M = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+  return `${M[f.getMonth()]} ${f.getFullYear()}`;
+}
+function labelTipo(id) {
+  const t = TIPOS_EVENTO.find(t => t.id === id);
+  return t ? t.label : "Otro";
+}
+
 // ── STYLES ───────────────────────────────────────────────────────────────────
 const wrap  = { fontFamily:"'Nunito',sans-serif", background:"#F5F0E4", minHeight:"100vh", color:"#2E2010", maxWidth:480, margin:"0 auto", paddingBottom:80 };
 const hdr   = { padding:"18px 20px 14px", borderBottom:"1px solid #e0d8c8", display:"flex", alignItems:"center", gap:10 };
