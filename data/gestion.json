@@ -39,6 +39,12 @@
           "nombre": "Fernando Garriga",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "mjc9dkk",
+          "nombre": "Judith",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
