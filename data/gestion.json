@@ -39,6 +39,12 @@
           "nombre": "Josue",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "23f681a",
+          "nombre": "Roberto",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
