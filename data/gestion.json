@@ -2,12 +2,12 @@
   "sesiones": [
     {
       "id": "evc2sw3",
-      "nombre": "nueva sesión",
-      "fecha": "22/06/2026",
-      "tipo": "precio",
+      "nombre": "Círculo hombres 24/06",
+      "fecha": "24/06/2026",
+      "tipo": "donacion",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "asistentes": []
     },
