@@ -16,7 +16,8 @@
       "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('PATH', 'User'\\); Set-Location 'c:\\\\Users\\\\errea\\\\Desktop\\\\Web'; git add '.claude/settings.json'; git commit -m 'config: hook autopush'; git push origin main)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "PowerShell(git -C \"c:\\\\Users\\\\errea\\\\web\" log --oneline -- gestion.html)"
     ]
   }
 }
