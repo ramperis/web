@@ -45,6 +45,12 @@
           "nombre": "Roberto",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "7dw8n6l",
+          "nombre": "Daniel Villa",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
