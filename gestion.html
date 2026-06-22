@@ -241,6 +241,13 @@ function App() {
       });
   }, [auth]);
 
+  // ── Resize detector ──────────────────────────────────────────────────────
+  useEffect(() => {
+    const fn = () => setIsMobile(window.innerWidth < 900);
+    window.addEventListener('resize', fn, { passive: true });
+    return () => window.removeEventListener('resize', fn);
+  }, []);
+
   // ── Guardar (debounced 700ms) ─────────────────────────────────────────────
   function triggerSave(newSesiones) {
     if (timerRef.current) clearTimeout(timerRef.current);
