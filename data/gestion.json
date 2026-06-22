@@ -33,6 +33,12 @@
           "nombre": "Marcel",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "yucvwic",
+          "nombre": "Josue",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
