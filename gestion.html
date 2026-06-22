@@ -475,7 +475,7 @@ function App() {
     );
   }
 
-  // ── PIPELINE DESKTOP ─────────────────────────────────────────────────────
+  // ── PIPELINE + DASHBOARD DESKTOP ─────────────────────────────────────────
   if (!isMobile && vista === "sesiones") {
     const hoy  = new Date(); hoy.setHours(0,0,0,0);
     const en14 = new Date(hoy); en14.setDate(hoy.getDate() + 14);
@@ -483,41 +483,182 @@ function App() {
     const pasadas  = sesiones.filter(s => parseFecha(s.fecha) < hoy).sort((a,b) => parseFecha(b.fecha) - parseFecha(a.fecha));
     const proximas = sesiones.filter(s => { const f = parseFecha(s.fecha); return f >= hoy && f <= en14; }).sort(byFecha);
     const futuras  = sesiones.filter(s => parseFecha(s.fecha) > en14).sort(byFecha);
+
+    // ── Métricas ──
+    const MESES_ORD = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+    const porMes = {}, porTipo = {};
+    sesiones.forEach(s => {
+      const mes  = getMes(s.fecha);
+      const tipo = s.tipoEvento || inferTipoEvento(s.nombre);
+      const fin  = finanzas(s);
+      const act  = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
+      const noV  = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
+      if (!porMes[mes])  porMes[mes]  = { sesiones:0, asistentes:0, ingresos:0, miParte:0, noShows:0 };
+      porMes[mes].sesiones++;  porMes[mes].asistentes += act;
+      porMes[mes].ingresos += fin.cobrado; porMes[mes].miParte += fin.miParte; porMes[mes].noShows += noV;
+      if (!porTipo[tipo]) porTipo[tipo] = { sesiones:0, asistentes:0, ingresos:0, miParte:0 };
+      porTipo[tipo].sesiones++; porTipo[tipo].asistentes += act;
+      porTipo[tipo].ingresos += fin.cobrado; porTipo[tipo].miParte += fin.miParte;
+    });
+    const mesesList = Object.keys(porMes).sort((a,b) => {
+      const [ma,ya] = a.split(" "), [mb,yb] = b.split(" ");
+      return ya !== yb ? +ya - +yb : MESES_ORD.indexOf(ma) - MESES_ORD.indexOf(mb);
+    });
+    const totalSes  = sesiones.length;
+    const totalAsis = sesiones.reduce((n,s) => n + s.asistentes.filter(a=>a.estado!=="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
+    const totalIng  = sesiones.reduce((n,s) => n + finanzas(s).cobrado, 0);
+    const totalMiP  = sesiones.reduce((n,s) => n + finanzas(s).miParte, 0);
+    const totalNoS  = sesiones.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
+    const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.ingresos), 1);
+    const maxIngTipo = Math.max(...Object.values(porTipo).map(t=>t.ingresos), 1);
+    const Bar = ({val, max, color="#B87A3A"}) => (
+      <div style={{height:5,background:"#e0d8c8",borderRadius:3,marginTop:5,flexShrink:0}}>
+        <div style={{height:"100%",width:`${Math.round((val/max)*100)}%`,background:color,borderRadius:3}}/>
+      </div>
+    );
+    const TabBtn = ({id, label}) => (
+      <button onClick={()=>setDashTab(id)} style={{padding:"6px 16px",borderRadius:8,border:"none",background:dashTab===id?"#2E2010":"transparent",color:dashTab===id?"#F5F0E4":"#8a7a60",fontWeight:800,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif",letterSpacing:0.3}}>{label}</button>
+    );
     const ColHdr = ({label, count, color}) => (
       <div style={{fontSize:10,letterSpacing:1.8,textTransform:"uppercase",fontWeight:800,color,marginBottom:14,paddingBottom:8,borderBottom:`2px solid ${color}`}}>
         {label} <span style={{opacity:0.5}}>· {count}</span>
       </div>
     );
+    const ViewBtn = ({id, label}) => (
+      <button onClick={()=>setVistaDesk(id)} style={{padding:"6px 14px",borderRadius:8,border:"none",background:vistaDesk===id?"#2E2010":"transparent",color:vistaDesk===id?"#F5F0E4":"#8a7a60",fontWeight:800,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>
+        {label}
+      </button>
+    );
+
     return (
       <div style={{background:"#F5F0E4",minHeight:"100vh",fontFamily:"'Nunito',sans-serif",color:"#2E2010"}}>
-        <div style={{padding:"14px 32px",borderBottom:"1px solid #e0d8c8",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-          <div>
+        {/* Header */}
+        <div style={{padding:"14px 32px",borderBottom:"1px solid #e0d8c8",display:"flex",alignItems:"center",justifyContent:"space-between",gap:16}}>
+          <div style={{flexShrink:0}}>
             <div style={{fontSize:10,letterSpacing:2,textTransform:"uppercase",color:"#B87A3A",fontWeight:800}}>ram peris</div>
             <div style={{fontSize:20,fontWeight:800}}>sesiones</div>
           </div>
+          <div style={{background:"#e8e0d0",borderRadius:10,padding:3,display:"flex",gap:2}}>
+            <ViewBtn id="pipeline" label="Pipeline"/>
+            <ViewBtn id="dashboard" label="Dashboard"/>
+          </div>
           <SyncBar state={syncState} onRetry={() => triggerSave(sesiones)}/>
-          <div style={{display:"flex",gap:10,alignItems:"center"}}>
-            <button onClick={nuevaSesion} style={{background:"#B87A3A",color:"#F5F0E4",border:"none",borderRadius:10,padding:"8px 20px",fontWeight:800,cursor:"pointer",fontSize:13}}>+ nueva sesión</button>
-            <button onClick={logout} style={{background:"none",border:"none",color:"#c0a880",fontSize:12,cursor:"pointer"}}>salir</button>
+          <div style={{display:"flex",gap:10,alignItems:"center",flexShrink:0}}>
+            <button onClick={nuevaSesion} style={{background:"#B87A3A",color:"#F5F0E4",border:"none",borderRadius:10,padding:"8px 20px",fontWeight:800,cursor:"pointer",fontSize:13,fontFamily:"'Nunito',sans-serif"}}>+ nueva sesión</button>
+            <button onClick={logout} style={{background:"none",border:"none",color:"#c0a880",fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>salir</button>
           </div>
         </div>
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:20,padding:"24px 32px",alignItems:"flex-start"}}>
-          <div>
-            <ColHdr label="Pasado" count={pasadas.length} color="#8a7a60"/>
-            {pasadas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-            {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+
+        {/* Pipeline */}
+        {vistaDesk === "pipeline" && (
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:20,padding:"24px 32px",alignItems:"flex-start"}}>
+            <div>
+              <ColHdr label="Pasado" count={pasadas.length} color="#8a7a60"/>
+              {pasadas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+              {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+            </div>
+            <div>
+              <ColHdr label="Próximo (≤14 días)" count={proximas.length} color="#B87A3A"/>
+              {proximas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+              {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+            </div>
+            <div>
+              <ColHdr label="Por venir" count={futuras.length} color="#424029"/>
+              {futuras.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+              {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+            </div>
           </div>
-          <div>
-            <ColHdr label="Próximo" count={proximas.length} color="#B87A3A"/>
-            {proximas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-            {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+        )}
+
+        {/* Dashboard */}
+        {vistaDesk === "dashboard" && (
+          <div style={{padding:"24px 32px"}}>
+            {/* Tabs */}
+            <div style={{display:"flex",gap:4,marginBottom:24,background:"#e8e0d0",borderRadius:10,padding:3,width:"fit-content"}}>
+              <TabBtn id="resumen" label="Resumen"/>
+              <TabBtn id="mes"     label="Por mes"/>
+              <TabBtn id="tipo"    label="Por tipo"/>
+            </div>
+
+            {/* Tab: Resumen */}
+            {dashTab === "resumen" && (
+              <div>
+                <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:12,marginBottom:28}}>
+                  {[
+                    {label:"Sesiones",  value:totalSes,            amber:false},
+                    {label:"Asistentes",value:totalAsis,           amber:false},
+                    {label:"Ingresos",  value:fmt(totalIng),       amber:true},
+                    {label:"Mi parte",  value:fmt(totalMiP),       amber:true},
+                    {label:"No-shows",  value:totalNoS,            amber:false},
+                  ].map(({label,value,amber}) => (
+                    <div key={label} style={{background:"#fff",borderRadius:12,padding:"14px 16px",border:"1.5px solid #e0d8c8"}}>
+                      <div style={{fontSize:10,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#8a7a60",marginBottom:6}}>{label}</div>
+                      <div style={{fontSize:24,fontWeight:800,color:amber?"#B87A3A":"#2E2010"}}>{value}</div>
+                    </div>
+                  ))}
+                </div>
+                {totalAsis > 0 && (
+                  <div style={{fontSize:12,color:"#8a7a60"}}>
+                    Tasa no-show: <strong>{Math.round((totalNoS/(totalAsis+totalNoS))*100)}%</strong>
+                    &nbsp;·&nbsp;Media asistentes/sesión: <strong>{totalSes>0?(totalAsis/totalSes).toFixed(1):0}</strong>
+                    &nbsp;·&nbsp;Media ingresos/sesión: <strong>{fmt(totalSes>0?totalIng/totalSes:0)}</strong>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Tab: Por mes */}
+            {dashTab === "mes" && (
+              <div style={{maxWidth:680}}>
+                {mesesList.length === 0 && <div style={{color:"#c8b890",fontSize:13}}>Sin datos</div>}
+                {mesesList.map(mes => {
+                  const m = porMes[mes];
+                  return (
+                    <div key={mes} style={{background:"#fff",borderRadius:12,padding:"14px 18px",marginBottom:10,border:"1.5px solid #e0d8c8"}}>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:6}}>
+                        <span style={{fontWeight:800,fontSize:15}}>{mes}</span>
+                        <div style={{display:"flex",gap:20,fontSize:12,color:"#8a7a60"}}>
+                          <span>{m.sesiones} sesión{m.sesiones!==1?"es":""}</span>
+                          <span>{m.asistentes} asist.</span>
+                          {m.noShows > 0 && <span style={{color:"#B87A3A"}}>{m.noShows} no-show</span>}
+                        </div>
+                      </div>
+                      <div style={{display:"flex",alignItems:"center",gap:10}}>
+                        <div style={{flex:1}}><Bar val={m.ingresos} max={maxIngMes}/></div>
+                        <span style={{fontSize:13,fontWeight:800,color:"#B87A3A",minWidth:64,textAlign:"right"}}>{fmt(m.ingresos)}</span>
+                        <span style={{fontSize:11,color:"#8a7a60",minWidth:80}}>({fmt(m.miParte)} tuyo)</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Tab: Por tipo */}
+            {dashTab === "tipo" && (
+              <div style={{maxWidth:680}}>
+                {Object.keys(porTipo).length === 0 && <div style={{color:"#c8b890",fontSize:13}}>Sin datos</div>}
+                {Object.entries(porTipo).sort((a,b)=>b[1].ingresos-a[1].ingresos).map(([tipo, t]) => (
+                  <div key={tipo} style={{background:"#fff",borderRadius:12,padding:"14px 18px",marginBottom:10,border:"1.5px solid #e0d8c8"}}>
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:6}}>
+                      <span style={{fontWeight:800,fontSize:15}}>{labelTipo(tipo)}</span>
+                      <div style={{display:"flex",gap:20,fontSize:12,color:"#8a7a60"}}>
+                        <span>{t.sesiones} sesión{t.sesiones!==1?"es":""}</span>
+                        <span>{t.asistentes} asist.</span>
+                        <span>~{fmt(t.sesiones>0?t.ingresos/t.sesiones:0)}/sesión</span>
+                      </div>
+                    </div>
+                    <div style={{display:"flex",alignItems:"center",gap:10}}>
+                      <div style={{flex:1}}><Bar val={t.ingresos} max={maxIngTipo}/></div>
+                      <span style={{fontSize:13,fontWeight:800,color:"#B87A3A",minWidth:64,textAlign:"right"}}>{fmt(t.ingresos)}</span>
+                      <span style={{fontSize:11,color:"#8a7a60",minWidth:80}}>({fmt(t.miParte)} tuyo)</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          <div>
-            <ColHdr label="Por venir" count={futuras.length} color="#424029"/>
-            {futuras.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-            {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
-          </div>
-        </div>
+        )}
       </div>
     );
   }
