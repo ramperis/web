@@ -441,7 +441,53 @@ function App() {
     );
   }
 
-  // ── LISTADO ───────────────────────────────────────────────────────────────
+  // ── PIPELINE DESKTOP ─────────────────────────────────────────────────────
+  if (!isMobile && vista === "sesiones") {
+    const hoy  = new Date(); hoy.setHours(0,0,0,0);
+    const en45 = new Date(hoy); en45.setDate(hoy.getDate() + 45);
+    const pasadas  = sesiones.filter(s => parseFecha(s.fecha) < hoy);
+    const proximas = sesiones.filter(s => { const f = parseFecha(s.fecha); return f >= hoy && f <= en45; });
+    const futuras  = sesiones.filter(s => parseFecha(s.fecha) > en45);
+    const ColHdr = ({label, count, color}) => (
+      <div style={{fontSize:10,letterSpacing:1.8,textTransform:"uppercase",fontWeight:800,color,marginBottom:14,paddingBottom:8,borderBottom:`2px solid ${color}`}}>
+        {label} <span style={{opacity:0.5}}>· {count}</span>
+      </div>
+    );
+    return (
+      <div style={{background:"#F5F0E4",minHeight:"100vh",fontFamily:"'Nunito',sans-serif",color:"#2E2010"}}>
+        <div style={{padding:"14px 32px",borderBottom:"1px solid #e0d8c8",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+          <div>
+            <div style={{fontSize:10,letterSpacing:2,textTransform:"uppercase",color:"#B87A3A",fontWeight:800}}>ram peris</div>
+            <div style={{fontSize:20,fontWeight:800}}>sesiones</div>
+          </div>
+          <SyncBar state={syncState} onRetry={() => triggerSave(sesiones)}/>
+          <div style={{display:"flex",gap:10,alignItems:"center"}}>
+            <button onClick={nuevaSesion} style={{background:"#B87A3A",color:"#F5F0E4",border:"none",borderRadius:10,padding:"8px 20px",fontWeight:800,cursor:"pointer",fontSize:13}}>+ nueva sesión</button>
+            <button onClick={logout} style={{background:"none",border:"none",color:"#c0a880",fontSize:12,cursor:"pointer"}}>salir</button>
+          </div>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:20,padding:"24px 32px",alignItems:"flex-start"}}>
+          <div>
+            <ColHdr label="Pasado" count={pasadas.length} color="#8a7a60"/>
+            {pasadas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+            {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+          </div>
+          <div>
+            <ColHdr label="Próximo" count={proximas.length} color="#B87A3A"/>
+            {proximas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+            {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+          </div>
+          <div>
+            <ColHdr label="Por venir" count={futuras.length} color="#424029"/>
+            {futuras.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+            {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── LISTADO MÓVIL ─────────────────────────────────────────────────────────
   if (vista === "sesiones") return (
     <div style={wrap}>
       <div style={{padding:"28px 20px 14px",borderBottom:"1px solid #e0d8c8",display:"flex",alignItems:"flex-end",justifyContent:"space-between"}}>
