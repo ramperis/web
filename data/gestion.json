@@ -21,6 +21,12 @@
           "nombre": "Mercedes Moraleda",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "hwlu28x",
+          "nombre": "Fernando Moya Pérez",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
