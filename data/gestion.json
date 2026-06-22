@@ -51,6 +51,12 @@
           "nombre": "Daniel Villa",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "0oa6bh7",
+          "nombre": "Bryan Avila",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
