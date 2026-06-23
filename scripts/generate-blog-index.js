@@ -9,7 +9,8 @@ const START_MARKER = '<!-- BLOG_CARDS_START -->';
 const END_MARKER = '<!-- BLOG_CARDS_END -->';
 
 function generateCard(post) {
-  return `      <a href="/blog/${post.slug}" class="blog-card" data-cat="${post.cat}">
+  const dateAttr = post.fecha ? ` data-date="${post.fecha}"` : '';
+  return `      <a href="/blog/${post.slug}" class="blog-card" data-cat="${post.cat}"${dateAttr}>
         <div class="card-img">
           <img src="${post.imagen}" alt="${post.alt}" style="width:100%;height:100%;object-fit:cover;">
         </div>
