@@ -75,7 +75,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .post-img { margin: 36px 0; }
   .post-img img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 16px; display: block; }
-  .post-img-placeholder { width: 100%; aspect-ratio: 16/9; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 40px; opacity: 0.5; background: linear-gradient(135deg, var(--tierra-media) 0%, var(--tierra-noche) 100%); }
   .post-img figcaption { font-size: 12px; color: var(--texto-sutil); text-align: center; margin-top: 10px; font-style: italic; }
 
   .post-sidebar { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 24px; }
@@ -101,25 +100,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .sidebar-cta button[type="submit"] { width: 100%; background: var(--ambar); border: none; border-radius: 10px; padding: 12px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #fff; cursor: pointer; transition: opacity 0.2s; }
   .sidebar-cta button[type="submit"]:hover { opacity: 0.88; }
 
-  .related-section { background: var(--arena-oscura); padding: 64px 48px; }
-  .related-inner { max-width: 1200px; margin: 0 auto; }
-  .related-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texto-sutil); margin-bottom: 8px; }
-  .related-title { font-size: 22px; font-weight: 800; color: var(--texto-principal); margin-bottom: 32px; }
-  .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .related-card { text-decoration: none; background: var(--arena); border-radius: 16px; overflow: hidden; transition: transform 0.2s; }
-  .related-card:hover { transform: translateY(-3px); }
-  .related-img { aspect-ratio: 16/9; background: var(--tierra-media); display: flex; align-items: center; justify-content: center; font-size: 28px; opacity: 0.6; }
-  .related-body { padding: 16px; }
-  .related-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ambar); margin-bottom: 6px; }
-  .related-post-title { font-size: 14px; font-weight: 700; color: var(--texto-principal); line-height: 1.4; }
-
   @media (max-width: 900px) {
     .post-body-wrap { grid-template-columns: 1fr; gap: 0; }
     .post-sidebar { position: static; order: -1; flex-direction: row; flex-wrap: wrap; margin-bottom: 40px; }
     .sidebar-toc { display: none; }
     .sidebar-author { flex: 1; min-width: 200px; }
     .sidebar-cta { display: none; }
-    .related-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 768px) {
     .post-header { grid-template-columns: 1fr; padding: 48px 24px 32px; gap: 24px; }
@@ -127,8 +113,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   @media (max-width: 640px) {
     .post-body-wrap { padding: 0 24px 72px; }
-    .related-section { padding: 48px 24px; }
-    .related-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -187,141 +171,124 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <article class="post-content">
 
-    <p>Sri Lanka no es solo un destino de playa. Es uno de los pocos lugares del mundo donde el bienestar no es una industria añadida al turismo — es parte de cómo funciona la vida desde hace siglos.</p>
+    <p>Sri Lanka no es solo un destino de playa. Es uno de los pocos lugares del mundo donde el bienestar no es una industria añadida al turismo — es parte de cómo funciona la vida desde hace siglos. El ayurveda lleva aquí más de tres mil años. El budismo theravada impregna el ritmo del país. Y el entorno — montañas de té, océano en todas direcciones, un ritmo completamente diferente al europeo — hace parte del trabajo antes de que empieces cualquier práctica.</p>
 
-    <p>El sistema ayurvédico llegó a la isla con el hinduismo hace más de 2.000 años. El yoga lo acompañó. La meditación vipassana tomó raíz aquí antes de exportarse a occidente. Hoy Sri Lanka concentra retiros de silencio, ashrams de yoga, centros de panchakarma, formaciones de teacher training y una cultura de contacto con la naturaleza que no necesita esfuerzo para activarse.</p>
-
-    <p>Esta guía no es para turistas. Es para personas que ya tienen una práctica — o quieren empezar una — y quieren saber qué tipo de experiencias de bienestar ofrece Sri Lanka, con nombres concretos y honestidad sobre lo que encontrarán.</p>
+    <p>Esta guía recorre lo que Sri Lanka ofrece para quien busca algo más que descanso: ayurveda real, retiros de yoga, meditación, breathwork y vida consciente. Con nombres, lugares y criterios para elegir bien.</p>
 
     <h2 id="ayurveda">Ayurveda en Sri Lanka: lo que es y lo que no es</h2>
 
-    <p>El ayurveda es un sistema médico completo, no una colección de masajes. En Sri Lanka conviven dos versiones muy distintas: los resorts de lujo que ofrecen "experiencias ayurvédicas" de fin de semana, y los centros reales donde los tratamientos duran semanas y están supervisados por médicos ayurvédicos certificados.</p>
+    <p>El ayurveda occidental ha quedado reducido a masajes con aceite de coco y tratamientos de spa. Lo que existe en Sri Lanka es otra cosa.</p>
 
-    <h3>La diferencia entre un resort ayurvédico y un tratamiento real</h3>
+    <p>El ayurveda es un sistema médico completo con más de 3.000 años de historia documentada, originario del subcontinente indio y profundamente integrado en la cultura de Sri Lanka — donde está reconocido por el gobierno como medicina oficial junto a la medicina occidental. No es medicina alternativa: es medicina tradicional con diagnósticos propios, tratamientos personalizados, farmacopea y una filosofía de la salud que trabaja sobre el principio de que el cuerpo tiene una naturaleza específica (<em>dosha</em>) que se desequilibra con el estilo de vida, la alimentación y el entorno.</p>
 
-    <p>Un tratamiento ayurvédico genuino empieza con una consulta: el médico evalúa tu prakriti (constitución), detecta vikruti (desequilibrio actual) y diseña un protocolo a medida. Incluye dieta, rutinas, hierbas y terapias específicas. Un resort te ofrece masajes relajantes con aceites y le llama ayurveda.</p>
+    <blockquote>
+      <p>El ayurveda en Sri Lanka es una de las tradiciones médicas más vivas del mundo. A diferencia del spa ayurvédico occidental, trabaja con diagnóstico individual, tratamiento personalizado y cambios de hábito — no solo con procedimientos físicos.</p>
+    </blockquote>
 
-    <p>La diferencia no es de precio. Es de intención. Si vas a Sri Lanka a descansar y que te den un masaje, los resorts están bien. Si quieres un tratamiento real, necesitas un centro con médico ayurvédico en plantilla y un mínimo de 7-14 días.</p>
+    <p><strong>La diferencia entre un resort ayurvédico y un tratamiento real:</strong></p>
 
-    <h3>Panchakarma en Sri Lanka</h3>
+    <p>Hay un dato importante que pocas guías mencionan: el término "ayurveda" no está protegido en Sri Lanka. Cualquier hotel puede ofrecerlo — la mayoría de las veces son masajes de bienestar que no tienen ninguna relación con la medicina tradicional.</p>
 
-    <p>Panchakarma es el conjunto de tratamientos depurativos del ayurveda. El proceso típico incluye abhyanga (masaje con aceite medicinal), shirodhara (flujo de aceite caliente en la frente), virechan (purgación), nasya (administración nasal) y basti (enemas medicinales). No es un spa. Es un proceso que puede ser intenso físicamente.</p>
+    <p>Un tratamiento ayurvédico real empieza con una consulta con un médico ayurvédico titulado (<em>vaidya</em>) con el grado BAMS (Bachelor of Ayurvedic Medicine and Surgery), que evalúa tu constitución y prescribe un protocolo específico. Sin esa consulta médica real, lo que tienes es spa con estética ayurvédica.</p>
 
-    <p>Los mejores centros de panchakarma en Sri Lanka tienen médico en plantilla y farmacia propia de hierbas preparadas in situ. Huye de cualquier lugar que ofrezca "panchakarma de fin de semana".</p>
+    <p><strong>Panchakarma en Sri Lanka:</strong></p>
 
-    <h3>Centros de referencia</h3>
+    <p>El panchakarma es el protocolo de purificación más profundo del ayurveda — una secuencia de tratamientos diseñada para eliminar toxinas acumuladas y restablecer el equilibrio del sistema. Un panchakarma real dura entre 7 y 21 días. Sri Lanka tiene algunos de los mejores centros del mundo para recibirlo con garantías de autenticidad.</p>
+
+    <p><strong>Centros de referencia:</strong></p>
 
     <ol>
-      <li><strong>Barberyn Ayurveda Resorts</strong> — Beruwela/Weligama. El más antiguo de Sri Lanka con práctica médica real. Aceptan solo estancias de mínimo 7 días. Tienen doctores en plantilla, farmacia propia y seguimiento diario.</li>
-      <li><strong>Ayurveda Paradise</strong> — Unawatuna. Más pequeño y personalizado. Buena relación calidad-precio para tratamientos de 10-14 días.</li>
-      <li><strong>Jetwing Vil Uyana</strong> — Sigiriya. Contexto natural excepcional (humedales y bosque). Los tratamientos son menos intensivos pero el entorno justifica la experiencia.</li>
-      <li><strong>Lanka Ayurveda</strong> — Kandy. En plenas montañas. Enfoque más clínico, sin la estética resort.</li>
+      <li><strong>Surya Lanka</strong> (Talalla) — uno de los primeros retiros construidos específicamente para panchakarma en Sri Lanka, desde 1995. Su mayor diferenciador: publican abiertamente el programa completo de tratamientos — inusual en el sector. Tres programas disponibles: Ligero, Intensivo (el elegido por el 80% de sus huéspedes) y Curativo para condiciones específicas. Médicos con formación clásica, ubicación en playa.</li>
+      <li><strong>Ayurveda Paradise Maho</strong> (Maho) — clínica privada con 25 años de experiencia. 6 tratamientos al día, consulta médica desde el primer día. Con estatus oficial de hospital privado. Recomiendan alejarse de la costa precisamente para evitar el ruido del turismo durante el tratamiento — tiene sentido médicamente.</li>
+      <li><strong>Plantation Villa</strong> (Kandy) — combina ayurveda con yoga diario en entorno de villa colonial con jardín orgánico propio y manantial natural. Mínimo cuatro tratamientos ayurvédicos diarios con médico desde el inicio.</li>
+      <li><strong>Haritha Villas &amp; Spa</strong> (Hikkaduwa) — opción de nivel superior en entorno de selva. Consulta de <em>prakriti</em> (constitución individual), tratamientos a medida, jardín de plantas medicinales propio.</li>
     </ol>
 
-    <p>Precios orientativos: estancias de 7 días con tratamientos incluidos van de 800&nbsp;€ a 2.500&nbsp;€ según el nivel del centro.</p>
+    <p><strong>Precios orientativos:</strong> las estancias en centros de calidad parten de 700&nbsp;€ para 7 noches con pensión completa. Los centros de mayor nivel pueden superar los 150&nbsp;€ al día todo incluido. Por debajo de eso, conviene revisar bien qué se incluye.</p>
 
     <figure class="post-img">
-      <img src="/img/blog/bienestar-sri-lanka-ayurveda-masaje-tratamiento.jpg" alt="Dos terapeutas ayurvédicas realizando masaje tradicional en centro de ayurveda de Sri Lanka" loading="lazy">
-      <figcaption>Masaje ayurvédico tradicional con aceites medicinales — uno de los tratamientos centrales del panchakarma en Sri Lanka.</figcaption>
+      <img src="/img/blog/bienestar-sri-lanka-ayurveda-masaje-tratamiento.jpg" alt="Dos terapeutas ayurvédicas realizando masaje tradicional con aceites medicinales en centro de ayurveda de Sri Lanka" loading="lazy">
+      <figcaption>Masaje ayurvédico tradicional con aceites medicinales — parte central del protocolo de panchakarma en Sri Lanka.</figcaption>
     </figure>
 
     <h2 id="yoga">Yoga en Sri Lanka: retiros, ashrams y formaciones de maestros</h2>
 
-    <p>Sri Lanka tiene una escena de yoga más discreta que India pero más accesible para occidentales que llegan por primera vez. No hay la concentración de ashrams de Rishikesh, pero hay retiros de calidad repartidos por toda la isla, desde las montañas de Ella hasta las playas del sur.</p>
+    <p>El yoga en Sri Lanka tiene una presencia más discreta que en India — y eso es precisamente lo que lo hace interesante. Menos saturación, más práctica real. Para quien busca un retiro de yoga en Sri Lanka o un ashram donde pasar tiempo en silencio y práctica, las opciones van desde eco-villages rurales hasta centros integrados de bienestar.</p>
 
     <ol>
-      <li><strong>Ulpotha</strong> — Kurunegala. El retiro de yoga más conocido y fotografiado de Sri Lanka. Situado en una aldea ancestral recuperada. Sin wifi, sin electricidad en los dormitorios. Una semana de inmersión total.</li>
-      <li><strong>Mango House</strong> — Unawatuna. Yoga diario frente al mar, ambiente más social, ideal para quienes quieren práctica sin aislamiento total.</li>
-      <li><strong>Saffron &amp; Blue</strong> — Koggala. Retiro boutique con clases pequeñas, pilates y yoga restaurativo. Buen nivel de instrucción.</li>
-      <li><strong>Sri Yoga Shala</strong> — Hikkaduwa. Estudio establecido, clases regulares, buenos profesores locales. Útil como base si te quedas un tiempo.</li>
+      <li><strong>Ulpotha</strong> (Embogama) — la referencia para quien busca inmersión total. Un eco-village en entorno completamente rural sin electricidad en las habitaciones. Retiros de yoga y ayurveda en chozas tradicionales, yoga en shalas al aire libre, lago de agua dulce. No es para quien quiere comodidades — es para quien quiere desconectar de verdad. Precios desde 100&nbsp;€ al día con pensión completa.</li>
+      <li><strong>Plantation Villa</strong> (Kandy) — combina yoga matutino y vespertino con tratamientos ayurvédicos en 30 acres de jardín con manantial natural. Más accesible que Ulpotha para quien quiere combinar práctica con comodidades básicas.</li>
+      <li><strong>Ashram Sri Lanka</strong> (zona de selva) — espacio en la jungla que funciona como ashram contemporáneo: silencio, naturaleza y libertad sin programa estructurado. Sin instrucción guiada ni horarios fijos. Para quien ya tiene su práctica y necesita espacio para hacerla en un entorno diferente.</li>
+      <li><strong>Senses Sri Lanka</strong> (Midigama) — ofrece clases diarias de yoga además de meditación, sound healing, breathwork y kirtan. No es un retiro de yoga puro, sino un centro de prácticas integradas donde el yoga convive con otras disciplinas de bienestar consciente. Una opción particularmente interesante para quien quiere explorar varias prácticas en un mismo lugar.</li>
     </ol>
 
-    <h3>Yoga teacher training en Sri Lanka</h3>
+    <p><strong>Yoga teacher training en Sri Lanka:</strong></p>
 
-    <p>Las formaciones de 200 horas en Sri Lanka son cada vez más numerosas. Algunas están bien. Otras son turismo de certificación.</p>
-
-    <p>Lo que diferencia una buena formación:</p>
-
-    <ol>
-      <li>Duración real (mínimo 21 días en inmersión)</li>
-      <li>Profesores con años de práctica propia documentada</li>
-      <li>Tradición clara: hatha, ashtanga, vinyasa — no un mix sin profundidad</li>
-      <li>Grupos pequeños (máximo 15-20 personas)</li>
-    </ol>
+    <p>Las formaciones de 200 horas con acreditación Yoga Alliance han crecido significativamente en los últimos años. La combinación de entorno natural, coste más contenido que en Occidente y calidad de instrucción la convierte en una opción real. Senses ofrece formación de profesores de yoga además de sus programas de breathwork y sound healing.</p>
 
     <figure class="post-img">
       <img src="/img/blog/bienestar-sri-lanka-yoga-formacion-profesores.jpg" alt="Círculo de formación de profesores de yoga en Sri Lanka con pizarra YTT Sri Lanka al fondo" loading="lazy">
-      <figcaption>Formación de profesores de yoga en Sri Lanka — el formato de inmersión en grupo pequeño marca la diferencia entre certificación real y turismo de yoga.</figcaption>
+      <figcaption>Formación de profesores de yoga en Sri Lanka — el formato de inmersión en grupo pequeño es lo que diferencia una certificación real del turismo de yoga.</figcaption>
     </figure>
 
     <h2 id="meditacion">Meditación y retiros de silencio</h2>
 
-    <p>Sri Lanka tiene una tradición theravada viva. No es representación turística — es práctica activa en monasterios por toda la isla.</p>
-
-    <p>Los retiros de Vipassana de Goenka tienen centros en Colombo y Kandy. Diez días de silencio, sin costo (dana), rigurosos. No son para todo el mundo en cualquier momento.</p>
-
-    <p>Opciones más accesibles:</p>
+    <p>Sri Lanka tiene una tradición budista theravada viva — no de museo. Los monasterios funcionan, los monjes practican, y existe una cultura de meditación que impregna el país de una forma que en Europa es muy difícil de encontrar.</p>
 
     <ol>
-      <li><strong>Nilambe Meditation Centre</strong> — Kandy. El retiro de meditación más respetado del país. Monjes reales, práctica diaria, posibilidad de quedarse semanas. Donación.</li>
-      <li><strong>Mitirigala Nissarana Vanaya</strong> — Cerca de Colombo. Monasterio forestal theravada. Solo para personas con práctica previa seria. Silencio total.</li>
-      <li><strong>Kanduboda Meditation Centre</strong> — Cerca de Colombo. Más accesible para principiantes. Formatos de 7-10 días disponibles.</li>
+      <li><strong>Nilambe Buddhist Meditation Centre</strong> (Nilambe, colinas sobre Kandy) — probablemente el centro de meditación más conocido de Sri Lanka fuera del país. Fundado en 1977, basado en mindfulness y meditación en silencio. Dos retiros de 6 días al mes — uno en inglés, uno en cingalés — con posibilidad de quedarse más tiempo. Coste por donación. Sin lujos: habitaciones básicas, comida vegetariana, caminos de piedra en ladera de montaña. Para llegar desde Kandy, autobús 633/1 y después tuk-tuk. Reservar con antelación en nilambe.lk.</li>
+      <li><strong>Dhamma Kuta Vipassana Meditation Center</strong> (Kanduboda) — centro oficial de la tradición Goenka. Retiros de 10 días en silencio total, sin coste (donación al salir). La opción más estructurada para quien quiere una inmersión seria en vipassana.</li>
+      <li><strong>Galduwa Forest Hermitage</strong> (Galduwa) — monasterio budista tradicional en bosque tropical. Programas de meditación intensivos para practicantes con experiencia previa. Entorno austero, para quien busca profundidad sin concesiones.</li>
     </ol>
 
     <h2 id="breathwork">Breathwork y prácticas de respiración</h2>
 
-    <p>El breathwork moderno no tiene en Sri Lanka el nivel de presencia que el yoga o la meditación — todavía. Pero hay centros que lo integran como práctica dentro de programas más amplios de bienestar.</p>
+    <p>El breathwork tiene en Sri Lanka un espacio que en España aún está por desarrollar. Hay algo en el entorno — el ritmo más lento, la distancia de lo cotidiano, la naturaleza que rodea cualquier práctica — que facilita el trabajo con la respiración de una forma que en un contexto urbano europeo requiere mucho más esfuerzo.</p>
 
-    <p>Senses Sri Lanka es una de las operadoras de retiros más coherentes en la isla para quien viene del mundo del breathwork. <a href="https://sensessrilanka.com/breathwork-teacher-training-sri-lanka/" target="_blank" rel="noopener noreferrer">Su programa de formación en breathwork</a> combina prácticas de respiración con integración en la naturaleza, y está diseñado para facilitadores que quieren profundizar su práctica en un entorno distinto.</p>
+    <p><strong>Senses Sri Lanka</strong> es la referencia en breathwork en la isla. <a href="https://sensessrilanka.com/breathwork/" target="_blank" rel="noopener noreferrer">Su programa de formación en breathwork</a> es uno de los pocos en Asia con rigor real en la metodología — no solo técnica de respiración sino trabajo de facilitación y acompañamiento. Además de la formación, ofrecen sesiones regulares de breathwork, clases diarias de meditación, yoga, sound healing y kirtan, y son el epicentro del ecstatic dance en Sri Lanka. Un centro que merece estar en el radar de cualquiera que trabaje o quiera trabajar con prácticas de bienestar consciente.</p>
 
-    <p>Si vienes a Sri Lanka con una práctica de breathwork establecida, lo más valioso no son los talleres formales sino la oportunidad de practicar en un entorno que reduce el ruido de fondo: sin pantallas, con naturaleza, con tiempo real. Un contexto donde las prácticas de activación intensas — que en casa se hacen en el suelo de tu habitación — aquí se hacen al amanecer frente al océano o en medio de la jungla.</p>
+    <p>Vale la pena mencionarlo con conocimiento de causa: me formé como facilitador de breathwork en Senses después de quedarme a vivir en Sri Lanka unos meses. No es una recomendación de catálogo.</p>
 
     <figure class="post-img">
       <img src="/img/blog/bienestar-sri-lanka-yoga-selva-tropical.jpg" alt="Clase de yoga en la selva tropical de Sri Lanka con cascada y vegetación exuberante al fondo" loading="lazy">
-      <figcaption>Practicar en plena naturaleza tropical — uno de los factores que hace que las prácticas de respiración y movimiento tengan otro peso en Sri Lanka.</figcaption>
+      <figcaption>Practicar en plena naturaleza tropical — uno de los factores que hace que el breathwork y el movimiento consciente tengan otro peso en Sri Lanka.</figcaption>
     </figure>
 
     <h2 id="ecstatic-dance">Ecstatic dance y movimiento consciente</h2>
 
-    <p>Colombo tiene una escena de ecstatic dance pequeña pero activa, concentrada principalmente en el barrio de Colombo 3 y en los cafés culturales de Cinnamon Gardens. En temporada alta (diciembre-marzo), también aparecen eventos en Galle y Unawatuna.</p>
+    <p>Algo que no aparece en casi ninguna guía de bienestar en Sri Lanka: la escena de ecstatic dance y movimiento consciente es más viva de lo que su discreción exterior sugiere.</p>
 
-    <p>El movimiento consciente — incluyendo biodanza, authentic movement y contact improvisation — está menos extendido que en Europa pero va creciendo en los círculos de expatriados y yoguis que viven permanentemente en la isla.</p>
+    <p>El ecstatic dance es una práctica de movimiento libre — sin coreografía, sin instrucción — donde el cuerpo sigue el ritmo de la música sin la mediación del pensamiento. Es una de las formas más directas de regulación del sistema nervioso a través del movimiento, y tiene una comunidad activa en Sri Lanka centrada principalmente en Senses.</p>
 
-    <p>Para encontrar eventos actualizados: busca en Facebook grupos como "Colombo Yoga &amp; Wellness" o "Conscious Living Sri Lanka". La escena es pequeña y comunicada por grupos de WhatsApp.</p>
+    <p>Para quien viene del mundo del bienestar consciente, encontrar eso integrado en un centro con yoga, breathwork y sound healing es una combinación inusual y valiosa.</p>
 
     <h2 id="detox">Detox y regeneración</h2>
 
-    <p>Más allá del ayurveda, Sri Lanka ofrece varios tipos de programas de detox que funcionan precisamente porque el entorno hace parte del trabajo.</p>
+    <p>Sri Lanka permite combinar algo que en Occidente raramente va junto: desconexión real del ritmo habitual, entorno natural sin concesiones y un sistema médico tradicional con siglos de historia detrás.</p>
 
-    <p>El detox hídrico — retiros que combinan ayuno con jugos frescos, caminatas y descanso — tiene su mejor contexto en las zonas de interior con acceso a frutas tropicales locales. No necesitas un programa caro: algunas casas de retiro ofrecen esto de forma sencilla y efectiva.</p>
+    <p>Un retiro de detox auténtico en Sri Lanka puede incluir protocolo ayurvédico supervisado médicamente, alimentación diseñada para el proceso (no para el gusto), tratamientos físicos de eliminación de toxinas, práctica de yoga y meditación como soporte, y desconexión digital sin opcional.</p>
 
-    <p>El baño de agua fría natural es parte de la práctica ayurvédica pero también está integrado en algunos retiros de yoga. Las corrientes de montaña en Ella, Nuwara Eliya o Adam's Peak son frías de verdad y tienen un efecto comparable al de la hidroterapia de contraste.</p>
+    <p>La señal de alerta más común: el marketing de "detox" sin médico ayurvédico titulado detrás. Si el centro no menciona diagnóstico de dosha y consulta médica inicial, probablemente es spa con nombre de detox.</p>
 
-    <p>La conexión con la tierra — caminar descalzo, nadar en océano real, pasar horas sin pantallas — tiene un efecto regenerativo documentado. Sri Lanka lo ofrece sin esfuerzo adicional.</p>
+    <p><strong>Duración mínima recomendable:</strong> una semana para una introducción real. Para panchakarma completo, entre 12 y 21 días.</p>
 
     <h2 id="entorno">Lo que el entorno hace sin que lo pidas</h2>
 
-    <p>Hay algo en Sri Lanka que no está en ningún programa de bienestar pero que actúa igualmente. La isla tiene una densidad de estímulos distintos a los de occidente: colores, olores, sonidos, tiempos. El ritmo de vida en las zonas rurales no es lento porque sea perezoso — es lento porque hay otra relación con el tiempo.</p>
+    <p>Hay algo en Sri Lanka difícil de incluir en ningún programa oficial porque no se puede programar: el ritmo del país es físicamente diferente.</p>
 
-    <p>Las plantaciones de té en Nuwara Eliya, los elefantes en Minneriya, las ballenas azules en Mirissa, los monasterios en roca de Dambulla — no son actividades de wellness pero generan estados similares: presencia, apertura, quietud.</p>
+    <p>Los ciclos naturales — la luz, las lluvias, las mareas — siguen organizando la vida en muchos lugares de la isla de una forma que en Europa dejó de ser así hace décadas. Eso tiene un efecto sobre el sistema nervioso que ninguna técnica de mindfulness puede replicar en una ciudad: los patrones crónicos de tensión tienen más espacio para aflojarse cuando el entorno deja de reforzarlos constantemente.</p>
 
-    <p>El mar, en particular. Las playas del sur (Mirissa, Tangalle, Hiriketiya) tienen una calidad del agua y una ausencia de masificación que es difícil de encontrar en Europa. Nadar en océano abierto, con waves reales, regularmente, cambia el sistema nervioso de formas que ningún programa de retiro puede replicar.</p>
+    <p>No es misticismo. Es fricción reducida. Y es una de las razones por las que tantos procesos de transformación ocurren en viaje — no por el exotismo, sino porque la distancia de los estímulos habituales crea un espacio que en casa es muy difícil de sostener.</p>
 
     <h2 id="como-elegir">Cómo elegir tu experiencia de bienestar en Sri Lanka</h2>
 
-    <p>Antes de reservar, una pregunta honesta: ¿qué tipo de cambio estás buscando?</p>
+    <p><strong>¿Buscas descanso o proceso terapéutico?</strong> Son cosas diferentes. El descanso requiere comodidad y ausencia de demandas. Un proceso terapéutico real (panchakarma, formación de breathwork, retiro de silencio) requiere incomodidad gestionada y acompañamiento competente. Los mejores centros de Sri Lanka ofrecen ambas cosas, pero conviene saber cuál es tu prioridad antes de reservar.</p>
 
-    <p><strong>Si buscas descanso real:</strong> un resort con masajes, piscina y aire acondicionado. No hay nada malo en eso. Sri Lanka tiene buenas opciones. No le llames retiro de bienestar.</p>
+    <p><strong>¿Cuánto tiempo tienes?</strong> Una semana: retiro de yoga o introducción al ayurveda. Dos semanas: panchakarma real o inmersión más profunda en meditación o breathwork. Un mes o más: formación certificada en yoga, breathwork o sound healing.</p>
 
-    <p><strong>Si buscas tratamiento:</strong> busca un centro ayurvédico con médico en plantilla, mínimo 7 días, y lee opiniones de personas que hayan hecho el programa completo.</p>
+    <p><strong>¿Resort o centro médico?</strong> Si buscas bienestar y descanso: resort ayurvédico de calidad. Si buscas tratamiento terapéutico real sobre una condición crónica o proceso de transformación profunda: centro con médicos BAMS certificados y protocolo de panchakarma documentado.</p>
 
-    <p><strong>Si buscas práctica:</strong> elige un retiro de yoga o meditación con formato de inmersión. Evita los que mezclan clases de yoga con excursiones turísticas en el mismo itinerario.</p>
-
-    <p><strong>Si quieres tiempo de integración:</strong> alquila una casa en un pueblo tranquilo, establece una rutina simple y deja que el entorno haga parte del trabajo. A veces lo más efectivo es lo menos estructurado.</p>
-
-    <p>Sri Lanka no es barata si eliges centros de calidad, pero tampoco es cara si calibras bien tus prioridades. Un mes bien planificado puede costar menos que una semana en un spa europeo y darte diez veces más.</p>
-
-    <p>Si vas a hacer un panchakarma intensivo, una formación de breathwork o un retiro de silencio profundo, conviene tener a alguien con quien trabajar esa vuelta. Si estás en España, una sesión de breathwork o de <a href="/bano-sonido">sound healing</a> puede ser un buen puente entre lo que abriste allí y el ritmo de aquí.</p>
+    <p><strong>¿Y después del retiro?</strong> Algunos procesos generan movimiento que necesita integración al volver a casa. Si vas a hacer un panchakarma intensivo, una formación de breathwork o un retiro de silencio profundo, conviene tener a alguien con quien trabajar esa vuelta. Si estás en España, una <a href="/breathwork">sesión de breathwork</a> o de <a href="/bano-sonido">sound healing</a> puede ser un buen puente entre lo que abriste allí y el ritmo de aquí.</p>
 
   </article>
 
