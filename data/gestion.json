@@ -303,6 +303,12 @@
           "nombre": "Isabella Batallas",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "rgyck97",
+          "nombre": "Raúl Ferrer",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
