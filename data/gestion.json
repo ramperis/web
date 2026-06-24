@@ -57,6 +57,12 @@
           "nombre": "Sandra",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "06ms61p",
+          "nombre": "Andreina",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
