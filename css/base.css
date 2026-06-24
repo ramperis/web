@@ -821,7 +821,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 .product-box { background: var(--arena-oscura); border-radius: 16px; padding: 24px; margin: 0 0 32px; }
 .product-box h3 { font-size: 19px; font-weight: 800; color: var(--texto-principal); margin: 0 0 16px; }
 .product-verdict { background: rgba(200,120,10,0.08); border-left: 3px solid var(--ambar); border-radius: 0 8px 8px 0; padding: 10px 16px; margin-top: 12px; }
-.product-verdict p { margin: 0; font-style: italic; }
+.product-verdict p { margin: 0; font-size: 14px; font-style: italic; }
 .product-verdict strong { font-style: normal; }
 
 /* ── RESPONSIVE ── */
