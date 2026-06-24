@@ -203,17 +203,19 @@ La columna Modelo debe enlazar cada producto a su ASIN:
 <td><a href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">NOMBRE</a></td>
 ```
 
-## CSS del product-verdict — ya está en base.css
+## CSS del product-box y product-verdict — ya está en base.css
 
-El estilo del bloque Veredicto está definido globalmente en `/css/base.css`:
+El estilo completo del bloque de producto está definido globalmente en `/css/base.css`:
 ```css
+.product-box { background: var(--arena-oscura); border-radius: 16px; padding: 24px; margin: 0 0 32px; }
+.product-box h3 { font-size: 19px; font-weight: 800; color: var(--texto-principal); margin: 0 0 16px; }
 .product-verdict { background: rgba(200,120,10,0.08); border-left: 3px solid var(--ambar); border-radius: 0 8px 8px 0; padding: 10px 16px; margin-top: 12px; }
 .product-verdict p { margin: 0; font-style: italic; }
 .product-verdict strong { font-style: normal; }
 ```
 **No añadir este CSS en el `<style>` inline de nuevos posts** — heredan de base.css automáticamente.
 
-Si un post tiene `.product-verdict` en su CSS inline con un estilo diferente, actualizarlo para que coincida con el de arriba.
+Si un post tiene `.product-box` o `.product-verdict` en su CSS inline, debe coincidir exactamente con el de arriba.
 
 ## Checklist al crear un post con productos Amazon
 
