@@ -80,7 +80,7 @@
           "id": "uelzuzs",
           "nombre": "Arturo",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "pwv6us2",
@@ -122,7 +122,7 @@
           "id": "0oa6bh7",
           "nombre": "Bryan Avila",
           "x2": false,
-          "estado": "estuvo"
+          "estado": "no viene"
         }
       ]
     },
