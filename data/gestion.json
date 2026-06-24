@@ -63,6 +63,12 @@
           "nombre": "Andreina",
           "x2": true,
           "estado": "reserva"
+        },
+        {
+          "id": "puj8jte",
+          "nombre": "Maggie",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
