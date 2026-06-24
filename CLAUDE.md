@@ -203,6 +203,18 @@ La columna Modelo debe enlazar cada producto a su ASIN:
 <td><a href="https://www.amazon.es/dp/ASIN?tag=ramperis-21" target="_blank" rel="noopener noreferrer sponsored">NOMBRE</a></td>
 ```
 
+## CSS del product-verdict — ya está en base.css
+
+El estilo del bloque Veredicto está definido globalmente en `/css/base.css`:
+```css
+.product-verdict { background: rgba(200,120,10,0.08); border-left: 3px solid var(--ambar); border-radius: 0 8px 8px 0; padding: 10px 16px; margin-top: 12px; }
+.product-verdict p { margin: 0; font-style: italic; }
+.product-verdict strong { font-style: normal; }
+```
+**No añadir este CSS en el `<style>` inline de nuevos posts** — heredan de base.css automáticamente.
+
+Si un post tiene `.product-verdict` en su CSS inline con un estilo diferente, actualizarlo para que coincida con el de arriba.
+
 ## Checklist al crear un post con productos Amazon
 
 1. `<head>` incluye `<script src="/js/amazon-box.js" defer></script>`
@@ -211,6 +223,7 @@ La columna Modelo debe enlazar cada producto a su ASIN:
 4. Imagen de cada caja: URL real de `m.media-amazon.com`
 5. Disclaimer al final del `<article>`: `<p><em>Artículo con enlaces de afiliado. Si compras a través de ellos recibo una pequeña comisión sin coste adicional para ti.</em></p>`
 6. Entrada en `posts.json` con imagen real que existe en `/img/blog/`
+7. NO añadir CSS de `.product-verdict` en el `<style>` del post — ya está en base.css
 
 ## Formato de un evento
 
