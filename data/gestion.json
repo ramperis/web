@@ -98,7 +98,7 @@
           "id": "9puq7oz",
           "nombre": "Marcel",
           "x2": false,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "yucvwic",
@@ -110,13 +110,13 @@
           "id": "23f681a",
           "nombre": "Roberto",
           "x2": false,
-          "estado": "estuvo"
+          "estado": "no viene"
         },
         {
           "id": "7dw8n6l",
           "nombre": "Daniel Villa",
           "x2": false,
-          "estado": "no viene"
+          "estado": "confirmado"
         },
         {
           "id": "0oa6bh7",
