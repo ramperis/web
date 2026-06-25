@@ -17,7 +17,8 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "PowerShell(git -C \"c:\\\\Users\\\\errea\\\\web\" log --oneline -- gestion.html)"
+      "PowerShell(git -C \"c:\\\\Users\\\\errea\\\\web\" log --oneline -- gestion.html)",
+      "Read(//c/Users/errea/**)"
     ]
   }
 }
