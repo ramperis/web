@@ -62,13 +62,13 @@
           "id": "06ms61p",
           "nombre": "Andreina",
           "x2": true,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "puj8jte",
           "nombre": "Maggie",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "completo"
         }
       ]
     },
