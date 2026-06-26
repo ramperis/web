@@ -343,8 +343,8 @@
         {
           "id": "6b4nxfi",
           "nombre": "Eva Alapont",
-          "x2": false,
-          "estado": "pendiente"
+          "x2": true,
+          "estado": "reserva"
         }
       ]
     },
