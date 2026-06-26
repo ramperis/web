@@ -327,6 +327,12 @@
           "nombre": "Ana Belén Rausell",
           "x2": false,
           "estado": "no viene"
+        },
+        {
+          "id": "6mqjj9y",
+          "nombre": "Noelia Carnovale",
+          "x2": true,
+          "estado": "pendiente"
         }
       ]
     },
