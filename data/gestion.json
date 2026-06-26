@@ -20,31 +20,31 @@
           "id": "h32iee8",
           "nombre": "Mercedes Moraleda",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "hwlu28x",
           "nombre": "Fernando Moya Pérez",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "y8zdweb",
           "nombre": "Olga García Giménez",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "c5aut38",
           "nombre": "Fernando Garriga",
           "x2": false,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "mjc9dkk",
           "nombre": "Judith",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "completo"
         },
         {
           "id": "u59e1oo",
