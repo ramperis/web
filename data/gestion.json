@@ -339,6 +339,12 @@
           "nombre": "Rosa Soler",
           "x2": false,
           "estado": "pendiente"
+        },
+        {
+          "id": "6b4nxfi",
+          "nombre": "Eva Alapont",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
