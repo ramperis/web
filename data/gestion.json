@@ -333,6 +333,12 @@
           "nombre": "Noelia Carnovale",
           "x2": true,
           "estado": "pendiente"
+        },
+        {
+          "id": "k61y7wy",
+          "nombre": "Rosa Soler",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
