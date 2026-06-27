@@ -1,18 +1,6 @@
 {
   "sesiones": [
     {
-      "id": "1d3xxgh",
-      "nombre": "nueva sesión",
-      "fecha": "27/06/2026",
-      "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "",
-      "precioReserva": "",
-      "splitPct": 50,
-      "donacion": "",
-      "asistentes": []
-    },
-    {
       "id": "xmzaqy5",
       "nombre": "Breath & Sound Casa Lenta 26/06",
       "fecha": "26/06/2026",
