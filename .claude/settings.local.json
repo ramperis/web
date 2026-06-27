@@ -20,7 +20,11 @@
       "PowerShell(git -C \"c:\\\\Users\\\\errea\\\\web\" log --oneline -- gestion.html)",
       "Read(//c/Users/errea/**)",
       "Read(//c/Users/errea/.claude/**)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\errea\\\\Desktop\\\\Web\\\\img\\\\blog\\\\\" | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddDays\\(-2\\) } | Select-Object Name, LastWriteTime | Sort-Object LastWriteTime -Descending)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\\" | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddDays\\(-2\\) } | Select-Object Name, LastWriteTime | Sort-Object LastWriteTime -Descending)",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\ChatGPT Image 27 jun 2026, 14_31_26.png\" \"handpan-precio-instrumento-ambiente.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\image.png\" \"handpan-sesion-sonido-grupo.png\")"
     ]
   }
 }
