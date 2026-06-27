@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$env:PATH = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine') + ';' + [System.Environment]::GetEnvironmentVariable('PATH', 'User'); Set-Location 'c:\\Users\\errea\\Desktop\\Web'; git add .; $status = git status --porcelain; if ($status) { git commit -m 'actualizacion'; git push origin main } 2>$null",
+            "command": "$env:PATH = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine') + ';' + [System.Environment]::GetEnvironmentVariable('PATH', 'User'); Set-Location 'c:\\Users\\errea\\web'; git add .; $status = git status --porcelain; if ($status) { git commit -m 'actualizacion'; git push origin main } 2>$null",
             "shell": "powershell",
             "timeout": 60,
             "statusMessage": "Subiendo cambios a GitHub..."
