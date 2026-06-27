@@ -890,6 +890,7 @@ function App() {
           <div style={{fontSize:11,color:"#8a7a60"}}>{activa.fecha}</div>
         </div>
         <button onClick={() => { setConfig({...activa}); setVista("config"); }} style={{background:"none",border:"1.5px solid #e0d8c8",borderRadius:8,padding:"6px 10px",cursor:"pointer",fontSize:13,color:"#8a7a60",fontWeight:700}}>✎</button>
+        <button onClick={clonarSesion} style={{background:"none",border:"1.5px solid #e0d8c8",borderRadius:8,padding:"6px 10px",cursor:"pointer",fontSize:13,color:"#8a7a60",fontWeight:700}} title="Clonar sesión">⧉</button>
         {confirmDel === activaId
           ? <div style={{display:"flex",gap:6}}>
               <button onClick={() => { setSes(p=>p.filter(x=>x.id!==activaId)); setConfirmDel(null); setVista("sesiones"); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
