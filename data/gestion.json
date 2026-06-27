@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "t3ycqwk",
+      "nombre": "Círculo de Hombres 22/07",
+      "fecha": "27/06/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "ou8asul",
       "nombre": "Círculo de Hombres 22/07",
       "fecha": "22/07/2026",
