@@ -664,9 +664,8 @@ function App() {
                           </div>
                         </div>
                         <div style={{display:"flex",alignItems:"center",gap:10}}>
-                          <div style={{flex:1}}><Bar val={m.ingresos} max={maxIngMes}/></div>
-                          <span style={{fontSize:13,fontWeight:800,color:"#B87A3A",minWidth:64,textAlign:"right"}}>{fmt(m.ingresos)}</span>
-                          <span style={{fontSize:11,color:"#8a7a60",minWidth:80}}>({fmt(m.miParte)} tuyo)</span>
+                          <div style={{flex:1}}><Bar val={m.miParte} max={maxIngMes}/></div>
+                          <span style={{fontSize:13,fontWeight:800,color:"#B87A3A",minWidth:64,textAlign:"right"}}>{fmt(m.miParte)}</span>
                         </div>
                       </div>
                       {isOpen && (
