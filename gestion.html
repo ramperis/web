@@ -164,8 +164,14 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
         </button>
         <div style={{flex:1,padding:"0 8px"}}>
           <div style={{fontWeight:700,fontSize:15}}>
-            {a.nombre}
-            {a.x2 && !esDon && <span style={{fontSize:11,color:"#B87A3A",fontWeight:800,marginLeft:5}}>×2</span>}
+            {editingName
+              ? <input autoFocus value={tmpName} onChange={e=>setTmpName(e.target.value)}
+                  onBlur={()=>{ if(tmpName.trim()) onRename(tmpName.trim()); setEditingName(false); }}
+                  onKeyDown={e=>{ if(e.key==="Enter") e.target.blur(); if(e.key==="Escape") setEditingName(false); }}
+                  style={{width:"90%",fontWeight:700,fontSize:15,border:"none",borderBottom:"2px solid #B87A3A",outline:"none",background:"transparent",fontFamily:"'Nunito',sans-serif",padding:"2px 0"}}/>
+              : <span onClick={()=>{ setEditingName(true); setTmpName(a.nombre); }} style={{cursor:"text"}}>{a.nombre}</span>
+            }
+            {!editingName && a.x2 && !esDon && <span style={{fontSize:11,color:"#B87A3A",fontWeight:800,marginLeft:5}}>×2</span>}
           </div>
           {tP && !esDon && (
             <div style={{fontSize:11,marginTop:1}}>
