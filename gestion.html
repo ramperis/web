@@ -60,13 +60,13 @@ function savedAuth() {
 }
 
 function cobradoAs(a, s) {
-  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.x2?2:1;
+  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.qty??(a.x2?2:1);
   if (a.estado === "completo") return pt * p;
   if (a.estado === "reserva")  return pr * p;
   return 0;
 }
 function pendienteAs(a, s) {
-  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.x2?2:1;
+  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.qty??(a.x2?2:1);
   if (a.estado === "completo")  return 0;
   if (a.estado === "reserva")   return (pt - pr) * p;
   if (a.estado === "pendiente") return pt * p;
