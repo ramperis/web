@@ -129,8 +129,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .post-content .escala-header-body h3 { font-size: 19px; font-weight: 800; margin: 0 0 4px; }
   .post-content .escala-header-body p { margin: 0; font-size: 12px; font-style: italic; color: var(--texto-sutil); }
   .post-content .escala-box > p { margin-bottom: 14px; }
-  .escala-footer { background: rgba(200,120,10,0.08); border-left: 3px solid var(--ambar); border-radius: 0 8px 8px 0; padding: 10px 16px; margin-top: 12px; }
-  .escala-footer p { margin: 0; font-size: 14px; }
+  .escala-footer { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+  .escala-caracter, .escala-quien { border-radius: 10px; padding: 11px 14px; font-size: 13px; line-height: 1.6; color: var(--texto-secundario); }
+  .escala-caracter { background: rgba(200,120,10,0.08); border-left: 3px solid var(--ambar); }
+  .escala-quien { background: rgba(42,28,8,0.06); border-left: 3px solid rgba(42,28,8,0.2); }
+  .escala-caracter strong, .escala-quien strong { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-principal); margin-bottom: 4px; }
+  @media (max-width: 640px) { .escala-footer { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
