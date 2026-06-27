@@ -424,7 +424,7 @@ function App() {
           <Lbl>tipo de evento</Lbl>
           <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:16}}>
             {TIPOS_EVENTO.map(({id,label}) => (
-              <button key={id} onClick={() => setConfig(p=>({...p,tipoEvento:id}))} style={{padding:"8px 14px",borderRadius:10,border:`1.5px solid ${(config.tipoEvento||"otro")===id?"#B87A3A":"#e0d8c8"}`,background:(config.tipoEvento||"otro")===id?"#B87A3A":"#fff",color:(config.tipoEvento||"otro")===id?"#F5F0E4":"#2E2010",fontWeight:800,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>{label}</button>
+              <button key={id} onClick={() => setConfig(p=>{const fill=p.nombre==="nueva sesión"||TIPOS_EVENTO.some(t=>t.label===p.nombre);return{...p,tipoEvento:id,nombre:fill?label:p.nombre};})} style={{padding:"8px 14px",borderRadius:10,border:`1.5px solid ${(config.tipoEvento||"otro")===id?"#B87A3A":"#e0d8c8"}`,background:(config.tipoEvento||"otro")===id?"#B87A3A":"#fff",color:(config.tipoEvento||"otro")===id?"#F5F0E4":"#2E2010",fontWeight:800,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>{label}</button>
             ))}
           </div>
           <Lbl>nombre</Lbl>
