@@ -966,7 +966,11 @@ function App() {
 
       <div style={{padding:"12px 20px",borderBottom:"1px solid #e0d8c8",display:"flex",gap:8,alignItems:"center"}}>
         <input value={inputAs} onChange={e => setInputAs(e.target.value)} onKeyDown={e => { if(e.key==="Enter") addAs(); }} placeholder="nombre..." style={{...inp(),flex:1}}/>
-        <button onClick={() => setX2New(!x2New)} style={{background:x2New?"#B87A3A":"#e0d8c8",color:x2New?"#F5F0E4":"#8a7a60",border:"none",borderRadius:10,padding:"10px 12px",fontSize:12,fontWeight:800,cursor:"pointer",flexShrink:0}}>x2</button>
+        <div style={{display:"flex",alignItems:"center",gap:3,background:"#e0d8c8",borderRadius:10,padding:"6px 8px",flexShrink:0}}>
+          <button onClick={()=>setQtyNew(q=>Math.max(1,q-1))} disabled={qtyNew<=1} style={{background:"none",border:"none",cursor:qtyNew<=1?"default":"pointer",color:qtyNew<=1?"#b0a890":"#B87A3A",fontWeight:800,fontSize:15,padding:"0 2px",lineHeight:1}}>−</button>
+          <span style={{fontSize:12,fontWeight:800,color:"#2E2010",minWidth:22,textAlign:"center"}}>×{qtyNew}</span>
+          <button onClick={()=>setQtyNew(q=>q+1)} style={{background:"none",border:"none",cursor:"pointer",color:"#B87A3A",fontWeight:800,fontSize:15,padding:"0 2px",lineHeight:1}}>+</button>
+        </div>
         <button onClick={addAs} style={{background:"#2E2010",color:"#F5F0E4",border:"none",borderRadius:10,padding:"10px 16px",fontSize:20,fontWeight:800,cursor:"pointer",flexShrink:0,lineHeight:1}}>+</button>
       </div>
 
