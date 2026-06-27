@@ -2,13 +2,13 @@
   "sesiones": [
     {
       "id": "cdnxo5c",
-      "nombre": "nueva sesión",
-      "fecha": "27/06/2026",
-      "tipo": "precio",
+      "nombre": "Ceremonia cacao",
+      "fecha": "05/07/2026",
+      "tipo": "donacion",
       "tipoEvento": "otro",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "asistentes": []
     },
