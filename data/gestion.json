@@ -403,6 +403,12 @@
           "nombre": "Mayllelim Borges",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "6w37cbu",
+          "nombre": "Rous Cid Carrasco",
+          "qty": 4,
+          "estado": "pendiente"
         }
       ]
     },
