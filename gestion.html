@@ -752,16 +752,16 @@ function App() {
                           const pts = mesesList.map((mes,i)=>`${xPos(i)},${yPos((monthTypeMiP[mes]||{})[t.id]||0)}`).join(" ");
                           return (
                             <g key={t.id}>
-                              <polyline points={pts} fill="none" stroke={TIPO_COLOR[t.id]} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round"/>
+                              <polyline points={pts} fill="none" stroke={TIPO_COLOR[t.id]} strokeWidth="3" strokeLinejoin="round" strokeLinecap="round"/>
                               {mesesList.map((mes,i)=>{
                                 const v=(monthTypeMiP[mes]||{})[t.id]||0;
                                 if(!v) return null;
                                 const cx=xPos(i), cy=yPos(v);
-                                const nearAbove = tiposConDatos.filter(ot=>ot.id!==t.id&&(monthTypeMiP[mes]||{})[ot.id]>0).some(ot=>{ const oy=yPos((monthTypeMiP[mes]||{})[ot.id]||0); return oy<cy&&cy-oy<18; });
-                                const labelY = nearAbove ? cy+16 : cy-8;
+                                const nearAbove = tiposConDatos.filter(ot=>ot.id!==t.id&&(monthTypeMiP[mes]||{})[ot.id]>0).some(ot=>{ const oy=yPos((monthTypeMiP[mes]||{})[ot.id]||0); return oy<cy&&cy-oy<28; });
+                                const labelY = nearAbove ? cy+22 : cy-12;
                                 return <g key={mes}>
-                                  <circle cx={cx} cy={cy} r="3.5" fill={TIPO_COLOR[t.id]} stroke="#fff" strokeWidth="1.5"/>
-                                  <text x={cx} y={labelY} textAnchor="middle" fontSize="9" fontWeight="700" fill={TIPO_COLOR[t.id]} fontFamily="Nunito,sans-serif">{fmt(v)}</text>
+                                  <circle cx={cx} cy={cy} r="5" fill={TIPO_COLOR[t.id]} stroke="#fff" strokeWidth="2"/>
+                                  <text x={cx} y={labelY} textAnchor="middle" fontSize="13" fontWeight="700" fill={TIPO_COLOR[t.id]} fontFamily="Nunito,sans-serif">{fmt(v)}</text>
                                 </g>;
                               })}
                             </g>
