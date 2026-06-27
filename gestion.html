@@ -146,7 +146,7 @@ function Lbl({children}) {
   return <div style={{fontSize:11,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#B87A3A",marginBottom:6}}>{children}</div>;
 }
 
-function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
+function AsRow({a, s, onCycle, onSet, onSetQty, onDel, onRename}) {
   const [open, setOpen] = useState(false);
   const [editingName, setEditingName] = useState(false);
   const [tmpName, setTmpName] = useState("");
@@ -156,6 +156,7 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
   const tP        = !!s.precioTotal;
   const esDon     = s.tipo === "donacion";
   const listaEstados = esDon ? ESTADOS_DONACION : ESTADOS;
+  const qty = a.qty??(a.x2?2:1);
   return (
     <div style={{marginBottom:8}}>
       <div style={{background:"#fff",borderRadius:open?"12px 12px 0 0":12,border:`1.5px solid ${col.border}`,display:"flex",alignItems:"center",overflow:"hidden"}}>
@@ -165,7 +166,7 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
         <div style={{flex:1,padding:"0 8px"}}>
           <div style={{fontWeight:700,fontSize:15}}>
             {a.nombre}
-            {a.x2 && !esDon && <span style={{fontSize:11,color:"#B87A3A",fontWeight:800,marginLeft:5}}>×2</span>}
+            {qty > 1 && !esDon && <span style={{fontSize:11,color:"#B87A3A",fontWeight:800,marginLeft:5}}>×{qty}</span>}
           </div>
           {tP && !esDon && (
             <div style={{fontSize:11,marginTop:1}}>
@@ -187,13 +188,19 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
                 <button onClick={()=>{ if(tmpName.trim()) onRename(tmpName.trim()); setEditingName(false); }} style={bsm("#B87A3A","#F5F0E4")}>guardar</button>
                 <button onClick={()=>setEditingName(false)} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
               </div>
-            : <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+            : <div style={{display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
                 {listaEstados.map(e => (
                   <button key={e} onClick={() => { onSet(e); setOpen(false); }} style={{...bsm(a.estado===e?COLOR[e].bg:"#F5F0E4",a.estado===e?COLOR[e].text:"#2E2010"),border:`1.5px solid ${a.estado===e?COLOR[e].border:"#e0d8c8"}`}}>
                     {LABEL[e]}
                   </button>
                 ))}
-                {!esDon && <button onClick={() => { onX2(); setOpen(false); }} style={bsm(a.x2?"#B87A3A":"#F5F0E4",a.x2?"#F5F0E4":"#8a7a60")}>{a.x2?"quitar ×2":"añadir ×2"}</button>}
+                {!esDon && (
+                  <div style={{display:"flex",alignItems:"center",gap:4,background:"#F5F0E4",borderRadius:10,padding:"4px 6px"}}>
+                    <button onClick={()=>onSetQty(qty-1)} disabled={qty<=1} style={{background:"none",border:"none",cursor:qty<=1?"default":"pointer",color:qty<=1?"#c0b090":"#B87A3A",fontWeight:800,fontSize:15,padding:"0 2px",lineHeight:1}}>−</button>
+                    <span style={{fontSize:12,fontWeight:800,color:"#2E2010",minWidth:18,textAlign:"center"}}>×{qty}</span>
+                    <button onClick={()=>onSetQty(qty+1)} style={{background:"none",border:"none",cursor:"pointer",color:"#B87A3A",fontWeight:800,fontSize:15,padding:"0 2px",lineHeight:1}}>+</button>
+                  </div>
+                )}
                 <button onClick={() => { setEditingName(true); setTmpName(a.nombre); }} style={bsm("#e8e0d0","#2E2010")}>editar</button>
                 <button onClick={() => { onDel(); setOpen(false); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
               </div>
