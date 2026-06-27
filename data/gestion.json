@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "cdnxo5c",
+      "nombre": "nueva sesión",
+      "fecha": "27/06/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "pqod4kb",
       "nombre": "Breath & Sound 10/07",
       "fecha": "10/07/2026",
