@@ -594,6 +594,13 @@ function App() {
             {/* Tab: Resumen */}
             {dashTab === "resumen" && (
               <div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:20,alignItems:"center"}}>
+                  <span style={{fontSize:10,letterSpacing:1,textTransform:"uppercase",fontWeight:800,color:"#c8b890",marginRight:4}}>Mes</span>
+                  <button onClick={()=>setFiltroMes(null)} style={{padding:"5px 12px",borderRadius:8,border:"none",background:filtroMes===null?"#2E2010":"#e8e0d0",color:filtroMes===null?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>Todo</button>
+                  {mesesList.map(mes=>(
+                    <button key={mes} onClick={()=>setFiltroMes(filtroMes===mes?null:mes)} style={{padding:"5px 12px",borderRadius:8,border:"none",background:filtroMes===mes?"#B87A3A":"#e8e0d0",color:filtroMes===mes?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>{mes}</button>
+                  ))}
+                </div>
                 <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:12,marginBottom:28}}>
                   {[
                     {label:"Sesiones",  value:totalSes,            amber:false},
