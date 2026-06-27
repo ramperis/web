@@ -536,7 +536,7 @@ function App() {
     const totalIng  = sesFiltradas.reduce((n,s) => n + finanzas(s).cobrado, 0);
     const totalMiP  = sesFiltradas.reduce((n,s) => n + finanzas(s).miParte, 0);
     const totalNoS  = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
-    const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.ingresos), 1);
+    const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.miParte), 1);
     const maxIngTipo = Math.max(...Object.values(porTipo).map(t=>t.ingresos), 1);
     const Bar = ({val, max, color="#B87A3A"}) => (
       <div style={{height:5,background:"#e0d8c8",borderRadius:3,marginTop:5,flexShrink:0}}>
