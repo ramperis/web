@@ -178,14 +178,26 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
         <button onClick={() => setOpen(!open)} style={{background:"none",border:"none",padding:"12px 14px",cursor:"pointer",color:"#B87A3A",fontSize:16}}>{open?"×":"›"}</button>
       </div>
       {open && (
-        <div style={{background:"#fff",borderRadius:"0 0 12px 12px",border:"1.5px solid #e0d8c8",borderTop:"none",padding:"10px 12px",display:"flex",gap:8,flexWrap:"wrap"}}>
-          {listaEstados.map(e => (
-            <button key={e} onClick={() => { onSet(e); setOpen(false); }} style={{...bsm(a.estado===e?COLOR[e].bg:"#F5F0E4",a.estado===e?COLOR[e].text:"#2E2010"),border:`1.5px solid ${a.estado===e?COLOR[e].border:"#e0d8c8"}`}}>
-              {LABEL[e]}
-            </button>
-          ))}
-          {!esDon && <button onClick={() => { onX2(); setOpen(false); }} style={bsm(a.x2?"#B87A3A":"#F5F0E4",a.x2?"#F5F0E4":"#8a7a60")}>{a.x2?"quitar ×2":"añadir ×2"}</button>}
-          <button onClick={() => { onDel(); setOpen(false); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
+        <div style={{background:"#fff",borderRadius:"0 0 12px 12px",border:"1.5px solid #e0d8c8",borderTop:"none",padding:"10px 12px"}}>
+          {editingName
+            ? <div style={{display:"flex",gap:8,alignItems:"center"}}>
+                <input autoFocus value={tmpName} onChange={e=>setTmpName(e.target.value)}
+                  onKeyDown={e=>{ if(e.key==="Enter"){ if(tmpName.trim()) onRename(tmpName.trim()); setEditingName(false); } if(e.key==="Escape") setEditingName(false); }}
+                  style={{flex:1,fontSize:14,fontWeight:700,padding:"6px 10px",borderRadius:8,border:"1.5px solid #B87A3A",outline:"none",fontFamily:"'Nunito',sans-serif"}}/>
+                <button onClick={()=>{ if(tmpName.trim()) onRename(tmpName.trim()); setEditingName(false); }} style={bsm("#B87A3A","#F5F0E4")}>guardar</button>
+                <button onClick={()=>setEditingName(false)} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
+              </div>
+            : <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+                {listaEstados.map(e => (
+                  <button key={e} onClick={() => { onSet(e); setOpen(false); }} style={{...bsm(a.estado===e?COLOR[e].bg:"#F5F0E4",a.estado===e?COLOR[e].text:"#2E2010"),border:`1.5px solid ${a.estado===e?COLOR[e].border:"#e0d8c8"}`}}>
+                    {LABEL[e]}
+                  </button>
+                ))}
+                {!esDon && <button onClick={() => { onX2(); setOpen(false); }} style={bsm(a.x2?"#B87A3A":"#F5F0E4",a.x2?"#F5F0E4":"#8a7a60")}>{a.x2?"quitar ×2":"añadir ×2"}</button>}
+                <button onClick={() => { setEditingName(true); setTmpName(a.nombre); }} style={bsm("#e8e0d0","#2E2010")}>editar</button>
+                <button onClick={() => { onDel(); setOpen(false); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
+              </div>
+          }
         </div>
       )}
     </div>
