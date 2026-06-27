@@ -60,13 +60,13 @@ function savedAuth() {
 }
 
 function cobradoAs(a, s) {
-  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.qty??(a.x2?2:1);
+  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.qty??(a.qty??(a.x2?2:1));
   if (a.estado === "completo") return pt * p;
   if (a.estado === "reserva")  return pr * p;
   return 0;
 }
 function pendienteAs(a, s) {
-  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.qty??(a.x2?2:1);
+  const pt = parseFloat(s.precioTotal)||0, pr = parseFloat(s.precioReserva)||0, p = a.qty??(a.qty??(a.x2?2:1));
   if (a.estado === "completo")  return 0;
   if (a.estado === "reserva")   return (pt - pr) * p;
   if (a.estado === "pendiente") return pt * p;
@@ -207,9 +207,9 @@ function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
 // ── PIPELINE CARD (desktop) ───────────────────────────────────────────────────
 function PipelineCard({ s, onClick }) {
   const fin     = finanzas(s);
-  const activos = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
-  const total   = s.asistentes.reduce((n,a) => n+(a.x2?2:1), 0);
-  const noV     = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
+  const activos = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
+  const total   = s.asistentes.reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
+  const noV     = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
   return (
     <div onClick={onClick} style={{background:"#fff",borderRadius:12,padding:"12px 14px",cursor:"pointer",border:"1.5px solid #e0d8c8",marginBottom:8}}>
       <div style={{fontWeight:800,fontSize:14,marginBottom:2,color:"#2E2010"}}>{s.nombre}</div>
@@ -513,8 +513,8 @@ function App() {
       const mes  = getMes(s.fecha);
       const tipo = s.tipoEvento || inferTipoEvento(s.nombre);
       const fin  = finanzas(s);
-      const act  = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
-      const noV  = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.x2?2:1), 0);
+      const act  = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
+      const noV  = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
       if (!porMes[mes])  porMes[mes]  = { sesiones:0, asistentes:0, ingresos:0, miParte:0, noShows:0 };
       porMes[mes].sesiones++;  porMes[mes].asistentes += act;
       porMes[mes].ingresos += fin.cobrado; porMes[mes].miParte += fin.miParte; porMes[mes].noShows += noV;
@@ -537,10 +537,10 @@ function App() {
     const maxMesTotal = Math.max(...mesesList.map(mes => Object.values(monthTypeData[mes]||{}).reduce((a,b)=>a+b,0)), 1);
     const sesFiltradas = filtroMes ? sesiones.filter(s => getMes(s.fecha) === filtroMes) : sesiones;
     const totalSes  = sesFiltradas.length;
-    const totalAsis = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado!=="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
+    const totalAsis = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado!=="no viene").reduce((m,a)=>m+(a.qty??(a.x2?2:1)),0), 0);
     const totalIng  = sesFiltradas.reduce((n,s) => n + finanzas(s).cobrado, 0);
     const totalMiP  = sesFiltradas.reduce((n,s) => n + finanzas(s).miParte, 0);
-    const totalNoS  = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
+    const totalNoS  = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.qty??(a.x2?2:1)),0), 0);
     const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.miParte), 1);
     const maxIngTipo = Math.max(...Object.values(porTipo).map(t=>t.ingresos), 1);
     const Bar = ({val, max, color="#B87A3A"}) => (
@@ -677,7 +677,7 @@ function App() {
                         <div style={{borderTop:"1px solid #ede8e0",background:"#faf8f4"}}>
                           {sesDeMes.map((s,i) => {
                             const sf = finanzas(s);
-                            const act = s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
+                            const act = s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.qty??(a.x2?2:1)),0);
                             return (
                               <div key={s.id} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"9px 18px",borderBottom:i<sesDeMes.length-1?"1px solid #ede8e0":"none"}}>
                                 <div>
@@ -808,9 +808,9 @@ function App() {
             const isPast     = parseFecha(s.fecha) < hoy;
             const firstPast  = isPast && (i === 0 || parseFecha(sorted[i-1].fecha) >= hoy);
             const fin    = finanzas(s);
-            const activos= s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
-            const total  = s.asistentes.reduce((n,a)=>n+(a.x2?2:1),0);
-            const noV    = s.asistentes.filter(a=>a.estado==="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
+            const activos= s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.qty??(a.x2?2:1)),0);
+            const total  = s.asistentes.reduce((n,a)=>n+(a.qty??(a.x2?2:1)),0);
+            const noV    = s.asistentes.filter(a=>a.estado==="no viene").reduce((n,a)=>n+(a.qty??(a.x2?2:1)),0);
             return (
               <React.Fragment key={s.id}>
                 {firstPast && (
@@ -871,7 +871,7 @@ function App() {
   const fin  = finanzas(activa);
   const tP   = !!activa.precioTotal;
   const byEstado   = e => activa.asistentes.filter(a => a.estado===e);
-  const countPlazas= list => list.reduce((n,a) => n+(a.x2?2:1), 0);
+  const countPlazas= list => list.reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
 
   return (
     <div style={wrap}>
@@ -902,7 +902,7 @@ function App() {
       <SyncBar state={syncState} onRetry={() => triggerSave(sesiones)}/>
 
       <div style={{display:"flex",gap:6,padding:"12px 20px",borderBottom:"1px solid #e0d8c8"}}>
-        <SB label="total"    value={activa.asistentes.reduce((n,a)=>n+(a.x2?2:1),0)}/>
+        <SB label="total"    value={activa.asistentes.reduce((n,a)=>n+(a.qty??(a.x2?2:1)),0)}/>
         <SB label="completo" value={countPlazas(byEstado("completo"))} accent/>
         <SB label="reserva"  value={countPlazas(byEstado("reserva"))}  amber/>
         <SB label="no viene" value={byEstado("no viene").length}        muted/>
