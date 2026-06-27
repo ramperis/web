@@ -522,11 +522,12 @@ function App() {
       return ya !== yb ? +ya - +yb : MESES_ORD.indexOf(ma) - MESES_ORD.indexOf(mb);
     });
     const TIPO_COLOR = { circulo:"#424029", "bano-sup":"#B87A3A", "breath-sound":"#6a8a70", otro:"#c8b890" };
-    const monthTypeData = {};
-    mesesList.forEach(mes => { monthTypeData[mes] = {}; });
+    const monthTypeData = {}, monthTypeMiP = {};
+    mesesList.forEach(mes => { monthTypeData[mes] = {}; monthTypeMiP[mes] = {}; });
     sesiones.forEach(s => {
       const mes = getMes(s.fecha); const tipo = s.tipoEvento || inferTipoEvento(s.nombre);
-      if (monthTypeData[mes]) monthTypeData[mes][tipo] = (monthTypeData[mes][tipo]||0) + finanzas(s).cobrado;
+      const fin = finanzas(s);
+      if (monthTypeData[mes]) { monthTypeData[mes][tipo] = (monthTypeData[mes][tipo]||0) + fin.cobrado; monthTypeMiP[mes][tipo] = (monthTypeMiP[mes][tipo]||0) + fin.miParte; }
     });
     const maxMesTotal = Math.max(...mesesList.map(mes => Object.values(monthTypeData[mes]||{}).reduce((a,b)=>a+b,0)), 1);
     const sesFiltradas = filtroMes ? sesiones.filter(s => getMes(s.fecha) === filtroMes) : sesiones;
