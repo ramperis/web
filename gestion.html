@@ -722,8 +722,8 @@ function App() {
                 </div>
                 {/* Gráfico de líneas */}
                 {mesesList.length > 0 && (() => {
-                  const PAD = {top:28,right:16,bottom:30,left:46};
-                  const W = 500; const H = 230;
+                  const PAD = {top:36,right:20,bottom:40,left:56};
+                  const W = 900; const H = 420;
                   const cW = W-PAD.left-PAD.right; const cH = H-PAD.top-PAD.bottom;
                   const allVals = mesesList.flatMap(mes=>TIPOS_EVENTO.map(t=>(monthTypeMiP[mes]||{})[t.id]||0));
                   const rawMax = Math.max(...allVals,1);
