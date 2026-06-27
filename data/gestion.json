@@ -2,13 +2,13 @@
   "sesiones": [
     {
       "id": "xwkjbiy",
-      "nombre": "nueva sesión",
-      "fecha": "27/06/2026",
-      "tipo": "precio",
-      "tipoEvento": "otro",
+      "nombre": "Círculo de Hombres 08/07",
+      "fecha": "08/07/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "asistentes": []
     },
