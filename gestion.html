@@ -506,11 +506,20 @@ function App() {
       const [ma,ya] = a.split(" "), [mb,yb] = b.split(" ");
       return ya !== yb ? +ya - +yb : MESES_ORD.indexOf(ma) - MESES_ORD.indexOf(mb);
     });
-    const totalSes  = sesiones.length;
-    const totalAsis = sesiones.reduce((n,s) => n + s.asistentes.filter(a=>a.estado!=="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
-    const totalIng  = sesiones.reduce((n,s) => n + finanzas(s).cobrado, 0);
-    const totalMiP  = sesiones.reduce((n,s) => n + finanzas(s).miParte, 0);
-    const totalNoS  = sesiones.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
+    const TIPO_COLOR = { circulo:"#424029", "bano-sup":"#B87A3A", "breath-sound":"#6a8a70", otro:"#c8b890" };
+    const monthTypeData = {};
+    mesesList.forEach(mes => { monthTypeData[mes] = {}; });
+    sesiones.forEach(s => {
+      const mes = getMes(s.fecha); const tipo = s.tipoEvento || inferTipoEvento(s.nombre);
+      if (monthTypeData[mes]) monthTypeData[mes][tipo] = (monthTypeData[mes][tipo]||0) + finanzas(s).cobrado;
+    });
+    const maxMesTotal = Math.max(...mesesList.map(mes => Object.values(monthTypeData[mes]||{}).reduce((a,b)=>a+b,0)), 1);
+    const sesFiltradas = filtroMes ? sesiones.filter(s => getMes(s.fecha) === filtroMes) : sesiones;
+    const totalSes  = sesFiltradas.length;
+    const totalAsis = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado!=="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
+    const totalIng  = sesFiltradas.reduce((n,s) => n + finanzas(s).cobrado, 0);
+    const totalMiP  = sesFiltradas.reduce((n,s) => n + finanzas(s).miParte, 0);
+    const totalNoS  = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.x2?2:1),0), 0);
     const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.ingresos), 1);
     const maxIngTipo = Math.max(...Object.values(porTipo).map(t=>t.ingresos), 1);
     const Bar = ({val, max, color="#B87A3A"}) => (
