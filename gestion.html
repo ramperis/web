@@ -380,6 +380,11 @@ function App() {
   function toggleX2As(aid)          { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,x2:!a.x2}:a) }); }
   function delAs(aid)               { upd(activaId, { asistentes: activa.asistentes.filter(a => a.id!==aid) }); }
   function renameAs(aid, nombre)    { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,nombre}:a) }); }
+  function clonarSesion() {
+    const s = { ...activa, id:genId(), asistentes:[], fecha:today(), donacion:"" };
+    setSes(prev => [s, ...prev]);
+    setActivaId(s.id); setConfig({...s}); setVista("config");
+  }
 
   // ══════════════════════════════════════════════════════════════════════════
   // VISTAS
