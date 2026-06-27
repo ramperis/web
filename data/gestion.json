@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "mn2vl8t",
+      "nombre": "Baño de Sonido SUP 15/07",
+      "fecha": "27/06/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "15",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "k0tf54l",
       "nombre": "Círculo de Hombres 30/09",
       "fecha": "30/09/2026",
