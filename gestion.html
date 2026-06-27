@@ -146,8 +146,10 @@ function Lbl({children}) {
   return <div style={{fontSize:11,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#B87A3A",marginBottom:6}}>{children}</div>;
 }
 
-function AsRow({a, s, onCycle, onSet, onX2, onDel}) {
+function AsRow({a, s, onCycle, onSet, onX2, onDel, onRename}) {
   const [open, setOpen] = useState(false);
+  const [editingName, setEditingName] = useState(false);
+  const [tmpName, setTmpName] = useState("");
   const col       = COLOR[a.estado] || COLOR["pendiente"];
   const cobrado   = cobradoAs(a, s);
   const pendiente = pendienteAs(a, s);
