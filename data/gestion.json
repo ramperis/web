@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "k0tf54l",
+      "nombre": "Círculo de Hombres 16/09",
+      "fecha": "27/06/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "hlig9cg",
       "nombre": "Círculo de Hombres 16/09",
       "fecha": "16/09/2026",
