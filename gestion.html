@@ -689,7 +689,6 @@ function App() {
                     <div style={{fontSize:10,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#8a7a60",marginBottom:14}}>Ingresos por mes y tipo</div>
                     <div style={{display:"flex",alignItems:"flex-end",gap:mesesList.length>8?3:6,height:90,marginBottom:4}}>
                       {mesesList.map(mes => {
-                        const tiposPresentes = TIPOS_EVENTO.filter(t=>(monthTypeData[mes]||{})[t.id]>0);
                         return (
                           <div key={mes} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",minWidth:0}}>
                             <div style={{width:"100%",display:"flex",flexDirection:"column-reverse",height:80,borderRadius:3,overflow:"hidden"}}>
