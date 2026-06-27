@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "orayj05",
+      "nombre": "Baño de Sonido SUP 02/08",
+      "fecha": "02/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "15",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "mn2vl8t",
       "nombre": "Baño de Sonido SUP 02/08",
       "fecha": "02/08/2026",
