@@ -933,6 +933,7 @@ function App() {
             onSet={e => setEstadoAs(a.id,e)}
             onX2={() => toggleX2As(a.id)}
             onDel={() => delAs(a.id)}
+            onRename={nombre => renameAs(a.id, nombre)}
           />
         ))}
         {activa.asistentes.length===0 && (
