@@ -678,7 +678,14 @@ function App() {
         {sesiones.length===0 && (
           <div style={{color:"#B87A3A",textAlign:"center",marginTop:40,fontSize:14}}>sin sesiones todavía</div>
         )}
-        {sesiones.map(s => {
+        {[...sesiones].sort((a,b) => {
+          const fa = parseFecha(a.fecha), fb = parseFecha(b.fecha);
+          const hoy = new Date(); hoy.setHours(0,0,0,0);
+          const aPast = fa < hoy, bPast = fb < hoy;
+          if (!aPast && !bPast) return fa - fb;
+          if (aPast && bPast)   return fb - fa;
+          return aPast ? 1 : -1;
+        }).map(s => {
           const fin    = finanzas(s);
           const activos= s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
           const total  = s.asistentes.reduce((n,a)=>n+(a.x2?2:1),0);
