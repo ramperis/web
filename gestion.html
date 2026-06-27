@@ -740,7 +740,7 @@ function App() {
                         {yTicks.map(tick=>(
                           <g key={tick}>
                             <line x1={PAD.left} y1={yPos(tick)} x2={W-PAD.right} y2={yPos(tick)} stroke="#e8e0d0" strokeWidth={tick===0?"1.5":"1"} strokeDasharray={tick===0?"none":"3,3"}/>
-                            <text x={PAD.left-6} y={yPos(tick)+4} textAnchor="end" fontSize="9" fill="#a09080" fontFamily="Nunito,sans-serif">{tick===0?"0":`${tick}€`}</text>
+                            <text x={PAD.left-6} y={yPos(tick)+4} textAnchor="end" fontSize="14" fill="#a09080" fontFamily="Nunito,sans-serif">{tick===0?"0":`${tick}€`}</text>
                           </g>
                         ))}
                         {/* X labels */}
