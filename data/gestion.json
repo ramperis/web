@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "wsfqbrv",
+      "nombre": "Círculo de Hombres 05/08",
+      "fecha": "27/06/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "t3ycqwk",
       "nombre": "Círculo de Hombres 05/08",
       "fecha": "05/08/2026",
