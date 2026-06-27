@@ -696,59 +696,81 @@ function App() {
 
             {/* Tab: Por tipo */}
             {dashTab === "tipo" && (
-              <div style={{maxWidth:680}}>
-                {/* Gráfica apilada por mes */}
-                {mesesList.length > 0 && (
-                  <div style={{background:"#fff",borderRadius:12,padding:"16px 20px",marginBottom:20,border:"1.5px solid #e0d8c8"}}>
-                    <div style={{fontSize:10,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#8a7a60",marginBottom:14}}>Ingresos por mes y tipo</div>
-                    <div style={{display:"flex",alignItems:"flex-end",gap:mesesList.length>8?3:6,height:90,marginBottom:4}}>
-                      {mesesList.map(mes => {
-                        return (
-                          <div key={mes} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",minWidth:0}}>
-                            <div style={{width:"100%",display:"flex",flexDirection:"column-reverse",height:80,borderRadius:3,overflow:"hidden"}}>
-                              {TIPOS_EVENTO.map(t=>{
-                                const val=(monthTypeData[mes]||{})[t.id]||0;
-                                if(!val) return null;
-                                return <div key={t.id} style={{width:"100%",height:Math.max(2,Math.round((val/maxMesTotal)*80)),background:TIPO_COLOR[t.id]||"#c8b890",flexShrink:0}}/>;
-                              })}
-                            </div>
-                            <div style={{fontSize:8,color:"#8a7a60",textAlign:"center",marginTop:3,lineHeight:1.2,overflow:"hidden",maxWidth:"100%",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{mes.split(" ")[0]}</div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <div style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:10}}>
-                      {TIPOS_EVENTO.filter(t=>porTipo[t.id]).map(t=>(
-                        <div key={t.id} style={{display:"flex",alignItems:"center",gap:5,fontSize:11}}>
-                          <div style={{width:10,height:10,borderRadius:2,background:TIPO_COLOR[t.id]||"#c8b890",flexShrink:0}}/>
-                          <span style={{color:"#8a7a60"}}>{t.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+              <div style={{display:"flex",gap:20,alignItems:"flex-start"}}>
                 {/* Tarjetas por tipo */}
-                {Object.keys(porTipo).length === 0 && <div style={{color:"#c8b890",fontSize:13}}>Sin datos</div>}
-                {Object.entries(porTipo).sort((a,b)=>b[1].ingresos-a[1].ingresos).map(([tipo, t]) => (
-                  <div key={tipo} style={{background:"#fff",borderRadius:12,padding:"14px 18px",marginBottom:10,border:"1.5px solid #e0d8c8"}}>
-                    <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
-                      <div style={{width:10,height:10,borderRadius:2,background:TIPO_COLOR[tipo]||"#c8b890",flexShrink:0}}/>
-                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",flex:1}}>
-                        <span style={{fontWeight:800,fontSize:15}}>{labelTipo(tipo)}</span>
-                        <div style={{display:"flex",gap:20,fontSize:12,color:"#8a7a60"}}>
-                          <span>{t.sesiones} sesión{t.sesiones!==1?"es":""}</span>
-                          <span>{t.asistentes} asist.</span>
-                          <span>~{fmt(t.sesiones>0?t.ingresos/t.sesiones:0)}/sesión</span>
+                <div style={{width:300,flexShrink:0}}>
+                  {Object.keys(porTipo).length === 0 && <div style={{color:"#c8b890",fontSize:13}}>Sin datos</div>}
+                  {Object.entries(porTipo).sort((a,b)=>b[1].ingresos-a[1].ingresos).map(([tipo, t]) => (
+                    <div key={tipo} style={{background:"#fff",borderRadius:12,padding:"14px 18px",marginBottom:10,border:"1.5px solid #e0d8c8"}}>
+                      <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
+                        <div style={{width:10,height:10,borderRadius:2,background:TIPO_COLOR[tipo]||"#c8b890",flexShrink:0}}/>
+                        <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",flex:1}}>
+                          <span style={{fontWeight:800,fontSize:14}}>{labelTipo(tipo)}</span>
                         </div>
                       </div>
+                      <div style={{fontSize:12,color:"#8a7a60",marginBottom:6,display:"flex",gap:14}}>
+                        <span>{t.sesiones} sesión{t.sesiones!==1?"es":""}</span>
+                        <span>{t.asistentes} asist.</span>
+                      </div>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline"}}>
+                        <span style={{fontSize:20,fontWeight:800,color:"#B87A3A"}}>{fmt(t.miParte)}</span>
+                        <span style={{fontSize:11,color:"#8a7a60"}}>~{fmt(t.sesiones>0?t.miParte/t.sesiones:0)}/ses.</span>
+                      </div>
                     </div>
-                    <div style={{display:"flex",alignItems:"center",gap:10}}>
-                      <div style={{flex:1}}><Bar val={t.ingresos} max={maxIngTipo}/></div>
-                      <span style={{fontSize:13,fontWeight:800,color:"#B87A3A",minWidth:64,textAlign:"right"}}>{fmt(t.ingresos)}</span>
-                      <span style={{fontSize:11,color:"#8a7a60",minWidth:80}}>({fmt(t.miParte)} tuyo)</span>
+                  ))}
+                </div>
+                {/* Gráfico de líneas */}
+                {mesesList.length > 0 && (() => {
+                  const PAD = {top:16,right:12,bottom:28,left:44};
+                  const W = 480; const H = 210;
+                  const cW = W-PAD.left-PAD.right; const cH = H-PAD.top-PAD.bottom;
+                  const allVals = mesesList.flatMap(mes=>TIPOS_EVENTO.map(t=>(monthTypeData[mes]||{})[t.id]||0));
+                  const rawMax = Math.max(...allVals,1);
+                  const niceMax = Math.ceil(rawMax/50)*50;
+                  const yTicks = [0,1,2,3,4].map(i=>Math.round(niceMax*i/4));
+                  const xPos = i => PAD.left + (mesesList.length<2 ? cW/2 : (i/(mesesList.length-1))*cW);
+                  const yPos = v => PAD.top + cH - (v/niceMax)*cH;
+                  const tiposConDatos = TIPOS_EVENTO.filter(t=>porTipo[t.id]);
+                  return (
+                    <div style={{flex:1,minWidth:0,background:"#fff",borderRadius:12,padding:"16px 20px",border:"1.5px solid #e0d8c8"}}>
+                      <div style={{fontSize:10,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#8a7a60",marginBottom:10}}>Evolución mensual (€ tuyo)</div>
+                      <svg viewBox={`0 0 ${W} ${H}`} style={{width:"100%",height:"auto",display:"block"}}>
+                        {/* grid + Y labels */}
+                        {yTicks.map(tick=>(
+                          <g key={tick}>
+                            <line x1={PAD.left} y1={yPos(tick)} x2={W-PAD.right} y2={yPos(tick)} stroke="#e8e0d0" strokeWidth={tick===0?"1.5":"1"} strokeDasharray={tick===0?"none":"3,3"}/>
+                            <text x={PAD.left-6} y={yPos(tick)+4} textAnchor="end" fontSize="9" fill="#a09080" fontFamily="Nunito,sans-serif">{tick===0?"0":`${tick}€`}</text>
+                          </g>
+                        ))}
+                        {/* X labels */}
+                        {mesesList.map((mes,i)=>(
+                          <text key={mes} x={xPos(i)} y={H-6} textAnchor="middle" fontSize="9" fill="#a09080" fontFamily="Nunito,sans-serif">{mes.split(" ")[0]}</text>
+                        ))}
+                        {/* Lines */}
+                        {tiposConDatos.map(t=>{
+                          const pts = mesesList.map((mes,i)=>`${xPos(i)},${yPos((monthTypeData[mes]||{})[t.id]||0)}`).join(" ");
+                          return (
+                            <g key={t.id}>
+                              <polyline points={pts} fill="none" stroke={TIPO_COLOR[t.id]} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round"/>
+                              {mesesList.map((mes,i)=>{
+                                const v=(monthTypeData[mes]||{})[t.id]||0;
+                                return v>0 ? <circle key={mes} cx={xPos(i)} cy={yPos(v)} r="3.5" fill={TIPO_COLOR[t.id]} stroke="#fff" strokeWidth="1.5"/> : null;
+                              })}
+                            </g>
+                          );
+                        })}
+                      </svg>
+                      <div style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:6}}>
+                        {tiposConDatos.map(t=>(
+                          <div key={t.id} style={{display:"flex",alignItems:"center",gap:5,fontSize:11}}>
+                            <div style={{width:18,height:2.5,background:TIPO_COLOR[t.id],borderRadius:2,flexShrink:0}}/>
+                            <span style={{color:"#8a7a60"}}>{t.label}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })()}
               </div>
             )}
           </div>
