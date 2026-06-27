@@ -710,7 +710,7 @@ function App() {
                 </div>
                 {/* Gráfico de líneas */}
                 {mesesList.length > 0 && (() => {
-                  const PAD = {top:16,right:12,bottom:28,left:44};
+                  const PAD = {top:24,right:12,bottom:28,left:44};
                   const W = 480; const H = 210;
                   const cW = W-PAD.left-PAD.right; const cH = H-PAD.top-PAD.bottom;
                   const allVals = mesesList.flatMap(mes=>TIPOS_EVENTO.map(t=>(monthTypeMiP[mes]||{})[t.id]||0));
