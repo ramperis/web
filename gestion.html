@@ -678,56 +678,70 @@ function App() {
         {sesiones.length===0 && (
           <div style={{color:"#B87A3A",textAlign:"center",marginTop:40,fontSize:14}}>sin sesiones todavía</div>
         )}
-        {[...sesiones].sort((a,b) => {
-          const fa = parseFecha(a.fecha), fb = parseFecha(b.fecha);
+        {(() => {
           const hoy = new Date(); hoy.setHours(0,0,0,0);
-          const aPast = fa < hoy, bPast = fb < hoy;
-          if (!aPast && !bPast) return fa - fb;
-          if (aPast && bPast)   return fb - fa;
-          return aPast ? 1 : -1;
-        }).map(s => {
-          const fin    = finanzas(s);
-          const activos= s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
-          const total  = s.asistentes.reduce((n,a)=>n+(a.x2?2:1),0);
-          const noV    = s.asistentes.filter(a=>a.estado==="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
-          return (
-            <div key={s.id} style={{marginBottom:10}}>
-              <div onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} style={{background:"#fff",borderRadius:14,padding:"14px 16px",cursor:"pointer",border:"1.5px solid #e0d8c8",display:"flex",alignItems:"center",justifyContent:"space-between",gap:12}}>
-                <div>
-                  <div style={{fontWeight:800,fontSize:16}}>{s.nombre}</div>
-                  <div style={{fontSize:12,color:"#8a7a60",marginTop:2}}>{s.fecha}</div>
-                  {s.tipo === "donacion" && fin.cobrado>0 && (
-                    <div style={{fontSize:12,marginTop:3}}>
-                      <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} donación</span>
-                      <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
-                    </div>
-                  )}
-                  {s.tipo !== "donacion" && s.precioTotal && fin.cobrado>0 && (
-                    <div style={{fontSize:12,marginTop:3}}>
-                      <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} cobrado</span>
-                      <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
-                    </div>
-                  )}
-                </div>
-                <div style={{display:"flex",gap:6,alignItems:"center",flexShrink:0}}>
-                  <Pill label={`${activos}/${total}`} color="#424029"/>
-                  {noV>0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
-                  <span style={{fontSize:18,color:"#B87A3A"}}>›</span>
-                </div>
-              </div>
-              {confirmDel===s.id
-                ? (
-                  <div style={{display:"flex",gap:8,marginTop:6,padding:"0 4px"}}>
-                    <button onClick={() => { setSes(p=>p.filter(x=>x.id!==s.id)); setConfirmDel(null); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
-                    <button onClick={() => setConfirmDel(null)} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
+          const sorted = [...sesiones].sort((a,b) => {
+            const fa = parseFecha(a.fecha), fb = parseFecha(b.fecha);
+            const aPast = fa < hoy, bPast = fb < hoy;
+            if (!aPast && !bPast) return fa - fb;
+            if (aPast && bPast)   return fb - fa;
+            return aPast ? 1 : -1;
+          });
+          return sorted.map((s, i) => {
+            const isPast     = parseFecha(s.fecha) < hoy;
+            const firstPast  = isPast && (i === 0 || parseFecha(sorted[i-1].fecha) >= hoy);
+            const fin    = finanzas(s);
+            const activos= s.asistentes.filter(a=>a.estado!=="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
+            const total  = s.asistentes.reduce((n,a)=>n+(a.x2?2:1),0);
+            const noV    = s.asistentes.filter(a=>a.estado==="no viene").reduce((n,a)=>n+(a.x2?2:1),0);
+            return (
+              <React.Fragment key={s.id}>
+                {firstPast && (
+                  <div style={{display:"flex",alignItems:"center",gap:10,margin:"16px 0 12px"}}>
+                    <div style={{flex:1,height:1,background:"#e0d8c8"}}/>
+                    <span style={{fontSize:10,letterSpacing:1.5,textTransform:"uppercase",fontWeight:800,color:"#c8b890"}}>pasadas</span>
+                    <div style={{flex:1,height:1,background:"#e0d8c8"}}/>
                   </div>
-                ) : (
-                  <button onClick={e => { e.stopPropagation(); setConfirmDel(s.id); }} style={{background:"none",border:"none",color:"#c0a880",fontSize:11,padding:"4px 4px 0",cursor:"pointer"}}>eliminar sesión</button>
-                )
-              }
-            </div>
-          );
-        })}
+                )}
+                <div style={{marginBottom:10}}>
+                  <div onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} style={{background:"#fff",borderRadius:14,padding:"14px 16px",cursor:"pointer",border:`1.5px solid ${isPast?"#ede8e0":"#e0d8c8"}`,display:"flex",alignItems:"center",justifyContent:"space-between",gap:12,opacity:isPast?0.75:1}}>
+                    <div>
+                      <div style={{fontWeight:800,fontSize:16}}>{s.nombre}</div>
+                      <div style={{fontSize:12,color:"#8a7a60",marginTop:2}}>{s.fecha}</div>
+                      {s.tipo === "donacion" && fin.cobrado>0 && (
+                        <div style={{fontSize:12,marginTop:3}}>
+                          <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} donación</span>
+                          <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
+                        </div>
+                      )}
+                      {s.tipo !== "donacion" && s.precioTotal && fin.cobrado>0 && (
+                        <div style={{fontSize:12,marginTop:3}}>
+                          <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} cobrado</span>
+                          <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
+                        </div>
+                      )}
+                    </div>
+                    <div style={{display:"flex",gap:6,alignItems:"center",flexShrink:0}}>
+                      <Pill label={`${activos}/${total}`} color={isPast?"#8a7a60":"#424029"}/>
+                      {noV>0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
+                      <span style={{fontSize:18,color:"#B87A3A"}}>›</span>
+                    </div>
+                  </div>
+                  {confirmDel===s.id
+                    ? (
+                      <div style={{display:"flex",gap:8,marginTop:6,padding:"0 4px"}}>
+                        <button onClick={() => { setSes(p=>p.filter(x=>x.id!==s.id)); setConfirmDel(null); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
+                        <button onClick={() => setConfirmDel(null)} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
+                      </div>
+                    ) : (
+                      <button onClick={e => { e.stopPropagation(); setConfirmDel(s.id); }} style={{background:"none",border:"none",color:"#c0a880",fontSize:11,padding:"4px 4px 0",cursor:"pointer"}}>eliminar sesión</button>
+                    )
+                  }
+                </div>
+              </React.Fragment>
+            );
+          });
+        })()}
       </div>
       <div style={{position:"fixed",bottom:24,left:"50%",transform:"translateX(-50%)",width:"calc(100% - 40px)",maxWidth:440}}>
         <button onClick={nuevaSesion} style={btnPrimary()}>+ nueva sesión</button>
