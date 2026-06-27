@@ -365,8 +365,8 @@ function App() {
   // ── ASISTENTES ────────────────────────────────────────────────────────────
   function addAs() {
     const n = inputAs.trim(); if (!n || !activa) return;
-    upd(activaId, { asistentes:[...activa.asistentes, {id:genId(),nombre:n,x2:x2New,estado:"pendiente"}] });
-    setInputAs(""); setX2New(false);
+    upd(activaId, { asistentes:[...activa.asistentes, {id:genId(),nombre:n,qty:qtyNew,estado:"pendiente"}] });
+    setInputAs(""); setQtyNew(1);
   }
   function cycleAs(aid) {
     const lista = activa.tipo === "donacion" ? ESTADOS_DONACION : ESTADOS;
