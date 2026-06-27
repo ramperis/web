@@ -245,6 +245,8 @@ function App() {
   const [isMobile,    setIsMobile]    = useState(() => window.innerWidth < 900);
   const [vistaDesk,   setVistaDesk]   = useState("pipeline"); // "pipeline" | "dashboard"
   const [dashTab,     setDashTab]     = useState("resumen");  // "resumen" | "mes" | "tipo"
+  const [filtroMes,   setFiltroMes]   = useState(null);
+  const [mesExpandido,setMesExpandido]= useState(null);
 
   const shaRef      = useRef(null);
   const timerRef    = useRef(null);
