@@ -745,9 +745,11 @@ function App() {
                                 const v=(monthTypeMiP[mes]||{})[t.id]||0;
                                 if(!v) return null;
                                 const cx=xPos(i), cy=yPos(v);
+                                const nearAbove = tiposConDatos.filter(ot=>ot.id!==t.id&&(monthTypeMiP[mes]||{})[ot.id]>0).some(ot=>{ const oy=yPos((monthTypeMiP[mes]||{})[ot.id]||0); return oy<cy&&cy-oy<18; });
+                                const labelY = nearAbove ? cy+16 : cy-8;
                                 return <g key={mes}>
                                   <circle cx={cx} cy={cy} r="3.5" fill={TIPO_COLOR[t.id]} stroke="#fff" strokeWidth="1.5"/>
-                                  <text x={cx} y={cy-8} textAnchor="middle" fontSize="8" fontWeight="700" fill={TIPO_COLOR[t.id]} fontFamily="Nunito,sans-serif">{fmt(v)}</text>
+                                  <text x={cx} y={labelY} textAnchor="middle" fontSize="9" fontWeight="700" fill={TIPO_COLOR[t.id]} fontFamily="Nunito,sans-serif">{fmt(v)}</text>
                                 </g>;
                               })}
                             </g>
