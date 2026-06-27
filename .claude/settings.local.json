@@ -19,7 +19,8 @@
       "Bash(git push *)",
       "PowerShell(git -C \"c:\\\\Users\\\\errea\\\\web\" log --oneline -- gestion.html)",
       "Read(//c/Users/errea/**)",
-      "Read(//c/Users/errea/.claude/**)"
+      "Read(//c/Users/errea/.claude/**)",
+      "Bash(python -c ' *)"
     ]
   }
 }
