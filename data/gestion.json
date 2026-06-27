@@ -345,6 +345,12 @@
           "nombre": "Eva Alapont",
           "x2": true,
           "estado": "reserva"
+        },
+        {
+          "id": "jw5bfki",
+          "nombre": "María José",
+          "x2": false,
+          "estado": "pendiente"
         }
       ]
     },
