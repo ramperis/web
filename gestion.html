@@ -683,15 +683,50 @@ function App() {
             {/* Tab: Por tipo */}
             {dashTab === "tipo" && (
               <div style={{maxWidth:680}}>
+                {/* Gráfica apilada por mes */}
+                {mesesList.length > 0 && (
+                  <div style={{background:"#fff",borderRadius:12,padding:"16px 20px",marginBottom:20,border:"1.5px solid #e0d8c8"}}>
+                    <div style={{fontSize:10,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#8a7a60",marginBottom:14}}>Ingresos por mes y tipo</div>
+                    <div style={{display:"flex",alignItems:"flex-end",gap:mesesList.length>8?3:6,height:90,marginBottom:4}}>
+                      {mesesList.map(mes => {
+                        const tiposPresentes = TIPOS_EVENTO.filter(t=>(monthTypeData[mes]||{})[t.id]>0);
+                        return (
+                          <div key={mes} style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",minWidth:0}}>
+                            <div style={{width:"100%",display:"flex",flexDirection:"column-reverse",height:80,borderRadius:3,overflow:"hidden"}}>
+                              {TIPOS_EVENTO.map(t=>{
+                                const val=(monthTypeData[mes]||{})[t.id]||0;
+                                if(!val) return null;
+                                return <div key={t.id} style={{width:"100%",height:Math.max(2,Math.round((val/maxMesTotal)*80)),background:TIPO_COLOR[t.id]||"#c8b890",flexShrink:0}}/>;
+                              })}
+                            </div>
+                            <div style={{fontSize:8,color:"#8a7a60",textAlign:"center",marginTop:3,lineHeight:1.2,overflow:"hidden",maxWidth:"100%",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{mes.split(" ")[0]}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:10}}>
+                      {TIPOS_EVENTO.filter(t=>porTipo[t.id]).map(t=>(
+                        <div key={t.id} style={{display:"flex",alignItems:"center",gap:5,fontSize:11}}>
+                          <div style={{width:10,height:10,borderRadius:2,background:TIPO_COLOR[t.id]||"#c8b890",flexShrink:0}}/>
+                          <span style={{color:"#8a7a60"}}>{t.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* Tarjetas por tipo */}
                 {Object.keys(porTipo).length === 0 && <div style={{color:"#c8b890",fontSize:13}}>Sin datos</div>}
                 {Object.entries(porTipo).sort((a,b)=>b[1].ingresos-a[1].ingresos).map(([tipo, t]) => (
                   <div key={tipo} style={{background:"#fff",borderRadius:12,padding:"14px 18px",marginBottom:10,border:"1.5px solid #e0d8c8"}}>
-                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",marginBottom:6}}>
-                      <span style={{fontWeight:800,fontSize:15}}>{labelTipo(tipo)}</span>
-                      <div style={{display:"flex",gap:20,fontSize:12,color:"#8a7a60"}}>
-                        <span>{t.sesiones} sesión{t.sesiones!==1?"es":""}</span>
-                        <span>{t.asistentes} asist.</span>
-                        <span>~{fmt(t.sesiones>0?t.ingresos/t.sesiones:0)}/sesión</span>
+                    <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
+                      <div style={{width:10,height:10,borderRadius:2,background:TIPO_COLOR[tipo]||"#c8b890",flexShrink:0}}/>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"baseline",flex:1}}>
+                        <span style={{fontWeight:800,fontSize:15}}>{labelTipo(tipo)}</span>
+                        <div style={{display:"flex",gap:20,fontSize:12,color:"#8a7a60"}}>
+                          <span>{t.sesiones} sesión{t.sesiones!==1?"es":""}</span>
+                          <span>{t.asistentes} asist.</span>
+                          <span>~{fmt(t.sesiones>0?t.ingresos/t.sesiones:0)}/sesión</span>
+                        </div>
                       </div>
                     </div>
                     <div style={{display:"flex",alignItems:"center",gap:10}}>
