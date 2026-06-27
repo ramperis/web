@@ -350,13 +350,13 @@
           "id": "jw5bfki",
           "nombre": "María José",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "3fpsaut",
           "nombre": "Marta",
           "x2": false,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
