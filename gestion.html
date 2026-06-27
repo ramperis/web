@@ -381,7 +381,7 @@ function App() {
   function delAs(aid)               { upd(activaId, { asistentes: activa.asistentes.filter(a => a.id!==aid) }); }
   function renameAs(aid, nombre)    { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,nombre}:a) }); }
   function clonarSesion() {
-    const s = { ...activa, id:genId(), asistentes:[], fecha:today(), donacion:"" };
+    const s = { ...activa, id:genId(), asistentes:[], donacion:"" };
     setSes(prev => [s, ...prev]);
     setActivaId(s.id); setConfig({...s}); setVista("config");
   }
