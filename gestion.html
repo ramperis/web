@@ -658,7 +658,7 @@ function App() {
                             <span style={{fontSize:10,color:"#c8b890",lineHeight:1}}>{isOpen?"▲":"▼"}</span>
                           </div>
                           <div style={{display:"flex",gap:20,fontSize:12,color:"#8a7a60"}}>
-                            <span>{m.sesiones} sesión{m.sesiones!==1?"es":""}</span>
+                            <span>{m.sesiones} {m.sesiones!==1?"sesiones":"sesión"}</span>
                             <span>{m.asistentes} asist.</span>
                             {m.noShows > 0 && <span style={{color:"#B87A3A"}}>{m.noShows} no-show</span>}
                           </div>
