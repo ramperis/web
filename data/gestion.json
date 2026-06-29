@@ -458,12 +458,6 @@
           "estado": "reserva"
         },
         {
-          "id": "gysiwrl",
-          "nombre": "Andrea valiente haba",
-          "x2": true,
-          "estado": "reserva"
-        },
-        {
           "id": "mxh60m5",
           "nombre": "Andrea Raluca",
           "qty": 3,
@@ -473,7 +467,7 @@
           "id": "urh9hhm",
           "nombre": "Andrea valiente haba",
           "qty": 5,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
