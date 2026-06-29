@@ -33,12 +33,12 @@ El usuario pasará el contenido del post en texto plano con este formato:
 
 Al recibir un post, Claude Code debe:
 1. Crear `/blog/slug-del-post/index.html` basado en `/blog/plantilla-post/index.html`
-
 2. Sustituir el título, categoría, fecha, tiempo de lectura y cuerpo del artículo
 3. Generar el TOC del sidebar automáticamente a partir de los H2 del contenido
 4. Añadir placeholders de imagen `<figure class="post-img">` entre secciones (una imagen cada 2-3 secciones aproximadamente). Cuando se sustituya el placeholder por una imagen real, añadir siempre `<figcaption>` con una descripción breve que incluya keywords relevantes.
 5. Añadir la tarjeta del post en `/blog/index.html` con título, categoría, tiempo de lectura y extracto (primeras 2 líneas del cuerpo)
-6. El slug de la URL se genera desde el título: minúsculas, sin acentos, espacios sustituidos por guiones
+6. Añadir entrada en `blog/posts.json` al inicio del array con los campos: slug, titulo, categoria, cat, tiempo, fecha (YYYY-MM-DD), extracto, imagen y alt. **Este paso es obligatorio** — el build de Vercel regenera `blog/index.html` desde este archivo, y si el post no está aquí desaparecerá de la portada en cada deploy.
+7. El slug de la URL se genera desde el título: minúsculas, sin acentos, espacios sustituidos por guiones
 
 ## Título de tarjeta = H1 del post
 
