@@ -525,25 +525,25 @@
           "id": "6b4nxfi",
           "nombre": "Eva Alapont",
           "x2": true,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "jw5bfki",
           "nombre": "María José",
           "x2": false,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "3fpsaut",
           "nombre": "Marta",
           "x2": false,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "2x62he2",
           "nombre": "Almudena Guillén",
           "x2": true,
-          "estado": "reserva"
+          "estado": "no viene"
         }
       ]
     },
