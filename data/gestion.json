@@ -7,7 +7,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "30",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -21,7 +21,7 @@
           "id": "mjunf9y",
           "nombre": "Alba Diaz Nieto",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
