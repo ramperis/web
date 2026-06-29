@@ -474,6 +474,12 @@
           "nombre": "Andrea valiente haba",
           "x2": false,
           "estado": "reserva"
+        },
+        {
+          "id": "mxh60m5",
+          "nombre": "Andrea Raluca",
+          "qty": 3,
+          "estado": "pendiente"
         }
       ]
     },
