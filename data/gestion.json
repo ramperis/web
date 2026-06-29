@@ -10,7 +10,14 @@
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "1flm4n1",
+          "nombre": "Andre + Thais",
+          "qty": 2,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "cdnxo5c",
