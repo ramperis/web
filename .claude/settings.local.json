@@ -26,7 +26,11 @@
       "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\ChatGPT Image 27 jun 2026, 14_31_26.png\" \"handpan-precio-instrumento-ambiente.png\")",
       "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\image.png\" \"handpan-sesion-sonido-grupo.png\")",
       "PowerShell(\\(Get-Command node -ErrorAction SilentlyContinue\\).Source; \\(Get-Command node.exe -ErrorAction SilentlyContinue\\).Source; Get-ChildItem \"C:\\\\Program Files\\\\nodejs\\\\node.exe\" -ErrorAction SilentlyContinue)",
-      "Bash(node generate-sitemap.js)"
+      "Bash(node generate-sitemap.js)",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_rmkcybrmkcybrmkc.png\" \"lampara-de-sal-dormitorio-mesita-noche.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_6w0s4z6w0s4z6w0s.png\" \"lampara-de-sal-salon-atardecer-ambiente.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_1x4mu41x4mu41x4m.png\" \"lampara-de-sal-sala-meditacion-yoga.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_2ns19e2ns19e2ns1.png\" \"lampara-de-sal-tipos-tamanos-coleccion.png\")"
     ]
   }
 }
