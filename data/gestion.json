@@ -22,6 +22,12 @@
           "nombre": "Alba Diaz Nieto",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "5wh2r0i",
+          "nombre": "Ana Maria Azuaje Silva",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
