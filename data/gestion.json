@@ -180,7 +180,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "b6j36oi",
+          "nombre": "Fernando Garriga",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "nbq2mhq",
