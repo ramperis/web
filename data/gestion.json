@@ -480,6 +480,12 @@
           "nombre": "Andrea Raluca",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "urh9hhm",
+          "nombre": "Andrea valiente haba",
+          "qty": 5,
+          "estado": "pendiente"
         }
       ]
     },
