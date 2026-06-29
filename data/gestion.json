@@ -16,6 +16,12 @@
           "nombre": "Andre + Thais",
           "qty": 2,
           "estado": "completo"
+        },
+        {
+          "id": "mjunf9y",
+          "nombre": "Alba Diaz Nieto",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
