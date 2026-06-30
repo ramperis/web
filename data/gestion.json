@@ -472,6 +472,12 @@
           "nombre": "Rous Cid Carrasco",
           "qty": 4,
           "estado": "reserva"
+        },
+        {
+          "id": "oa9uh0a",
+          "nombre": "Diana Carolina",
+          "qty": 3,
+          "estado": "pendiente"
         }
       ]
     },
