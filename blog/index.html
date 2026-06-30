@@ -716,7 +716,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
     function scrollToGrid() {
-      document.querySelector('.cats-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     document.querySelectorAll('.cat-btn').forEach(function (btn) {
