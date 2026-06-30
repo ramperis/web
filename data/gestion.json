@@ -478,6 +478,12 @@
           "nombre": "Diana Carolina",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "mnwl9i4",
+          "nombre": "María José",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
