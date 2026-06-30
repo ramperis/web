@@ -62,6 +62,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .blog-card:hover .card-title { color: var(--verde-oliva); }
   .card-excerpt { font-size: 13px; color: var(--texto-secundario); line-height: 1.65; }
 
+  .blog-pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 48px; }
+  .blog-pagination button { background: none; border: 1px solid rgba(42,28,8,0.15); border-radius: 8px; padding: 8px 14px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--texto-secundario); cursor: pointer; transition: all 0.15s; min-width: 38px; }
+  .blog-pagination button:hover:not(:disabled) { border-color: var(--ambar); color: var(--ambar); }
+  .blog-pagination button.active { background: var(--ambar); border-color: var(--ambar); color: #fff; }
+  .blog-pagination button:disabled { opacity: 0.3; cursor: default; }
+
   .blog-cta { background: var(--verde-oliva); padding: 72px 8vw; text-align: center; }
   .blog-cta-label { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,238,216,0.5); margin-bottom: 16px; }
   .blog-cta-title { font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: var(--texto-claro); margin-bottom: 8px; }
