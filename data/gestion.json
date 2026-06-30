@@ -28,6 +28,12 @@
           "nombre": "Ana Maria Azuaje Silva",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "mppcvoj",
+          "nombre": "María José",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
