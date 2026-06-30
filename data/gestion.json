@@ -205,7 +205,14 @@
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "w1lide3",
+          "nombre": "Alba Díaz",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "xmzaqy5",
