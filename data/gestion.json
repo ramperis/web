@@ -518,6 +518,12 @@
           "nombre": "Eva Alapont",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "q8yvc7f",
+          "nombre": "Almudena Guillén",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
