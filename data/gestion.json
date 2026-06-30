@@ -494,6 +494,12 @@
           "nombre": "Andrea valiente haba",
           "qty": 5,
           "estado": "reserva"
+        },
+        {
+          "id": "4spzopm",
+          "nombre": "Rosa",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
