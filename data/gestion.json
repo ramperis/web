@@ -506,6 +506,12 @@
           "nombre": "Rosa",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "mpnie0s",
+          "nombre": "Eva Alapont",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
