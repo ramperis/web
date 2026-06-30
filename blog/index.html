@@ -650,25 +650,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="/js/main.js"></script>
 <script>
   (function () {
+    var CARDS_PER_PAGE = 12;
+    var currentFilter = 'todo';
+    var currentPage = 1;
+
     var cards = Array.from(document.querySelectorAll('.blog-card'));
 
-    // Asigna order CSS según fecha descendente (más reciente = order más bajo)
     var sorted = cards.slice().sort(function (a, b) {
       return (b.dataset.date || '').localeCompare(a.dataset.date || '');
     });
-    sorted.forEach(function (card, i) { card.style.order = i; });
 
-    // Filtro por categoría
+    function getVisible() {
+      return sorted.filter(function (c) {
+        return currentFilter === 'todo' || c.dataset.cat === currentFilter;
+      });
+    }
+
+    function render() {
+      var visible = getVisible();
+      var totalPages = Math.ceil(visible.length / CARDS_PER_PAGE);
+      if (currentPage > totalPages) currentPage = 1;
+      var start = (currentPage - 1) * CARDS_PER_PAGE;
+      var end = start + CARDS_PER_PAGE;
+
+      sorted.forEach(function (c, i) {
+        var idx = visible.indexOf(c);
+        if (idx === -1) {
+          c.style.display = 'none';
+        } else if (idx >= start && idx < end) {
+          c.style.display = '';
+          c.style.order = idx;
+        } else {
+          c.style.display = 'none';
+        }
+      });
+
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      var el = document.getElementById('blogPagination');
+      if (totalPages <= 1) { el.innerHTML = ''; return; }
+
+      var html = '';
+      html += '<button id="pgPrev" ' + (currentPage === 1 ? 'disabled' : '') + '>&#8592;</button>';
+      for (var i = 1; i <= totalPages; i++) {
+        html += '<button class="pg-num' + (i === currentPage ? ' active' : '') + '" data-page="' + i + '">' + i + '</button>';
+      }
+      html += '<button id="pgNext" ' + (currentPage === totalPages ? 'disabled' : '') + '>&#8594;</button>';
+      el.innerHTML = html;
+
+      el.querySelector('#pgPrev').addEventListener('click', function () {
+        if (currentPage > 1) { currentPage--; render(); scrollToGrid(); }
+      });
+      el.querySelector('#pgNext').addEventListener('click', function () {
+        if (currentPage < totalPages) { currentPage++; render(); scrollToGrid(); }
+      });
+      el.querySelectorAll('.pg-num').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          currentPage = parseInt(btn.dataset.page);
+          render();
+          scrollToGrid();
+        });
+      });
+    }
+
+    function scrollToGrid() {
+      document.querySelector('.cats-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     document.querySelectorAll('.cat-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         document.querySelectorAll('.cat-btn').forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        var filter = btn.dataset.filter;
-        cards.forEach(function (card) {
-          card.style.display = (filter === 'todo' || card.dataset.cat === filter) ? '' : 'none';
-        });
+        currentFilter = btn.dataset.filter;
+        currentPage = 1;
+        render();
       });
     });
+
+    render();
   })();
 </script>
 <script src="/js/cookie-banner.js"></script>
