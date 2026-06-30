@@ -30,7 +30,14 @@
       "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_rmkcybrmkcybrmkc.png\" \"lampara-de-sal-dormitorio-mesita-noche.png\")",
       "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_6w0s4z6w0s4z6w0s.png\" \"lampara-de-sal-salon-atardecer-ambiente.png\")",
       "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_1x4mu41x4mu41x4m.png\" \"lampara-de-sal-sala-meditacion-yoga.png\")",
-      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_2ns19e2ns19e2ns1.png\" \"lampara-de-sal-tipos-tamanos-coleccion.png\")"
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\Gemini_Generated_Image_2ns19e2ns19e2ns1.png\" \"lampara-de-sal-tipos-tamanos-coleccion.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\ChatGPT Image 30 jun 2026, 13_38_57.png\" \"gafas-luz-roja-mujer-escritorio-portatil-noche.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\ChatGPT Image 30 jun 2026, 13_53_28.png\" \"gafas-luz-roja-hombre-movil-noche-salon.png\")",
+      "PowerShell(Rename-Item \"c:\\\\Users\\\\errea\\\\web\\\\img\\\\blog\\\\ChatGPT Image 30 jun 2026, 13_55_08.png\" \"gafas-luz-roja-mujer-sofa-amigos-noche.png\")",
+      "PowerShell($content = [System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\errea\\\\.claude\\\\projects\\\\c--Users-errea-web\\\\0e930432-db2f-4ef7-a0a6-5f50c28e333d.jsonl\"\\); $lines = $content -split \"`n\"; $lastLines = $lines | Select-Object -Last 200; $lastLines -join \"`n\" | Select-String -Pattern \"gafas\" -Context 0,5 | Select-Object -First 20)",
+      "PowerShell($content = [System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\errea\\\\.claude\\\\projects\\\\c--Users-errea-web\\\\0e930432-db2f-4ef7-a0a6-5f50c28e333d.jsonl\"\\); $idx = $content.IndexOf\\(\"gafas-luz-roja.html\"\\); Write-Host \"Found at index: $idx\"; if \\($idx -gt 0\\) { Write-Host $content.Substring\\([Math]::Max\\(0, $idx - 200\\), [Math]::Min\\(3000, $content.Length - $idx + 200\\)\\) })",
+      "PowerShell($content = [System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\errea\\\\.claude\\\\projects\\\\c--Users-errea-web\\\\0e930432-db2f-4ef7-a0a6-5f50c28e333d.jsonl\"\\); $idx = $content.IndexOf\\(\"gafas-luz-roja.html\"\\); Write-Host $content.Substring\\($idx + 3000, 6000\\))",
+      "PowerShell($content = [System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\errea\\\\.claude\\\\projects\\\\c--Users-errea-web\\\\0e930432-db2f-4ef7-a0a6-5f50c28e333d.jsonl\"\\); $idx = $content.IndexOf\\(\"gafas-luz-roja.html\"\\); Write-Host $content.Substring\\($idx + 9000, 6000\\))"
     ]
   }
 }
