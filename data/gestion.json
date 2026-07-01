@@ -161,6 +161,12 @@
           "nombre": "Bryan",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "r7uab1k",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
