@@ -191,6 +191,12 @@
           "nombre": "Roberto",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "9fizc2t",
+          "nombre": "Nicolás",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
