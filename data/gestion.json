@@ -155,6 +155,12 @@
           "nombre": "Fernando Garriga",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "g4o8y8x",
+          "nombre": "Bryan",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
