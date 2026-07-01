@@ -1,43 +1,6 @@
 {
   "sesiones": [
     {
-      "id": "b1zoznk",
-      "nombre": "Baño de Sonido SUP 12/07",
-      "fecha": "12/07/2026",
-      "tipo": "precio",
-      "tipoEvento": "bano-sup",
-      "precioTotal": "30",
-      "precioReserva": "10",
-      "splitPct": 50,
-      "donacion": "",
-      "asistentes": [
-        {
-          "id": "1flm4n1",
-          "nombre": "Andre + Thais",
-          "qty": 2,
-          "estado": "pendiente"
-        },
-        {
-          "id": "mjunf9y",
-          "nombre": "Alba Diaz Nieto",
-          "qty": 1,
-          "estado": "no viene"
-        },
-        {
-          "id": "5wh2r0i",
-          "nombre": "Ana Maria Azuaje Silva",
-          "qty": 2,
-          "estado": "pendiente"
-        },
-        {
-          "id": "mppcvoj",
-          "nombre": "María José",
-          "qty": 1,
-          "estado": "no viene"
-        }
-      ]
-    },
-    {
       "id": "cdnxo5c",
       "nombre": "Ceremonia de cacao",
       "fecha": "05/07/2026",
