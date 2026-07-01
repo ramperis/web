@@ -185,6 +185,12 @@
           "nombre": "Marcel",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "mf6iyjp",
+          "nombre": "Roberto",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
