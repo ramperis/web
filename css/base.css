@@ -960,44 +960,44 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 
 /* ── MasterTheHandpan Banner Inline ── */
 .mth-banner-inline {
-  position: relative; border-radius: 14px; overflow: hidden;
-  display: flex; align-items: center; justify-content: space-between;
-  min-height: 140px; margin: 32px 0; text-decoration: none;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+  position: relative; border-radius: 16px; overflow: hidden;
+  display: flex; align-items: center;
+  min-height: 168px; margin: 36px 0; text-decoration: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
 }
 .mth-banner-inline .mth-bg {
   position: absolute; inset: 0; background-size: cover;
   background-image: url('/img/banner-handpan-bg.jpg');
-  background-position: center 70%;
+  background-position: center 65%;
 }
 .mth-banner-inline .mth-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to right,
-    #0f0a06 0%, rgba(15,10,6,0.94) 22%,
-    rgba(15,10,6,0.15) 45%, rgba(15,10,6,0.15) 55%,
-    rgba(15,10,6,0.94) 78%, #0f0a06 100%);
+    rgba(15,10,6,0.97) 0%, rgba(15,10,6,0.93) 32%,
+    rgba(15,10,6,0.18) 50%, rgba(15,10,6,0.18) 58%,
+    rgba(15,10,6,0.93) 72%, rgba(15,10,6,0.97) 100%);
 }
-.mth-left { position: relative; z-index:1; padding: 24px 28px; flex:1; max-width: 290px; }
-.mth-right { position: relative; z-index:1; padding: 24px 28px 24px 0; flex-shrink:0; }
-.mth-logo { height: 28px; filter: invert(1); display: block; margin-bottom: 8px; }
-.mth-tagline { color: #B8893A; font-size: 10px; letter-spacing: 0.8px; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
-.mth-headline { color: #F2EDE2; font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: 6px; }
-.mth-code { color: #B8893A; font-size: 11px; font-weight: 600; margin-bottom: 4px; }
-.mth-sub { color: #999; font-size: 10px; }
+.mth-left { position: relative; z-index: 1; padding: 28px 32px; flex: 1; }
+.mth-right { position: relative; z-index: 1; padding: 28px 32px 28px 0; flex-shrink: 0; }
+.mth-logo { height: 30px; filter: invert(1); display: block; margin-bottom: 10px; }
+.mth-tagline { color: #B8893A; font-size: 10px; letter-spacing: 0.8px; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+.mth-headline { color: #F2EDE2; font-size: 17px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+.mth-code { color: #B8893A; font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.mth-sub { color: #aaa; font-size: 11px; }
 .mth-btn {
-  background: #B8893A; color: #fff; border-radius: 10px;
-  padding: 16px 26px; font-size: 14px; font-weight: 700;
+  background: #B8893A; color: #fff; border-radius: 12px;
+  padding: 18px 28px; font-size: 14px; font-weight: 700;
   white-space: nowrap; display: inline-block; text-align: center;
 }
-.mth-btn small { display: block; font-weight: 400; font-size: 10px; opacity: 0.8; margin-top: 3px; }
+.mth-btn small { display: block; font-weight: 400; font-size: 10px; opacity: 0.85; margin-top: 4px; }
 
 /* ── MasterTheHandpan Banner Sidebar ── */
 .mth-banner-sidebar {
-  position: relative; border-radius: 14px; overflow: hidden;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  width: 100%; padding: 26px 22px; box-sizing: border-box;
+  position: relative; border-radius: 16px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  width: 100%; padding: 28px 20px; box-sizing: border-box;
   box-shadow: 0 6px 24px rgba(0,0,0,0.3); text-align: center;
-  text-decoration: none; margin-bottom: 24px;
+  text-decoration: none; margin-bottom: 0;
 }
 .mth-bg-s {
   position: absolute; inset: 0; background-size: cover;
@@ -1007,23 +1007,27 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 .mth-overlay-s {
   position: absolute; inset: 0;
   background: linear-gradient(to bottom,
-    #0f0a06 0%, rgba(15,10,6,0.96) 28%,
-    rgba(15,10,6,0.55) 50%,
-    rgba(15,10,6,0.96) 72%, #0f0a06 100%);
+    rgba(15,10,6,0.97) 0%, rgba(15,10,6,0.94) 25%,
+    rgba(15,10,6,0.68) 50%,
+    rgba(15,10,6,0.94) 75%, rgba(15,10,6,0.97) 100%);
 }
-.mth-banner-sidebar > * { position: relative; z-index: 1; }
-.mth-logo-s { height: 20px; filter: invert(1); }
+/* Sólo los elementos de contenido necesitan z-index — no bg ni overlay */
+.mth-logo-s, .mth-divider, .mth-badge,
+.mth-headline-s, .mth-code-s, .mth-sub-s, .mth-btn-s {
+  position: relative; z-index: 1;
+}
+.mth-logo-s { height: 24px; filter: invert(1); }
 .mth-divider { width: 36px; height: 1px; background: #B8893A; opacity: 0.5; }
 .mth-badge {
   background: rgba(184,137,58,0.12); color: #B8893A; font-size: 10px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.6px; padding: 4px 12px;
   border-radius: 20px; border: 1px solid rgba(184,137,58,0.3);
 }
-.mth-headline-s { color: #F2EDE2; font-size: 13px; font-weight: 700; line-height: 1.45; }
+.mth-headline-s { color: #F2EDE2; font-size: 14px; font-weight: 700; line-height: 1.45; }
 .mth-code-s { color: #B8893A; font-size: 11px; font-weight: 600; }
-.mth-sub-s { color: #999; font-size: 10px; line-height: 1.6; }
+.mth-sub-s { color: #bbb; font-size: 10px; line-height: 1.6; }
 .mth-btn-s {
-  background: #B8893A; color: #fff; border-radius: 8px; padding: 12px;
+  background: #B8893A; color: #fff; border-radius: 10px; padding: 13px;
   font-size: 13px; font-weight: 700; width: 100%;
   display: block; box-sizing: border-box;
 }
