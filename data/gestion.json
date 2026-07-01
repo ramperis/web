@@ -167,6 +167,12 @@
           "nombre": "Josue",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "t823u49",
+          "nombre": "Cristopher",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
