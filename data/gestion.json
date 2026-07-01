@@ -512,6 +512,12 @@
           "nombre": "Almudena Guillén",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "21w9rkm",
+          "nombre": "Ana Marie",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
