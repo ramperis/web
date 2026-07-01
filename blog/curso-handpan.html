@@ -114,6 +114,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .related-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ambar); margin-bottom: 6px; }
   .related-post-title { font-size: 14px; font-weight: 700; color: var(--texto-principal); line-height: 1.4; }
 
+  /* Boxes cursos numerados */
+  .estilo-box { background: var(--arena-oscura); border-radius: 16px; padding: 24px 28px; margin: 0 0 24px; }
+  .estilo-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(42,28,8,0.1); }
+  .estilo-num { width: 36px; height: 36px; border-radius: 50%; background: var(--ambar); color: #fff; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .post-content .estilo-header-body h3 { font-size: 19px; font-weight: 800; margin: 0 0 4px; scroll-margin-top: 100px; }
+  .post-content .estilo-header-body p { margin: 0; font-size: 12px; font-style: italic; color: var(--texto-sutil); }
+  .post-content .estilo-box ul { margin-bottom: 8px; }
+  .post-content .estilo-box li:last-child { margin-bottom: 0; }
+  .post-content .estilo-box p:last-of-type { margin-bottom: 0; }
+  .btn-curso { display: inline-block; margin-top: 16px; background: var(--ambar); color: #fff !important; font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: 10px; text-decoration: none !important; transition: opacity 0.2s; }
+  .btn-curso:hover { opacity: 0.85; }
+
   @media (max-width: 900px) {
     .post-body-wrap { grid-template-columns: 1fr; gap: 0; }
     .post-sidebar { position: static; order: -1; flex-direction: row; flex-wrap: wrap; margin-bottom: 40px; }
