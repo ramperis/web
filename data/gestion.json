@@ -179,6 +179,12 @@
           "nombre": "Arturo",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "xez38mz",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
