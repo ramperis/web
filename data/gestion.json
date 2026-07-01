@@ -173,6 +173,12 @@
           "nombre": "Cristopher",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "xpo0jeg",
+          "nombre": "Arturo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
