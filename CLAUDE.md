@@ -99,7 +99,7 @@ En cualquier artículo del blog que contenga enlaces de afiliado (`rel="sponsore
 - **Disclaimer obligatorio** — añadir siempre esta línea al final del contenido del artículo, justo antes del cierre de `</article>`, en cursiva:
 
 ```html
-<p><em>Artículo con enlaces de afiliado. Si compras a través de ellos recibo una pequeña comisión sin coste adicional para ti.</em></p>
+<p><em>Artículo con enlaces de afiliado.</em></p>
 ```
 
 - **Formato de enlace de afiliado Amazon** — siempre con esta estructura exacta:
