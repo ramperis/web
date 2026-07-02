@@ -65,7 +65,14 @@
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "kx3l8lg",
+          "nombre": "Sole Villanueva Tur",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "k0tf54l",
