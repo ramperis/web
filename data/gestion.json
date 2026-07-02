@@ -503,6 +503,12 @@
           "nombre": "María José",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "wt5up7x",
+          "nombre": "Carolina",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
