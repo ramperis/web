@@ -223,6 +223,12 @@
           "nombre": "Alba Díaz",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "2gjgu5x",
+          "nombre": "Julieta Paiva",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
