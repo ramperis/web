@@ -192,9 +192,8 @@
             inner.appendChild(p3);
           }
 
-          const a = el('a', 'Ver →');
-          a.href = safeUrl(e.url);
-          a.style.cssText = 'font-size:11px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:5px 12px;border-radius:100px;white-space:nowrap;text-decoration:none;flex-shrink:0';
+          const a = el('span', 'Ver →');
+          a.style.cssText = 'font-size:11px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:5px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0';
 
           body.appendChild(inner);
           body.appendChild(a);
