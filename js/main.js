@@ -157,9 +157,10 @@
           const linea2 = [e.hora, e.marca].filter(Boolean).join(' · ');
           const linea3 = [e.espacio, e.lugar].filter(Boolean).join(' · ');
 
-          const outer = el('div');
+          const outer = el('a');
           outer.className = 'agenda-card';
-          outer.style.cssText = 'display:grid;grid-template-columns:72px 1fr;gap:0;border-radius:16px;overflow:hidden;background:var(--arena-oscura)';
+          outer.href = safeUrl(e.url);
+          outer.style.cssText = 'display:grid;grid-template-columns:72px 1fr;gap:0;border-radius:16px;overflow:hidden;background:var(--arena-oscura);text-decoration:none;cursor:pointer';
 
           const dateCol = el('div');
           dateCol.className = 'agenda-date-col';
