@@ -521,6 +521,12 @@
           "nombre": "Carolina Forero",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "hpa14u5",
+          "nombre": "Gema Moruno",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
