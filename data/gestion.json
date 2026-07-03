@@ -28,6 +28,12 @@
           "nombre": "Alba Diaz Nieto",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "m9a4wrj",
+          "nombre": "Lorena",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
