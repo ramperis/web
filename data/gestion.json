@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "turu8oa",
+      "nombre": "Baño de Sonido SUP 12/08",
+      "fecha": "12/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "30",
+      "precioReserva": "10",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "dmuz9ov",
       "nombre": "Baño de Sonido SUP 12/08",
       "fecha": "12/08/2026",
