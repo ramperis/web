@@ -10,7 +10,14 @@
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "haasn52",
+          "nombre": "Cristina Andreu",
+          "qty": 2,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "cdnxo5c",
