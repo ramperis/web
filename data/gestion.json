@@ -290,6 +290,12 @@
           "nombre": "Larisa Klibanskaya",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "0ehgab8",
+          "nombre": "Ana Maria",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
