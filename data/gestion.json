@@ -284,6 +284,12 @@
           "nombre": "Andrea Dolza",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "dsvd0zk",
+          "nombre": "Larisa Klibanskaya",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
