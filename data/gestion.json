@@ -120,6 +120,12 @@
           "nombre": "Sole Villanueva Tur",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "jy0h70s",
+          "nombre": "Cecilia Gómez",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
