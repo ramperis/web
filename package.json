@@ -5,7 +5,7 @@
   "scripts": {
     "generate-blog": "node scripts/generate-blog-index.js",
     "sitemap": "node generate-sitemap.js",
-    "build": "node scripts/generate-blog-index.js && node generate-sitemap.js"
+    "build": "node scripts/sync-agenda-redirects.js && node scripts/generate-blog-index.js && node generate-sitemap.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1"
