@@ -122,6 +122,61 @@
       "source": "/agenda/breath-sound-sanctuary-10-julio",
       "destination": "/agenda/breath-sound-sanctuary",
       "permanent": true
+    },
+    {
+      "source": "/agenda/bano-sonido-paddle-surf-16-agosto",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/bano-sonido-paddle-surf-30-agosto",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/bano-sonido-paddle-surf-19-julio",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/bano-sonido-paddle-surf-2-agosto",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/circulo-hombres-22-julio",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/circulo-hombres-5-agosto",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/circulo-hombres-19-agosto",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/circulo-hombres-2-septiembre",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/agenda/circulo-hombres-16-septiembre",
+      "destination": "/agenda",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
