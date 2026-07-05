@@ -259,6 +259,12 @@
           "nombre": "Nicolás",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "ms62eso",
+          "nombre": "Luciano",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
