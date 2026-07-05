@@ -633,13 +633,13 @@
           "id": "urh9hhm",
           "nombre": "Andrea valiente haba",
           "qty": 5,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "4spzopm",
           "nombre": "Rosa",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "mpnie0s",
