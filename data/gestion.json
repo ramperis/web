@@ -234,25 +234,25 @@
           "id": "b6j36oi",
           "nombre": "Fernando Garriga",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "g4o8y8x",
           "nombre": "Bryan",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "r7uab1k",
           "nombre": "Josue",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "t823u49",
           "nombre": "Cristopher",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "xpo0jeg",
@@ -264,25 +264,25 @@
           "id": "xez38mz",
           "nombre": "Marcel",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "mf6iyjp",
           "nombre": "Roberto",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "9fizc2t",
           "nombre": "Nicolás",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "ms62eso",
           "nombre": "Luciano",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "estuvo"
         },
         {
           "id": "t4eosen",
