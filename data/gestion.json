@@ -89,6 +89,12 @@
           "nombre": "Berna",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "ym60uf3",
+          "nombre": "Rose",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
