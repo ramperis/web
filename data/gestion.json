@@ -40,6 +40,12 @@
           "nombre": "Cristina Andreu",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "t93emtb",
+          "nombre": "Lourdes durillo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
