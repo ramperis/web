@@ -77,6 +77,12 @@
           "nombre": "Lorena",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "p57koeo",
+          "nombre": "Berna",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
