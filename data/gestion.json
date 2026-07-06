@@ -271,6 +271,12 @@
           "nombre": "Luciano",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "t4eosen",
+          "nombre": "Francisco Punzano",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
