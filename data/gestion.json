@@ -282,13 +282,13 @@
           "id": "ms62eso",
           "nombre": "Luciano",
           "qty": 1,
-          "estado": "estuvo"
+          "estado": "confirmado"
         },
         {
           "id": "t4eosen",
           "nombre": "Francisco Punzano",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         }
       ]
     },
