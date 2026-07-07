@@ -144,6 +144,12 @@
           "nombre": "Cecilia Gómez",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "93juspx",
+          "nombre": "Ibticem",
+          "qty": 3,
+          "estado": "pendiente"
         }
       ]
     },
