@@ -156,6 +156,12 @@
           "nombre": "Mateo Añibarro",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "0zfgvdw",
+          "nombre": "Mireya Moreno",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
