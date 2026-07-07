@@ -149,7 +149,7 @@
           "id": "93juspx",
           "nombre": "Ibticem",
           "qty": 3,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
@@ -343,6 +343,12 @@
           "id": "te0yaue",
           "nombre": "Toni Bonet",
           "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "nww05ul",
+          "nombre": "Jesús Suero",
+          "qty": 3,
           "estado": "reserva"
         }
       ]
