@@ -162,6 +162,12 @@
           "nombre": "Mireya Moreno",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "lygf914",
+          "nombre": "Neus Sanjuan",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
