@@ -150,6 +150,12 @@
           "nombre": "Ibticem",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "wg7145f",
+          "nombre": "Mateo Añibarro",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
