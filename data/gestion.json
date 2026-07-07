@@ -155,13 +155,13 @@
           "id": "wg7145f",
           "nombre": "Mateo Añibarro",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "0zfgvdw",
           "nombre": "Mireya Moreno",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
