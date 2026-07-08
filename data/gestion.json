@@ -168,6 +168,12 @@
           "nombre": "Neus Sanjuan",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "13ng83y",
+          "nombre": "Silvia Giner",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
