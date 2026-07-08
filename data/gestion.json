@@ -295,7 +295,7 @@
           "id": "t823u49",
           "nombre": "Cristopher",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "no viene"
         },
         {
           "id": "xpo0jeg",
@@ -331,7 +331,7 @@
           "id": "t4eosen",
           "nombre": "Francisco Punzano",
           "qty": 1,
-          "estado": "estuvo"
+          "estado": "no viene"
         }
       ]
     },
