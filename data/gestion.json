@@ -53,6 +53,12 @@
           "nombre": "Lourdes durillo",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "mmiwu99",
+          "nombre": "Andrea Miguel",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
