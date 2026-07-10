@@ -593,21 +593,31 @@ function App() {
 
         {/* Pipeline */}
         {vistaDesk === "pipeline" && (
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:20,padding:"24px 32px",alignItems:"flex-start"}}>
-            <div>
-              <ColHdr label="Pasado" count={pasadas.length} color="#8a7a60"/>
-              {pasadas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-              {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+          <div>
+            <div style={{padding:"14px 32px 0",display:"flex",gap:6,flexWrap:"wrap"}}>
+              <button onClick={()=>setFiltroTipo(null)} style={{padding:"6px 14px",borderRadius:20,border:"none",background:filtroTipo===null?"#2E2010":"#e8e0d0",color:filtroTipo===null?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>Todos</button>
+              {TIPOS_EVENTO.map(t => {
+                const count = sesiones.filter(s=>(s.tipoEvento||inferTipoEvento(s.nombre))===t.id).length;
+                if (!count) return null;
+                return <button key={t.id} onClick={()=>setFiltroTipo(filtroTipo===t.id?null:t.id)} style={{padding:"6px 14px",borderRadius:20,border:"none",background:filtroTipo===t.id?"#B87A3A":"#e8e0d0",color:filtroTipo===t.id?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>{t.label}</button>;
+              })}
             </div>
-            <div>
-              <ColHdr label="Próximo (≤14 días)" count={proximas.length} color="#B87A3A"/>
-              {proximas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-              {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
-            </div>
-            <div>
-              <ColHdr label="Por venir" count={futuras.length} color="#424029"/>
-              {futuras.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-              {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:20,padding:"16px 32px 24px",alignItems:"flex-start"}}>
+              <div>
+                <ColHdr label="Pasado" count={pasadas.length} color="#8a7a60"/>
+                {pasadas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+                {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+              </div>
+              <div>
+                <ColHdr label="Próximo (≤14 días)" count={proximas.length} color="#B87A3A"/>
+                {proximas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+                {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+              </div>
+              <div>
+                <ColHdr label="Por venir" count={futuras.length} color="#424029"/>
+                {futuras.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
+                {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+              </div>
             </div>
           </div>
         )}
