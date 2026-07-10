@@ -511,9 +511,10 @@ function App() {
     const hoy  = new Date(); hoy.setHours(0,0,0,0);
     const en14 = new Date(hoy); en14.setDate(hoy.getDate() + 14);
     const byFecha = (a, b) => parseFecha(a.fecha) - parseFecha(b.fecha);
-    const pasadas  = sesiones.filter(s => parseFecha(s.fecha) < hoy).sort((a,b) => parseFecha(b.fecha) - parseFecha(a.fecha));
-    const proximas = sesiones.filter(s => { const f = parseFecha(s.fecha); return f >= hoy && f <= en14; }).sort(byFecha);
-    const futuras  = sesiones.filter(s => parseFecha(s.fecha) > en14).sort(byFecha);
+    const sesPipeline = filtroTipo ? sesiones.filter(s=>(s.tipoEvento||inferTipoEvento(s.nombre))===filtroTipo) : sesiones;
+    const pasadas  = sesPipeline.filter(s => parseFecha(s.fecha) < hoy).sort((a,b) => parseFecha(b.fecha) - parseFecha(a.fecha));
+    const proximas = sesPipeline.filter(s => { const f = parseFecha(s.fecha); return f >= hoy && f <= en14; }).sort(byFecha);
+    const futuras  = sesPipeline.filter(s => parseFecha(s.fecha) > en14).sort(byFecha);
 
     // ── Métricas ──
     const MESES_ORD = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
