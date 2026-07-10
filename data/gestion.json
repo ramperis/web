@@ -50,7 +50,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "30",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -76,7 +76,7 @@
           "id": "liyc9vc",
           "nombre": "Ana Belén Rausell",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
