@@ -800,13 +800,21 @@ function App() {
         <button onClick={logout} style={{background:"none",border:"none",color:"#c0a880",fontSize:11,cursor:"pointer",paddingBottom:4}}>salir</button>
       </div>
       <SyncBar state={syncState} onRetry={() => triggerSave(sesiones)}/>
+      <div style={{padding:"10px 20px 4px",display:"flex",gap:6,overflowX:"auto",scrollbarWidth:"none",WebkitOverflowScrolling:"touch"}}>
+        <button onClick={()=>setFiltroTipo(null)} style={{padding:"6px 14px",borderRadius:20,border:"none",background:filtroTipo===null?"#2E2010":"#e8e0d0",color:filtroTipo===null?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",whiteSpace:"nowrap",flexShrink:0,fontFamily:"'Nunito',sans-serif"}}>Todos</button>
+        {TIPOS_EVENTO.map(t => {
+          const count = sesiones.filter(s=>(s.tipoEvento||inferTipoEvento(s.nombre))===t.id).length;
+          if (!count) return null;
+          return <button key={t.id} onClick={()=>setFiltroTipo(filtroTipo===t.id?null:t.id)} style={{padding:"6px 14px",borderRadius:20,border:"none",background:filtroTipo===t.id?"#B87A3A":"#e8e0d0",color:filtroTipo===t.id?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",whiteSpace:"nowrap",flexShrink:0,fontFamily:"'Nunito',sans-serif"}}>{TIPO_SHORT[t.id]||t.label}</button>;
+        })}
+      </div>
       <div style={{padding:"16px 20px 0"}}>
         {sesiones.length===0 && (
           <div style={{color:"#B87A3A",textAlign:"center",marginTop:40,fontSize:14}}>sin sesiones todavía</div>
         )}
         {(() => {
           const hoy = new Date(); hoy.setHours(0,0,0,0);
-          const sorted = [...sesiones].sort((a,b) => {
+          const sorted = [...sesiones].filter(s => !filtroTipo || (s.tipoEvento||inferTipoEvento(s.nombre))===filtroTipo).sort((a,b) => {
             const fa = parseFecha(a.fecha), fb = parseFecha(b.fecha);
             const aPast = fa < hoy, bPast = fb < hoy;
             if (!aPast && !bPast) return fa - fb;
