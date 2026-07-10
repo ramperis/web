@@ -2,11 +2,11 @@
   "sesiones": [
     {
       "id": "n2tguhz",
-      "nombre": "nueva sesión",
-      "fecha": "10/07/2026",
+      "nombre": "Baño de Sonido SUP 01/08",
+      "fecha": "01/08/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "30",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
