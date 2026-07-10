@@ -71,6 +71,12 @@
           "nombre": "Andrea Miguel",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "liyc9vc",
+          "nombre": "Ana Belén Rausell",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
