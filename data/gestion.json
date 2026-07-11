@@ -416,13 +416,13 @@
           "id": "st5dx9u",
           "nombre": "Soraya Salgado",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "bvy894l",
           "nombre": "Paula Mejías",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
