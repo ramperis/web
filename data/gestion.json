@@ -217,6 +217,12 @@
           "nombre": "Brunela Coratolo",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "tl5w9a8",
+          "nombre": "karla nuñez",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
