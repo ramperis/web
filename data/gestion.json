@@ -411,6 +411,12 @@
           "nombre": "Jesús Suero",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "st5dx9u",
+          "nombre": "Soraya Salgado",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
