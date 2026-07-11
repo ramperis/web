@@ -150,7 +150,7 @@
           "id": "a4r39iy",
           "nombre": "Laura Peño",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
@@ -734,6 +734,12 @@
           "nombre": "Gema Moruno",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "z63uhhl",
+          "nombre": "Beatriz Villodre",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
