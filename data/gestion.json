@@ -40,6 +40,12 @@
           "nombre": "Noelia",
           "qty": 2,
           "estado": "pendiente"
+        },
+        {
+          "id": "onjtglt",
+          "nombre": "BEATRIZ UREÑA BAÑULS",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
