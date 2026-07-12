@@ -740,6 +740,12 @@
           "nombre": "Beatriz Villodre",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "6gb4y4x",
+          "nombre": "María José Rechi",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
