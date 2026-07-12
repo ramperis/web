@@ -38,6 +38,12 @@
   </url>
 
   <url>
+    <loc>https://ramperis.com/agenda/hielo-sonido-breathwork-18-julio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
     <loc>https://ramperis.com/agenda/circulo-hombres-27-mayo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
