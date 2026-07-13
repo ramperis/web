@@ -260,6 +260,12 @@
   </url>
 
   <url>
+    <loc>https://ramperis.com/blog/soporte-handpan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://ramperis.com/blog/cacao-ceremonial</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
