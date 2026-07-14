@@ -2,12 +2,12 @@
   "sesiones": [
     {
       "id": "dgkadlo",
-      "nombre": "nueva sesión",
-      "fecha": "14/07/2026",
+      "nombre": "Ice + Sounds bath",
+      "fecha": "18/07/2026",
       "tipo": "precio",
       "tipoEvento": "otro",
-      "precioTotal": "",
-      "precioReserva": "",
+      "precioTotal": "35",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": []
