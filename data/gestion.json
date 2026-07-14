@@ -71,6 +71,12 @@
           "nombre": "BEATRIZ UREÑA BAÑULS",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "2bgevxh",
+          "nombre": "Lorena Coronel",
+          "qty": 4,
+          "estado": "pendiente"
         }
       ]
     },
