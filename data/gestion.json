@@ -22,6 +22,12 @@
           "nombre": "Mayllelim",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "ntrdssv",
+          "nombre": "Lucca",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
