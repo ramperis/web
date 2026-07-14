@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "dgkadlo",
+      "nombre": "nueva sesión",
+      "fecha": "14/07/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "n2tguhz",
       "nombre": "Baño de Sonido SUP 01/08",
       "fecha": "01/08/2026",
