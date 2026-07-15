@@ -448,7 +448,7 @@
           "id": "dsvd0zk",
           "nombre": "Larisa Klibanskaya",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "0ehgab8",
@@ -466,7 +466,7 @@
           "id": "nww05ul",
           "nombre": "Jesús Suero",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "st5dx9u",
@@ -478,7 +478,7 @@
           "id": "bvy894l",
           "nombre": "Paula Mejías",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
