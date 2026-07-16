@@ -28,6 +28,12 @@
           "nombre": "Lucca",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "b0yof8o",
+          "nombre": "Raul",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
