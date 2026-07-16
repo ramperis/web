@@ -138,6 +138,12 @@
           "nombre": "Ana Belén Rausell",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "xna28o5",
+          "nombre": "Carolina Forero",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
