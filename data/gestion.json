@@ -39,6 +39,12 @@
           "id": "v4bn1oc",
           "nombre": "Bettina",
           "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "nkbma6s",
+          "nombre": "Barbara",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
