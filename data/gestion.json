@@ -27,13 +27,13 @@
           "id": "ntrdssv",
           "nombre": "Lucca",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "b0yof8o",
           "nombre": "Raul",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "v4bn1oc",
