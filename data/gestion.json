@@ -52,6 +52,12 @@
           "nombre": "Inés",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "8nug68n",
+          "nombre": "Juan Pablo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
