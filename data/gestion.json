@@ -58,6 +58,12 @@
           "nombre": "Juan Pablo",
           "qty": 1,
           "estado": "completo"
+        },
+        {
+          "id": "kqs49jo",
+          "nombre": "Matej",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
