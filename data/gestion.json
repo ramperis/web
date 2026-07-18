@@ -15,19 +15,19 @@
           "id": "4f0t7a2",
           "nombre": "Andreina",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "mulf57p",
           "nombre": "Mayllelim",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "ntrdssv",
           "nombre": "Lucca",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "b0yof8o",
@@ -39,25 +39,25 @@
           "id": "v4bn1oc",
           "nombre": "Bettina",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "nkbma6s",
           "nombre": "Barbara",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "csf25qa",
           "nombre": "Inés",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "8nug68n",
           "nombre": "Juan Pablo",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
