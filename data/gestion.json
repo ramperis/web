@@ -46,6 +46,12 @@
           "nombre": "Barbara",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "csf25qa",
+          "nombre": "Inés",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
