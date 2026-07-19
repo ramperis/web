@@ -218,22 +218,32 @@ function AsRow({a, s, onCycle, onSet, onSetQty, onDel, onRename}) {
 }
 
 // ── PIPELINE CARD (desktop) ───────────────────────────────────────────────────
-function PipelineCard({ s, onClick }) {
+function PipelineCard({ s, onClick, confirmDel, onRequestDelete, onConfirmDelete, onCancelDelete }) {
   const fin     = finanzas(s);
   const activos = s.asistentes.filter(a => a.estado !== "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
   const total   = s.asistentes.reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
   const noV     = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
+  const isConfirming = confirmDel === s.id;
   return (
-    <div onClick={onClick} style={{background:"#fff",borderRadius:12,padding:"12px 14px",cursor:"pointer",border:"1.5px solid #e0d8c8",marginBottom:8}}>
-      <div style={{fontWeight:800,fontSize:14,marginBottom:2,color:"#2E2010"}}>{s.nombre}</div>
-      <div style={{fontSize:11,color:"#8a7a60",marginBottom:8}}>{s.fecha}</div>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:6}}>
-        <div style={{display:"flex",gap:4}}>
-          <Pill label={`${activos}/${total}`} color="#424029"/>
-          {noV > 0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
+    <div style={{background:"#fff",borderRadius:12,border:"1.5px solid #e0d8c8",marginBottom:8,overflow:"hidden"}}>
+      <div onClick={onClick} style={{padding:"12px 14px",cursor:"pointer",position:"relative"}}>
+        <button onClick={e => { e.stopPropagation(); onRequestDelete(); }} title="Eliminar sesión" style={{position:"absolute",top:8,right:8,background:"none",border:"none",color:"#c0a880",fontSize:14,cursor:"pointer",padding:4,lineHeight:1}}>✕</button>
+        <div style={{fontWeight:800,fontSize:14,marginBottom:2,color:"#2E2010",paddingRight:18}}>{s.nombre}</div>
+        <div style={{fontSize:11,color:"#8a7a60",marginBottom:8}}>{s.fecha}</div>
+        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:6}}>
+          <div style={{display:"flex",gap:4}}>
+            <Pill label={`${activos}/${total}`} color="#424029"/>
+            {noV > 0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
+          </div>
+          {fin.beneficio > 0 && <span style={{fontSize:12,color:"#B87A3A",fontWeight:800}}>{fmt(fin.beneficio)} tuyo</span>}
         </div>
-        {fin.beneficio > 0 && <span style={{fontSize:12,color:"#B87A3A",fontWeight:800}}>{fmt(fin.beneficio)} tuyo</span>}
       </div>
+      {isConfirming && (
+        <div style={{display:"flex",gap:8,padding:"0 14px 12px"}}>
+          <button onClick={e => { e.stopPropagation(); onConfirmDelete(); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
+          <button onClick={e => { e.stopPropagation(); onCancelDelete(); }} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
+        </div>
+      )}
     </div>
   );
 }
@@ -612,17 +622,17 @@ function App() {
               <div>
                 <ColHdr label="Pasado" count={pasadas.length} color="#8a7a60"/>
                 {pasadas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-                {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+                {pasadas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} confirmDel={confirmDel} onRequestDelete={() => setConfirmDel(s.id)} onConfirmDelete={() => { setSes(p=>p.filter(x=>x.id!==s.id)); setConfirmDel(null); }} onCancelDelete={() => setConfirmDel(null)}/>)}
               </div>
               <div>
                 <ColHdr label="Próximo (≤14 días)" count={proximas.length} color="#B87A3A"/>
                 {proximas.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-                {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+                {proximas.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} confirmDel={confirmDel} onRequestDelete={() => setConfirmDel(s.id)} onConfirmDelete={() => { setSes(p=>p.filter(x=>x.id!==s.id)); setConfirmDel(null); }} onCancelDelete={() => setConfirmDel(null)}/>)}
               </div>
               <div>
                 <ColHdr label="Por venir" count={futuras.length} color="#424029"/>
                 {futuras.length === 0 && <div style={{fontSize:12,color:"#c8b890",textAlign:"center",padding:"16px 0"}}>—</div>}
-                {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }}/>)}
+                {futuras.map(s => <PipelineCard key={s.id} s={s} onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} confirmDel={confirmDel} onRequestDelete={() => setConfirmDel(s.id)} onConfirmDelete={() => { setSes(p=>p.filter(x=>x.id!==s.id)); setConfirmDel(null); }} onCancelDelete={() => setConfirmDel(null)}/>)}
               </div>
             </div>
           </div>
