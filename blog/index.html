@@ -31,12 +31,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .blog-title { font-size: clamp(36px, 5vw, 60px); font-weight: 800; color: var(--texto-claro); line-height: 1.1; letter-spacing: -0.03em; max-width: 600px; margin-bottom: 16px; }
   .blog-subtitle { font-size: 16px; color: var(--texto-sutil); line-height: 1.75; max-width: 600px; font-weight: 400; }
 
-  .cats-bar { background: var(--arena); border-bottom: 1px solid rgba(42,28,8,0.08); padding: 0 8vw; position: sticky; top: 64px; z-index: 40; }
-  .cats-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .cats-bar { background: var(--arena); border-bottom: 1px solid rgba(42,28,8,0.08); padding: 0 8vw; position: sticky; top: 64px; z-index: 40; display: flex; align-items: center; gap: 20px; }
+  .cats-inner { max-width: 1200px; margin: 0 auto 0 0; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
   .cats-inner::-webkit-scrollbar { display: none; }
   .cat-btn { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--texto-sutil); background: none; border: none; border-bottom: 2px solid transparent; padding: 16px 20px; cursor: pointer; white-space: nowrap; transition: color 0.2s, border-color 0.2s; }
   .cat-btn:hover { color: var(--texto-principal); }
   .cat-btn.active { color: var(--texto-principal); border-bottom-color: var(--ambar); }
+
+  .search-wrap { position: relative; flex: 0 0 auto; padding: 12px 0; }
+  .search-input { width: 220px; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--texto-principal); background: var(--arena-oscura); border: 1.5px solid transparent; border-radius: 100px; padding: 8px 14px 8px 34px; outline: none; transition: border-color 0.2s, width 0.2s; }
+  .search-input::placeholder { color: var(--texto-sutil); }
+  .search-input:focus { border-color: var(--ambar); width: 260px; }
+  .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; color: var(--texto-sutil); pointer-events: none; }
+
+  .blog-empty { display: none; text-align: center; padding: 48px 0; color: var(--texto-sutil); font-size: 14px; }
+  .blog-empty.visible { display: block; }
 
   .blog-grid-section { padding: 56px 8vw 96px; }
   .blog-grid-inner { max-width: 1200px; margin: 0 auto; }
@@ -77,7 +86,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   @media (max-width: 640px) {
     .blog-hero { padding: 80px 6vw 48px; min-height: auto; }
-    .cats-bar { padding: 0 6vw; }
+    .cats-bar { padding: 10px 6vw; flex-wrap: wrap; }
+    .cats-inner { order: 2; }
+    .search-wrap { order: 1; width: 100%; padding: 0 0 10px; }
+    .search-input { width: 100%; box-sizing: border-box; }
+    .search-input:focus { width: 100%; }
     .blog-grid-section { padding: 40px 6vw 72px; }
     .blog-grid { grid-template-columns: 1fr; gap: 40px; }
     .blog-card--featured { flex-direction: column; padding: 20px; }
@@ -134,6 +147,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="cat-btn" data-filter="presencia">Presencia</button>
     <button class="cat-btn" data-filter="lifestyle">Lifestyle</button>
     <button class="cat-btn" data-filter="instrumentos">Instrumentos</button>
+  </div>
+  <div class="search-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="search" id="blogSearch" class="search-input" placeholder="Buscar por palabra clave..." aria-label="Buscar artículos del blog">
   </div>
 </div>
 
@@ -668,6 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
 <!-- BLOG_CARDS_END -->
     </div>
+    <p class="blog-empty" id="blogEmpty">No se encontraron artículos para esa búsqueda.</p>
     <div class="blog-pagination" id="blogPagination"></div>
   </div>
 </section>
@@ -736,6 +754,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function () {
     var CARDS_PER_PAGE = 12;
     var currentFilter = 'todo';
+    var currentQuery = '';
     var currentPage = 1;
 
     var cards = Array.from(document.querySelectorAll('.blog-card'));
@@ -744,9 +763,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return (b.dataset.date || '').localeCompare(a.dataset.date || '');
     });
 
+    function normalize(str) {
+      return (str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '');
+    }
+
+    // Cache searchable text (title + excerpt + category) per card once.
+    sorted.forEach(function (c) {
+      var title = c.querySelector('.card-title');
+      var excerpt = c.querySelector('.card-excerpt');
+      var cat = c.querySelector('.card-cat');
+      c.dataset.search = normalize(
+        (title ? title.textContent : '') + ' ' +
+        (excerpt ? excerpt.textContent : '') + ' ' +
+        (cat ? cat.textContent : '')
+      );
+    });
+
     function getVisible() {
+      var q = normalize(currentQuery);
       return sorted.filter(function (c) {
-        return currentFilter === 'todo' || c.dataset.cat === currentFilter;
+        var matchesCat = currentFilter === 'todo' || c.dataset.cat === currentFilter;
+        var matchesQuery = !q || c.dataset.search.indexOf(q) !== -1;
+        return matchesCat && matchesQuery;
       });
     }
 
@@ -769,6 +810,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
 
+      document.getElementById('blogEmpty').classList.toggle('visible', visible.length === 0);
       renderPagination(totalPages);
     }
 
@@ -811,6 +853,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         currentPage = 1;
         render();
       });
+    });
+
+    var searchInput = document.getElementById('blogSearch');
+    var searchDebounce;
+    searchInput.addEventListener('input', function () {
+      clearTimeout(searchDebounce);
+      var value = searchInput.value;
+      searchDebounce = setTimeout(function () {
+        currentQuery = value;
+        currentPage = 1;
+        render();
+      }, 150);
     });
 
     render();
