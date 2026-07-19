@@ -76,14 +76,16 @@ function finanzas(s) {
   const gastos = parseFloat(s.gastos)||0;
   if (s.tipo === "donacion") {
     const don = parseFloat(s.donacion)||0;
-    const miParte = don*((s.splitPct||100)/100);
-    return { cobrado: don, pendiente: 0, total: don, miParte, gastos, beneficio: miParte-gastos };
+    const neto = don - gastos;
+    const beneficio = neto*((s.splitPct||100)/100);
+    return { cobrado: don, pendiente: 0, total: don, gastos, neto, beneficio };
   }
   const act = s.asistentes.filter(a => a.estado !== "no viene");
   const cobrado   = act.reduce((n,a) => n + cobradoAs(a,s), 0);
   const pendiente = act.reduce((n,a) => n + pendienteAs(a,s), 0);
-  const miParte = cobrado*(s.splitPct/100);
-  return { cobrado, pendiente, total: cobrado+pendiente, miParte, gastos, beneficio: miParte-gastos };
+  const neto = cobrado - gastos;
+  const beneficio = neto*(s.splitPct/100);
+  return { cobrado, pendiente, total: cobrado+pendiente, gastos, neto, beneficio };
 }
 
 const TIPOS_EVENTO = [
@@ -983,9 +985,9 @@ function App() {
                 <FR label="total cobrado"   value={fmt(fin.cobrado)}   bold/>
                 <FR label="aún pendiente"   value={fmt(fin.pendiente)}/>
                 <FR label="potencial total" value={fmt(fin.total)}/>
-                <FR label={`tu parte (${activa.splitPct}%)`} value={fmt(fin.miParte)}/>
                 {fin.gastos > 0 && <FR label="gastos" value={`− ${fmt(fin.gastos)}`}/>}
-                <FR label="beneficio neto" value={fmt(fin.beneficio)} bold/>
+                {fin.gastos > 0 && <FR label="neto a repartir" value={fmt(fin.neto)}/>}
+                <FR label={`tu parte (${activa.splitPct}%)`} value={fmt(fin.beneficio)} bold/>
               </div>
             </div>
           )}
