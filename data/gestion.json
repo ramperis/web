@@ -224,6 +224,12 @@
           "nombre": "Rose",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "ldwhjny",
+          "nombre": "Carla",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
