@@ -217,7 +217,7 @@
           "id": "p57koeo",
           "nombre": "Berna",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "ym60uf3",
@@ -229,7 +229,7 @@
           "id": "ldwhjny",
           "nombre": "Carla",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
