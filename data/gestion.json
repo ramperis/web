@@ -163,6 +163,12 @@
           "nombre": "Carolina Forero",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "0b7i12q",
+          "nombre": "María José",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
