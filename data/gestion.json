@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "0kgxo6a",
+      "nombre": "nueva sesión",
+      "fecha": "19/07/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "dgkadlo",
       "nombre": "Ice + Sounds bath",
       "fecha": "18/07/2026",
@@ -8,26 +20,62 @@
       "tipoEvento": "otro",
       "precioTotal": "35",
       "precioReserva": "15",
-      "splitPct": 50,
+      "splitPct": 60,
       "donacion": "",
       "asistentes": [
         {
           "id": "4f0t7a2",
           "nombre": "Andreina",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "mulf57p",
           "nombre": "Mayllelim",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "ntrdssv",
           "nombre": "Lucca",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
+        },
+        {
+          "id": "b0yof8o",
+          "nombre": "Raul",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "v4bn1oc",
+          "nombre": "Bettina",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "nkbma6s",
+          "nombre": "Barbara",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "csf25qa",
+          "nombre": "Inés",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "8nug68n",
+          "nombre": "Juan Pablo",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "kqs49jo",
+          "nombre": "Matej",
+          "qty": 1,
+          "estado": "completo"
         }
       ]
     },
@@ -120,6 +168,12 @@
           "nombre": "Ana Belén Rausell",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "xna28o5",
+          "nombre": "Carolina Forero",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
@@ -430,55 +484,55 @@
           "id": "w1lide3",
           "nombre": "Alba Díaz",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "2gjgu5x",
           "nombre": "Julieta Paiva",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "e6cm2sp",
           "nombre": "Andrea Dolza",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dsvd0zk",
           "nombre": "Larisa Klibanskaya",
-          "qty": 2,
-          "estado": "reserva"
+          "qty": 1,
+          "estado": "completo"
         },
         {
           "id": "0ehgab8",
           "nombre": "Ana Maria",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "te0yaue",
           "nombre": "Toni Bonet",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "nww05ul",
           "nombre": "Jesús Suero",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "st5dx9u",
           "nombre": "Soraya Salgado",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "bvy894l",
           "nombre": "Paula Mejías",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
@@ -734,7 +788,7 @@
           "id": "zrjhmvv",
           "nombre": "Flavia Cabrera",
           "x2": true,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "aobrour",
@@ -763,8 +817,8 @@
         {
           "id": "wt5up7x",
           "nombre": "Carolina Forero",
-          "qty": 2,
-          "estado": "reserva"
+          "qty": 1,
+          "estado": "no viene"
         },
         {
           "id": "hpa14u5",
@@ -781,6 +835,12 @@
         {
           "id": "6gb4y4x",
           "nombre": "María José Rechi",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "yxdonz5",
+          "nombre": "Alessia Ojeda",
           "qty": 2,
           "estado": "reserva"
         }
