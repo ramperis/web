@@ -73,14 +73,17 @@ function pendienteAs(a, s) {
   return 0;
 }
 function finanzas(s) {
+  const gastos = parseFloat(s.gastos)||0;
   if (s.tipo === "donacion") {
     const don = parseFloat(s.donacion)||0;
-    return { cobrado: don, pendiente: 0, total: don, miParte: don*((s.splitPct||100)/100) };
+    const miParte = don*((s.splitPct||100)/100);
+    return { cobrado: don, pendiente: 0, total: don, miParte, gastos, beneficio: miParte-gastos };
   }
   const act = s.asistentes.filter(a => a.estado !== "no viene");
   const cobrado   = act.reduce((n,a) => n + cobradoAs(a,s), 0);
   const pendiente = act.reduce((n,a) => n + pendienteAs(a,s), 0);
-  return { cobrado, pendiente, total: cobrado+pendiente, miParte: cobrado*(s.splitPct/100) };
+  const miParte = cobrado*(s.splitPct/100);
+  return { cobrado, pendiente, total: cobrado+pendiente, miParte, gastos, beneficio: miParte-gastos };
 }
 
 const TIPOS_EVENTO = [
@@ -227,7 +230,7 @@ function PipelineCard({ s, onClick }) {
           <Pill label={`${activos}/${total}`} color="#424029"/>
           {noV > 0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
         </div>
-        {fin.miParte > 0 && <span style={{fontSize:12,color:"#B87A3A",fontWeight:800}}>{fmt(fin.miParte)} tuyo</span>}
+        {fin.beneficio > 0 && <span style={{fontSize:12,color:"#B87A3A",fontWeight:800}}>{fmt(fin.beneficio)} tuyo</span>}
       </div>
     </div>
   );
@@ -353,7 +356,7 @@ function App() {
 
   // ── SESIONES ──────────────────────────────────────────────────────────────
   function nuevaSesion() {
-    const s = { id:genId(), nombre:"nueva sesión", fecha:today(), tipo:"precio", tipoEvento:"otro", precioTotal:"", precioReserva:"", splitPct:50, donacion:"", asistentes:[] };
+    const s = { id:genId(), nombre:"nueva sesión", fecha:today(), tipo:"precio", tipoEvento:"otro", precioTotal:"", precioReserva:"", splitPct:50, donacion:"", gastos:"", asistentes:[] };
     setSes(prev => [s, ...prev]);
     setActivaId(s.id); setConfig({...s}); setVista("config");
   }
@@ -390,7 +393,7 @@ function App() {
   function delAs(aid)               { upd(activaId, { asistentes: activa.asistentes.filter(a => a.id!==aid) }); }
   function renameAs(aid, nombre)    { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,nombre}:a) }); }
   function clonarSesion() {
-    const s = { ...activa, id:genId(), asistentes:[], donacion:"" };
+    const s = { ...activa, id:genId(), asistentes:[], donacion:"", gastos:"" };
     setSes(prev => [s, ...prev]);
     setActivaId(s.id); setConfig({...s}); setVista("config");
   }
@@ -527,10 +530,10 @@ function App() {
       const noV  = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
       if (!porMes[mes])  porMes[mes]  = { sesiones:0, asistentes:0, ingresos:0, miParte:0, noShows:0 };
       porMes[mes].sesiones++;  porMes[mes].asistentes += act;
-      porMes[mes].ingresos += fin.cobrado; porMes[mes].miParte += fin.miParte; porMes[mes].noShows += noV;
+      porMes[mes].ingresos += fin.cobrado; porMes[mes].miParte += fin.beneficio; porMes[mes].noShows += noV;
       if (!porTipo[tipo]) porTipo[tipo] = { sesiones:0, asistentes:0, ingresos:0, miParte:0 };
       porTipo[tipo].sesiones++; porTipo[tipo].asistentes += act;
-      porTipo[tipo].ingresos += fin.cobrado; porTipo[tipo].miParte += fin.miParte;
+      porTipo[tipo].ingresos += fin.cobrado; porTipo[tipo].miParte += fin.beneficio;
     });
     const mesesList = Object.keys(porMes).sort((a,b) => {
       const [ma,ya] = a.split(" "), [mb,yb] = b.split(" ");
@@ -542,14 +545,15 @@ function App() {
     sesiones.forEach(s => {
       const mes = getMes(s.fecha); const tipo = s.tipoEvento || inferTipoEvento(s.nombre);
       const fin = finanzas(s);
-      if (monthTypeData[mes]) { monthTypeData[mes][tipo] = (monthTypeData[mes][tipo]||0) + fin.cobrado; monthTypeMiP[mes][tipo] = (monthTypeMiP[mes][tipo]||0) + fin.miParte; }
+      if (monthTypeData[mes]) { monthTypeData[mes][tipo] = (monthTypeData[mes][tipo]||0) + fin.cobrado; monthTypeMiP[mes][tipo] = (monthTypeMiP[mes][tipo]||0) + fin.beneficio; }
     });
     const maxMesTotal = Math.max(...mesesList.map(mes => Object.values(monthTypeData[mes]||{}).reduce((a,b)=>a+b,0)), 1);
     const sesFiltradas = filtroMes ? sesiones.filter(s => getMes(s.fecha) === filtroMes) : sesiones;
     const totalSes  = sesFiltradas.length;
     const totalAsis = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado!=="no viene").reduce((m,a)=>m+(a.qty??(a.x2?2:1)),0), 0);
     const totalIng  = sesFiltradas.reduce((n,s) => n + finanzas(s).cobrado, 0);
-    const totalMiP  = sesFiltradas.reduce((n,s) => n + finanzas(s).miParte, 0);
+    const totalMiP  = sesFiltradas.reduce((n,s) => n + finanzas(s).beneficio, 0);
+    const totalGast = sesFiltradas.reduce((n,s) => n + finanzas(s).gastos, 0);
     const totalNoS  = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.qty??(a.x2?2:1)),0), 0);
     const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.miParte), 1);
     const maxIngTipo = Math.max(...Object.values(porTipo).map(t=>t.ingresos), 1);
@@ -642,12 +646,13 @@ function App() {
                     <button key={mes} onClick={()=>setFiltroMes(filtroMes===mes?null:mes)} style={{padding:"5px 12px",borderRadius:8,border:"none",background:filtroMes===mes?"#B87A3A":"#e8e0d0",color:filtroMes===mes?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>{mes}</button>
                   ))}
                 </div>
-                <div style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:12,marginBottom:28}}>
+                <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:12,marginBottom:28}}>
                   {[
                     {label:"Sesiones",  value:totalSes,            amber:false},
                     {label:"Asistentes",value:totalAsis,           amber:false},
                     {label:"Ingresos",  value:fmt(totalIng),       amber:true},
-                    {label:"Mi parte",  value:fmt(totalMiP),       amber:true},
+                    {label:"Gastos",    value:fmt(totalGast),      amber:false},
+                    {label:"Beneficio", value:fmt(totalMiP),       amber:true},
                     {label:"No-shows",  value:totalNoS,            amber:false},
                   ].map(({label,value,amber}) => (
                     <div key={label} style={{background:"#fff",borderRadius:12,padding:"14px 16px",border:"1.5px solid #e0d8c8"}}>
@@ -706,7 +711,7 @@ function App() {
                                 </div>
                                 <div style={{display:"flex",gap:16,alignItems:"center",flexShrink:0}}>
                                   <span style={{fontSize:11,color:"#8a7a60"}}>{act} asist.</span>
-                                  <span style={{fontSize:13,fontWeight:700,color:"#B87A3A"}}>{fmt(sf.miParte)}</span>
+                                  <span style={{fontSize:13,fontWeight:700,color:"#B87A3A"}}>{fmt(sf.beneficio)}</span>
                                 </div>
                               </div>
                             );
@@ -856,13 +861,13 @@ function App() {
                       {s.tipo === "donacion" && fin.cobrado>0 && (
                         <div style={{fontSize:12,marginTop:3}}>
                           <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} donación</span>
-                          <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
+                          <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.beneficio)} tuyo</span>
                         </div>
                       )}
                       {s.tipo !== "donacion" && s.precioTotal && fin.cobrado>0 && (
                         <div style={{fontSize:12,marginTop:3}}>
                           <span style={{color:"#424029",fontWeight:700}}>{fmt(fin.cobrado)} cobrado</span>
-                          <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.miParte)} tuyo</span>
+                          <span style={{color:"#B87A3A",fontWeight:700}}> · {fmt(fin.beneficio)} tuyo</span>
                         </div>
                       )}
                     </div>
@@ -951,7 +956,7 @@ function App() {
           </div>
           {(parseFloat(activa.donacion)||0) > 0 && (
             <div style={{marginTop:10,fontSize:13,color:"#c8b890"}}>
-              tuyo ({activa.splitPct}%): <span style={{color:"#F5F0E4",fontWeight:800}}>{fmt(fin.miParte)}</span>
+              tuyo ({activa.splitPct}%): <span style={{color:"#F5F0E4",fontWeight:800}}>{fmt(fin.beneficio)}</span>
             </div>
           )}
         </div>
@@ -961,7 +966,7 @@ function App() {
             <div>
               <div style={{fontSize:11,letterSpacing:1.5,textTransform:"uppercase",color:"#c8b890",fontWeight:800,marginBottom:2}}>ingresos</div>
               <div style={{fontSize:28,fontWeight:800,lineHeight:1}}>{fmt(fin.cobrado)}</div>
-              <div style={{fontSize:12,color:"#c8b890",marginTop:4}}>tuyo: <span style={{color:"#F5F0E4",fontWeight:800}}>{fmt(fin.miParte)}</span></div>
+              <div style={{fontSize:12,color:"#c8b890",marginTop:4}}>tuyo: <span style={{color:"#F5F0E4",fontWeight:800}}>{fmt(fin.beneficio)}</span></div>
             </div>
             <div style={{textAlign:"right"}}>
               <div style={{fontSize:11,color:"#c8b890",marginBottom:4}}>pendiente</div>
@@ -978,12 +983,33 @@ function App() {
                 <FR label="total cobrado"   value={fmt(fin.cobrado)}   bold/>
                 <FR label="aún pendiente"   value={fmt(fin.pendiente)}/>
                 <FR label="potencial total" value={fmt(fin.total)}/>
-                <FR label={`tu parte (${activa.splitPct}%)`} value={fmt(fin.miParte)} bold/>
+                <FR label={`tu parte (${activa.splitPct}%)`} value={fmt(fin.miParte)}/>
+                {fin.gastos > 0 && <FR label="gastos" value={`− ${fmt(fin.gastos)}`}/>}
+                <FR label="beneficio neto" value={fmt(fin.beneficio)} bold/>
               </div>
             </div>
           )}
         </div>
       )}
+
+      <div style={{margin:"10px 20px",background:"#fff",borderRadius:14,padding:"14px 16px",border:"1.5px solid #e0d8c8"}}>
+        <Lbl>gastos</Lbl>
+        <div style={{display:"flex",gap:10,alignItems:"center"}}>
+          <input
+            value={activa.gastos||""}
+            onChange={e => upd(activaId,{gastos:e.target.value})}
+            placeholder="0"
+            inputMode="decimal"
+            style={{...inp(),flex:1}}
+          />
+          <span style={{fontSize:16,color:"#8a7a60",fontWeight:700}}>€</span>
+        </div>
+        {(parseFloat(activa.gastos)||0) > 0 && (
+          <div style={{marginTop:10,fontSize:13,color:"#8a7a60"}}>
+            beneficio neto: <span style={{color:"#B87A3A",fontWeight:800}}>{fmt(fin.beneficio)}</span>
+          </div>
+        )}
+      </div>
 
       <div style={{padding:"12px 20px",borderBottom:"1px solid #e0d8c8",display:"flex",gap:8,alignItems:"center"}}>
         <input value={inputAs} onChange={e => setInputAs(e.target.value)} onKeyDown={e => { if(e.key==="Enter") addAs(); }} placeholder="nombre..." style={{...inp(),flex:1}}/>
