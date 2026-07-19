@@ -1,6 +1,18 @@
 {
   "sesiones": [
     {
+      "id": "0kgxo6a",
+      "nombre": "nueva sesión",
+      "fecha": "19/07/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": []
+    },
+    {
       "id": "dgkadlo",
       "nombre": "Ice + Sounds bath",
       "fecha": "18/07/2026",
