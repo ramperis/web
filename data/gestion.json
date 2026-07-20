@@ -281,12 +281,6 @@
           "nombre": "María José Rechi",
           "qty": 2,
           "estado": "reserva"
-        },
-        {
-          "id": "2j3ymzd",
-          "nombre": "Diana Carolina",
-          "qty": 3,
-          "estado": "pendiente"
         }
       ]
     },
