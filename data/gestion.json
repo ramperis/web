@@ -120,6 +120,12 @@
           "nombre": "Lorena Coronel",
           "qty": 4,
           "estado": "reserva"
+        },
+        {
+          "id": "14fyvu7",
+          "nombre": "Isabel Tonon",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
