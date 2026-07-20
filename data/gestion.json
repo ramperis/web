@@ -2,12 +2,12 @@
   "sesiones": [
     {
       "id": "3a33698",
-      "nombre": "Baño de Sonido SUP 01/08",
-      "fecha": "01/08/2026",
+      "nombre": "Baño de Sonido SUP 09/08",
+      "fecha": "09/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "30",
-      "precioReserva": "",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [],
