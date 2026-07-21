@@ -459,6 +459,12 @@
           "nombre": "Josue",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "hb2ev5q",
+          "nombre": "Christian",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
