@@ -213,6 +213,12 @@
           "id": "yz07few",
           "nombre": "Miriam Magid",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "w926wfq",
+          "nombre": "Marieke",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
