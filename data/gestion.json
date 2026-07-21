@@ -219,13 +219,13 @@
           "id": "w926wfq",
           "nombre": "Marieke",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "cfsa6i0",
           "nombre": "Alisi",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
