@@ -465,6 +465,12 @@
           "nombre": "Christian",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "y7m3arq",
+          "nombre": "Arturo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
