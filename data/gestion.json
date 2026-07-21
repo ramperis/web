@@ -458,25 +458,25 @@
           "id": "1ro75za",
           "nombre": "Josue",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "hb2ev5q",
           "nombre": "Christian",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "y7m3arq",
           "nombre": "Arturo",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "0b9b2ab",
           "nombre": "Luciano",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         }
       ]
     },
