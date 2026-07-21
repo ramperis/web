@@ -220,6 +220,12 @@
           "nombre": "Marieke",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "cfsa6i0",
+          "nombre": "Alisi",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
