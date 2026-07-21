@@ -208,6 +208,12 @@
           "nombre": "María José",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "yz07few",
+          "nombre": "Miriam Magid",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
