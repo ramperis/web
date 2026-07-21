@@ -471,6 +471,12 @@
           "nombre": "Arturo",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "0b9b2ab",
+          "nombre": "Luciano",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
