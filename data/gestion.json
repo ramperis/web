@@ -159,6 +159,12 @@
           "nombre": "Isabel Tonon",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "o8t9kzi",
+          "nombre": "Carolina Rosello",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
