@@ -226,6 +226,12 @@
           "nombre": "Alisi",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "yd42pv0",
+          "nombre": "Ema mil",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
