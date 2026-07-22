@@ -331,6 +331,12 @@
           "nombre": "María José Rechi",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "wbvt7gb",
+          "nombre": "Andre",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
