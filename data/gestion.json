@@ -1,15 +1,36 @@
 {
   "sesiones": [
     {
-      "id": "0kgxo6a",
+      "id": "3a33698",
+      "nombre": "Baño de Sonido SUP 09/08",
+      "fecha": "09/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "30",
+      "precioReserva": "10",
+      "splitPct": 50,
+      "donacion": "",
+      "asistentes": [
+        {
+          "id": "f7yzu8r",
+          "nombre": "Diana Carolina",
+          "qty": 3,
+          "estado": "pendiente"
+        }
+      ],
+      "gastos": ""
+    },
+    {
+      "id": "vag2wqb",
       "nombre": "nueva sesión",
-      "fecha": "19/07/2026",
+      "fecha": "20/07/2026",
       "tipo": "precio",
       "tipoEvento": "otro",
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
+      "gastos": "",
       "asistentes": []
     },
     {
@@ -131,7 +152,13 @@
           "id": "2bgevxh",
           "nombre": "Lorena Coronel",
           "qty": 4,
-          "estado": "pendiente"
+          "estado": "reserva"
+        },
+        {
+          "id": "14fyvu7",
+          "nombre": "Isabel Tonon",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -161,7 +188,7 @@
         {
           "id": "mmiwu99",
           "nombre": "Andrea Miguel",
-          "qty": 1,
+          "qty": 3,
           "estado": "reserva"
         },
         {
@@ -174,7 +201,49 @@
           "id": "xna28o5",
           "nombre": "Carolina Forero",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
+        },
+        {
+          "id": "0b7i12q",
+          "nombre": "María José",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "yz07few",
+          "nombre": "Miriam Magid",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "w926wfq",
+          "nombre": "Marieke",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "cfsa6i0",
+          "nombre": "Alisi",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "yd42pv0",
+          "nombre": "Ema mil",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "ya0qha0",
+          "nombre": "Rosa chenoll",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "lsynfw2",
+          "nombre": "Anna Marshall",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -223,7 +292,7 @@
           "id": "ym60uf3",
           "nombre": "Rose",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "no viene"
         },
         {
           "id": "ldwhjny",
@@ -262,7 +331,20 @@
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "1q05p6r",
+          "nombre": "María José Rechi",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "wbvt7gb",
+          "nombre": "Andre",
+          "qty": 2,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "mn2vl8t",
@@ -401,7 +483,38 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "1ro75za",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "hb2ev5q",
+          "nombre": "Christian",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "y7m3arq",
+          "nombre": "Arturo",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "0b9b2ab",
+          "nombre": "Luciano",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "siyc815",
+          "nombre": "Dani",
+          "qty": 1,
+          "estado": "confirmado"
+        }
+      ]
     },
     {
       "id": "xwkjbiy",
@@ -412,7 +525,7 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 100,
-      "donacion": "8",
+      "donacion": "18",
       "asistentes": [
         {
           "id": "b6j36oi",
@@ -795,7 +908,7 @@
           "id": "zrjhmvv",
           "nombre": "Flavia Cabrera",
           "x2": true,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "aobrour",
@@ -813,13 +926,13 @@
           "id": "oa9uh0a",
           "nombre": "Diana Carolina",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "mnwl9i4",
           "nombre": "María José",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "wt5up7x",
@@ -831,19 +944,19 @@
           "id": "hpa14u5",
           "nombre": "Gema Moruno",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "z63uhhl",
           "nombre": "Beatriz Villodre",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "6gb4y4x",
           "nombre": "María José Rechi",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "yxdonz5",
