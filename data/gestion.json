@@ -238,6 +238,12 @@
           "nombre": "Rosa chenoll",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "lsynfw2",
+          "nombre": "Anna Marshall",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
