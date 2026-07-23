@@ -355,6 +355,12 @@
           "nombre": "Andre",
           "qty": 2,
           "estado": "pendiente"
+        },
+        {
+          "id": "entb2nk",
+          "nombre": "Carolina Rosello",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
