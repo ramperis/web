@@ -123,7 +123,14 @@
       "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "f156ric",
+          "nombre": "Carolina Rosello",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "dmuz9ov",
