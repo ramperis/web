@@ -116,7 +116,7 @@
           "id": "hliecoe",
           "nombre": "Naira",
           "qty": 10,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
@@ -435,7 +435,7 @@
           "id": "tl5w9a8",
           "nombre": "karla nuñez",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
