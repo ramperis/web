@@ -111,7 +111,14 @@
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "hliecoe",
+          "nombre": "Naira",
+          "qty": 10,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "turu8oa",
