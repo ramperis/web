@@ -15,7 +15,7 @@
           "id": "f7yzu8r",
           "nombre": "Diana Carolina",
           "qty": 3,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ],
       "gastos": ""
@@ -128,7 +128,7 @@
           "id": "f156ric",
           "nombre": "Carolina Rosello",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
