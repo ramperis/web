@@ -251,7 +251,7 @@
           "id": "cfsa6i0",
           "nombre": "Alisi",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "yd42pv0",
@@ -269,7 +269,7 @@
           "id": "lsynfw2",
           "nombre": "Anna Marshall",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
