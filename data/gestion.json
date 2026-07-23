@@ -179,6 +179,12 @@
           "nombre": "Carolina Rosello",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "0vyo1dq",
+          "nombre": "Paolo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
