@@ -532,6 +532,12 @@
           "nombre": "Dani",
           "qty": 1,
           "estado": "confirmado"
+        },
+        {
+          "id": "9usog4q",
+          "nombre": "Matej",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
