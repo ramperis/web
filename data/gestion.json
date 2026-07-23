@@ -324,6 +324,12 @@
           "nombre": "Laura Peño",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "ni6rwpk",
+          "nombre": "Gema Moruno",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
