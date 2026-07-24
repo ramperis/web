@@ -6,8 +6,8 @@
       "fecha": "09/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
-      "precioTotal": "30",
-      "precioReserva": "10",
+      "precioTotal": "35",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -15,7 +15,9 @@
           "id": "f7yzu8r",
           "nombre": "Diana Carolina",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         }
       ],
       "gastos": ""
@@ -94,8 +96,8 @@
       "fecha": "01/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
-      "precioTotal": "30",
-      "precioReserva": "",
+      "precioTotal": "35",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -103,7 +105,9 @@
           "id": "hliecoe",
           "nombre": "Naira",
           "qty": 10,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": ""
         }
       ]
     },
@@ -113,8 +117,8 @@
       "fecha": "26/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
-      "precioTotal": "30",
-      "precioReserva": "10",
+      "precioTotal": "35",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -122,7 +126,9 @@
           "id": "f156ric",
           "nombre": "Carolina Rosello",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         }
       ]
     },
@@ -132,8 +138,8 @@
       "fecha": "12/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
-      "precioTotal": "30",
-      "precioReserva": "10",
+      "precioTotal": "35",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -141,37 +147,49 @@
           "id": "3xjco81",
           "nombre": "Noelia",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "onjtglt",
           "nombre": "BEATRIZ UREÑA BAÑULS",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "2bgevxh",
           "nombre": "Lorena Coronel",
           "qty": 4,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "14fyvu7",
           "nombre": "Isabel Tonon",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "o8t9kzi",
           "nombre": "Carolina Rosello",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "30",
+          "precioReserva": "10"
         }
       ]
     },
