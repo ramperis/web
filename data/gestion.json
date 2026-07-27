@@ -190,6 +190,12 @@
           "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
+        },
+        {
+          "id": "0wgqor6",
+          "nombre": "Noelia Benítez",
+          "qty": 4,
+          "estado": "pendiente"
         }
       ]
     },
