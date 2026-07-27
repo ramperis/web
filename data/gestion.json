@@ -195,6 +195,12 @@
           "id": "0wgqor6",
           "nombre": "Noelia Benítez",
           "qty": 4,
+          "estado": "reserva"
+        },
+        {
+          "id": "mp1kzn5",
+          "nombre": "Valen",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
