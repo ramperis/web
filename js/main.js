@@ -128,6 +128,7 @@
           const wrap  = document.createElement('a');
           wrap.className = 'evento';
           wrap.href = safeUrl(e.url);
+          if (e.completo) wrap.style.opacity = '0.6';
 
           const fecha = el('div', null, 'evento-fecha');
           fecha.appendChild(el('div', e.dia, 'evento-dia'));
@@ -142,7 +143,8 @@
             info.appendChild(p);
           }
 
-          const btn = el('span', 'Más info →', 'evento-btn');
+          const btn = el('span', e.completo ? 'Completo' : 'Más info →', 'evento-btn');
+          if (e.completo) btn.style.cssText = 'color:var(--texto-sutil);border-color:var(--texto-sutil)';
 
           wrap.appendChild(fecha);
           wrap.appendChild(info);
@@ -161,6 +163,7 @@
           outer.className = 'agenda-card';
           outer.href = safeUrl(e.url);
           outer.style.cssText = 'display:grid;grid-template-columns:72px 1fr;gap:0;border-radius:16px;overflow:hidden;background:var(--arena-oscura);text-decoration:none;cursor:pointer';
+          if (e.completo) outer.style.opacity = '0.6';
 
           const dateCol = el('div');
           dateCol.className = 'agenda-date-col';
@@ -192,8 +195,10 @@
             inner.appendChild(p3);
           }
 
-          const a = el('span', 'Ver →');
-          a.style.cssText = 'font-size:11px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:5px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0';
+          const a = el('span', e.completo ? 'Completo' : 'Ver →');
+          a.style.cssText = e.completo
+            ? 'font-size:11px;font-weight:600;color:var(--texto-sutil);border:1.5px solid var(--texto-sutil);padding:5px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0'
+            : 'font-size:11px;font-weight:600;color:var(--verde-oliva);border:1.5px solid var(--verde-oliva);padding:5px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0';
 
           body.appendChild(inner);
           body.appendChild(a);
