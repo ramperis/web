@@ -18,6 +18,12 @@
           "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
+        },
+        {
+          "id": "uuh9kxx",
+          "nombre": "Arantxa Ruiz",
+          "qty": 2,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
