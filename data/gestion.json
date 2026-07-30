@@ -12,14 +12,6 @@
       "donacion": "",
       "asistentes": [
         {
-          "id": "f7yzu8r",
-          "nombre": "Diana Carolina",
-          "qty": 3,
-          "estado": "reserva",
-          "precioTotal": "30",
-          "precioReserva": "10"
-        },
-        {
           "id": "uuh9kxx",
           "nombre": "Arantxa Ruiz",
           "qty": 2,
@@ -397,6 +389,12 @@
           "id": "wbvt7gb",
           "nombre": "Andre",
           "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "kpa35oe",
+          "nombre": "Diana Carolina",
+          "qty": 3,
           "estado": "reserva"
         }
       ]
