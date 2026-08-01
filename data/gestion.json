@@ -108,7 +108,7 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "15",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "asistentes": [
         {
@@ -571,13 +571,13 @@
           "id": "mghllau",
           "nombre": "Josue",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "gg8zjx7",
           "nombre": "Fernando",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         }
       ]
     },
