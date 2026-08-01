@@ -566,6 +566,12 @@
           "nombre": "Nicolás",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "mghllau",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
