@@ -560,6 +560,12 @@
           "nombre": "Lucia",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "gugebbb",
+          "nombre": "Nicolás",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
