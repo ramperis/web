@@ -536,7 +536,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "10",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "eh0zjr6",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "ou8asul",
