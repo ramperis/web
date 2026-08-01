@@ -548,6 +548,12 @@
           "nombre": "Matej",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "sskwm4m",
+          "nombre": "Arturo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
