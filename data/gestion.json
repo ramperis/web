@@ -572,6 +572,12 @@
           "nombre": "Josue",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "gg8zjx7",
+          "nombre": "Fernando",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
