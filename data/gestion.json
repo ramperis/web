@@ -28,6 +28,12 @@
           "nombre": "Pilar Ruiz",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "742eifa",
+          "nombre": "Beatriz Hortal",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
