@@ -445,19 +445,19 @@
           "id": "93juspx",
           "nombre": "Ibticem",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "wg7145f",
           "nombre": "Mateo Añibarro",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "0zfgvdw",
           "nombre": "Mireya Moreno",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "lygf914",
