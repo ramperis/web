@@ -34,6 +34,12 @@
           "nombre": "Beatriz Hortal",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "078kiv6",
+          "nombre": "Sara Fores",
+          "qty": 1,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
