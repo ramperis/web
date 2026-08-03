@@ -16,6 +16,36 @@
           "nombre": "Arantxa Ruiz",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "yi5dpbx",
+          "nombre": "Cristina Soler",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "9n7lqqv",
+          "nombre": "Pilar Ruiz",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "742eifa",
+          "nombre": "Beatriz Hortal",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "078kiv6",
+          "nombre": "Sara Fores",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "u42t0b2",
+          "nombre": "Marilina Vasquez",
+          "qty": 1,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
@@ -96,18 +126,19 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "15",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "asistentes": [
         {
           "id": "hliecoe",
           "nombre": "Naira",
           "qty": 10,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": ""
         }
-      ]
+      ],
+      "gastos": "105"
     },
     {
       "id": "turu8oa",
@@ -396,6 +427,12 @@
           "nombre": "Diana Carolina",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "ronzkxx",
+          "nombre": "Toya Sancho",
+          "qty": 2,
+          "estado": "reserva"
         }
       ]
     },
@@ -405,7 +442,7 @@
       "fecha": "02/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
-      "precioTotal": "35",
+      "precioTotal": "30",
       "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
@@ -414,55 +451,55 @@
           "id": "kx3l8lg",
           "nombre": "Sole Villanueva Tur",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "jy0h70s",
           "nombre": "Cecilia Gómez",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "93juspx",
           "nombre": "Ibticem",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "wg7145f",
           "nombre": "Mateo Añibarro",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "0zfgvdw",
           "nombre": "Mireya Moreno",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "lygf914",
           "nombre": "Neus Sanjuan",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "13ng83y",
           "nombre": "Silvia Giner",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "nmbuoge",
           "nombre": "Brunela Coratolo",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "tl5w9a8",
           "nombre": "karla nuñez",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
@@ -524,7 +561,50 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "10",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "eh0zjr6",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "ykfdjg6",
+          "nombre": "Matej",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "sskwm4m",
+          "nombre": "Arturo",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "7viuibr",
+          "nombre": "Lucia",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "gugebbb",
+          "nombre": "Nicolás",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "mghllau",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "gg8zjx7",
+          "nombre": "Fernando",
+          "qty": 1,
+          "estado": "confirmado"
+        }
+      ]
     },
     {
       "id": "ou8asul",
