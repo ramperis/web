@@ -40,6 +40,12 @@
           "nombre": "Sara Fores",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "u42t0b2",
+          "nombre": "Marilina Vasquez",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
