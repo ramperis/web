@@ -40,6 +40,12 @@
           "nombre": "María González",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "p5rxa1r",
+          "nombre": "Valeriia Petryshyna",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
