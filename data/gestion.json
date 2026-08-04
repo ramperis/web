@@ -139,7 +139,7 @@
           "id": "hliecoe",
           "nombre": "Naira",
           "qty": 10,
-          "estado": "completo",
+          "estado": "no viene",
           "precioTotal": "30",
           "precioReserva": ""
         }
