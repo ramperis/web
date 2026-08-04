@@ -450,6 +450,12 @@
           "id": "ambexys",
           "nombre": "Arantxa Ruiz",
           "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "mzgpao2",
+          "nombre": "Laura Peño",
+          "qty": 2,
           "estado": "pendiente"
         }
       ]
