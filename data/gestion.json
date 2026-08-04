@@ -164,6 +164,12 @@
           "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
+        },
+        {
+          "id": "ubma7rj",
+          "nombre": "Pilar Ruiz",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
@@ -456,7 +462,7 @@
           "id": "mzgpao2",
           "nombre": "Laura Peño",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
