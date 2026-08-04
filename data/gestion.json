@@ -439,6 +439,12 @@
           "nombre": "Toya Sancho",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "qh6j3jk",
+          "nombre": "Alessia Ojeda",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
