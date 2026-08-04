@@ -402,6 +402,12 @@
           "nombre": "Gema Moruno",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "f3012mm",
+          "nombre": "Monica Aragon",
+          "qty": 7,
+          "estado": "pendiente"
         }
       ]
     },
