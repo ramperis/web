@@ -46,6 +46,12 @@
           "nombre": "Valeriia Petryshyna",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "7zsy6bz",
+          "nombre": "Eva Sahuquillo",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
