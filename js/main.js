@@ -221,7 +221,7 @@
   banner.target = '_blank';
   banner.rel = 'noopener noreferrer sponsored';
   banner.className = 'mth-banner-sidebar';
-  banner.innerHTML = '<div class="mth-bg-s"></div><div class="mth-overlay-s"></div><img src="/img/masterthehandpan-logo.svg" alt="MasterTheHandpan" class="mth-logo-s"><div class="mth-divider"></div><div class="mth-badge">14 días gratis</div><div class="mth-headline-s">Aprende con los mejores del mundo</div><div class="mth-code-s">Código "RAM" · 10% descuento</div><div class="mth-sub-s">+33 cursos · cámara cenital · comunidad activa</div><span class="mth-btn-s">Empezar gratis →</span>';
+  banner.innerHTML = '<div class="mth-bg-s"></div><div class="mth-overlay-s"></div><img src="/img/masterthehandpan-logo.svg" alt="MasterTheHandpan" class="mth-logo-s"><div class="mth-divider"></div><div class="mth-badge">14 días gratis</div><div class="mth-headline-s">Aprende handpan con los mejores del mundo</div><div class="mth-code-s">Código "RAM" · 10% descuento</div><div class="mth-sub-s">+33 cursos · cámara cenital · comunidad activa</div><span class="mth-btn-s">Empezar gratis →</span>';
   sidebar.insertBefore(banner, sidebar.firstChild);
 })();
 
