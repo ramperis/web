@@ -215,7 +215,7 @@
   var cat = document.querySelector('.post-cat');
   if (!cat || cat.textContent.trim() !== 'Instrumentos') return;
   var sidebar = document.querySelector('.post-sidebar');
-  if (!sidebar) return;
+  if (!sidebar || sidebar.hasAttribute('data-no-mth')) return;
   var banner = document.createElement('a');
   banner.href = 'https://www.masterthehandpan.com/?via=ram';
   banner.target = '_blank';
