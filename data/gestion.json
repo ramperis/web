@@ -7,7 +7,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "10",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -71,13 +71,17 @@
           "id": "ijvi8tx",
           "nombre": "Alba Rodríguez",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "2pjczuh",
           "nombre": "Alba Ruiz",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "pendiente",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ],
       "gastos": ""
@@ -179,7 +183,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "10",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -208,7 +212,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "10",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -417,7 +421,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "10",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -446,7 +450,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "10",
+      "precioReserva": "15",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
