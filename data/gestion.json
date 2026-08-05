@@ -66,6 +66,12 @@
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
+        },
+        {
+          "id": "ijvi8tx",
+          "nombre": "Alba Rodríguez",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
