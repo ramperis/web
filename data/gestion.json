@@ -46,6 +46,12 @@
           "nombre": "Valeriia Petryshyna",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "7zsy6bz",
+          "nombre": "Eva Sahuquillo",
+          "qty": 2,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
@@ -205,14 +211,6 @@
         {
           "id": "14fyvu7",
           "nombre": "Isabel Tonon",
-          "qty": 1,
-          "estado": "reserva",
-          "precioTotal": "30",
-          "precioReserva": "10"
-        },
-        {
-          "id": "o8t9kzi",
-          "nombre": "Carolina Rosello",
           "qty": 1,
           "estado": "reserva",
           "precioTotal": "30",
@@ -606,15 +604,15 @@
         },
         {
           "id": "7viuibr",
-          "nombre": "Lucia",
+          "nombre": "Luciano",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "no viene"
         },
         {
           "id": "gugebbb",
           "nombre": "Nicolás",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "no viene"
         },
         {
           "id": "mghllau",
@@ -626,7 +624,13 @@
           "id": "gg8zjx7",
           "nombre": "Fernando",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "no viene"
+        },
+        {
+          "id": "tbijiik",
+          "nombre": "Ivan",
+          "qty": 1,
+          "estado": "no viene"
         }
       ]
     },
