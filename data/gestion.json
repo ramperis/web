@@ -627,6 +627,12 @@
           "nombre": "Fernando",
           "qty": 1,
           "estado": "confirmado"
+        },
+        {
+          "id": "tbijiik",
+          "nombre": "Ivan",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
