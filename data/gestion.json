@@ -632,7 +632,7 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 100,
-      "donacion": "10",
+      "donacion": "50",
       "asistentes": [
         {
           "id": "eh0zjr6",
@@ -668,7 +668,7 @@
           "id": "mghllau",
           "nombre": "Josue",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "gg8zjx7",
