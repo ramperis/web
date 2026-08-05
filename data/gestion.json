@@ -72,6 +72,12 @@
           "nombre": "Alba Rodríguez",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "2pjczuh",
+          "nombre": "Alba Ruiz",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
