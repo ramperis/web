@@ -7,7 +7,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -15,43 +15,57 @@
           "id": "yi5dpbx",
           "nombre": "Cristina Soler",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "742eifa",
           "nombre": "Beatriz Hortal",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "078kiv6",
           "nombre": "Sara Fores",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "u42t0b2",
           "nombre": "Marilina Vasquez",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "onfe3po",
           "nombre": "María González",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "p5rxa1r",
           "nombre": "Valeriia Petryshyna",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "7zsy6bz",
           "nombre": "Eva Sahuquillo",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ],
       "gastos": ""
@@ -153,7 +167,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -169,7 +183,9 @@
           "id": "ubma7rj",
           "nombre": "Pilar Ruiz",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ]
     },
@@ -180,7 +196,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -228,13 +244,17 @@
           "id": "0wgqor6",
           "nombre": "Noelia Benítez",
           "qty": 4,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "mp1kzn5",
           "nombre": "Valen",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ]
     },
@@ -385,7 +405,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -393,13 +413,17 @@
           "id": "ni6rwpk",
           "nombre": "Gema Moruno",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "f3012mm",
           "nombre": "Monica Aragon",
           "qty": 7,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ]
     },
@@ -410,7 +434,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "asistentes": [
@@ -418,43 +442,57 @@
           "id": "1q05p6r",
           "nombre": "María José Rechi",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "wbvt7gb",
           "nombre": "Andre",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "kpa35oe",
           "nombre": "Diana Carolina",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "ronzkxx",
           "nombre": "Toya Sancho",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "qh6j3jk",
           "nombre": "Alessia Ojeda",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "ambexys",
           "nombre": "Arantxa Ruiz",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         },
         {
           "id": "mzgpao2",
           "nombre": "Laura Peño",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ]
     },
