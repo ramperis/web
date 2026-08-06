@@ -68,20 +68,18 @@
           "precioReserva": "15"
         },
         {
-          "id": "ijvi8tx",
-          "nombre": "Alba Rodríguez",
-          "qty": 1,
+          "id": "2pjczuh",
+          "nombre": "Alba Ruiz",
+          "qty": 2,
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
         },
         {
-          "id": "2pjczuh",
-          "nombre": "Alba Ruiz",
-          "qty": 2,
-          "estado": "pendiente",
-          "precioTotal": "35",
-          "precioReserva": "15"
+          "id": "spucm7j",
+          "nombre": "Eva Krisova",
+          "qty": 1,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
@@ -515,6 +513,12 @@
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
+        },
+        {
+          "id": "mpukti9",
+          "nombre": "Alba Rodríguez",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
