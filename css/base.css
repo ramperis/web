@@ -968,7 +968,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 }
 .mth-banner-inline .mth-bg {
   position: absolute; inset: 0; background-size: cover;
-  background-image: url('/img/banner-handpan-bg.jpg');
+  background-image: url('/img/banner-handpan-bg.webp');
   background-position: center 65%;
 }
 .mth-banner-inline .mth-overlay {
@@ -1003,7 +1003,7 @@ footer { background: var(--tierra-noche); padding: 56px 8vw 40px; }
 }
 .mth-bg-s {
   position: absolute; inset: 0; background-size: cover;
-  background-image: url('/img/banner-handpan-bg-sm.jpg');
+  background-image: url('/img/banner-handpan-bg-sm.webp');
   background-position: center 70%;
 }
 .mth-overlay-s {
