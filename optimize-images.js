@@ -52,14 +52,6 @@ async function main() {
   const totalBefore = results.reduce((n, r) => n + r.beforeSize, 0);
   const totalAfter = results.reduce((n, r) => n + r.afterSize, 0);
   console.log(`\n${results.length} imágenes convertidas. ${(totalBefore / 1024 / 1024).toFixed(1)}MB -> ${(totalAfter / 1024 / 1024).toFixed(1)}MB`);
-
-  fs.writeFileSync(
-    path.join(__dirname, 'optimize-images.rename-map.json'),
-    JSON.stringify(results.map(r => ({
-      from: path.relative(__dirname, r.from).replace(/\\/g, '/'),
-      to: path.relative(__dirname, r.to).replace(/\\/g, '/'),
-    })), null, 2)
-  );
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
