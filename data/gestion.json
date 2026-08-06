@@ -79,7 +79,7 @@
           "id": "2pjczuh",
           "nombre": "Alba Ruiz",
           "qty": 2,
-          "estado": "pendiente",
+          "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -87,7 +87,7 @@
           "id": "spucm7j",
           "nombre": "Eva Krisova",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ],
       "gastos": ""
