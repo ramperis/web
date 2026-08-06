@@ -82,6 +82,12 @@
           "estado": "pendiente",
           "precioTotal": "35",
           "precioReserva": "15"
+        },
+        {
+          "id": "spucm7j",
+          "nombre": "Eva Krisova",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ],
       "gastos": ""
