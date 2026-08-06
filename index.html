@@ -461,14 +461,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 <script src="js/main.js"></script>
-<script type="module" src="https://w.behold.so/widget.js" defer></script>
 <script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var placeholder = document.getElementById('ig-placeholder');
-      if (placeholder) placeholder.style.display = 'none';
-    }, 800);
-  });
+  (function() {
+    var widgetWrap = document.querySelector('.ig-widget-wrap');
+    if (!widgetWrap) return;
+
+    function loadBeholdWidget() {
+      var script = document.createElement('script');
+      script.type = 'module';
+      script.src = 'https://w.behold.so/widget.js';
+      document.body.appendChild(script);
+      setTimeout(function() {
+        var placeholder = document.getElementById('ig-placeholder');
+        if (placeholder) placeholder.style.display = 'none';
+      }, 800);
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          loadBeholdWidget();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    observer.observe(widgetWrap);
+  })();
 </script>
 <script src="/js/cookie-banner.js"></script>
 </body>
