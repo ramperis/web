@@ -513,6 +513,12 @@
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
+        },
+        {
+          "id": "mpukti9",
+          "nombre": "Alba Rodríguez",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
