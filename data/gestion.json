@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "tpxs91n",
+      "nombre": "nueva sesión",
+      "fecha": "07/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "3a33698",
       "nombre": "Baño de Sonido SUP 09/08",
       "fecha": "09/08/2026",
