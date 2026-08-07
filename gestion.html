@@ -72,6 +72,13 @@ function pendienteAs(a, s) {
   if (a.estado === "pendiente") return pt * p;
   return 0;
 }
+function beneficioAs(a, s) {
+  const p = a.qty??(a.qty??(a.x2?2:1));
+  if (a.estado === "completo" && a.miParte !== undefined && a.miParte !== "") {
+    return (parseFloat(a.miParte)||0) * p;
+  }
+  return cobradoAs(a, s) * ((s.splitPct||0)/100);
+}
 function finanzas(s) {
   const gastos = parseFloat(s.gastos)||0;
   if (s.tipo === "donacion") {
@@ -84,7 +91,7 @@ function finanzas(s) {
   const cobrado   = act.reduce((n,a) => n + cobradoAs(a,s), 0);
   const pendiente = act.reduce((n,a) => n + pendienteAs(a,s), 0);
   const neto = cobrado - gastos;
-  const beneficio = neto*(s.splitPct/100);
+  const beneficio = act.reduce((n,a) => n + beneficioAs(a,s), 0) - gastos;
   return { cobrado, pendiente, total: cobrado+pendiente, gastos, neto, beneficio };
 }
 

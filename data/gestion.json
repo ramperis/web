@@ -28,7 +28,7 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "10",
-      "splitPct": 50,
+      "splitPct": 57.14,
       "donacion": "",
       "asistentes": [
         {
@@ -208,7 +208,7 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "10",
-      "splitPct": 50,
+      "splitPct": 57.14,
       "donacion": "",
       "asistentes": [
         {
@@ -217,7 +217,8 @@
           "qty": 2,
           "estado": "reserva",
           "precioTotal": "30",
-          "precioReserva": "10"
+          "precioReserva": "10",
+          "miParte": "15"
         },
         {
           "id": "ubma7rj",
@@ -243,7 +244,7 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "10",
-      "splitPct": 50,
+      "splitPct": 57.14,
       "donacion": "",
       "asistentes": [
         {
@@ -252,7 +253,8 @@
           "qty": 2,
           "estado": "reserva",
           "precioTotal": "30",
-          "precioReserva": "10"
+          "precioReserva": "10",
+          "miParte": "15"
         },
         {
           "id": "onjtglt",
@@ -260,7 +262,8 @@
           "qty": 2,
           "estado": "reserva",
           "precioTotal": "30",
-          "precioReserva": "10"
+          "precioReserva": "10",
+          "miParte": "15"
         },
         {
           "id": "2bgevxh",
@@ -268,7 +271,8 @@
           "qty": 4,
           "estado": "reserva",
           "precioTotal": "30",
-          "precioReserva": "10"
+          "precioReserva": "10",
+          "miParte": "15"
         },
         {
           "id": "14fyvu7",
@@ -276,7 +280,8 @@
           "qty": 1,
           "estado": "reserva",
           "precioTotal": "30",
-          "precioReserva": "10"
+          "precioReserva": "10",
+          "miParte": "15"
         },
         {
           "id": "0vyo1dq",
@@ -284,7 +289,8 @@
           "qty": 1,
           "estado": "reserva",
           "precioTotal": "30",
-          "precioReserva": "10"
+          "precioReserva": "10",
+          "miParte": "15"
         },
         {
           "id": "0wgqor6",
@@ -458,7 +464,7 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "10",
-      "splitPct": 50,
+      "splitPct": 57.14,
       "donacion": "",
       "asistentes": [
         {
@@ -487,7 +493,7 @@
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
       "precioReserva": "10",
-      "splitPct": 50,
+      "splitPct": 57.14,
       "donacion": "",
       "asistentes": [
         {
