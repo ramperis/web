@@ -11,7 +11,14 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "pjxk2nl",
+          "nombre": "Valentyna",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "3a33698",
