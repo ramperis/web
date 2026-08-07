@@ -206,6 +206,12 @@
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
+        },
+        {
+          "id": "o8f0908",
+          "nombre": "Yolanda Gomis",
+          "qty": 3,
+          "estado": "reserva"
         }
       ]
     },
