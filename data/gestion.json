@@ -51,7 +51,7 @@
           "id": "078kiv6",
           "nombre": "Sara Fores",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -59,7 +59,7 @@
           "id": "u42t0b2",
           "nombre": "Marilina Vasquez",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
