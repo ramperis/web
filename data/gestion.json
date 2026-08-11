@@ -251,7 +251,7 @@
           "id": "3xjco81",
           "nombre": "Noelia",
           "qty": 2,
-          "estado": "completo",
+          "estado": "no viene",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -260,7 +260,7 @@
           "id": "onjtglt",
           "nombre": "BEATRIZ UREÑA BAÑULS",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "no viene",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -269,7 +269,7 @@
           "id": "2bgevxh",
           "nombre": "Lorena Coronel",
           "qty": 4,
-          "estado": "reserva",
+          "estado": "no viene",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -278,7 +278,7 @@
           "id": "14fyvu7",
           "nombre": "Isabel Tonon",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "no viene",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -287,7 +287,7 @@
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "no viene",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -296,7 +296,7 @@
           "id": "0wgqor6",
           "nombre": "Noelia Benítez",
           "qty": 4,
-          "estado": "reserva",
+          "estado": "no viene",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -304,7 +304,7 @@
           "id": "mp1kzn5",
           "nombre": "Valen",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "no viene",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -312,7 +312,7 @@
           "id": "nveme7d",
           "nombre": "Sarah madero",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "no viene"
         }
       ]
     },
