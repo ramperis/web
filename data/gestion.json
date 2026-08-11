@@ -233,6 +233,12 @@
           "nombre": "Yolanda Gomis",
           "qty": 3,
           "estado": "reserva"
+        },
+        {
+          "id": "o068l9a",
+          "nombre": "Paolo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
@@ -312,7 +318,7 @@
           "id": "nveme7d",
           "nombre": "Sarah madero",
           "qty": 1,
-          "estado": "completo"
+          "estado": "no viene"
         }
       ]
     },
