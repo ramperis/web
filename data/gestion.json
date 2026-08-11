@@ -482,6 +482,12 @@
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
+        },
+        {
+          "id": "lj8d8cy",
+          "nombre": "Sarah madero",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
