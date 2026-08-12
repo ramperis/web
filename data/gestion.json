@@ -17,6 +17,12 @@
           "nombre": "Valentyna",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "w1dvx1n",
+          "nombre": "Noe",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
