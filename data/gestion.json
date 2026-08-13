@@ -219,7 +219,8 @@
           "precioReserva": ""
         }
       ],
-      "gastos": "105"
+      "gastos": "105",
+      "estadoSesion": "cancelada"
     },
     {
       "id": "turu8oa",
