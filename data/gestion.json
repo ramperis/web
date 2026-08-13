@@ -325,12 +325,6 @@
           "estado": "no viene",
           "precioTotal": "35",
           "precioReserva": "15"
-        },
-        {
-          "id": "nveme7d",
-          "nombre": "Sarah madero",
-          "qty": 1,
-          "estado": "no viene"
         }
       ]
     },
@@ -506,6 +500,12 @@
           "nombre": "Sarah madero",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "nveme7d",
+          "nombre": "Sarah madero",
+          "qty": 1,
+          "estado": "no viene"
         }
       ]
     },
