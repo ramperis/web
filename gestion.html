@@ -80,6 +80,9 @@ function beneficioAs(a, s) {
   return cobradoAs(a, s) * ((s.splitPct||0)/100);
 }
 function finanzas(s) {
+  if (s.estadoSesion === "cancelada") {
+    return { cobrado: 0, pendiente: 0, total: 0, gastos: 0, neto: 0, beneficio: 0 };
+  }
   const gastos = parseFloat(s.gastos)||0;
   if (s.tipo === "donacion") {
     const don = parseFloat(s.donacion)||0;
@@ -159,10 +162,12 @@ function Lbl({children}) {
   return <div style={{fontSize:11,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#B87A3A",marginBottom:6}}>{children}</div>;
 }
 
-function AsRow({a, s, onCycle, onSet, onSetQty, onDel, onRename}) {
+function AsRow({a, s, sesiones, onCycle, onSet, onSetQty, onDel, onRename, onMove}) {
   const [open, setOpen] = useState(false);
   const [editingName, setEditingName] = useState(false);
   const [tmpName, setTmpName] = useState("");
+  const [moving, setMoving] = useState(false);
+  const [moveTarget, setMoveTarget] = useState("");
   const col       = COLOR[a.estado] || COLOR["pendiente"];
   const cobrado   = cobradoAs(a, s);
   const pendiente = pendienteAs(a, s);
@@ -201,6 +206,18 @@ function AsRow({a, s, onCycle, onSet, onSetQty, onDel, onRename}) {
                 <button onClick={()=>{ if(tmpName.trim()) onRename(tmpName.trim()); setEditingName(false); }} style={bsm("#B87A3A","#F5F0E4")}>guardar</button>
                 <button onClick={()=>setEditingName(false)} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
               </div>
+            : moving
+            ? <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
+                <select autoFocus value={moveTarget} onChange={e=>setMoveTarget(e.target.value)}
+                  style={{flex:1,minWidth:160,fontSize:13,fontWeight:700,padding:"8px 10px",borderRadius:8,border:"1.5px solid #B87A3A",outline:"none",fontFamily:"'Nunito',sans-serif",color:"#2E2010",background:"#fff"}}>
+                  <option value="">elige sesión destino...</option>
+                  {(sesiones||[]).filter(ss=>ss.id!==s.id).sort((x,y)=>parseFecha(x.fecha)-parseFecha(y.fecha)).map(ss=>(
+                    <option key={ss.id} value={ss.id}>{ss.nombre} · {ss.fecha}</option>
+                  ))}
+                </select>
+                <button onClick={()=>{ if(moveTarget){ onMove(moveTarget); setMoving(false); setOpen(false); } }} disabled={!moveTarget} style={bsm(moveTarget?"#B87A3A":"#e0d8c8",moveTarget?"#F5F0E4":"#a09080")}>mover</button>
+                <button onClick={()=>{ setMoving(false); setMoveTarget(""); }} style={bsm("#e0d8c8","#2E2010")}>cancelar</button>
+              </div>
             : <div style={{display:"flex",gap:8,flexWrap:"wrap",alignItems:"center"}}>
                 {listaEstados.map(e => (
                   <button key={e} onClick={() => { onSet(e); setOpen(false); }} style={{...bsm(a.estado===e?COLOR[e].bg:"#F5F0E4",a.estado===e?COLOR[e].text:"#2E2010"),border:`1.5px solid ${a.estado===e?COLOR[e].border:"#e0d8c8"}`}}>
@@ -215,6 +232,7 @@ function AsRow({a, s, onCycle, onSet, onSetQty, onDel, onRename}) {
                   </div>
                 )}
                 <button onClick={() => { setEditingName(true); setTmpName(a.nombre); }} style={bsm("#e8e0d0","#2E2010")}>editar</button>
+                <button onClick={() => setMoving(true)} style={bsm("#e8e0d0","#2E2010")}>mover</button>
                 <button onClick={() => { onDel(); setOpen(false); }} style={bsm("#2E2010","#F5F0E4")}>eliminar</button>
               </div>
           }
@@ -231,16 +249,19 @@ function PipelineCard({ s, onClick, confirmDel, onRequestDelete, onConfirmDelete
   const total   = s.asistentes.reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
   const noV     = s.asistentes.filter(a => a.estado === "no viene").reduce((n,a) => n+(a.qty??(a.x2?2:1)), 0);
   const isConfirming = confirmDel === s.id;
+  const cancelada = s.estadoSesion === "cancelada";
   return (
-    <div style={{background:"#fff",borderRadius:12,border:"1.5px solid #e0d8c8",marginBottom:8,overflow:"hidden"}}>
+    <div style={{background:"#fff",borderRadius:12,border:`1.5px solid ${cancelada?"#d9c8c0":"#e0d8c8"}`,marginBottom:8,overflow:"hidden",opacity:cancelada?0.6:1}}>
       <div onClick={onClick} style={{padding:"12px 14px",cursor:"pointer",position:"relative"}}>
         <button onClick={e => { e.stopPropagation(); onRequestDelete(); }} title="Eliminar sesión" style={{position:"absolute",top:8,right:8,background:"none",border:"none",color:"#c0a880",fontSize:14,cursor:"pointer",padding:4,lineHeight:1}}>✕</button>
-        <div style={{fontWeight:800,fontSize:14,marginBottom:2,color:"#2E2010",paddingRight:18}}>{s.nombre}</div>
+        <div style={{fontWeight:800,fontSize:14,marginBottom:2,color:"#2E2010",paddingRight:18,textDecoration:cancelada?"line-through":"none"}}>{s.nombre}</div>
         <div style={{fontSize:11,color:"#8a7a60",marginBottom:8}}>{s.fecha}</div>
         <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:6}}>
           <div style={{display:"flex",gap:4}}>
             <Pill label={`${activos}/${total}`} color="#424029"/>
             {noV > 0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
+            {cancelada && <Pill label="Cancelada" color="#8a3a3a"/>}
+            {s.estadoSesion === "hecha" && <Pill label="✓ Hecha" color="#424029"/>}
           </div>
           {fin.beneficio > 0 && <span style={{fontSize:12,color:"#B87A3A",fontWeight:800}}>{fmt(fin.beneficio)} tuyo</span>}
         </div>
@@ -411,6 +432,18 @@ function App() {
   function setQtyAs(aid, qty)       { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,qty:Math.max(1,qty)}:a) }); }
   function delAs(aid)               { upd(activaId, { asistentes: activa.asistentes.filter(a => a.id!==aid) }); }
   function renameAs(aid, nombre)    { upd(activaId, { asistentes: activa.asistentes.map(a => a.id===aid?{...a,nombre}:a) }); }
+  function moverAs(aid, targetId) {
+    setSes(prev => {
+      const origen = prev.find(s => s.id === activaId);
+      const asistente = origen && origen.asistentes.find(a => a.id === aid);
+      if (!asistente) return prev;
+      return prev.map(s => {
+        if (s.id === activaId) return {...s, asistentes: s.asistentes.filter(a => a.id !== aid)};
+        if (s.id === targetId) return {...s, asistentes: [...s.asistentes, asistente]};
+        return s;
+      });
+    });
+  }
   function clonarSesion() {
     const s = { ...activa, id:genId(), asistentes:[], donacion:"", gastos:"" };
     setSes(prev => [s, ...prev]);
@@ -574,6 +607,7 @@ function App() {
     const totalMiP  = sesFiltradas.reduce((n,s) => n + finanzas(s).beneficio, 0);
     const totalGast = sesFiltradas.reduce((n,s) => n + finanzas(s).gastos, 0);
     const totalNoS  = sesFiltradas.reduce((n,s) => n + s.asistentes.filter(a=>a.estado==="no viene").reduce((m,a)=>m+(a.qty??(a.x2?2:1)),0), 0);
+    const totalCancel = sesFiltradas.filter(s => s.estadoSesion === "cancelada").length;
     const maxIngMes  = Math.max(...Object.values(porMes).map(m=>m.miParte), 1);
     const maxIngTipo = Math.max(...Object.values(porTipo).map(t=>t.ingresos), 1);
     const Bar = ({val, max, color="#B87A3A"}) => (
@@ -665,7 +699,7 @@ function App() {
                     <button key={mes} onClick={()=>setFiltroMes(filtroMes===mes?null:mes)} style={{padding:"5px 12px",borderRadius:8,border:"none",background:filtroMes===mes?"#B87A3A":"#e8e0d0",color:filtroMes===mes?"#F5F0E4":"#8a7a60",fontWeight:700,fontSize:12,cursor:"pointer",fontFamily:"'Nunito',sans-serif"}}>{mes}</button>
                   ))}
                 </div>
-                <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:12,marginBottom:28}}>
+                <div style={{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:12,marginBottom:28}}>
                   {[
                     {label:"Sesiones",  value:totalSes,            amber:false},
                     {label:"Asistentes",value:totalAsis,           amber:false},
@@ -673,6 +707,7 @@ function App() {
                     {label:"Gastos",    value:fmt(totalGast),      amber:false},
                     {label:"Beneficio", value:fmt(totalMiP),       amber:true},
                     {label:"No-shows",  value:totalNoS,            amber:false},
+                    {label:"Canceladas",value:totalCancel,         amber:false},
                   ].map(({label,value,amber}) => (
                     <div key={label} style={{background:"#fff",borderRadius:12,padding:"14px 16px",border:"1.5px solid #e0d8c8"}}>
                       <div style={{fontSize:10,letterSpacing:1.2,textTransform:"uppercase",fontWeight:800,color:"#8a7a60",marginBottom:6}}>{label}</div>
@@ -873,9 +908,9 @@ function App() {
                   </div>
                 )}
                 <div style={{marginBottom:10}}>
-                  <div onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} style={{background:"#fff",borderRadius:14,padding:"14px 16px",cursor:"pointer",border:`1.5px solid ${isPast?"#ede8e0":"#e0d8c8"}`,display:"flex",alignItems:"center",justifyContent:"space-between",gap:12,opacity:isPast?0.75:1}}>
+                  <div onClick={() => { setActivaId(s.id); setVista("sesion"); setReporte(false); }} style={{background:"#fff",borderRadius:14,padding:"14px 16px",cursor:"pointer",border:`1.5px solid ${isPast?"#ede8e0":"#e0d8c8"}`,display:"flex",alignItems:"center",justifyContent:"space-between",gap:12,opacity:isPast||s.estadoSesion==="cancelada"?0.6:1}}>
                     <div>
-                      <div style={{fontWeight:800,fontSize:16}}>{s.nombre}</div>
+                      <div style={{fontWeight:800,fontSize:16,textDecoration:s.estadoSesion==="cancelada"?"line-through":"none"}}>{s.nombre}</div>
                       <div style={{fontSize:12,color:"#8a7a60",marginTop:2}}>{s.fecha}</div>
                       {s.tipo === "donacion" && fin.cobrado>0 && (
                         <div style={{fontSize:12,marginTop:3}}>
@@ -893,6 +928,8 @@ function App() {
                     <div style={{display:"flex",gap:6,alignItems:"center",flexShrink:0}}>
                       <Pill label={`${activos}/${total}`} color={isPast?"#8a7a60":"#424029"}/>
                       {noV>0 && <Pill label={`-${noV}`} color="#B87A3A"/>}
+                      {s.estadoSesion==="cancelada" && <Pill label="Cancelada" color="#8a3a3a"/>}
+                      {s.estadoSesion==="hecha" && <Pill label="✓" color="#424029"/>}
                       <span style={{fontSize:18,color:"#B87A3A"}}>›</span>
                     </div>
                   </div>
@@ -952,6 +989,15 @@ function App() {
         }
       </div>
       <SyncBar state={syncState} onRetry={() => triggerSave(sesiones)}/>
+
+      <div style={{display:"flex",gap:8,padding:"12px 20px 0"}}>
+        {[["hecha","✓ Hecha","#424029"],["cancelada","✕ Cancelada","#8a3a3a"]].map(([val,lbl,color]) => (
+          <button key={val} onClick={() => upd(activaId,{estadoSesion: activa.estadoSesion===val ? undefined : val})}
+            style={{...bsm(activa.estadoSesion===val?color:"#fff", activa.estadoSesion===val?"#F5F0E4":"#8a7a60"), border:`1.5px solid ${activa.estadoSesion===val?color:"#e0d8c8"}`}}>
+            {lbl}
+          </button>
+        ))}
+      </div>
 
       <div style={{display:"flex",gap:6,padding:"12px 20px",borderBottom:"1px solid #e0d8c8"}}>
         <SB label="total"    value={activa.asistentes.reduce((n,a)=>n+(a.qty??(a.x2?2:1)),0)}/>
@@ -1042,12 +1088,13 @@ function App() {
 
       <div style={{padding:"10px 20px 0"}}>
         {activa.asistentes.map(a => (
-          <AsRow key={a.id} a={a} s={activa}
+          <AsRow key={a.id} a={a} s={activa} sesiones={sesiones}
             onCycle={() => cycleAs(a.id)}
             onSet={e => setEstadoAs(a.id,e)}
             onSetQty={qty => setQtyAs(a.id,qty)}
             onDel={() => delAs(a.id)}
             onRename={nombre => renameAs(a.id, nombre)}
+            onMove={targetId => moverAs(a.id, targetId)}
           />
         ))}
         {activa.asistentes.length===0 && (
