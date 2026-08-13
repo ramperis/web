@@ -31,19 +31,10 @@
           "estado": "reserva"
         },
         {
-          "id": "3xjco81",
-          "nombre": "Noelia",
-          "qty": 2,
-          "estado": "reserva",
-          "precioTotal": "30",
-          "precioReserva": "10",
-          "miParte": "15"
-        },
-        {
           "id": "6mqjj9y",
           "nombre": "Noelia Carnovale",
           "x2": true,
-          "estado": "no viene"
+          "estado": "reserva"
         }
       ]
     },
