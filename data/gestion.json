@@ -487,12 +487,6 @@
           "nombre": "Sarah madero",
           "qty": 1,
           "estado": "reserva"
-        },
-        {
-          "id": "nveme7d",
-          "nombre": "Sarah madero",
-          "qty": 1,
-          "estado": "pendiente"
         }
       ]
     },
