@@ -248,16 +248,10 @@
           "estado": "reserva"
         },
         {
-          "id": "o068l9a",
-          "nombre": "Paolo",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "pendiente",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
