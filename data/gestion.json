@@ -38,6 +38,12 @@
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
+        },
+        {
+          "id": "6mqjj9y",
+          "nombre": "Noelia Carnovale",
+          "x2": true,
+          "estado": "no viene"
         }
       ]
     },
@@ -1344,12 +1350,6 @@
           "id": "cs5dfio",
           "nombre": "Ana Belén Rausell",
           "x2": false,
-          "estado": "no viene"
-        },
-        {
-          "id": "6mqjj9y",
-          "nombre": "Noelia Carnovale",
-          "x2": true,
           "estado": "no viene"
         },
         {
