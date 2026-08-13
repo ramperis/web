@@ -1382,7 +1382,8 @@
           "x2": true,
           "estado": "no viene"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "g25tqw7",
