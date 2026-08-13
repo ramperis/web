@@ -260,6 +260,15 @@
           "nombre": "Paolo",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "0vyo1dq",
+          "nombre": "Paolo",
+          "qty": 1,
+          "estado": "no viene",
+          "precioTotal": "30",
+          "precioReserva": "10",
+          "miParte": "15"
         }
       ]
     },
@@ -295,15 +304,6 @@
         {
           "id": "14fyvu7",
           "nombre": "Isabel Tonon",
-          "qty": 1,
-          "estado": "no viene",
-          "precioTotal": "30",
-          "precioReserva": "10",
-          "miParte": "15"
-        },
-        {
-          "id": "0vyo1dq",
-          "nombre": "Paolo",
           "qty": 1,
           "estado": "no viene",
           "precioTotal": "30",
