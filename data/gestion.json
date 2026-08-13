@@ -1259,7 +1259,8 @@
           "qty": 2,
           "estado": "no viene"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "a3iom2w",
