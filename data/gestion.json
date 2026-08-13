@@ -29,6 +29,15 @@
           "nombre": "Carol",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "3xjco81",
+          "nombre": "Noelia",
+          "qty": 2,
+          "estado": "no viene",
+          "precioTotal": "30",
+          "precioReserva": "10",
+          "miParte": "15"
         }
       ]
     },
@@ -265,15 +274,6 @@
       "splitPct": 57.14,
       "donacion": "",
       "asistentes": [
-        {
-          "id": "3xjco81",
-          "nombre": "Noelia",
-          "qty": 2,
-          "estado": "no viene",
-          "precioTotal": "30",
-          "precioReserva": "10",
-          "miParte": "15"
-        },
         {
           "id": "onjtglt",
           "nombre": "BEATRIZ UREÑA BAÑULS",
