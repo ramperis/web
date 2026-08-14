@@ -29,6 +29,12 @@
           "nombre": "Noelia Carnovale",
           "x2": true,
           "estado": "reserva"
+        },
+        {
+          "id": "jb0qhaf",
+          "nombre": "Diana Molina",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
