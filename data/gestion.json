@@ -11,7 +11,14 @@
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "m9h7kjl",
+          "nombre": "Gabriel",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "tpxs91n",
