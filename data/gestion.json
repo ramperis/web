@@ -281,6 +281,12 @@
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
+        },
+        {
+          "id": "djl597p",
+          "nombre": "Lorena",
+          "qty": 4,
+          "estado": "pendiente"
         }
       ]
     },
