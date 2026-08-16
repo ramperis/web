@@ -538,8 +538,8 @@
           "nombre": "María José Rechi",
           "qty": 2,
           "estado": "reserva",
-          "precioTotal": "35",
-          "precioReserva": "15"
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "wbvt7gb",
@@ -554,8 +554,8 @@
           "nombre": "Diana Carolina",
           "qty": 3,
           "estado": "reserva",
-          "precioTotal": "35",
-          "precioReserva": "15"
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "ronzkxx",
@@ -570,8 +570,8 @@
           "nombre": "Alessia Ojeda",
           "qty": 2,
           "estado": "reserva",
-          "precioTotal": "35",
-          "precioReserva": "15"
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "ambexys",
@@ -586,14 +586,16 @@
           "nombre": "Laura Peño",
           "qty": 2,
           "estado": "reserva",
-          "precioTotal": "35",
-          "precioReserva": "15"
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "mpukti9",
           "nombre": "Alba Rodríguez",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "35",
+          "precioReserva": "15"
         }
       ]
     },
