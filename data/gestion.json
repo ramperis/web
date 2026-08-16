@@ -585,7 +585,7 @@
           "id": "mzgpao2",
           "nombre": "Laura Peño",
           "qty": 2,
-          "estado": "completo",
+          "estado": "pendiente",
           "precioTotal": "30",
           "precioReserva": "10"
         },
