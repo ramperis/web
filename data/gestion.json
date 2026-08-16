@@ -593,7 +593,7 @@
           "id": "mpukti9",
           "nombre": "Alba Rodríguez",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         }
