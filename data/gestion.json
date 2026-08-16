@@ -569,7 +569,7 @@
           "id": "qh6j3jk",
           "nombre": "Alessia Ojeda",
           "qty": 2,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -577,7 +577,7 @@
           "id": "ambexys",
           "nombre": "Arantxa Ruiz",
           "qty": 2,
-          "estado": "pendiente",
+          "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
         },
