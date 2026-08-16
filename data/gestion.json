@@ -546,8 +546,8 @@
           "nombre": "Andre",
           "qty": 2,
           "estado": "completo",
-          "precioTotal": "35",
-          "precioReserva": "15"
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "kpa35oe",
