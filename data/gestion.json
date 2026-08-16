@@ -537,7 +537,7 @@
           "id": "1q05p6r",
           "nombre": "María José Rechi",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -545,7 +545,7 @@
           "id": "wbvt7gb",
           "nombre": "Andre",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -553,7 +553,7 @@
           "id": "kpa35oe",
           "nombre": "Diana Carolina",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -561,7 +561,7 @@
           "id": "ronzkxx",
           "nombre": "Toya Sancho",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -569,7 +569,7 @@
           "id": "qh6j3jk",
           "nombre": "Alessia Ojeda",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -577,7 +577,7 @@
           "id": "ambexys",
           "nombre": "Arantxa Ruiz",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -585,7 +585,7 @@
           "id": "mzgpao2",
           "nombre": "Laura Peño",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -593,7 +593,7 @@
           "id": "mpukti9",
           "nombre": "Alba Rodríguez",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         }
