@@ -545,7 +545,7 @@
           "id": "wbvt7gb",
           "nombre": "Andre",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
