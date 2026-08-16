@@ -537,7 +537,7 @@
           "id": "1q05p6r",
           "nombre": "María José Rechi",
           "qty": 2,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -545,7 +545,7 @@
           "id": "wbvt7gb",
           "nombre": "Andre",
           "qty": 2,
-          "estado": "completo",
+          "estado": "pendiente",
           "precioTotal": "30",
           "precioReserva": "10"
         },
