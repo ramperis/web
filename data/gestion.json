@@ -537,7 +537,7 @@
           "id": "1q05p6r",
           "nombre": "María José Rechi",
           "qty": 2,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -553,7 +553,7 @@
           "id": "kpa35oe",
           "nombre": "Diana Carolina",
           "qty": 3,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -561,7 +561,7 @@
           "id": "ronzkxx",
           "nombre": "Toya Sancho",
           "qty": 2,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
         },
