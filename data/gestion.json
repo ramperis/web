@@ -597,7 +597,8 @@
           "precioTotal": "35",
           "precioReserva": "15"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "mn2vl8t",
