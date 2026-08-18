@@ -743,6 +743,12 @@
           "id": "s6k9pgb",
           "nombre": "David",
           "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "zoqg48y",
+          "nombre": "Marcel",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
