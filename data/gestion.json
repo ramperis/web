@@ -68,6 +68,12 @@
           "nombre": "Diana Molina",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "g7cofqa",
+          "nombre": "Nuria González",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
