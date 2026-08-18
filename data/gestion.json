@@ -755,6 +755,12 @@
           "id": "rm6yczh",
           "nombre": "Arturo",
           "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "tf2yjev",
+          "nombre": "Josue",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
