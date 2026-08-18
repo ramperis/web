@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "d6wlao9",
+      "nombre": "nueva sesión",
+      "fecha": "17/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "n1azl2m",
       "nombre": "Baño de Sonido SUP 25/08",
       "fecha": "25/08/2026",
@@ -55,6 +68,12 @@
           "nombre": "Diana Molina",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "g7cofqa",
+          "nombre": "Nuria González",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
@@ -537,7 +556,7 @@
           "id": "1q05p6r",
           "nombre": "María José Rechi",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -552,8 +571,8 @@
         {
           "id": "kpa35oe",
           "nombre": "Diana Carolina",
-          "qty": 3,
-          "estado": "reserva",
+          "qty": 2,
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -561,7 +580,7 @@
           "id": "ronzkxx",
           "nombre": "Toya Sancho",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -569,7 +588,7 @@
           "id": "qh6j3jk",
           "nombre": "Alessia Ojeda",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -577,7 +596,7 @@
           "id": "ambexys",
           "nombre": "Arantxa Ruiz",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -585,7 +604,7 @@
           "id": "mzgpao2",
           "nombre": "Laura Peño",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -593,11 +612,12 @@
           "id": "mpukti9",
           "nombre": "Alba Rodríguez",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "mn2vl8t",
