@@ -761,19 +761,19 @@
           "id": "tf2yjev",
           "nombre": "Josue",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "g5al7xe",
           "nombre": "Bryan",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": "dj6aarw",
           "nombre": "Fernando",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         }
       ]
     },
