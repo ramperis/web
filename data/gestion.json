@@ -732,7 +732,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "zcbqfhm",
+          "nombre": "Fran",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "t3ycqwk",
