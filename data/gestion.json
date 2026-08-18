@@ -737,6 +737,12 @@
           "id": "zcbqfhm",
           "nombre": "Fran",
           "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "s6k9pgb",
+          "nombre": "David",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
