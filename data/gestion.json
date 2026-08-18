@@ -768,6 +768,12 @@
           "nombre": "Bryan",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "dj6aarw",
+          "nombre": "Fernando",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
