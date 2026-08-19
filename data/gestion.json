@@ -74,6 +74,12 @@
           "nombre": "Nuria González",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "oj29vr2",
+          "nombre": "Lorena",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
