@@ -775,7 +775,8 @@
           "qty": 1,
           "estado": "confirmado"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "t3ycqwk",
