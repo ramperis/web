@@ -73,6 +73,12 @@
           "id": "g7cofqa",
           "nombre": "Nuria González",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "oj29vr2",
+          "nombre": "Lorena",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
@@ -732,7 +738,44 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "zcbqfhm",
+          "nombre": "Fran",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "s6k9pgb",
+          "nombre": "David",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "zoqg48y",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "tf2yjev",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "g5al7xe",
+          "nombre": "Bryan",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "dj6aarw",
+          "nombre": "Fernando",
+          "qty": 1,
+          "estado": "confirmado"
+        }
+      ]
     },
     {
       "id": "t3ycqwk",
