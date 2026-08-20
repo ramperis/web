@@ -69,7 +69,8 @@
           "qty": 1,
           "estado": "pendiente"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "3a33698",
