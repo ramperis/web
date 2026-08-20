@@ -80,6 +80,12 @@
           "nombre": "Lorena",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "wj16b76",
+          "nombre": "Andrea",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
