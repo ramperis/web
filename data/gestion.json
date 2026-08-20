@@ -543,7 +543,8 @@
           "precioTotal": "35",
           "precioReserva": "15"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "orayj05",
