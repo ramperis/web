@@ -536,14 +536,6 @@
       "donacion": "",
       "asistentes": [
         {
-          "id": "ni6rwpk",
-          "nombre": "Gema Moruno",
-          "qty": 2,
-          "estado": "reserva",
-          "precioTotal": "35",
-          "precioReserva": "15"
-        },
-        {
           "id": "f3012mm",
           "nombre": "Monica Aragon",
           "qty": 7,
