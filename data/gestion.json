@@ -52,12 +52,6 @@
           "estado": "reserva"
         },
         {
-          "id": "9y6nhkb",
-          "nombre": "Carol",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
           "id": "6mqjj9y",
           "nombre": "Noelia Carnovale",
           "x2": true,
@@ -317,6 +311,12 @@
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 5,
+          "estado": "reserva"
+        },
+        {
+          "id": "9y6nhkb",
+          "nombre": "Carol",
+          "qty": 1,
           "estado": "reserva"
         }
       ]
