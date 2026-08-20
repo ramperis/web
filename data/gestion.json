@@ -157,6 +157,12 @@
           "nombre": "Julieta Burgos",
           "qty": 1,
           "estado": "completo"
+        },
+        {
+          "id": "lj8d8cy",
+          "nombre": "Sarah madero",
+          "qty": 1,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
@@ -544,12 +550,6 @@
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
-        },
-        {
-          "id": "lj8d8cy",
-          "nombre": "Sarah madero",
-          "qty": 1,
-          "estado": "reserva"
         }
       ]
     },
