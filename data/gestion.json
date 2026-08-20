@@ -52,12 +52,6 @@
           "estado": "reserva"
         },
         {
-          "id": "jb0qhaf",
-          "nombre": "Diana Molina",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
           "id": "g7cofqa",
           "nombre": "Nuria González",
           "qty": 1,
@@ -316,6 +310,12 @@
         {
           "id": "pjxk2nl",
           "nombre": "Valentyna",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "jb0qhaf",
+          "nombre": "Diana Molina",
           "qty": 1,
           "estado": "reserva"
         }
