@@ -46,12 +46,6 @@
       "gastos": "",
       "asistentes": [
         {
-          "id": "pjxk2nl",
-          "nombre": "Valentyna",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
           "id": "6mqjj9y",
           "nombre": "Noelia Carnovale",
           "x2": true,
@@ -316,6 +310,12 @@
         {
           "id": "9y6nhkb",
           "nombre": "Carol",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "pjxk2nl",
+          "nombre": "Valentyna",
           "qty": 1,
           "estado": "reserva"
         }
