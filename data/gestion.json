@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "jedfkfr",
+      "nombre": "Baño de Sonido SUP 26/08",
+      "fecha": "26/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "10",
+      "splitPct": 57.14,
+      "donacion": "",
+      "asistentes": [],
+      "gastos": ""
+    },
+    {
       "id": "d6wlao9",
       "nombre": "nueva sesión",
       "fecha": "17/08/2026",
