@@ -24,7 +24,14 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "nhrqr74",
+          "nombre": "Madeleine Soler",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "jedfkfr",
