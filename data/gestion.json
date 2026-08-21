@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "n43i5uz",
+      "nombre": "Baño de Sonido SUP 09/09",
+      "fecha": "09/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "15",
+      "splitPct": 60,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "tfsw4dl",
       "nombre": "Baño de Sonido SUP 09/09",
       "fecha": "09/09/2026",
