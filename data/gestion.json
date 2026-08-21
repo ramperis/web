@@ -29,6 +29,12 @@
           "id": "nhrqr74",
           "nombre": "Madeleine Soler",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "bmqhttq",
+          "nombre": "Sarah Madero",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
