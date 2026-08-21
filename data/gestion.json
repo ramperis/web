@@ -1,17 +1,56 @@
 {
   "sesiones": [
     {
-      "id": "d6wlao9",
-      "nombre": "nueva sesión",
-      "fecha": "17/08/2026",
+      "id": "n43i5uz",
+      "nombre": "Baño de Sonido SUP 23/09",
+      "fecha": "23/09/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "",
-      "precioReserva": "",
-      "splitPct": 50,
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "15",
+      "splitPct": 60,
       "donacion": "",
       "gastos": "",
       "asistentes": []
+    },
+    {
+      "id": "tfsw4dl",
+      "nombre": "Baño de Sonido SUP 09/09",
+      "fecha": "09/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "15",
+      "splitPct": 60,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": [
+        {
+          "id": "nhrqr74",
+          "nombre": "Madeleine Soler",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "bmqhttq",
+          "nombre": "Sarah Madero",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
+    },
+    {
+      "id": "jedfkfr",
+      "nombre": "Baño de Sonido SUP 26/08",
+      "fecha": "26/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "10",
+      "splitPct": 57.14,
+      "donacion": "",
+      "asistentes": [],
+      "gastos": ""
     },
     {
       "id": "n1azl2m",
@@ -46,27 +85,9 @@
       "gastos": "",
       "asistentes": [
         {
-          "id": "pjxk2nl",
-          "nombre": "Valentyna",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "9y6nhkb",
-          "nombre": "Carol",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
           "id": "6mqjj9y",
           "nombre": "Noelia Carnovale",
           "x2": true,
-          "estado": "reserva"
-        },
-        {
-          "id": "jb0qhaf",
-          "nombre": "Diana Molina",
-          "qty": 2,
           "estado": "reserva"
         },
         {
@@ -87,7 +108,8 @@
           "qty": 1,
           "estado": "pendiente"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "3a33698",
@@ -175,6 +197,12 @@
           "nombre": "Julieta Burgos",
           "qty": 1,
           "estado": "completo"
+        },
+        {
+          "id": "lj8d8cy",
+          "nombre": "Sarah madero",
+          "qty": 1,
+          "estado": "reserva"
         }
       ],
       "gastos": ""
@@ -317,6 +345,24 @@
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 5,
+          "estado": "reserva"
+        },
+        {
+          "id": "9y6nhkb",
+          "nombre": "Carol",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "pjxk2nl",
+          "nombre": "Valentyna",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "jb0qhaf",
+          "nombre": "Diana Molina",
+          "qty": 1,
           "estado": "reserva"
         }
       ]
@@ -530,28 +576,15 @@
       "donacion": "",
       "asistentes": [
         {
-          "id": "ni6rwpk",
-          "nombre": "Gema Moruno",
-          "qty": 2,
-          "estado": "reserva",
-          "precioTotal": "35",
-          "precioReserva": "15"
-        },
-        {
           "id": "f3012mm",
           "nombre": "Monica Aragon",
           "qty": 7,
           "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
-        },
-        {
-          "id": "lj8d8cy",
-          "nombre": "Sarah madero",
-          "qty": 1,
-          "estado": "reserva"
         }
-      ]
+      ],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "orayj05",
