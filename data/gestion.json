@@ -2,11 +2,11 @@
   "sesiones": [
     {
       "id": "7xhx355",
-      "nombre": "nueva sesión",
-      "fecha": "23/08/2026",
+      "nombre": "Breath & Sound Maktub",
+      "fecha": "25/09/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "30",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
