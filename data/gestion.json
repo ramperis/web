@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "6yftn87",
+      "nombre": "Breath & Sound Expirit",
+      "fecha": "02/10/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "qm5t26q",
       "nombre": "Breath & Sound Expirit",
       "fecha": "02/10/2026",
