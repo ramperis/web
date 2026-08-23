@@ -2,11 +2,11 @@
   "sesiones": [
     {
       "id": "zp9f7zu",
-      "nombre": "nueva sesión",
-      "fecha": "23/08/2026",
+      "nombre": "Baño de Sonido privado",
+      "fecha": "28/08/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "50",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
