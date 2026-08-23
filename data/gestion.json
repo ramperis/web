@@ -2,10 +2,10 @@
   "sesiones": [
     {
       "id": "qm5t26q",
-      "nombre": "nueva sesión",
-      "fecha": "23/08/2026",
+      "nombre": "Breath & Sound",
+      "fecha": "02/10/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
+      "tipoEvento": "breath-sound",
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 50,
