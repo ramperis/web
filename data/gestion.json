@@ -11,7 +11,14 @@
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "3ut8ved",
+          "nombre": "Alba Diaz",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "6yftn87",
