@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "zp9f7zu",
+      "nombre": "nueva sesión",
+      "fecha": "23/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "6yftn87",
       "nombre": "Breath & Sound Yogabox",
       "fecha": "16/10/2026",
