@@ -88,25 +88,25 @@
           "id": "nhrqr74",
           "nombre": "Madeleine Soler",
           "qty": 1,
-          "estado": "completo"
+          "estado": "reserva"
         },
         {
           "id": "bmqhttq",
           "nombre": "Sarah Madero",
           "qty": 1,
-          "estado": "completo"
+          "estado": "reserva"
         },
         {
           "id": "pjxk2nl",
           "nombre": "Valentyna",
           "qty": 1,
-          "estado": "completo"
+          "estado": "reserva"
         },
         {
           "id": "dqjri1p",
           "nombre": "Xiomara",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
