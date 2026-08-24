@@ -100,7 +100,13 @@
           "id": "pjxk2nl",
           "nombre": "Valentyna",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
+        },
+        {
+          "id": "dqjri1p",
+          "nombre": "Xiomara",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
