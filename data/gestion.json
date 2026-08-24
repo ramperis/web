@@ -95,6 +95,12 @@
           "nombre": "Sarah Madero",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "pjxk2nl",
+          "nombre": "Valentyna",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -396,12 +402,6 @@
         {
           "id": "9y6nhkb",
           "nombre": "Carol",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "pjxk2nl",
-          "nombre": "Valentyna",
           "qty": 1,
           "estado": "reserva"
         },
