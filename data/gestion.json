@@ -397,7 +397,7 @@
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 4,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "9y6nhkb",
@@ -410,6 +410,12 @@
           "nombre": "Diana Molina",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "dj02yhm",
+          "nombre": "Lorena",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
