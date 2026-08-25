@@ -823,7 +823,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "pxmvfcz",
+          "nombre": "Federico Tzaneff",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "wsfqbrv",
