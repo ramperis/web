@@ -386,7 +386,7 @@
           "id": "ubma7rj",
           "nombre": "Pilar Ruiz",
           "qty": 2,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -394,13 +394,13 @@
           "id": "o8f0908",
           "nombre": "Yolanda Gomis",
           "qty": 3,
-          "estado": "completo"
+          "estado": "reserva"
         },
         {
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "completo",
+          "estado": "pendiente",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
