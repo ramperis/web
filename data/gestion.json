@@ -400,7 +400,7 @@
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "pendiente",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -409,13 +409,13 @@
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 4,
-          "estado": "completo"
+          "estado": "reserva"
         },
         {
           "id": "9y6nhkb",
           "nombre": "Carol",
           "qty": 1,
-          "estado": "completo"
+          "estado": "reserva"
         },
         {
           "id": "jb0qhaf",
