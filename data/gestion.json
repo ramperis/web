@@ -107,6 +107,12 @@
           "nombre": "Xiomara",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "hjapwjm",
+          "nombre": "Juleydi Liliana",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
