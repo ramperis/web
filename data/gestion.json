@@ -421,13 +421,13 @@
           "id": "jb0qhaf",
           "nombre": "Diana Molina",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dj02yhm",
           "nombre": "Lorena",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
