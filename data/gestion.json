@@ -377,7 +377,7 @@
           "id": "f156ric",
           "nombre": "Carolina Rosello",
           "qty": 2,
-          "estado": "completo",
+          "estado": "pendiente",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -386,7 +386,7 @@
           "id": "ubma7rj",
           "nombre": "Pilar Ruiz",
           "qty": 2,
-          "estado": "completo",
+          "estado": "pendiente",
           "precioTotal": "35",
           "precioReserva": "15"
         },
