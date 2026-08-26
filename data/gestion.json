@@ -400,7 +400,7 @@
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "completo",
+          "estado": "reserva",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
