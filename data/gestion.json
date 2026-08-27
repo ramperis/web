@@ -1,13 +1,72 @@
 {
   "sesiones": [
     {
+      "id": "zp9f7zu",
+      "nombre": "Baño de Sonido privado",
+      "fecha": "28/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "50",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": [
+        {
+          "id": "3ut8ved",
+          "nombre": "Alba Diaz",
+          "qty": 2,
+          "estado": "reserva"
+        }
+      ]
+    },
+    {
+      "id": "6yftn87",
+      "nombre": "Breath & Sound Yogabox",
+      "fecha": "16/10/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
+      "id": "qm5t26q",
+      "nombre": "Breath & Sound Expirit",
+      "fecha": "02/10/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
+      "id": "7xhx355",
+      "nombre": "Breath & Sound Maktub",
+      "fecha": "25/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "30",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "n43i5uz",
       "nombre": "Baño de Sonido SUP 23/09",
       "fecha": "23/09/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
@@ -20,7 +79,7 @@
       "tipo": "precio",
       "tipoEvento": "bano-sup",
       "precioTotal": "35",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
@@ -35,22 +94,27 @@
           "id": "bmqhttq",
           "nombre": "Sarah Madero",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "pjxk2nl",
+          "nombre": "Valentyna",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "dqjri1p",
+          "nombre": "Xiomara",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "hjapwjm",
+          "nombre": "Juleydi Liliana",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
-    },
-    {
-      "id": "jedfkfr",
-      "nombre": "Baño de Sonido SUP 26/08",
-      "fecha": "26/08/2026",
-      "tipo": "precio",
-      "tipoEvento": "bano-sup",
-      "precioTotal": "35",
-      "precioReserva": "10",
-      "splitPct": 57.14,
-      "donacion": "",
-      "asistentes": [],
-      "gastos": ""
     },
     {
       "id": "n1azl2m",
@@ -344,10 +408,10 @@
         {
           "id": "djl597p",
           "nombre": "Lorena",
-          "qty": 5,
+          "qty": 4,
           "estado": "reserva",
-          "precioTotal": "24",
-          "precioReserva": "8"
+          "precioTotal": "30",
+          "precioReserva": "10"
         },
         {
           "id": "9y6nhkb",
@@ -356,16 +420,16 @@
           "estado": "reserva"
         },
         {
-          "id": "pjxk2nl",
-          "nombre": "Valentyna",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
           "id": "jb0qhaf",
           "nombre": "Diana Molina",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "dj02yhm",
+          "nombre": "Lorena",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
@@ -767,7 +831,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "pxmvfcz",
+          "nombre": "Federico Tzaneff",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "wsfqbrv",
