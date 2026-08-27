@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "7k27l85",
+      "nombre": "nueva sesión",
+      "fecha": "27/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "hw0unng",
       "nombre": "nueva sesión",
       "fecha": "27/08/2026",
