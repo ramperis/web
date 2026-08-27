@@ -102,9 +102,10 @@ const TIPOS_EVENTO = [
   { id: "circulo",      label: "Círculo de Hombres" },
   { id: "bano-sup",     label: "Baño de Sonido SUP" },
   { id: "breath-sound", label: "Breath & Sound" },
+  { id: "corporate",    label: "Evento Corporate" },
   { id: "otro",         label: "Otro" },
 ];
-const TIPO_SHORT = { circulo:"Círculo", "bano-sup":"Baño SUP", "breath-sound":"Breath & Sound", otro:"Otro" };
+const TIPO_SHORT = { circulo:"Círculo", "bano-sup":"Baño SUP", "breath-sound":"Breath & Sound", corporate:"Corporate", otro:"Otro" };
 
 function parseFecha(f) {
   if (!f) return new Date(0);
@@ -117,6 +118,7 @@ function inferTipoEvento(nombre) {
   if (n.includes("circulo") || n.includes("círculo") || n.includes("hombre")) return "circulo";
   if (n.includes("sup") || n.includes("paddle") || n.includes("bano sonido") || n.includes("baño sonido")) return "bano-sup";
   if (n.includes("breath") || n.includes("sound")) return "breath-sound";
+  if (n.includes("corporate") || n.includes("empresa")) return "corporate";
   return "otro";
 }
 function getMes(fecha) {
@@ -591,7 +593,7 @@ function App() {
       const [ma,ya] = a.split(" "), [mb,yb] = b.split(" ");
       return ya !== yb ? +ya - +yb : MESES_ORD.indexOf(ma) - MESES_ORD.indexOf(mb);
     });
-    const TIPO_COLOR = { circulo:"#424029", "bano-sup":"#B87A3A", "breath-sound":"#6a8a70", otro:"#c8b890" };
+    const TIPO_COLOR = { circulo:"#424029", "bano-sup":"#B87A3A", "breath-sound":"#6a8a70", corporate:"#7a5c9e", otro:"#c8b890" };
     const monthTypeData = {}, monthTypeMiP = {};
     mesesList.forEach(mes => { monthTypeData[mes] = {}; monthTypeMiP[mes] = {}; });
     sesiones.forEach(s => {
