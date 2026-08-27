@@ -377,7 +377,7 @@
           "id": "f156ric",
           "nombre": "Carolina Rosello",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -386,7 +386,7 @@
           "id": "ubma7rj",
           "nombre": "Pilar Ruiz",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -394,7 +394,7 @@
           "id": "o8f0908",
           "nombre": "Yolanda Gomis",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "0vyo1dq",
