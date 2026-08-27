@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "hw0unng",
+      "nombre": "nueva sesión",
+      "fecha": "27/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "zp9f7zu",
       "nombre": "Baño de Sonido privado",
       "fecha": "28/08/2026",
@@ -131,10 +144,11 @@
         {
           "id": "m9h7kjl",
           "nombre": "Gabriel",
-          "qty": 10,
-          "estado": "reserva"
+          "qty": 11,
+          "estado": "completo"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "tpxs91n",
@@ -377,7 +391,7 @@
           "id": "f156ric",
           "nombre": "Carolina Rosello",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10",
           "miParte": "15"
@@ -386,7 +400,7 @@
           "id": "ubma7rj",
           "nombre": "Pilar Ruiz",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15"
         },
@@ -394,13 +408,13 @@
           "id": "o8f0908",
           "nombre": "Yolanda Gomis",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "0vyo1dq",
           "nombre": "Paolo",
           "qty": 1,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "35",
           "precioReserva": "15",
           "miParte": "15"
@@ -409,7 +423,7 @@
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 4,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -417,21 +431,22 @@
           "id": "9y6nhkb",
           "nombre": "Carol",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "jb0qhaf",
           "nombre": "Diana Molina",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dj02yhm",
           "nombre": "Lorena",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "completo"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "dmuz9ov",
