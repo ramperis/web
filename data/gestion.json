@@ -134,7 +134,8 @@
           "qty": 10,
           "estado": "reserva"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "tpxs91n",
