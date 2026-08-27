@@ -409,7 +409,7 @@
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 4,
-          "estado": "reserva",
+          "estado": "completo",
           "precioTotal": "30",
           "precioReserva": "10"
         },
@@ -417,19 +417,19 @@
           "id": "9y6nhkb",
           "nombre": "Carol",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "jb0qhaf",
           "nombre": "Diana Molina",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dj02yhm",
           "nombre": "Lorena",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
