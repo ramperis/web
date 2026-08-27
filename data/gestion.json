@@ -11,7 +11,8 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [],
+      "estadoSesion": "hecha"
     },
     {
       "id": "hw0unng",
