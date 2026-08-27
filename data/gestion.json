@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "hw0unng",
+      "nombre": "nueva sesión",
+      "fecha": "27/08/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "zp9f7zu",
       "nombre": "Baño de Sonido privado",
       "fecha": "28/08/2026",
@@ -132,7 +145,7 @@
           "id": "m9h7kjl",
           "nombre": "Gabriel",
           "qty": 11,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ],
       "estadoSesion": "hecha"
