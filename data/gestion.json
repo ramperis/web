@@ -337,15 +337,17 @@
           "nombre": "Paolo",
           "qty": 1,
           "estado": "reserva",
-          "precioTotal": "30",
-          "precioReserva": "10",
+          "precioTotal": "35",
+          "precioReserva": "15",
           "miParte": "15"
         },
         {
           "id": "djl597p",
           "nombre": "Lorena",
           "qty": 5,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioTotal": "24",
+          "precioReserva": "8"
         },
         {
           "id": "9y6nhkb",
