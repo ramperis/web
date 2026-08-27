@@ -2,13 +2,13 @@
   "sesiones": [
     {
       "id": "7k27l85",
-      "nombre": "nueva sesión",
-      "fecha": "27/08/2026",
+      "nombre": "Evento Corporate Arkadia 11/09",
+      "fecha": "11/09/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
+      "tipoEvento": "corporate",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "gastos": "",
       "asistentes": []
