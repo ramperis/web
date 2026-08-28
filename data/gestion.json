@@ -3,10 +3,10 @@
     {
       "id": "hvdzuj7",
       "nombre": "Baño de Sonido privado",
-      "fecha": "28/08/2026",
+      "fecha": "29/08/2026",
       "tipo": "precio",
       "tipoEvento": "bano-sup",
-      "precioTotal": "50",
+      "precioTotal": "60",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
