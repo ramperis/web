@@ -872,6 +872,12 @@
           "nombre": "Federico Tzaneff",
           "qty": 1,
           "estado": "confirmado"
+        },
+        {
+          "id": "t9lg0nc",
+          "nombre": "David",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
