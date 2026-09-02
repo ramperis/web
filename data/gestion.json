@@ -865,39 +865,41 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 100,
-      "donacion": "",
+      "donacion": "40",
       "asistentes": [
         {
           "id": "pxmvfcz",
           "nombre": "Federico Tzaneff",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "t9lg0nc",
           "nombre": "David",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "ze6btn3",
           "nombre": "Josue",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "rk68rhx",
           "nombre": "Marcel",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "nrs4gop",
           "nombre": "Ivan",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "estuvo"
         }
-      ]
+      ],
+      "gastos": "",
+      "estadoSesion": "hecha"
     },
     {
       "id": "wsfqbrv",
