@@ -865,7 +865,7 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 100,
-      "donacion": "",
+      "donacion": "40",
       "asistentes": [
         {
           "id": "pxmvfcz",
@@ -898,7 +898,7 @@
           "estado": "pendiente"
         }
       ],
-      "gastos": "40"
+      "gastos": ""
     },
     {
       "id": "wsfqbrv",
