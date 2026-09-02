@@ -898,7 +898,8 @@
           "estado": "estuvo"
         }
       ],
-      "gastos": ""
+      "gastos": "",
+      "estadoSesion": "hecha"
     },
     {
       "id": "wsfqbrv",
