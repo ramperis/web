@@ -884,6 +884,12 @@
           "nombre": "Josue",
           "qty": 1,
           "estado": "confirmado"
+        },
+        {
+          "id": "rk68rhx",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
