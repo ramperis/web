@@ -1,14 +1,34 @@
 {
   "sesiones": [
     {
-      "id": "hw0unng",
-      "nombre": "nueva sesión",
-      "fecha": "27/08/2026",
+      "id": "hvdzuj7",
+      "nombre": "Baño de Sonido privado",
+      "fecha": "29/08/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "60",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": [
+        {
+          "id": "qgpicom",
+          "nombre": "Vicky",
+          "qty": 1,
+          "estado": "reserva"
+        }
+      ]
+    },
+    {
+      "id": "7k27l85",
+      "nombre": "Evento Corporate Arkadia 11/09",
+      "fecha": "11/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "corporate",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "gastos": "",
       "asistentes": []
@@ -850,6 +870,30 @@
         {
           "id": "pxmvfcz",
           "nombre": "Federico Tzaneff",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "t9lg0nc",
+          "nombre": "David",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "ze6btn3",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "rk68rhx",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "nrs4gop",
+          "nombre": "Ivan",
           "qty": 1,
           "estado": "pendiente"
         }
