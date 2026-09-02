@@ -897,7 +897,8 @@
           "qty": 1,
           "estado": "pendiente"
         }
-      ]
+      ],
+      "gastos": "40"
     },
     {
       "id": "wsfqbrv",
