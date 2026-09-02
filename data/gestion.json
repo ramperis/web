@@ -889,6 +889,12 @@
           "id": "rk68rhx",
           "nombre": "Marcel",
           "qty": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": "nrs4gop",
+          "nombre": "Ivan",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
