@@ -878,6 +878,12 @@
           "nombre": "David",
           "qty": 1,
           "estado": "confirmado"
+        },
+        {
+          "id": "ze6btn3",
+          "nombre": "Josue",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
