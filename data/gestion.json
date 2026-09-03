@@ -11,7 +11,14 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "g7cofqa",
+          "nombre": "Nuria González",
+          "qty": 1,
+          "estado": "reserva"
+        }
+      ]
     },
     {
       "id": "hvdzuj7",
@@ -199,12 +206,6 @@
           "id": "6mqjj9y",
           "nombre": "Noelia Carnovale",
           "x2": true,
-          "estado": "reserva"
-        },
-        {
-          "id": "g7cofqa",
-          "nombre": "Nuria González",
-          "qty": 1,
           "estado": "reserva"
         },
         {
