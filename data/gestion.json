@@ -123,7 +123,14 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "8dr5t6m",
+          "nombre": "Vittoria Abogaro",
+          "qty": 2,
+          "estado": "reserva"
+        }
+      ]
     },
     {
       "id": "tfsw4dl",
