@@ -2,13 +2,13 @@
   "sesiones": [
     {
       "id": "hjn1c1l",
-      "nombre": "nueva sesión",
-      "fecha": "03/09/2026",
+      "nombre": "Breath & Sound 18/09",
+      "fecha": "18/09/2026",
       "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "",
-      "precioReserva": "",
-      "splitPct": 50,
+      "tipoEvento": "breath-sound",
+      "precioTotal": "25",
+      "precioReserva": "15",
+      "splitPct": 100,
       "donacion": "",
       "gastos": "",
       "asistentes": []
