@@ -220,6 +220,12 @@
           "id": "rze8wiq",
           "nombre": "Sara Lopez",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "2hte1jf",
+          "nombre": "Mario Mazza",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
