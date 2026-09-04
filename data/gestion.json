@@ -197,6 +197,12 @@
           "nombre": "Paula Lema",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "xqe6vtf",
+          "nombre": "Lila Sour",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
