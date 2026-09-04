@@ -178,13 +178,13 @@
           "id": "hjapwjm",
           "nombre": "Juleydi Liliana",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "dfcqfu3",
           "nombre": "Tatiana Sanfilipo",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
