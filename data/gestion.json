@@ -17,6 +17,12 @@
           "nombre": "Nuria González",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "n9bll39",
+          "nombre": "Rosa Cid",
+          "qty": 3,
+          "estado": "pendiente"
         }
       ]
     },
