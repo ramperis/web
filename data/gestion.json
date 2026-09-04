@@ -22,7 +22,7 @@
           "id": "n9bll39",
           "nombre": "Rosa Cid",
           "qty": 4,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
@@ -177,6 +177,12 @@
         {
           "id": "hjapwjm",
           "nombre": "Juleydi Liliana",
+          "qty": 1,
+          "estado": "pendiente"
+        },
+        {
+          "id": "dfcqfu3",
+          "nombre": "Tatiana Sanfilipo",
           "qty": 1,
           "estado": "pendiente"
         }
