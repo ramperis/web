@@ -185,6 +185,12 @@
           "nombre": "Tatiana Sanfilipo",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "qawxaw8",
+          "nombre": "Juan Zabala",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
