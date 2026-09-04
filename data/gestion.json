@@ -190,6 +190,12 @@
           "id": "qawxaw8",
           "nombre": "Juan Zabala",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "lal3ce8",
+          "nombre": "Paula Lema",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
