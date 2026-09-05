@@ -233,6 +233,12 @@
           "nombre": "María Fernández",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "8j9ip1c",
+          "nombre": "Juan Polo",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
