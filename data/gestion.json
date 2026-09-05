@@ -226,19 +226,19 @@
           "id": "2hte1jf",
           "nombre": "Mario Mazza",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "0iscbs1",
           "nombre": "María Fernández",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "8j9ip1c",
           "nombre": "Juan Polo",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
