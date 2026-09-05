@@ -227,6 +227,12 @@
           "nombre": "Mario Mazza",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "0iscbs1",
+          "nombre": "María Fernández",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
