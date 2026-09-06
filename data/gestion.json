@@ -136,6 +136,12 @@
           "nombre": "Vittoria Abogaro",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "0wqe0qy",
+          "nombre": "Marisol Lujan",
+          "qty": 2,
+          "estado": "reserva"
         }
       ]
     },
