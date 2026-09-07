@@ -1,6 +1,32 @@
 {
   "sesiones": [
     {
+      "id": "hjn1c1l",
+      "nombre": "Breath & Sound 18/09",
+      "fecha": "18/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "25",
+      "precioReserva": "15",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": [
+        {
+          "id": "g7cofqa",
+          "nombre": "Nuria González",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "n9bll39",
+          "nombre": "Rosa Cid",
+          "qty": 4,
+          "estado": "reserva"
+        }
+      ]
+    },
+    {
       "id": "hvdzuj7",
       "nombre": "Baño de Sonido privado",
       "fecha": "29/08/2026",
@@ -31,7 +57,8 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "zp9f7zu",
@@ -103,7 +130,20 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "8dr5t6m",
+          "nombre": "Vittoria Abogaro",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "0wqe0qy",
+          "nombre": "Marisol Lujan",
+          "qty": 2,
+          "estado": "reserva"
+        }
+      ]
     },
     {
       "id": "tfsw4dl",
@@ -145,7 +185,67 @@
           "id": "hjapwjm",
           "nombre": "Juleydi Liliana",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
+        },
+        {
+          "id": "dfcqfu3",
+          "nombre": "Tatiana Sanfilipo",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "qawxaw8",
+          "nombre": "Juan Zabala",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "lal3ce8",
+          "nombre": "Paula Lema",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "xqe6vtf",
+          "nombre": "Lila Sour",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "c1t49a7",
+          "nombre": "Estelle Ampe",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "dd9s8vm",
+          "nombre": "Carolina Moreto",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "rze8wiq",
+          "nombre": "Sara Lopez",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "2hte1jf",
+          "nombre": "Mario Mazza",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "0iscbs1",
+          "nombre": "María Fernández",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "8j9ip1c",
+          "nombre": "Juan Polo",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -186,12 +286,6 @@
           "id": "6mqjj9y",
           "nombre": "Noelia Carnovale",
           "x2": true,
-          "estado": "reserva"
-        },
-        {
-          "id": "g7cofqa",
-          "nombre": "Nuria González",
-          "qty": 1,
           "estado": "reserva"
         },
         {
