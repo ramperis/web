@@ -23,6 +23,12 @@
           "nombre": "Rosa Cid",
           "qty": 4,
           "estado": "reserva"
+        },
+        {
+          "id": "9ircq98",
+          "nombre": "Elena Marco",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
