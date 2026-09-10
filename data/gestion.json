@@ -34,7 +34,7 @@
           "id": "1393ktd",
           "nombre": "Soraya Salgado",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
@@ -179,6 +179,12 @@
           "nombre": "Nuria monsalvez",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "dd9s8vm",
+          "nombre": "Carolina Moreto",
+          "qty": 2,
+          "estado": "reserva"
         }
       ]
     },
@@ -246,12 +252,6 @@
           "id": "c1t49a7",
           "nombre": "Estelle Ampe",
           "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "dd9s8vm",
-          "nombre": "Carolina Moreto",
-          "qty": 2,
           "estado": "reserva"
         },
         {
