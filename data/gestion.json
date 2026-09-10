@@ -116,6 +116,12 @@
           "nombre": "Begoña Cano",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "o2h0x5x",
+          "nombre": "Claudia Tedesco",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
