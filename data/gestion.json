@@ -110,7 +110,14 @@
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "6gndedv",
+          "nombre": "Begoña Cano",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "7xhx355",
