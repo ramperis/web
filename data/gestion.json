@@ -29,6 +29,12 @@
           "nombre": "Elena Marco",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "1393ktd",
+          "nombre": "Soraya Salgado",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
