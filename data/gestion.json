@@ -161,6 +161,12 @@
           "nombre": "Marisol Lujan",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "bmqhttq",
+          "nombre": "Sarah Madero",
+          "qty": 1,
+          "estado": "no viene"
         }
       ]
     },
@@ -181,12 +187,6 @@
           "nombre": "Madeleine Soler",
           "qty": 1,
           "estado": "completo"
-        },
-        {
-          "id": "bmqhttq",
-          "nombre": "Sarah Madero",
-          "qty": 1,
-          "estado": "no viene"
         },
         {
           "id": "pjxk2nl",
