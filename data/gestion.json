@@ -216,7 +216,7 @@
           "id": "qawxaw8",
           "nombre": "Juan Zabala",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "lal3ce8",
@@ -258,7 +258,7 @@
           "id": "0iscbs1",
           "nombre": "María Fernández",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "8j9ip1c",
