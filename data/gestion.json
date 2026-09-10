@@ -167,6 +167,12 @@
           "nombre": "Sarah Madero",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "2o3oggp",
+          "nombre": "Nuria monsalvez",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
