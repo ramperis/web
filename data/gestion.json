@@ -191,6 +191,18 @@
           "nombre": "Mario Mazza",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "xqe6vtf",
+          "nombre": "Lila Sour",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "c1t49a7",
+          "nombre": "Estelle Ampe",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -245,24 +257,6 @@
         {
           "id": "lal3ce8",
           "nombre": "Paula Lema",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "xqe6vtf",
-          "nombre": "Lila Sour",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "c1t49a7",
-          "nombre": "Estelle Ampe",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "rze8wiq",
-          "nombre": "Sara Lopez",
           "qty": 1,
           "estado": "reserva"
         },
