@@ -23,6 +23,18 @@
           "nombre": "Rosa Cid",
           "qty": 4,
           "estado": "reserva"
+        },
+        {
+          "id": "9ircq98",
+          "nombre": "Elena Marco",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "1393ktd",
+          "nombre": "Soraya Salgado",
+          "qty": 2,
+          "estado": "reserva"
         }
       ]
     },
@@ -104,7 +116,20 @@
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "6gndedv",
+          "nombre": "Begoña Cano",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "o2h0x5x",
+          "nombre": "Claudia Tedesco",
+          "qty": 1,
+          "estado": "reserva"
+        }
+      ]
     },
     {
       "id": "7xhx355",
@@ -142,6 +167,30 @@
           "nombre": "Marisol Lujan",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "bmqhttq",
+          "nombre": "Sarah Madero",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "2o3oggp",
+          "nombre": "Nuria monsalvez",
+          "qty": 1,
+          "estado": "pendiente"
+        },
+        {
+          "id": "dd9s8vm",
+          "nombre": "Carolina Moreto",
+          "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "2hte1jf",
+          "nombre": "Mario Mazza",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -161,31 +210,25 @@
           "id": "nhrqr74",
           "nombre": "Madeleine Soler",
           "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "bmqhttq",
-          "nombre": "Sarah Madero",
-          "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "pjxk2nl",
           "nombre": "Valentyna",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dqjri1p",
           "nombre": "Xiomara",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "hjapwjm",
           "nombre": "Juleydi Liliana",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dfcqfu3",
@@ -197,7 +240,7 @@
           "id": "qawxaw8",
           "nombre": "Juan Zabala",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "lal3ce8",
@@ -218,20 +261,8 @@
           "estado": "reserva"
         },
         {
-          "id": "dd9s8vm",
-          "nombre": "Carolina Moreto",
-          "qty": 2,
-          "estado": "reserva"
-        },
-        {
           "id": "rze8wiq",
           "nombre": "Sara Lopez",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "2hte1jf",
-          "nombre": "Mario Mazza",
           "qty": 1,
           "estado": "reserva"
         },
@@ -239,13 +270,13 @@
           "id": "0iscbs1",
           "nombre": "María Fernández",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "8j9ip1c",
           "nombre": "Juan Polo",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
