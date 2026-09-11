@@ -16,19 +16,22 @@
           "id": "g7cofqa",
           "nombre": "Nuria González",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioReserva": "10"
         },
         {
           "id": "n9bll39",
           "nombre": "Rosa Cid",
           "qty": 4,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioReserva": "10"
         },
         {
           "id": "9ircq98",
           "nombre": "Elena Marco",
-          "qty": 1,
-          "estado": "reserva"
+          "qty": 2,
+          "estado": "reserva",
+          "precioReserva": "12.5"
         },
         {
           "id": "1393ktd",
