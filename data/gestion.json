@@ -197,6 +197,12 @@
           "nombre": "Lila Sour",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "c1t49a7",
+          "nombre": "Estelle Ampe",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -251,12 +257,6 @@
         {
           "id": "lal3ce8",
           "nombre": "Paula Lema",
-          "qty": 1,
-          "estado": "reserva"
-        },
-        {
-          "id": "c1t49a7",
-          "nombre": "Estelle Ampe",
           "qty": 1,
           "estado": "reserva"
         },
