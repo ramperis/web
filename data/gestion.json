@@ -206,6 +206,12 @@
           "nombre": "Estelle Ampe",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "dn1yi3m",
+          "nombre": "Viviana",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
