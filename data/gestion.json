@@ -38,6 +38,12 @@
           "nombre": "Soraya Salgado",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "a9u4dks",
+          "nombre": "Camila Donoso",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
