@@ -254,5 +254,27 @@
     "lugar": "Valencia",
     "url": "/agenda/circulo-hombres-16-septiembre",
     "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "23",
+    "mes": "Sep",
+    "titulo": "Baño de Sonido en Paddle Surf",
+    "hora": "19:00 – 21:00",
+    "marca": "",
+    "espacio": "Club Náutico",
+    "lugar": "Valencia Mar · Valencia",
+    "url": "/agenda/bano-sonido-paddle-surf-23-septiembre",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "30",
+    "mes": "Sep",
+    "titulo": "Círculo de Hombres",
+    "hora": "18:30 – 20:30",
+    "marca": "",
+    "espacio": "Jardín del Turia",
+    "lugar": "Valencia",
+    "url": "/agenda/circulo-hombres-30-septiembre",
+    "wa": "https://wa.me/34617847196"
   }
 ]
