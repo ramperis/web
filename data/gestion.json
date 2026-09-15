@@ -243,6 +243,12 @@
           "nombre": "Paula Lema",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "vmsqdk1",
+          "nombre": "Angie Camargo",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
