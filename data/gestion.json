@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "7eo6q1i",
+      "nombre": "Hielo + Sonido + Breathwork Casa Lenta 26/09",
+      "fecha": "26/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "40",
+      "precioReserva": "",
+      "splitPct": 60,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "hjn1c1l",
       "nombre": "Breath & Sound 18/09",
       "fecha": "18/09/2026",
@@ -113,7 +126,7 @@
       "fecha": "16/10/2026",
       "tipo": "precio",
       "tipoEvento": "breath-sound",
-      "precioTotal": "",
+      "precioTotal": "25",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
@@ -126,7 +139,7 @@
       "fecha": "02/10/2026",
       "tipo": "precio",
       "tipoEvento": "breath-sound",
-      "precioTotal": "",
+      "precioTotal": "30",
       "precioReserva": "",
       "splitPct": 50,
       "donacion": "",
