@@ -256,6 +256,17 @@
     "wa": "https://wa.me/34617847196"
   },
   {
+    "dia": "18",
+    "mes": "Sep",
+    "titulo": "Baño de sonido + Breathwork",
+    "hora": "19:00 – 21:00",
+    "marca": "Breath & Sound",
+    "espacio": "Hogar Micelio",
+    "lugar": "Valencia",
+    "url": "/agenda/breath-sound-hogar-micelio",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
     "dia": "23",
     "mes": "Sep",
     "titulo": "Baño de Sonido en Paddle Surf",
@@ -267,6 +278,28 @@
     "wa": "https://wa.me/34617847196"
   },
   {
+    "dia": "25",
+    "mes": "Sep",
+    "titulo": "Baño de sonido + Breathwork",
+    "hora": "19:00 – 21:00",
+    "marca": "Breath & Sound",
+    "espacio": "Maktub",
+    "lugar": "Mislata",
+    "url": "/agenda/breath-sound-maktub",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "26",
+    "mes": "Sep",
+    "titulo": "Hielo + Sonido + Breathwork",
+    "hora": "11:30 – 14:00",
+    "marca": "Entrena tu sistema nervioso",
+    "espacio": "Casa Lenta",
+    "lugar": "Valencia",
+    "url": "/agenda/hielo-sonido-breathwork-26-septiembre",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
     "dia": "30",
     "mes": "Sep",
     "titulo": "Círculo de Hombres",
@@ -275,6 +308,28 @@
     "espacio": "Jardín del Turia",
     "lugar": "Valencia",
     "url": "/agenda/circulo-hombres-30-septiembre",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "02",
+    "mes": "Oct",
+    "titulo": "Baño de sonido + Breathwork",
+    "hora": "19:00 – 21:00",
+    "marca": "Breath & Sound",
+    "espacio": "Expirit",
+    "lugar": "Valencia",
+    "url": "/agenda/breath-sound-expirit",
+    "wa": "https://wa.me/34617847196"
+  },
+  {
+    "dia": "16",
+    "mes": "Oct",
+    "titulo": "Baño de sonido + Breathwork",
+    "hora": "19:30 – 21:00",
+    "marca": "Breath & Sound",
+    "espacio": "The Yoga Box",
+    "lugar": "Valencia",
+    "url": "/agenda/breath-sound-yogabox",
     "wa": "https://wa.me/34617847196"
   }
 ]
