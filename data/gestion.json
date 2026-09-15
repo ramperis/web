@@ -237,6 +237,12 @@
           "nombre": "Viviana",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "lal3ce8",
+          "nombre": "Paula Lema",
+          "qty": 1,
+          "estado": "reserva"
         }
       ]
     },
@@ -287,12 +293,6 @@
           "nombre": "Juan Zabala",
           "qty": 1,
           "estado": "completo"
-        },
-        {
-          "id": "lal3ce8",
-          "nombre": "Paula Lema",
-          "qty": 1,
-          "estado": "reserva"
         },
         {
           "id": "0iscbs1",
