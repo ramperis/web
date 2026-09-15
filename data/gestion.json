@@ -7,7 +7,7 @@
       "tipo": "precio",
       "tipoEvento": "breath-sound",
       "precioTotal": "25",
-      "precioReserva": "15",
+      "precioReserva": "10",
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
@@ -38,6 +38,18 @@
           "nombre": "Soraya Salgado",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "a9u4dks",
+          "nombre": "Camila Donoso",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "v55v6l8",
+          "nombre": "Nicolino",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
@@ -181,7 +193,7 @@
           "id": "2o3oggp",
           "nombre": "Nuria monsalvez",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "dd9s8vm",
@@ -204,6 +216,12 @@
         {
           "id": "c1t49a7",
           "nombre": "Estelle Ampe",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "dn1yi3m",
+          "nombre": "Viviana",
           "qty": 1,
           "estado": "reserva"
         }
