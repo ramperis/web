@@ -139,8 +139,8 @@
       "fecha": "02/10/2026",
       "tipo": "precio",
       "tipoEvento": "breath-sound",
-      "precioTotal": "30",
-      "precioReserva": "",
+      "precioTotal": "25",
+      "precioReserva": "10",
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
@@ -161,7 +161,7 @@
           "id": "uj1nb3p",
           "nombre": "María del Carmen Sanabria",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
