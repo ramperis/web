@@ -156,6 +156,12 @@
           "nombre": "Claudia Tedesco",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "uj1nb3p",
+          "nombre": "María del Carmen Sanabria",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
