@@ -46,7 +46,7 @@ nav {
   top: 0; left: 0; right: 0;
   z-index: 100;
   height: 64px;
-  padding: 0 5vw;
+  padding: 0 8vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,6 +111,21 @@ nav.nav-light.scrolled .logo-claro  { display: none; }
 nav.nav-light:not(.scrolled) .nav-links a { color: rgba(245,238,216,0.8); }
 nav.nav-light:not(.scrolled) .nav-links a:hover { color: var(--texto-claro); }
 .nav-links a:hover { color: var(--tierra-noche); }
+
+/* Menú centrado en desktop: el CTA se separa y se ancla a la derecha */
+@media (min-width: 901px) {
+  .nav-links {
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+  .nav-links > li:last-child {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
 
 /* Dropdown */
 .nav-dropdown { position: relative; }
