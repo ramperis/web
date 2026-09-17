@@ -162,6 +162,12 @@
           "nombre": "María del Carmen Sanabria",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "xk2fax4",
+          "nombre": "Didia",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
