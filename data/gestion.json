@@ -87,6 +87,12 @@
           "nombre": "Leonie",
           "qty": 1,
           "estado": "completo"
+        },
+        {
+          "id": "hxww8zz",
+          "nombre": "Andrea",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
