@@ -68,7 +68,7 @@
           "id": "48zgovr",
           "nombre": "Isabel Winkler",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dagzenz",
@@ -86,7 +86,7 @@
           "id": "7s9f67r",
           "nombre": "Leonie",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         }
       ]
     },
