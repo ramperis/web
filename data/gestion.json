@@ -93,6 +93,12 @@
           "nombre": "Andrea",
           "qty": 1,
           "estado": "no viene"
+        },
+        {
+          "id": "qy5sowm",
+          "nombre": "Erica",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
