@@ -69,6 +69,12 @@
           "nombre": "Isabel Winkler",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "dagzenz",
+          "nombre": "Maria",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
