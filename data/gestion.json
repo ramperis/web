@@ -81,6 +81,12 @@
           "nombre": "Stefanie",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "7s9f67r",
+          "nombre": "Leonie",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
