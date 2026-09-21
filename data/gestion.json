@@ -260,7 +260,7 @@
           "id": "dd9s8vm",
           "nombre": "Carolina Moreto",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "2hte1jf",
@@ -302,7 +302,7 @@
           "id": "j5xliah",
           "nombre": "Rocío Campos",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
