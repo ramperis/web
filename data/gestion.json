@@ -297,6 +297,12 @@
           "nombre": "Angie Camargo",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "j5xliah",
+          "nombre": "Rocío Campos",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
