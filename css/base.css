@@ -40,6 +40,16 @@ h1 { font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; }
 h2 { font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
 h3 { font-weight: 600; line-height: 1.2; }
 
+/* Color de enlace por defecto: nunca azul (base para cualquier enlace sin
+   clase propia; los selectores más específicos como .nav-links a,
+   .footer-col a, .btn-wa, .post-content a, etc. siguen mandando sobre esto).
+   Ojo: no se añade aquí un "a:hover { text-decoration: underline }" global
+   porque rompería botones/píldoras (.btn-wa, .nav-cta, .formato-link...)
+   que solo fijan text-decoration:none en su clase base, no en :hover — el
+   subrayado en hover se define de forma explícita por contenedor de texto
+   más abajo (.dos-col-texto a, .faq-respuesta a, .paso-texto a). */
+a { color: var(--ambar); text-decoration: none; }
+
 /* ── NAV ── */
 nav {
   position: fixed;
@@ -348,6 +358,24 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
   line-height: 1.85;
   margin-bottom: 14px;
   font-weight: 400;
+}
+
+/* Enlaces dentro de texto de contenido (nunca azul, subrayado solo en hover,
+   igual que .post-content a en el blog) */
+.dos-col-texto a,
+.faq-respuesta a,
+.paso-texto a,
+.formato-texto a,
+.item-texto a {
+  color: var(--ambar);
+  text-decoration: none;
+}
+.dos-col-texto a:hover,
+.faq-respuesta a:hover,
+.paso-texto a:hover,
+.formato-texto a:hover,
+.item-texto a:hover {
+  text-decoration: underline;
 }
 
 /* ── BOTONES ── */
