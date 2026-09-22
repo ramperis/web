@@ -100,7 +100,8 @@
           "qty": 1,
           "estado": "completo"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "hvdzuj7",
