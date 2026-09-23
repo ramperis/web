@@ -254,7 +254,7 @@
           "id": "2o3oggp",
           "nombre": "Nuria monsalvez",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "dd9s8vm",
@@ -290,7 +290,7 @@
           "id": "lal3ce8",
           "nombre": "Paula Lema",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "no viene"
         },
         {
           "id": "vmsqdk1",
