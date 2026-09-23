@@ -1,6 +1,20 @@
 {
   "sesiones": [
     {
+      "id": "a3bqyl2",
+      "nombre": "Baño de Sonido SUP 23/09",
+      "fecha": "23/09/2026",
+      "tipo": "precio",
+      "tipoEvento": "bano-sup",
+      "precioTotal": "35",
+      "precioReserva": "10",
+      "splitPct": 60,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": [],
+      "estadoSesion": "hecha"
+    },
+    {
       "id": "7eo6q1i",
       "nombre": "Hielo + Sonido + Breathwork Casa Lenta 26/09",
       "fecha": "26/09/2026",
