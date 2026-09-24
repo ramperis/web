@@ -1070,7 +1070,14 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "pk4beyx",
+          "nombre": "Daniel Brett",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "hlig9cg",
