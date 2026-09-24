@@ -11,7 +11,14 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": [],
+      "asistentes": [
+        {
+          "id": "2hte1jf",
+          "nombre": "Mario Mazza",
+          "qty": 1,
+          "estado": "reserva"
+        }
+      ],
       "estadoSesion": "hecha"
     },
     {
@@ -275,12 +282,6 @@
           "nombre": "Carolina Moreto",
           "qty": 2,
           "estado": "no viene"
-        },
-        {
-          "id": "2hte1jf",
-          "nombre": "Mario Mazza",
-          "qty": 1,
-          "estado": "reserva"
         },
         {
           "id": "xqe6vtf",
