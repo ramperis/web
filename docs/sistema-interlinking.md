@@ -650,3 +650,16 @@ Revisión de todos los artículos del blog que mencionan "sonoterapia" en el cue
 | blog/arpa-de-cristal.html | — | ⏭️ Sin contexto natural (solo aparece en amazon-box-title y alt de imagen, no en texto corriente) |
 | blog/escalas-handpan.html | — | ⏭️ Sin contexto natural ("sonoterapia" solo aparece en el H2, el párrafo siguiente ya enlaza a /bano-sonido) |
 | blog/tambor-oceanico.html | — | ⏭️ Sin contexto natural (la única mención ya forma parte del anchor hacia /bano-sonido) |
+
+---
+
+### GAP DETECTADO (2026-09-27): páginas informacionales sin enlace hacia su formación
+
+El usuario detectó que `/blog/formacion-sonoterapia` seguía prácticamente sin enlaces entrantes (0 en todo el sitio antes de esta fila, 1 solo tras el post de mantenimiento-handpan). Al revisar el patrón se encontró que ni `/blog/que-es-la-sonoterapia` ni `/blog/que-es-el-breathwork` enlazaban al artículo de formación correspondiente — un funnel obvio (de "qué es X" a "fórmate en X") que faltaba en ambos clusters. Se implementa en los dos.
+
+| Archivo | Anchor | Destino | Estado |
+|---------|--------|---------|--------|
+| blog/que-es-la-sonoterapia/index.html | "formaciones en sonoterapia" | /blog/formacion-sonoterapia | ✅ Implementado |
+| blog/que-es-el-breathwork/index.html | "formación de facilitador de breathwork" | /blog/formacion-breathwork | ✅ Implementado |
+
+**Verificado:** `blog/cacao-ceremonial.html` ya enlaza a `/blog/formacion-facilitador-cacao` (implementado en la tabla de gaps de embudo críticos), ese funnel está cubierto. `/blog/que-es-un-circulo-de-hombres` no tiene gap equivalente porque no existe cluster de formación para círculos de hombres en el sistema.
