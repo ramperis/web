@@ -1077,6 +1077,12 @@
           "nombre": "Daniel Brett",
           "qty": 1,
           "estado": "confirmado"
+        },
+        {
+          "id": "w0h3x6z",
+          "nombre": "Óscar",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
