@@ -603,3 +603,20 @@ Cuando se publique un artículo nuevo, añadir al final de este documento:
 | blog/[relacionado-1].html | "[anchor]" | ⬜ Pendiente |
 | blog/[relacionado-2].html | "[anchor]" | ⬜ Pendiente |
 ```
+
+### NUEVO: /blog/mantenimiento-handpan
+**Keyword objetivo:** mantenimiento handpan | cómo limpiar handpan
+**Anchors aprobados:**
+- mantenimiento del handpan
+- cómo mantener el handpan
+- cuidado del handpan
+- limpiar el handpan
+- aceite para handpan
+
+**Implementaciones generadas:**
+| Archivo | Anchor | Estado |
+|---------|--------|--------|
+| blog/que-es-el-handpan.html | "mantenimiento del handpan" | ✅ Implementado |
+| blog/mejores-handpan.html | "cómo mantener el handpan" | ✅ Implementado |
+| blog/handpan-makers-espana.html | "cuidado del handpan" | ✅ Implementado |
+| blog/funda-handpan.html | "limpiar el handpan" | ✅ Implementado |
