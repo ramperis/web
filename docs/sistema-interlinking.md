@@ -620,3 +620,33 @@ Cuando se publique un artículo nuevo, añadir al final de este documento:
 | blog/mejores-handpan.html | "cómo mantener el handpan" | ✅ Implementado |
 | blog/handpan-makers-espana.html | "cuidado del handpan" | ✅ Implementado |
 | blog/funda-handpan.html | "limpiar el handpan" | ✅ Implementado |
+
+---
+
+### AUDITORÍA: /blog/que-es-la-sonoterapia (2026-09-26)
+
+Revisión de todos los artículos del blog que mencionan "sonoterapia" en el cuerpo del texto, para comprobar si enlazaban a su página informacional de destino (`/blog/que-es-la-sonoterapia`). Se excluyen del recuento los enlaces estructurales (related-card, nav, footer), igual que en el resto del sistema.
+
+**Resultado:** 21 archivos mencionaban "sonoterapia" sin enlace de contenido a `/blog/que-es-la-sonoterapia`. De esos, 2 eran los propios `/blog/formacion-sonoterapia.html` y `/blog/que-es-la-sonoterapia/index.html` (autoenlace, no aplica). De los 19 restantes, 16 se implementaron y 3 se marcan sin contexto natural.
+
+| Archivo | Anchor | Estado |
+|---------|--------|--------|
+| blog/campana-de-viento.html | "sonoterapia" | ✅ Implementado |
+| blog/cuencos-chakras-mito.html | "terapia de sonido" | ✅ Implementado |
+| blog/curso-handpan.html | "sound healing" | ✅ Implementado |
+| blog/darbuka.html | "sonoterapia" | ✅ Implementado |
+| blog/flauta-nativa-americana.html | "sonoterapia" | ✅ Implementado |
+| blog/gong-instrumento.html | "terapia de sonido" | ✅ Implementado |
+| blog/harmonium.html | "sonoterapia" | ✅ Implementado |
+| blog/kalimba.html | "sound healing" | ✅ Implementado |
+| blog/lampara-de-sal.html | "sonoterapia" | ✅ Implementado |
+| blog/mejores-tambores-lengueta.html | "terapia de sonido" | ✅ Implementado |
+| blog/palo-de-lluvia.html | "sound healing" | ✅ Implementado |
+| blog/tambor-chamanico.html | "sonoterapia" | ✅ Implementado |
+| blog/que-es-el-handpan.html | "sonoterapia" | ✅ Implementado |
+| blog/mejores-handpan.html | "terapia de sonido" | ✅ Implementado |
+| blog/cuencos-tibetanos/index.html | "sound healing" | ✅ Implementado |
+| blog/que-es-un-bano-de-sonido/index.html | "sonoterapia" | ✅ Implementado |
+| blog/arpa-de-cristal.html | — | ⏭️ Sin contexto natural (solo aparece en amazon-box-title y alt de imagen, no en texto corriente) |
+| blog/escalas-handpan.html | — | ⏭️ Sin contexto natural ("sonoterapia" solo aparece en el H2, el párrafo siguiente ya enlaza a /bano-sonido) |
+| blog/tambor-oceanico.html | — | ⏭️ Sin contexto natural (la única mención ya forma parte del anchor hacia /bano-sonido) |
