@@ -22,7 +22,7 @@
           "id": "75ebtyi",
           "nombre": "Lidia",
           "qty": 8,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ],
       "estadoSesion": "hecha"
@@ -1087,6 +1087,12 @@
         {
           "id": "w0h3x6z",
           "nombre": "Óscar",
+          "qty": 1,
+          "estado": "pendiente"
+        },
+        {
+          "id": "2hjuah4",
+          "nombre": "Francisco",
           "qty": 1,
           "estado": "pendiente"
         }
