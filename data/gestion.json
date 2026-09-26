@@ -17,6 +17,12 @@
           "nombre": "Mario Mazza",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "75ebtyi",
+          "nombre": "Lidia",
+          "qty": 8,
+          "estado": "pendiente"
         }
       ],
       "estadoSesion": "hecha"
