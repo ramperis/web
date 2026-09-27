@@ -11,14 +11,7 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": [
-        {
-          "id": "2hte1jf",
-          "nombre": "Mario Mazza",
-          "qty": 1,
-          "estado": "reserva"
-        }
-      ],
+      "asistentes": [],
       "estadoSesion": "hecha"
     },
     {
