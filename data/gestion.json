@@ -242,7 +242,7 @@
       "tipoEvento": "breath-sound",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "110",
       "gastos": "",
       "asistentes": []
