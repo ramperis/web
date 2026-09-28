@@ -361,17 +361,22 @@ nav.nav-light:not(.scrolled) .nav-hamburger span { background: var(--texto-claro
 }
 
 /* Enlaces dentro de texto de contenido (nunca azul, subrayado solo en hover,
-   igual que .post-content a en el blog) */
-.dos-col-texto a,
-.faq-respuesta a,
+   igual que .post-content a en el blog). Ojo: .dos-col-texto y
+   .faq-respuesta son contenedores que también pueden llevar un botón
+   (.btn-primario, etc.) como hijo directo — se escopa a "p a" para no
+   pintar el texto de esos botones de ámbar. .paso-texto/.formato-texto/
+   .item-texto son párrafos en sí mismos, no contenedores, así que no
+   tienen ese riesgo. */
+.dos-col-texto p a,
+.faq-respuesta p a,
 .paso-texto a,
 .formato-texto a,
 .item-texto a {
   color: var(--ambar);
   text-decoration: none;
 }
-.dos-col-texto a:hover,
-.faq-respuesta a:hover,
+.dos-col-texto p a:hover,
+.faq-respuesta p a:hover,
 .paso-texto a:hover,
 .formato-texto a:hover,
 .item-texto a:hover {
