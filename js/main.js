@@ -291,3 +291,37 @@ document.querySelectorAll('.ano-actual').forEach(el => {
   window.addEventListener('resize', () => setPos(current, false), { passive: true });
   autoplay = setInterval(() => goTo(current + 1, false), 8000);
 })();
+
+
+// Newsletter form — Brevo integration
+document.querySelectorAll('.footer-newsletter-form').forEach(form => {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    const btn = form.querySelector('button[type="submit"]');
+    const email = input.value.trim();
+    if (!email) return;
+
+    const originalText = btn.textContent;
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        form.innerHTML = '<p style="color:var(--ambar);font-size:14px;font-weight:600;margin:0">¡Apuntado! Pronto tendrás noticias 🌿</p>';
+      } else {
+        btn.textContent = 'Inténtalo de nuevo';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Inténtalo de nuevo';
+      btn.disabled = false;
+    }
+  });
+});
