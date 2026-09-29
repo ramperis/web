@@ -307,10 +307,11 @@ document.querySelectorAll('.footer-newsletter-form').forEach(form => {
     btn.disabled = true;
 
     try {
+      const source = form.dataset.source || 'footer';
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, source }),
       });
 
       if (res.ok) {
