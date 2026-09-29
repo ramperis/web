@@ -314,7 +314,7 @@ document.querySelectorAll('.footer-newsletter-form').forEach(form => {
       });
 
       if (res.ok) {
-        form.innerHTML = '<p style="color:var(--ambar);font-size:14px;font-weight:600;margin:0">¡Apuntado! Pronto tendrás noticias 🌿</p>';
+        form.innerHTML = '<p style="color:var(--ambar);font-size:14px;font-weight:600;margin:0">¡Listo! Ya estás suscrito/a. Pronto tendrás noticias 🌿</p>';
       } else {
         btn.textContent = 'Inténtalo de nuevo';
         btn.disabled = false;
