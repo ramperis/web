@@ -218,7 +218,7 @@
           "id": "xk2fax4",
           "nombre": "Didia",
           "qty": 1,
-          "estado": "completo"
+          "estado": "pendiente"
         },
         {
           "id": "uhh0xue",
@@ -242,7 +242,7 @@
           "id": "wynbth5",
           "nombre": "Esther Cuqurella",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "completo"
         },
         {
           "id": "1wmvxny",
