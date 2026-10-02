@@ -199,7 +199,8 @@
           "id": "6gndedv",
           "nombre": "Begoña Cano",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "reserva",
+          "precioReserva": "15"
         },
         {
           "id": "o2h0x5x",
