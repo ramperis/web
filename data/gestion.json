@@ -206,7 +206,7 @@
           "id": "o2h0x5x",
           "nombre": "Claudia Tedesco",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "pendiente"
         },
         {
           "id": "uj1nb3p",
@@ -217,6 +217,36 @@
         {
           "id": "xk2fax4",
           "nombre": "Didia",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "uhh0xue",
+          "nombre": "Viktoria",
+          "qty": 1,
+          "estado": "pendiente"
+        },
+        {
+          "id": "z3paq3l",
+          "nombre": "Manuel",
+          "qty": 2,
+          "estado": "pendiente"
+        },
+        {
+          "id": "gpxrsfy",
+          "nombre": "Sergio Rodriguez",
+          "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "wynbth5",
+          "nombre": "Esther Cuqurella",
+          "qty": 1,
+          "estado": "pendiente"
+        },
+        {
+          "id": "1wmvxny",
+          "nombre": "Celia Escandell",
           "qty": 1,
           "estado": "pendiente"
         }
