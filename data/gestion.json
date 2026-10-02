@@ -224,6 +224,12 @@
           "nombre": "Viktoria",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "z3paq3l",
+          "nombre": "Manuel",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
