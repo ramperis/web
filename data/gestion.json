@@ -230,6 +230,12 @@
           "nombre": "Manuel",
           "qty": 2,
           "estado": "pendiente"
+        },
+        {
+          "id": "gpxrsfy",
+          "nombre": "Sergio Rodriguez",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
