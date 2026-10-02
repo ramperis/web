@@ -236,6 +236,12 @@
           "nombre": "Sergio Rodriguez",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "wynbth5",
+          "nombre": "Esther Cuqurella",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
