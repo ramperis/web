@@ -193,7 +193,7 @@
       "precioReserva": "10",
       "splitPct": 70,
       "donacion": "",
-      "gastos": "",
+      "gastos": "50",
       "asistentes": [
         {
           "id": "6gndedv",
