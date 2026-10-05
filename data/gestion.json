@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "fbj20v3",
+      "nombre": "nueva sesión",
+      "fecha": "05/10/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "aocej6g",
       "nombre": "Baño sonido BCN 30/10",
       "fecha": "30/10/2026",
