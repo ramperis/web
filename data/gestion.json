@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "wdvuqj0",
+      "nombre": "nueva sesión",
+      "fecha": "07/10/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "fbj20v3",
       "nombre": "Baño sonido Brenda",
       "fecha": "03/10/2026",
@@ -238,7 +251,7 @@
           "id": "6gndedv",
           "nombre": "Begoña Cano",
           "qty": 2,
-          "estado": "reserva",
+          "estado": "completo",
           "precioReserva": "15"
         },
         {
