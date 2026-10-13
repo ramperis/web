@@ -11,7 +11,14 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "tda34wb",
+          "nombre": "Óscar",
+          "qty": 2,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "wdvuqj0",
