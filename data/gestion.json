@@ -29,6 +29,12 @@
           "nombre": "Arturo",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "zxd0evb",
+          "nombre": "Victor",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
