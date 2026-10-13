@@ -295,6 +295,12 @@
           "nombre": "Susana Mejia",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "ndcwjk2",
+          "nombre": "Camila",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
