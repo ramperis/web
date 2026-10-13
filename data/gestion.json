@@ -294,37 +294,37 @@
           "id": "w1uqtwu",
           "nombre": "Susana Mejia",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "ndcwjk2",
           "nombre": "Camila",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "oylm7rk",
           "nombre": "Raquel",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "mwxsp79",
           "nombre": "Nina van der have",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "cnjukv0",
           "nombre": "Elia Monzonis",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "3lu69qb",
           "nombre": "Cristina Gomez",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
