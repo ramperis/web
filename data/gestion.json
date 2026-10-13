@@ -337,6 +337,12 @@
           "nombre": "Benito",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "88gsjvr",
+          "nombre": "Fatima",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
