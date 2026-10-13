@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "pqldh71",
+      "nombre": "nueva sesión",
+      "fecha": "13/10/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "wdvuqj0",
       "nombre": "nueva sesión",
       "fecha": "07/10/2026",
