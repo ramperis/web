@@ -289,7 +289,14 @@
       "splitPct": 60,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "w1uqtwu",
+          "nombre": "Susana Mejia",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "qm5t26q",
