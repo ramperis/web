@@ -301,6 +301,12 @@
           "nombre": "Camila",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "oylm7rk",
+          "nombre": "Raquel",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
