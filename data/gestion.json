@@ -35,6 +35,12 @@
           "nombre": "Victor",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "0s2ry4b",
+          "nombre": "Amigo Óscar",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
