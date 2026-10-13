@@ -41,6 +41,12 @@
           "nombre": "Amigo Óscar",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "mfwoxk2",
+          "nombre": "Amigo shane 1",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
