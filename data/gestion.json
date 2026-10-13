@@ -13,12 +13,6 @@
       "gastos": "",
       "asistentes": [
         {
-          "id": "tda34wb",
-          "nombre": "Óscar",
-          "qty": 2,
-          "estado": "pendiente"
-        },
-        {
           "id": "czv866m",
           "nombre": "Óscar",
           "qty": 2,
