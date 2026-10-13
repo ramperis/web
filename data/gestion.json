@@ -331,6 +331,12 @@
           "nombre": "Maxime Ballester",
           "qty": 1,
           "estado": "reserva"
+        },
+        {
+          "id": "an2ftq2",
+          "nombre": "Benito",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
