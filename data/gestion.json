@@ -2,13 +2,13 @@
   "sesiones": [
     {
       "id": "pqldh71",
-      "nombre": "nueva sesión",
-      "fecha": "13/10/2026",
-      "tipo": "precio",
-      "tipoEvento": "otro",
+      "nombre": "Círculo de Hombres 14/10",
+      "fecha": "14/10/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "gastos": "",
       "asistentes": []
