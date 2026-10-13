@@ -319,6 +319,12 @@
           "nombre": "Elia Monzonis",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "3lu69qb",
+          "nombre": "Cristina Gomez",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
