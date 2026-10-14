@@ -53,6 +53,12 @@
           "nombre": "Amigo shane 2",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "f277vqy",
+          "nombre": "Marcel",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
