@@ -65,6 +65,12 @@
           "nombre": "Dani",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "mu6kfxk",
+          "nombre": "Óscar",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
