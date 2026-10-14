@@ -46,13 +46,13 @@
           "id": "z9cza31",
           "nombre": "Dani",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "estuvo"
         },
         {
           "id": "mu6kfxk",
           "nombre": "Óscar",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         }
       ]
     },
