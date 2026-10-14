@@ -16,7 +16,7 @@
           "id": "88zoguq",
           "nombre": "Arturo",
           "qty": 1,
-          "estado": "estuvo"
+          "estado": "no viene"
         },
         {
           "id": "zxd0evb",
@@ -52,7 +52,7 @@
           "id": "mu6kfxk",
           "nombre": "Óscar",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "confirmado"
         }
       ]
     },
