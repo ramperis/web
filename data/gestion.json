@@ -16,7 +16,7 @@
           "id": "88zoguq",
           "nombre": "Arturo",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "estuvo"
         },
         {
           "id": "zxd0evb",
@@ -27,12 +27,6 @@
         {
           "id": "0s2ry4b",
           "nombre": "Amigo Óscar",
-          "qty": 1,
-          "estado": "pendiente"
-        },
-        {
-          "id": "2ly7pxc",
-          "nombre": "Amigo shane 2",
           "qty": 1,
           "estado": "pendiente"
         },
