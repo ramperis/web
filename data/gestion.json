@@ -306,7 +306,7 @@
           "id": "oylm7rk",
           "nombre": "Raquel",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "mwxsp79",
@@ -336,7 +336,7 @@
           "id": "an2ftq2",
           "nombre": "Benito",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "88gsjvr",
