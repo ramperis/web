@@ -330,13 +330,13 @@
           "id": "b9tg8uw",
           "nombre": "Maxime Ballester",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "an2ftq2",
           "nombre": "Benito",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "88gsjvr",
@@ -348,7 +348,7 @@
           "id": "npd8n7u",
           "nombre": "Ana",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "completo"
         }
       ]
     },
