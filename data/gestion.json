@@ -22,13 +22,13 @@
           "id": "zxd0evb",
           "nombre": "Victor",
           "qty": 1,
-          "estado": "confirmado"
+          "estado": "estuvo"
         },
         {
           "id": "0s2ry4b",
           "nombre": "Markus",
           "qty": 1,
-          "estado": "no viene"
+          "estado": "estuvo"
         },
         {
           "id": "f277vqy",
