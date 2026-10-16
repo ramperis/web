@@ -350,7 +350,8 @@
           "qty": 2,
           "estado": "completo"
         }
-      ]
+      ],
+      "estadoSesion": "hecha"
     },
     {
       "id": "qm5t26q",
