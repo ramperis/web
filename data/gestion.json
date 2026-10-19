@@ -93,7 +93,8 @@
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [],
+      "estadoSesion": "cancelada"
     },
     {
       "id": "3rpvdsy",
