@@ -8,8 +8,8 @@
       "tipoEvento": "circulo",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
-      "donacion": "10",
+      "splitPct": 100,
+      "donacion": "40",
       "gastos": "",
       "asistentes": [
         {
