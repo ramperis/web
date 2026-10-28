@@ -11,7 +11,14 @@
       "splitPct": 50,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "2yt805c",
+          "nombre": "Arturo",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "pqldh71",
