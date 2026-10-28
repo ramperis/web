@@ -29,6 +29,12 @@
           "nombre": "Óscar",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "f14ih30",
+          "nombre": "Federico",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
