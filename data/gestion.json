@@ -23,6 +23,12 @@
           "nombre": "Shane",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "sqota02",
+          "nombre": "Óscar",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
