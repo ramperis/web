@@ -35,6 +35,12 @@
           "nombre": "Federico",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "bzf9v08",
+          "nombre": "Fabián",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
