@@ -41,6 +41,12 @@
           "nombre": "Fabián",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "epu3ys4",
+          "nombre": "Benito",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
