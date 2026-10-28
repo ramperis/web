@@ -17,6 +17,12 @@
           "nombre": "Arturo",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "kp5xkev",
+          "nombre": "Shane",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
