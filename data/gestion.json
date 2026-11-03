@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "6h724wy",
+      "nombre": "nueva sesión",
+      "fecha": "03/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "auv0i74",
       "nombre": "Círculo de Hombres 28/10",
       "fecha": "28/10/2026",
