@@ -264,7 +264,7 @@ document.querySelectorAll('.ano-actual').forEach(el => {
   function goTo(i, resetAP = true) {
     if (isTransitioning) return; isTransitioning = true;
     current = i; setPos(current, true);
-    if (resetAP) { clearInterval(autoplay); autoplay = setInterval(() => goTo(current + 1, false), 8000); }
+    if (resetAP) { clearInterval(autoplay); autoplay = setInterval(() => goTo(current + 1, false), 10000); }
   }
 
   if (dotsWrap) {
@@ -289,7 +289,7 @@ document.querySelectorAll('.ano-actual').forEach(el => {
   });
 
   window.addEventListener('resize', () => setPos(current, false), { passive: true });
-  autoplay = setInterval(() => goTo(current + 1, false), 8000);
+  autoplay = setInterval(() => goTo(current + 1, false), 10000);
 })();
 
 
