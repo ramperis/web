@@ -1,6 +1,32 @@
 {
   "sesiones": [
     {
+      "id": "qz8mdn4",
+      "nombre": "Cacao + Baño sonido 14/11",
+      "fecha": "14/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "35",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
+      "id": "wf3lxp9",
+      "nombre": "Yin Yoga + Baño sonido 15/11",
+      "fecha": "15/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "35",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "6h724wy",
       "nombre": "nueva sesión",
       "fecha": "03/11/2026",
