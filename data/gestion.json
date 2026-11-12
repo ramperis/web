@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "6amdjp1",
+      "nombre": "nueva sesión",
+      "fecha": "12/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "qz8mdn4",
       "nombre": "Cacao + Baño sonido 14/11",
       "fecha": "14/11/2026",
