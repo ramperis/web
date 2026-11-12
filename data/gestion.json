@@ -11,7 +11,14 @@
       "splitPct": 100,
       "donacion": "45",
       "gastos": "",
-      "asistentes": [],
+      "asistentes": [
+        {
+          "id": "gl2t8yi",
+          "nombre": "Hhhhh",
+          "qty": 5,
+          "estado": "pendiente"
+        }
+      ],
       "estadoSesion": "hecha"
     },
     {
