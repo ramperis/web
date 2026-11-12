@@ -2,13 +2,13 @@
   "sesiones": [
     {
       "id": "6amdjp1",
-      "nombre": "nueva sesión",
-      "fecha": "12/11/2026",
-      "tipo": "precio",
-      "tipoEvento": "otro",
+      "nombre": "Círculo de Hombres",
+      "fecha": "11/11/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
+      "splitPct": 100,
       "donacion": "",
       "gastos": "",
       "asistentes": []
