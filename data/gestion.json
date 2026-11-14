@@ -32,7 +32,14 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "6j4yhyz",
+          "nombre": "Fabian",
+          "qty": 1,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "wf3lxp9",
