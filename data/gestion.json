@@ -67,13 +67,13 @@
           "id": "byx4npc",
           "nombre": "Azahar",
           "qty": 3,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "ib5yqd7",
           "nombre": "Elodie",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "crrn5t7",
