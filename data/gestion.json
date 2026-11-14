@@ -85,12 +85,18 @@
           "id": "sdgzmpw",
           "nombre": "Estela",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "y6s7f46",
           "nombre": "Andrea",
           "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "m12llxo",
+          "nombre": "Jonathan",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
