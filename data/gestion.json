@@ -61,6 +61,12 @@
           "id": "47ykwbb",
           "nombre": "Javier",
           "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "byx4npc",
+          "nombre": "Azahar",
+          "qty": 3,
           "estado": "pendiente"
         }
       ]
