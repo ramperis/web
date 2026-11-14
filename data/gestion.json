@@ -86,6 +86,12 @@
           "nombre": "Estela",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "y6s7f46",
+          "nombre": "Andrea",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
