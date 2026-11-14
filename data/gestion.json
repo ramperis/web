@@ -55,7 +55,7 @@
           "id": "329q8w2",
           "nombre": "Darcy",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "completo"
         },
         {
           "id": "47ykwbb",
@@ -103,7 +103,7 @@
           "id": "6l4fgtw",
           "nombre": "Adela",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
