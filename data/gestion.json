@@ -79,6 +79,12 @@
           "id": "crrn5t7",
           "nombre": "Carla",
           "qty": 2,
+          "estado": "reserva"
+        },
+        {
+          "id": "sdgzmpw",
+          "nombre": "Estela",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
