@@ -97,6 +97,12 @@
           "id": "m12llxo",
           "nombre": "Jonathan",
           "qty": 1,
+          "estado": "reserva"
+        },
+        {
+          "id": "6l4fgtw",
+          "nombre": "Adela",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
