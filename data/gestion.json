@@ -67,6 +67,12 @@
           "id": "byx4npc",
           "nombre": "Azahar",
           "qty": 3,
+          "estado": "reserva"
+        },
+        {
+          "id": "ib5yqd7",
+          "nombre": "Elodie",
+          "qty": 1,
           "estado": "pendiente"
         }
       ]
