@@ -56,6 +56,12 @@
           "nombre": "Darcy",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "47ykwbb",
+          "nombre": "Javier",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
