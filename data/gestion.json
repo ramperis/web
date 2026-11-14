@@ -43,7 +43,7 @@
           "id": "l4a5w4l",
           "nombre": "Oly",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "i43fggm",
@@ -85,7 +85,7 @@
           "id": "sdgzmpw",
           "nombre": "Estela",
           "qty": 1,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "y6s7f46",
