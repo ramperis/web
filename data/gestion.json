@@ -50,6 +50,12 @@
           "nombre": "Myriam",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "329q8w2",
+          "nombre": "Darcy",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
