@@ -43,13 +43,13 @@
           "id": "l4a5w4l",
           "nombre": "Oly",
           "qty": 2,
-          "estado": "reserva"
+          "estado": "completo"
         },
         {
           "id": "i43fggm",
           "nombre": "Myriam",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         }
       ]
     },
