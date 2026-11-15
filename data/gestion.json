@@ -37,7 +37,7 @@
           "id": "6j4yhyz",
           "nombre": "Fabian",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "no viene"
         },
         {
           "id": "l4a5w4l",
@@ -103,7 +103,7 @@
           "id": "6l4fgtw",
           "nombre": "Adela",
           "qty": 1,
-          "estado": "completo"
+          "estado": "no viene"
         }
       ]
     },
