@@ -118,7 +118,8 @@
       "splitPct": 100,
       "donacion": "122",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [],
+      "estadoSesion": "hecha"
     },
     {
       "id": "auv0i74",
