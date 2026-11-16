@@ -52,11 +52,10 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 .score-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg2);border-radius:var(--radius);margin-bottom:4px}
 .score-num{font-size:32px;font-weight:800;color:var(--amber);line-height:1}
 .score-label{font-size:12px;color:var(--text2);line-height:1.4}
-.score-min{font-size:11px;color:var(--text2);margin-left:auto}
-.score-min span{color:var(--sand2)}
-.progress-bar{height:6px;background:var(--bg3);border-radius:3px;margin-bottom:16px;overflow:hidden}
-.progress-fill{height:100%;border-radius:3px;background:var(--amber);transition:width 0.4s ease}
-.progress-fill.done{background:var(--verde)}
+.score-block{flex:1;display:flex;flex-direction:column;gap:3px}
+.score-mini-bar{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;margin-top:4px}
+.score-mini-fill{height:100%;border-radius:3px;background:var(--amber);transition:width 0.4s ease}
+.score-mini-fill.done{background:var(--verde)}
 
 /* TABS */
 .tabs{display:flex;gap:8px;margin-bottom:20px}
@@ -138,21 +137,18 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
       <div class="obj">🎓 60 cursos</div>
     </div>
     <div class="score-bar">
-      <div>
+      <div class="score-block">
         <div class="score-num" id="score-today">0</div>
-        <div class="score-label">pts hoy</div>
+        <div class="score-label">pts hoy <span id="daily-status" style="color:var(--sand2)">0/10</span></div>
+        <div class="score-mini-bar"><div class="score-mini-fill" id="bar-today"></div></div>
       </div>
-      <div style="width:1px;height:40px;background:var(--bg3)"></div>
-      <div>
+      <div style="width:1px;align-self:stretch;background:var(--bg3)"></div>
+      <div class="score-block">
         <div class="score-num" id="score-week-header">0</div>
-        <div class="score-label">pts semana</div>
-      </div>
-      <div class="score-min">
-        <div>Diario: <span id="daily-status">0/10</span></div>
-        <div>Semanal: <span id="weekly-status">0/80</span></div>
+        <div class="score-label">pts semana <span id="weekly-status" style="color:var(--sand2)">0/80</span></div>
+        <div class="score-mini-bar"><div class="score-mini-fill" id="bar-week"></div></div>
       </div>
     </div>
-    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
     <div class="tabs">
       <button class="tab active" onclick="switchTab('today')">Hoy</button>
       <button class="tab" onclick="switchTab('week')">Semana</button>
@@ -351,20 +347,21 @@ function toggleTask(id){
 function updateScore(){
   const pts=calcPts(dayData.done);
   document.getElementById('score-today').textContent=pts;
-  const pct=Math.min(100,(pts/DAILY_MIN)*100);
-  const bar=document.getElementById('progress-fill');
-  bar.style.width=pct+'%';
-  bar.className='progress-fill'+(pts>=DAILY_MIN?' done':'');
   document.getElementById('daily-status').textContent=pts+'/'+DAILY_MIN;
+  const pctDay=Math.min(100,(pts/DAILY_MIN)*100);
+  const barDay=document.getElementById('bar-today');
+  barDay.style.width=pctDay+'%';
+  barDay.className='score-mini-fill'+(pts>=DAILY_MIN?' done':'');
 
   const ws=weekStart(today);
   let weekPts=0;
-  for(let i=0;i<7;i++){
-    const d=addDays(ws,i);
-    weekPts+=calcPts(getDay(d).done);
-  }
+  for(let i=0;i<7;i++) weekPts+=calcPts(getDay(addDays(ws,i)).done);
   document.getElementById('score-week-header').textContent=weekPts;
   document.getElementById('weekly-status').textContent=weekPts+'/'+WEEKLY_MIN;
+  const pctWeek=Math.min(100,(weekPts/WEEKLY_MIN)*100);
+  const barWeek=document.getElementById('bar-week');
+  barWeek.style.width=pctWeek+'%';
+  barWeek.className='score-mini-fill'+(weekPts>=WEEKLY_MIN?' done':'');
 }
 
 // --- Week view ---
