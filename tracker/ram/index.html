@@ -341,10 +341,10 @@ function logout(){
   document.getElementById('login-screen').style.display='flex';
   document.getElementById('pin-input').value='';
 }
-function showApp(){
+async function showApp(){
   document.getElementById('login-screen').style.display='none';
   document.getElementById('app').style.display='block';
-  init();
+  await init();
 }
 
 // --- Date helpers ---
