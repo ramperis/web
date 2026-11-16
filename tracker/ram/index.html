@@ -114,8 +114,21 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 .obj{flex:1;min-width:0;padding:10px 12px;background:var(--bg2);border-radius:10px;font-size:12px;font-weight:600;color:var(--sand2);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .week-summary{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;padding:12px 16px 0}
 .week-chart-wrap{margin:16px 16px 8px;background:var(--bg2);border-radius:12px;padding:12px 8px 8px}
-.history-chart-wrap{margin:16px 16px 24px;background:var(--bg2);border-radius:12px;padding:12px 8px 8px}
+.history-chart-wrap{margin:16px 16px 8px;background:var(--bg2);border-radius:12px;padding:12px 8px 8px}
 .history-chart-title{font-size:12px;font-weight:600;color:var(--sand2);text-align:center;margin-bottom:8px}
+/* BALANCE */
+.balance-wrap{margin:0 0 24px}
+.balance-title{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text2);margin:20px 0 10px}
+.balance-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg2);border-radius:10px;margin-bottom:6px}
+.balance-rank{font-size:12px;font-weight:700;color:var(--text2);width:18px;text-align:center;flex-shrink:0}
+.balance-name{flex:1;font-size:14px;font-weight:500;color:var(--text)}
+.balance-count{font-size:12px;font-weight:700;color:var(--sand2);flex-shrink:0}
+.balance-pts{font-size:13px;font-weight:800;color:var(--amber);flex-shrink:0;min-width:40px;text-align:right}
+.balance-bar-wrap{width:100%;height:4px;background:var(--bg3);border-radius:2px;margin-top:4px}
+.balance-bar{height:4px;border-radius:2px;background:var(--amber);transition:width .4s}
+.balance-row.never .balance-name{color:var(--text2)}
+.balance-row.never .balance-pts{color:var(--rojo)}
+.sync-status{font-size:11px;color:var(--text2);text-align:right;padding:4px 0 8px;min-height:18px}
 </style>
 </head>
 <body>
@@ -200,19 +213,75 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 
   <!-- HISTORIAL -->
   <div id="tab-history" style="display:none">
+    <div class="sync-status" id="sync-status"></div>
     <div id="history-list"></div>
     <div class="history-chart-wrap" id="history-chart-wrap" style="display:none">
       <div class="history-chart-title">Evolución semanal</div>
       <svg id="history-chart" width="100%" height="100" viewBox="0 0 320 100" preserveAspectRatio="none"></svg>
     </div>
+    <div class="balance-wrap" id="balance-wrap" style="display:none">
+      <div class="balance-title">🏆 Tareas más repetidas</div>
+      <div id="balance-top"></div>
+      <div class="balance-title">❌ Tareas menos hechas</div>
+      <div id="balance-bottom"></div>
+      <div class="balance-title">📊 Puntos por tarea</div>
+      <div id="balance-pts"></div>
+    </div>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
 <script>
 const PIN = '1111';
 const USER = 'ram';
 const DAILY_MIN = 10;
 const WEEKLY_MIN = 80;
+
+// --- Supabase ---
+const SB_URL = 'https://xgijnvovngfgwamrxgwq.supabase.co';
+const SB_KEY = 'sb_publishable_TXvveMdcTnvFv7n6y95CCg_EjJkLAWU';
+let sb = null;
+function initSupabase(){
+  try{ sb = supabase.createClient(SB_URL, SB_KEY); }catch(e){ sb=null; }
+}
+
+function setSyncStatus(msg){ try{ document.getElementById('sync-status').textContent=msg; }catch(e){} }
+
+async function syncFromCloud(){
+  if(!sb) return;
+  try{
+    setSyncStatus('↓ Sincronizando…');
+    const {data,error}=await sb.from('tracker_days').select('date,data').eq('user_id',USER);
+    if(error) throw error;
+    if(data){
+      let updated=0;
+      data.forEach(row=>{
+        const local=getDay(row.date);
+        // merge: take the union of done tasks
+        const merged=[...new Set([...(local.done||[]),...(row.data?.done||[])])];
+        const localPts=calcPts(local.done||[]);
+        const cloudPts=calcPts(row.data?.done||[]);
+        // use whichever has more data
+        if(cloudPts>localPts){
+          try{ localStorage.setItem(USER+'_day_'+row.date,JSON.stringify({date:row.date,done:row.data.done})); }catch(e){}
+          updated++;
+        }
+      });
+      setSyncStatus(updated>0?`↓ ${updated} días actualizados`:'✓ Sincronizado');
+    }
+    setTimeout(()=>setSyncStatus(''),3000);
+  }catch(e){
+    setSyncStatus('⚠ Sin conexión (datos locales)');
+    setTimeout(()=>setSyncStatus(''),4000);
+  }
+}
+
+async function saveToCloud(data){
+  if(!sb) return;
+  try{
+    await sb.from('tracker_days').upsert({user_id:USER,date:data.date,data:{done:data.done},updated_at:new Date().toISOString()},{onConflict:'user_id,date'});
+  }catch(e){ /* silent fail */ }
+}
 
 const TASKS = [
   // Nivel 3
@@ -307,6 +376,7 @@ function getDay(dateStr){
 }
 function saveDay(data){
   try{ localStorage.setItem(USER+'_day_'+data.date,JSON.stringify(data)); }catch(e){}
+  saveToCloud(data);
 }
 function getAllDays(){
   const days=[];
@@ -540,7 +610,80 @@ function renderHistory(){
     list.appendChild(block);
   });
   renderHistoryChart(weekData);
+  renderBalance(allDays);
 }
+
+function renderBalance(allDays){
+  if(allDays.length===0){ document.getElementById('balance-wrap').style.display='none'; return; }
+  document.getElementById('balance-wrap').style.display='block';
+  // count per task
+  const counts={};
+  const ptsTotal={};
+  TASKS.forEach(t=>{ counts[t.id]=0; ptsTotal[t.id]=0; });
+  allDays.forEach(d=>{
+    (d.done||[]).forEach(id=>{
+      if(counts[id]!==undefined){ counts[id]++; const t=TASKS.find(x=>x.id===id); if(t) ptsTotal[id]+=t.pts; }
+    });
+  });
+  const totalDays=allDays.length;
+  const sorted=TASKS.map(t=>({...t,count:counts[t.id]||0,totalPts:ptsTotal[t.id]||0})).sort((a,b)=>b.count-a.count);
+  const maxCount=sorted[0]?.count||1;
+  const maxPts=Math.max(...sorted.map(x=>x.totalPts))||1;
+
+  // Top 5
+  const topEl=document.getElementById('balance-top');
+  topEl.innerHTML='';
+  sorted.slice(0,5).forEach((t,i)=>{
+    const pct=Math.round((t.count/totalDays)*100);
+    topEl.innerHTML+=`<div class="balance-row">
+      <span class="balance-rank">${i+1}</span>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="balance-name">${t.n}</span>
+          <span class="balance-count">${t.count}×  <span style="color:var(--text2)">${pct}%</span></span>
+        </div>
+        <div class="balance-bar-wrap"><div class="balance-bar" style="width:${(t.count/maxCount*100).toFixed(0)}%"></div></div>
+      </div>
+    </div>`;
+  });
+
+  // Bottom 5 (never/rarely done)
+  const botEl=document.getElementById('balance-bottom');
+  botEl.innerHTML='';
+  sorted.slice().reverse().slice(0,5).forEach((t,i)=>{
+    const pct=Math.round((t.count/totalDays)*100);
+    const cls=t.count===0?'never':'';
+    botEl.innerHTML+=`<div class="balance-row ${cls}">
+      <span class="balance-rank">${sorted.length-i}</span>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="balance-name">${t.n}</span>
+          <span class="balance-count">${t.count===0?'Nunca':t.count+'×  '+pct+'%'}</span>
+        </div>
+        ${t.count>0?`<div class="balance-bar-wrap"><div class="balance-bar" style="width:${(t.count/maxCount*100).toFixed(0)}%;background:var(--rojo);opacity:.7"></div></div>`:''}
+      </div>
+    </div>`;
+  });
+
+  // Points breakdown
+  const ptsEl=document.getElementById('balance-pts');
+  ptsEl.innerHTML='';
+  const ptsSorted=[...sorted].sort((a,b)=>b.totalPts-a.totalPts);
+  ptsSorted.forEach(t=>{
+    if(t.totalPts===0) return;
+    ptsEl.innerHTML+=`<div class="balance-row">
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="balance-name">${t.n}</span>
+          <span class="balance-pts">${t.totalPts} pts</span>
+        </div>
+        <div class="balance-bar-wrap"><div class="balance-bar" style="width:${(t.totalPts/maxPts*100).toFixed(0)}%"></div></div>
+      </div>
+    </div>`;
+  });
+  if(!ptsEl.innerHTML) ptsEl.innerHTML='<p style="font-size:13px;color:var(--text2);text-align:center;padding:16px">Aún no hay datos suficientes</p>';
+}
+
 function toggleWeek(header){
   const body=header.nextElementSibling;
   body.classList.toggle('open');
@@ -559,8 +702,10 @@ function switchTab(name){
   if(name==='history') renderHistory();
 }
 
-function init(){
+async function init(){
   today=todayStr();
+  initSupabase();
+  await syncFromCloud();
   dayData=getDay(today);
   renderTasks();
 }
