@@ -1,8 +1,8 @@
 {
   "name": "Alba · Pirámide",
   "short_name": "Alba 🔺",
-  "start_url": "/tracker/alba/",
-  "scope": "/tracker/alba/",
+  "start_url": "https://tracker.ramperis.com/alba/",
+  "scope": "https://tracker.ramperis.com/alba/",
   "display": "standalone",
   "background_color": "#1a1510",
   "theme_color": "#1a1510",

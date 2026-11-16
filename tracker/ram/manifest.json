@@ -1,8 +1,8 @@
 {
   "name": "Ram · Pirámide",
   "short_name": "Ram 🔺",
-  "start_url": "/tracker/ram/",
-  "scope": "/tracker/ram/",
+  "start_url": "https://tracker.ramperis.com/ram/",
+  "scope": "https://tracker.ramperis.com/ram/",
   "display": "standalone",
   "background_color": "#1a1510",
   "theme_color": "#1a1510",

@@ -24,6 +24,26 @@
   ],
   "rewrites": [
     {
+      "source": "/ram/:path*",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/ram/:path*"
+    },
+    {
+      "source": "/ram",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/ram/index.html"
+    },
+    {
+      "source": "/alba/:path*",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/alba/:path*"
+    },
+    {
+      "source": "/alba",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/alba/index.html"
+    },
+    {
       "source": "/blog/_plantilla.html",
       "destination": "/404.html"
     },
