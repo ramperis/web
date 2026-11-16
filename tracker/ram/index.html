@@ -230,52 +230,47 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.3/dist/umd/supabase.min.js"></script>
 <script>
 const PIN = '1111';
 const USER = 'ram';
 const DAILY_MIN = 10;
 const WEEKLY_MIN = 80;
 
-// --- Supabase ---
+// --- Supabase REST (no SDK, no external scripts) ---
 const SB_URL = 'https://xgijnvovngfgwamrxgwq.supabase.co';
 const SB_KEY = 'sb_publishable_TXvveMdcTnvFv7n6y95CCg_EjJkLAWU';
-let sb = null;
-function initSupabase(){
-  try{ sb = supabase.createClient(SB_URL, SB_KEY); }catch(e){ sb=null; }
-}
+const SB_HEADERS = {'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'resolution=merge-duplicates'};
 
 function setSyncStatus(msg){ try{ document.getElementById('sync-status').textContent=msg; }catch(e){} }
 
+async function sbFetch(path, opts={}){
+  const r = await fetch(SB_URL+'/rest/v1/'+path, {headers:SB_HEADERS, ...opts});
+  if(!r.ok) throw new Error(r.status);
+  return r.status===204?null:r.json();
+}
+
 async function syncFromCloud(){
-  if(!sb) return;
   try{
     setSyncStatus('↑↓ Sincronizando…');
-    // 1. Upload all local days that have data
+    // 1. Upload all local days
     const localDays=getAllDays().filter(d=>d.done&&d.done.length>0);
     if(localDays.length>0){
-      const upserts=localDays.map(d=>({user_id:USER,date:d.date,data:{done:d.done},updated_at:new Date().toISOString()}));
-      // upsert in batches of 50
-      for(let i=0;i<upserts.length;i+=50){
-        await sb.from('tracker_days').upsert(upserts.slice(i,i+50),{onConflict:'user_id,date',ignoreDuplicates:false});
+      const body=localDays.map(d=>({user_id:USER,date:d.date,data:{done:d.done},updated_at:new Date().toISOString()}));
+      await sbFetch('tracker_days',{method:'POST',body:JSON.stringify(body)});
+    }
+    // 2. Download and merge
+    const rows = await sbFetch('tracker_days?select=date,data&user_id=eq.'+USER);
+    let updated=0;
+    (rows||[]).forEach(row=>{
+      const local=getDay(row.date);
+      const cloudPts=calcPts(row.data?.done||[]);
+      const localPts=calcPts(local.done||[]);
+      if(cloudPts>localPts){
+        try{ localStorage.setItem(USER+'_day_'+row.date,JSON.stringify({date:row.date,done:row.data.done})); }catch(e){}
+        updated++;
       }
-    }
-    // 2. Download cloud and merge (cloud wins if more pts)
-    const {data,error}=await sb.from('tracker_days').select('date,data').eq('user_id',USER);
-    if(error) throw error;
-    if(data){
-      let updated=0;
-      data.forEach(row=>{
-        const local=getDay(row.date);
-        const cloudPts=calcPts(row.data?.done||[]);
-        const localPts=calcPts(local.done||[]);
-        if(cloudPts>localPts){
-          try{ localStorage.setItem(USER+'_day_'+row.date,JSON.stringify({date:row.date,done:row.data.done})); }catch(e){}
-          updated++;
-        }
-      });
-      setSyncStatus(`✓ Sincronizado (${localDays.length} días subidos)`);
-    }
+    });
+    setSyncStatus(`✓ Sincronizado${updated>0?' ('+updated+' días)':''}`);
     setTimeout(()=>setSyncStatus(''),4000);
   }catch(e){
     setSyncStatus('⚠ Sin conexión (datos locales)');
@@ -284,9 +279,8 @@ async function syncFromCloud(){
 }
 
 async function saveToCloud(data){
-  if(!sb) return;
   try{
-    await sb.from('tracker_days').upsert({user_id:USER,date:data.date,data:{done:data.done},updated_at:new Date().toISOString()},{onConflict:'user_id,date'});
+    await sbFetch('tracker_days',{method:'POST',body:JSON.stringify({user_id:USER,date:data.date,data:{done:data.done},updated_at:new Date().toISOString()})});
   }catch(e){ /* silent fail */ }
 }
 
@@ -711,7 +705,6 @@ function switchTab(name){
 
 async function init(){
   today=todayStr();
-  initSupabase();
   await syncFromCloud();
   dayData=getDay(today);
   renderTasks();
