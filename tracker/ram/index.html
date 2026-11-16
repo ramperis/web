@@ -250,26 +250,33 @@ function setSyncStatus(msg){ try{ document.getElementById('sync-status').textCon
 async function syncFromCloud(){
   if(!sb) return;
   try{
-    setSyncStatus('↓ Sincronizando…');
+    setSyncStatus('↑↓ Sincronizando…');
+    // 1. Upload all local days that have data
+    const localDays=getAllDays().filter(d=>d.done&&d.done.length>0);
+    if(localDays.length>0){
+      const upserts=localDays.map(d=>({user_id:USER,date:d.date,data:{done:d.done},updated_at:new Date().toISOString()}));
+      // upsert in batches of 50
+      for(let i=0;i<upserts.length;i+=50){
+        await sb.from('tracker_days').upsert(upserts.slice(i,i+50),{onConflict:'user_id,date',ignoreDuplicates:false});
+      }
+    }
+    // 2. Download cloud and merge (cloud wins if more pts)
     const {data,error}=await sb.from('tracker_days').select('date,data').eq('user_id',USER);
     if(error) throw error;
     if(data){
       let updated=0;
       data.forEach(row=>{
         const local=getDay(row.date);
-        // merge: take the union of done tasks
-        const merged=[...new Set([...(local.done||[]),...(row.data?.done||[])])];
-        const localPts=calcPts(local.done||[]);
         const cloudPts=calcPts(row.data?.done||[]);
-        // use whichever has more data
+        const localPts=calcPts(local.done||[]);
         if(cloudPts>localPts){
           try{ localStorage.setItem(USER+'_day_'+row.date,JSON.stringify({date:row.date,done:row.data.done})); }catch(e){}
           updated++;
         }
       });
-      setSyncStatus(updated>0?`↓ ${updated} días actualizados`:'✓ Sincronizado');
+      setSyncStatus(`✓ Sincronizado (${localDays.length} días subidos)`);
     }
-    setTimeout(()=>setSyncStatus(''),3000);
+    setTimeout(()=>setSyncStatus(''),4000);
   }catch(e){
     setSyncStatus('⚠ Sin conexión (datos locales)');
     setTimeout(()=>setSyncStatus(''),4000);
