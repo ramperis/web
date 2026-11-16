@@ -87,9 +87,9 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 .week-day-dot{width:6px;height:6px;border-radius:50%;background:var(--bg3)}
 .week-day-dot.hit{background:var(--verde)}
 .week-day-dot.today-dot{background:var(--amber)}
-.week-summary{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
-.week-stat{padding:16px;background:var(--bg2);border-radius:var(--radius);text-align:center}
-.week-stat-num{font-size:28px;font-weight:800;color:var(--amber)}
+.week-summary{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:16px}
+.week-stat{padding:12px 8px;background:var(--bg2);border-radius:var(--radius);text-align:center}
+.week-stat-num{font-size:22px;font-weight:800;color:var(--amber)}
 .week-stat-num.hit{color:var(--verde)}
 .week-stat-label{font-size:12px;color:var(--text2)}
 
@@ -112,6 +112,9 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 .empty-history{text-align:center;padding:40px;color:var(--text2);font-size:14px}
 .objetivos{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
 .obj{flex:1;min-width:0;padding:10px 12px;background:var(--bg2);border-radius:10px;font-size:12px;font-weight:600;color:var(--sand2);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.week-chart-wrap{margin:16px 16px 8px;background:var(--bg2);border-radius:12px;padding:12px 8px 8px}
+.history-chart-wrap{margin:16px 16px 24px;background:var(--bg2);border-radius:12px;padding:12px 8px 8px}
+.history-chart-title{font-size:12px;font-weight:600;color:var(--sand2);text-align:center;margin-bottom:8px}
 </style>
 </head>
 <body>
@@ -180,12 +183,27 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
         <div class="week-stat-num" id="week-days-hit">0/7</div>
         <div class="week-stat-label">días ≥10 pts</div>
       </div>
+      <div class="week-stat">
+        <div class="week-stat-num" id="week-media">0</div>
+        <div class="week-stat-label">media diaria</div>
+      </div>
+      <div class="week-stat">
+        <div class="week-stat-num" id="week-racha">0</div>
+        <div class="week-stat-label">racha actual 🔥</div>
+      </div>
+    </div>
+    <div class="week-chart-wrap">
+      <svg id="week-chart" width="100%" height="90" viewBox="0 0 280 90" preserveAspectRatio="none"></svg>
     </div>
   </div>
 
   <!-- HISTORIAL -->
   <div id="tab-history" style="display:none">
     <div id="history-list"></div>
+    <div class="history-chart-wrap" id="history-chart-wrap" style="display:none">
+      <div class="history-chart-title">Evolución semanal</div>
+      <svg id="history-chart" width="100%" height="100" viewBox="0 0 320 100" preserveAspectRatio="none"></svg>
+    </div>
   </div>
 </div>
 
@@ -257,9 +275,8 @@ function dateFromStr(s){ const [y,m,d]=s.split('-').map(Number); return new Date
 function weekStart(dateStr){
   const d=dateFromStr(dateStr);
   const dow=d.getDay();
-  const mon=new Date(d);
-  mon.setDate(d.getDate()-((dow+6)%7));
-  return mon.toISOString().slice(0,10);
+  d.setDate(d.getDate()-((dow+6)%7));
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 }
 function addDays(dateStr,n){
   const d=dateFromStr(dateStr);
@@ -366,6 +383,42 @@ function updateScore(){
   barWeek.className='score-mini-fill'+(weekPts>=WEEKLY_MIN?' done':'');
 }
 
+// --- Racha ---
+function calcRacha(){
+  let count=0;
+  let d=today;
+  while(true){
+    const pts=calcPts(getDay(d).done);
+    if(pts>=DAILY_MIN){ count++; d=addDays(d,-1); }
+    else break;
+  }
+  return count;
+}
+
+// --- Week chart ---
+function renderWeekChart(dayPts){
+  const svg=document.getElementById('week-chart');
+  const max=Math.max(DAILY_MIN*2,Math.max(...dayPts)||1);
+  const W=280,H=80,barW=24,gap=(W-7*barW)/8;
+  const refY=H-(DAILY_MIN/max)*H;
+  let html='';
+  html+=`<line x1="0" y1="${refY.toFixed(1)}" x2="${W}" y2="${refY.toFixed(1)}" stroke="rgba(240,235,225,0.15)" stroke-width="1" stroke-dasharray="4,3"/>`;
+  const labels=['L','M','X','J','V','S','D'];
+  dayPts.forEach((pts,i)=>{
+    const x=gap+(i*(barW+gap));
+    const bh=Math.max(2,(pts/max)*H);
+    const y=H-bh;
+    const hit=pts>=DAILY_MIN;
+    const fill=hit?'var(--verde)':'var(--amber)';
+    html+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW}" height="${bh.toFixed(1)}" rx="4" fill="${fill}" opacity="0.9"/>`;
+    html+=`<text x="${(x+barW/2).toFixed(1)}" y="${(H+12).toFixed(1)}" text-anchor="middle" font-size="10" fill="var(--sand2)" font-family="Inter,sans-serif">${labels[i]}</text>`;
+    if(pts>0) html+=`<text x="${(x+barW/2).toFixed(1)}" y="${(y-3).toFixed(1)}" text-anchor="middle" font-size="9" fill="${fill}" font-family="Inter,sans-serif">${pts}</text>`;
+  });
+  svg.innerHTML=html;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H+16}`);
+  svg.setAttribute('height','96');
+}
+
 // --- Week view ---
 function renderWeek(){
   const ws=weekStart(today);
@@ -373,10 +426,12 @@ function renderWeek(){
   const labels=['L','M','X','J','V','S','D'];
   grid.innerHTML='';
   let weekPts=0,daysHit=0;
+  const dayPts=[];
   for(let i=0;i<7;i++){
     const d=addDays(ws,i);
     const data=getDay(d);
     const pts=calcPts(data.done);
+    dayPts.push(pts);
     weekPts+=pts;
     const hit=pts>=DAILY_MIN;
     if(hit) daysHit++;
@@ -392,6 +447,39 @@ function renderWeek(){
   wTotal.textContent=weekPts;
   wTotal.className='week-stat-num'+(weekPts>=WEEKLY_MIN?' hit':'');
   document.getElementById('week-days-hit').textContent=daysHit+'/7';
+  document.getElementById('week-media').textContent=(weekPts/7).toFixed(1);
+  document.getElementById('week-racha').textContent=calcRacha();
+  renderWeekChart(dayPts);
+}
+
+// --- History chart ---
+function renderHistoryChart(weekData){
+  if(weekData.length<2){
+    document.getElementById('history-chart-wrap').style.display='none';
+    return;
+  }
+  document.getElementById('history-chart-wrap').style.display='block';
+  const svg=document.getElementById('history-chart');
+  const pts=weekData.map(w=>w.pts);
+  const max=Math.max(WEEKLY_MIN*1.2,Math.max(...pts)||1);
+  const W=320,H=80,n=pts.length;
+  const barW=Math.min(28,Math.floor((W-16)/(n+1)));
+  const totalGap=W-n*barW;
+  const gap=totalGap/(n+1);
+  const refY=H-(WEEKLY_MIN/max)*H;
+  let html='';
+  html+=`<line x1="0" y1="${refY.toFixed(1)}" x2="${W}" y2="${refY.toFixed(1)}" stroke="rgba(240,235,225,0.15)" stroke-width="1" stroke-dasharray="4,3"/>`;
+  pts.forEach((p,i)=>{
+    const x=gap+(i*(barW+gap));
+    const bh=Math.max(2,(p/max)*H);
+    const y=H-bh;
+    const hit=p>=WEEKLY_MIN;
+    const fill=hit?'var(--verde)':'var(--amber)';
+    html+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW}" height="${bh.toFixed(1)}" rx="3" fill="${fill}" opacity="0.9"/>`;
+    html+=`<text x="${(x+barW/2).toFixed(1)}" y="${(H+12).toFixed(1)}" text-anchor="middle" font-size="9" fill="var(--sand2)" font-family="Inter,sans-serif">S${weekData[i].num}</text>`;
+  });
+  svg.innerHTML=html;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H+16}`);
 }
 
 // --- History ---
@@ -400,6 +488,7 @@ function renderHistory(){
   const allDays=getAllDays();
   if(allDays.length===0){
     list.innerHTML='<div class="empty-history">Aún no hay datos.<br>¡A por ello!</div>';
+    document.getElementById('history-chart-wrap').style.display='none';
     return;
   }
   const weeks={};
@@ -408,15 +497,19 @@ function renderHistory(){
     if(!weeks[ws]) weeks[ws]=[];
     weeks[ws].push(d);
   });
-  const sortedWeeks=Object.keys(weeks).sort((a,b)=>b.localeCompare(a));
-  list.innerHTML='';
+  const sortedWeeks=Object.keys(weeks).sort((a,b)=>a.localeCompare(b));
   const currentWS=weekStart(today);
-  sortedWeeks.forEach(ws=>{
-    const days=weeks[ws];
+  if(!weeks[currentWS]) weeks[currentWS]=[];
+  const allWeeks=[...new Set([...sortedWeeks,currentWS])].sort((a,b)=>a.localeCompare(b));
+  list.innerHTML='';
+  const weekData=[];
+  allWeeks.slice().reverse().forEach((ws,revIdx)=>{
+    const weekNum=allWeeks.indexOf(ws)+1;
     let fullPts=0;
     for(let i=0;i<7;i++) fullPts+=calcPts(getDay(addDays(ws,i)).done);
-    const hit=fullPts>=WEEKLY_MIN;
+    weekData.unshift({num:weekNum,pts:fullPts,ws});
     const isCurrent=ws===currentWS;
+    const hit=fullPts>=WEEKLY_MIN;
     let badge,badgeClass;
     if(isCurrent){badge='En curso';badgeClass='badge-current';}
     else if(hit){badge='✓ Completada';badgeClass='badge-done';}
@@ -425,7 +518,7 @@ function renderHistory(){
     block.className='history-week';
     block.innerHTML=`<div class="history-week-header" onclick="toggleWeek(this)">
       <div>
-        <div class="history-week-title">${fmtWeekRange(ws)}</div>
+        <div class="history-week-title">Semana ${weekNum} · ${fmtWeekRange(ws)}</div>
         <span class="history-badge ${badgeClass}">${badge}</span>
       </div>
       <span class="history-week-pts${hit&&!isCurrent?' hit':''}">${fullPts} pts</span>
@@ -440,6 +533,7 @@ function renderHistory(){
     </div>`;
     list.appendChild(block);
   });
+  renderHistoryChart(weekData);
 }
 function toggleWeek(header){
   const body=header.nextElementSibling;
