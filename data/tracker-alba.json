@@ -1,7 +1,22 @@
 {
   "days": {
     "2026-11-16": {
-      "done": ["tronki","deporte","limpiar","gracias","bailar","llamada","no_videojuegos","cantar","editar"]
+      "done": [
+        "tronki",
+        "deporte",
+        "limpiar",
+        "gracias",
+        "bailar",
+        "llamada",
+        "no_videojuegos",
+        "cantar",
+        "editar"
+      ]
+    },
+    "2026-11-17": {
+      "done": [
+        "limpiar"
+      ]
     }
   }
 }
