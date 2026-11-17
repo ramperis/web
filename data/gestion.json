@@ -11,7 +11,14 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "bgq74oh",
+          "nombre": "Angeles",
+          "qty": 1,
+          "estado": "completo"
+        }
+      ]
     },
     {
       "id": "6amdjp1",
