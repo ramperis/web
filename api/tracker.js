@@ -68,14 +68,14 @@ module.exports = async (req, res) => {
         }
       }
 
-      // Mergear: para cada día, gana el que tenga más tareas completadas
+      // Mergear: para cada día, gana el que tenga más tareas (union de ambos)
       const merged = { ...currentDays };
       for (const [date, dayData] of Object.entries(days)) {
         const incoming = Array.isArray(dayData?.done) ? dayData.done : [];
         const existing = Array.isArray(merged[date]?.done) ? merged[date].done : [];
-        merged[date] = incoming.length >= existing.length
-          ? { done: incoming }
-          : { done: existing };
+        // Union: quedarse con todas las tareas que aparezcan en cualquiera de los dos
+        const union = [...new Set([...existing, ...incoming])];
+        merged[date] = { done: union };
       }
 
       const encoded = Buffer.from(

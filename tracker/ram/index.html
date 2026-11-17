@@ -263,17 +263,19 @@ async function syncFromCloud(){
     const {sha, days} = await r.json();
     cloudSha = sha;
 
-    // Aplicar días cloud al localStorage
-    let updated = 0;
+    // Aplicar todos los días cloud al localStorage (cloud wins)
     Object.entries(days||{}).forEach(([date, dayData])=>{
-      const local = getDay(date);
       const cloudDone = Array.isArray(dayData?.done) ? dayData.done : [];
-      const localDone = local.done || [];
-      if(cloudDone.length > localDone.length){
+      if(cloudDone.length > 0){
         try{ localStorage.setItem(USER+'_day_'+date, JSON.stringify({date, done:cloudDone})); }catch(e){}
-        updated++;
       }
     });
+
+    // Refrescar UI con datos actualizados
+    dayData = getDay(today);
+    renderTasks();
+    if(currentTab==='week') renderWeek();
+    if(currentTab==='history') renderHistory();
 
     setSyncStatus(`✓ sync`);
     setTimeout(()=>setSyncStatus(''),4000);
