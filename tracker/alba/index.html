@@ -847,5 +847,10 @@ document.getElementById('login-btn').addEventListener('click',login);
 
 checkAuth();
 </script>
+<script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/alba/sw.js').catch(()=>{});
+}
+</script>
 </body>
 </html>
