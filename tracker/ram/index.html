@@ -254,6 +254,48 @@ let cloudSha = null;
 
 function setSyncStatus(msg){ try{ document.getElementById('sync-status').textContent=msg; }catch(e){} }
 
+async function downloadFromCloud(){
+  // Solo GET — descarga sin subir nada. Se llama en init().
+  try{
+    setSyncStatus('↓ …');
+    const r = await fetch('/api/tracker?user='+USER, {
+      method:'GET',
+      headers:{'Authorization':'Bearer '+API_PASS}
+    });
+    if(!r.ok) throw new Error(r.status);
+    const {sha, days} = await r.json();
+    cloudSha = sha;
+
+    const cloudDates = Object.keys(days||{});
+    if(cloudDates.length === 0){
+      const keys = Object.keys(localStorage).filter(k=>k.startsWith(USER+'_day_'));
+      keys.forEach(k=>{ try{ localStorage.removeItem(k); }catch(e){} });
+    } else {
+      const keys = Object.keys(localStorage).filter(k=>k.startsWith(USER+'_day_'));
+      keys.forEach(k=>{
+        const date = k.replace(USER+'_day_','');
+        if(!days[date]) try{ localStorage.removeItem(k); }catch(e){}
+      });
+      cloudDates.forEach(date=>{
+        const cloudDone = Array.isArray(days[date]?.done) ? days[date].done : [];
+        try{ localStorage.setItem(USER+'_day_'+date, JSON.stringify({date, done:cloudDone})); }catch(e){}
+      });
+    }
+
+    dayData = getDay(today);
+    renderTasks();
+    if(currentTab==='week') renderWeek();
+    if(currentTab==='history') renderHistory();
+    setSyncStatus('✓');
+    setTimeout(()=>setSyncStatus(''),3000);
+    return true;
+  }catch(e){
+    setSyncStatus('⚠ offline');
+    setTimeout(()=>setSyncStatus(''),4000);
+    return false;
+  }
+}
+
 async function syncFromCloud(){
   try{
     setSyncStatus('↑↓ …');
@@ -272,13 +314,26 @@ async function syncFromCloud(){
     const {sha, days} = await r.json();
     cloudSha = sha;
 
-    // Aplicar todos los días cloud al localStorage (cloud wins)
-    Object.entries(days||{}).forEach(([date, dayData])=>{
-      const cloudDone = Array.isArray(dayData?.done) ? dayData.done : [];
-      if(cloudDone.length > 0){
+    // Si cloud está vacío, limpiar localStorage local (reset remoto)
+    const cloudDates = Object.keys(days||{});
+    if(cloudDates.length === 0){
+      // Borrar todos los días locales
+      const keys = Object.keys(localStorage).filter(k=>k.startsWith(USER+'_day_'));
+      keys.forEach(k=>{ try{ localStorage.removeItem(k); }catch(e){} });
+    } else {
+      // Aplicar todos los días cloud al localStorage (cloud wins)
+      // Primero borrar días locales que no están en cloud
+      const keys = Object.keys(localStorage).filter(k=>k.startsWith(USER+'_day_'));
+      keys.forEach(k=>{
+        const date = k.replace(USER+'_day_','');
+        if(!days[date]) try{ localStorage.removeItem(k); }catch(e){}
+      });
+      // Luego aplicar los del cloud
+      cloudDates.forEach(date=>{
+        const cloudDone = Array.isArray(days[date]?.done) ? days[date].done : [];
         try{ localStorage.setItem(USER+'_day_'+date, JSON.stringify({date, done:cloudDone})); }catch(e){}
-      }
-    });
+      });
+    }
 
     // Refrescar UI con datos actualizados
     dayData = getDay(today);
@@ -785,7 +840,7 @@ function switchTab(name){
 
 async function init(){
   today=todayStr();
-  await syncFromCloud();
+  await downloadFromCloud();
   dayData=getDay(today);
   renderTasks();
 }
