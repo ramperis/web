@@ -11,6 +11,13 @@
       ]
     },
     {
+      "source": "/tracker/:path*/manifest.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/manifest+json" },
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
@@ -18,11 +25,31 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
         { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://w.behold.so https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://unpkg.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://unpkg.com https://*.behold.so https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://www.facebook.com https://connect.facebook.net; frame-ancestors 'none'; base-uri 'self'; form-action 'none'" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://w.behold.so https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://unpkg.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://tracker.ramperis.com https://unpkg.com https://*.behold.so https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://www.facebook.com https://connect.facebook.net; frame-ancestors 'none'; base-uri 'self'; form-action 'none'" }
       ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/ram/:path*",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/ram/:path*"
+    },
+    {
+      "source": "/ram",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/ram/index.html"
+    },
+    {
+      "source": "/alba/:path*",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/alba/:path*"
+    },
+    {
+      "source": "/alba",
+      "has": [{"type": "host", "value": "tracker.ramperis.com"}],
+      "destination": "/tracker/alba/index.html"
+    },
     {
       "source": "/blog/_plantilla.html",
       "destination": "/404.html"

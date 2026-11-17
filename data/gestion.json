@@ -1,6 +1,86 @@
 {
   "sesiones": [
     {
+      "id": "60py0p2",
+      "nombre": "Sesion Okisam",
+      "fecha": "19/11/2026",
+      "tipo": "donacion",
+      "tipoEvento": "corporate",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "500",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
+      "id": "3k08t88",
+      "nombre": "Breath & Sound 28/11",
+      "fecha": "28/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "35",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
+      "id": "8spl09r",
+      "nombre": "Breath & Sound 20/11",
+      "fecha": "20/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "35",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
+      "id": "mp7ofln",
+      "nombre": "Baño sonido Angeles",
+      "fecha": "18/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "60",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": [
+        {
+          "id": "bgq74oh",
+          "nombre": "Angeles",
+          "qty": 1,
+          "estado": "completo"
+        }
+      ]
+    },
+    {
+      "id": "6amdjp1",
+      "nombre": "Círculo de Hombres",
+      "fecha": "11/11/2026",
+      "tipo": "donacion",
+      "tipoEvento": "circulo",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "45",
+      "gastos": "",
+      "asistentes": [
+        {
+          "id": "gl2t8yi",
+          "nombre": "Hhhhh",
+          "qty": 5,
+          "estado": "confirmado"
+        }
+      ],
+      "estadoSesion": "hecha"
+    },
+    {
       "id": "qz8mdn4",
       "nombre": "Cacao + Baño sonido 14/11",
       "fecha": "14/11/2026",
@@ -8,36 +88,97 @@
       "tipoEvento": "otro",
       "precioTotal": "35",
       "precioReserva": "",
-      "splitPct": 100,
+      "splitPct": 60,
       "donacion": "",
-      "gastos": "",
-      "asistentes": []
+      "gastos": "125",
+      "asistentes": [
+        {
+          "id": "6j4yhyz",
+          "nombre": "Fabian",
+          "qty": 1,
+          "estado": "no viene"
+        },
+        {
+          "id": "l4a5w4l",
+          "nombre": "Oly",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "i43fggm",
+          "nombre": "Myriam",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "329q8w2",
+          "nombre": "Darcy",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "47ykwbb",
+          "nombre": "Javier",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "byx4npc",
+          "nombre": "Azahar",
+          "qty": 3,
+          "estado": "completo"
+        },
+        {
+          "id": "ib5yqd7",
+          "nombre": "Elodie",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "crrn5t7",
+          "nombre": "Carla",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "sdgzmpw",
+          "nombre": "Estela",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "y6s7f46",
+          "nombre": "Andrea",
+          "qty": 2,
+          "estado": "completo"
+        },
+        {
+          "id": "m12llxo",
+          "nombre": "Jonathan",
+          "qty": 1,
+          "estado": "completo"
+        },
+        {
+          "id": "6l4fgtw",
+          "nombre": "Adela",
+          "qty": 1,
+          "estado": "no viene"
+        }
+      ]
     },
     {
       "id": "wf3lxp9",
       "nombre": "Yin Yoga + Baño sonido 15/11",
       "fecha": "15/11/2026",
-      "tipo": "precio",
-      "tipoEvento": "otro",
-      "precioTotal": "35",
-      "precioReserva": "",
-      "splitPct": 100,
-      "donacion": "",
-      "gastos": "",
-      "asistentes": []
-    },
-    {
-      "id": "6h724wy",
-      "nombre": "nueva sesión",
-      "fecha": "03/11/2026",
-      "tipo": "precio",
+      "tipo": "donacion",
       "tipoEvento": "otro",
       "precioTotal": "",
       "precioReserva": "",
-      "splitPct": 50,
-      "donacion": "",
+      "splitPct": 100,
+      "donacion": "122",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [],
+      "estadoSesion": "hecha"
     },
     {
       "id": "auv0i74",
@@ -167,7 +308,7 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 100,
-      "donacion": "",
+      "donacion": "60",
       "gastos": "",
       "asistentes": []
     },
@@ -194,7 +335,7 @@
       "precioTotal": "",
       "precioReserva": "",
       "splitPct": 100,
-      "donacion": "",
+      "donacion": "160",
       "gastos": "",
       "asistentes": []
     },
