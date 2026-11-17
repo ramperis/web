@@ -1,23 +1,11 @@
 {
   "days": {
-    "2026-11-16": {
-      "done": [
-        "meditar",
-        "ejercicio",
-        "limpiar",
-        "bailar",
-        "madrugar",
-        "desarrollar",
-        "armonicos",
-        "instagram",
-        "leer"
-      ]
-    },
     "2026-11-17": {
       "done": [
         "limpiar",
         "bailar",
-        "madrugar"
+        "madrugar",
+        "ejercicio"
       ]
     }
   }
