@@ -2,7 +2,7 @@ const REPO   = 'ramperis/web';
 const GH_URL = (file) => `https://api.github.com/repos/${REPO}/contents/${file}`;
 
 module.exports = async (req, res) => {
-  const { GESTION_TOKEN, TRACKER_PASS } = process.env;
+  const { GESTION_TOKEN, GESTION_PASS: TRACKER_PASS } = process.env;
 
   res.setHeader('Access-Control-Allow-Origin',  req.headers.origin || '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
