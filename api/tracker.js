@@ -55,14 +55,11 @@ module.exports = async (req, res) => {
         currentSha  = file.sha;
       }
 
-      // Mergear: para cada día, gana el que tenga más tareas (union de ambos)
+      // El incoming reemplaza el día completo (last-write-wins por día)
       const merged = { ...currentDays };
       for (const [date, dayData] of Object.entries(days)) {
         const incoming = Array.isArray(dayData?.done) ? dayData.done : [];
-        const existing = Array.isArray(merged[date]?.done) ? merged[date].done : [];
-        // Union: quedarse con todas las tareas que aparezcan en cualquiera de los dos
-        const union = [...new Set([...existing, ...incoming])];
-        merged[date] = { done: union };
+        merged[date] = { done: incoming };
       }
 
       const encoded = Buffer.from(
