@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "8spl09r",
+      "nombre": "nueva sesión",
+      "fecha": "17/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "mp7ofln",
       "nombre": "Baño sonido Angeles",
       "fecha": "18/11/2026",
