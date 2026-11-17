@@ -44,28 +44,15 @@ module.exports = async (req, res) => {
       const { sha, days } = req.body;
       if (!days || typeof days !== 'object') return res.status(400).json({ error: 'Missing days' });
 
-      // Si ya existe, leer y mergear (el que tiene más pts gana por día)
+      // Siempre leer el estado actual de cloud antes de mergear
       let currentDays = {};
-      let currentSha  = sha;
-      if (!currentSha) {
-        const r = await fetch(url, { headers: ghHeaders });
-        if (r.ok) {
-          const file = await r.json();
-          const existing = JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
-          currentDays = existing.days || {};
-          currentSha  = file.sha;
-        }
-      } else {
-        // sha conocido — igual leemos para mergear si hay conflicto
-        const r = await fetch(url, { headers: ghHeaders });
-        if (r.ok) {
-          const file = await r.json();
-          if (file.sha !== currentSha) {
-            const existing = JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
-            currentDays = existing.days || {};
-            currentSha  = file.sha;
-          }
-        }
+      let currentSha  = null;
+      const r0 = await fetch(url, { headers: ghHeaders });
+      if (r0.ok) {
+        const file = await r0.json();
+        const existing = JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
+        currentDays = existing.days || {};
+        currentSha  = file.sha;
       }
 
       // Mergear: para cada día, gana el que tenga más tareas (union de ambos)
