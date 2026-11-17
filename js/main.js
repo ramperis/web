@@ -217,7 +217,7 @@
   var sidebar = document.querySelector('.post-sidebar');
   if (!sidebar || sidebar.hasAttribute('data-no-mth')) return;
   var banner = document.createElement('a');
-  banner.href = 'https://www.masterthehandpan.com/?via=ram';
+  banner.href = 'https://www.masterthehandpan.com/?via=ramperis';
   banner.target = '_blank';
   banner.rel = 'noopener noreferrer sponsored';
   banner.className = 'mth-banner-sidebar';
