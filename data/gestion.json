@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "60py0p2",
+      "nombre": "Breath & Sound 28/11",
+      "fecha": "28/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "breath-sound",
+      "precioTotal": "35",
+      "precioReserva": "",
+      "splitPct": 100,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "3k08t88",
       "nombre": "Breath & Sound 28/11",
       "fecha": "28/11/2026",
