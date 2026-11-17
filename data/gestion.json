@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "mp7ofln",
+      "nombre": "nueva sesión",
+      "fecha": "17/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "6amdjp1",
       "nombre": "Círculo de Hombres",
       "fecha": "11/11/2026",
