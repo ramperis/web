@@ -148,7 +148,11 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
   <div class="header">
     <div class="header-top">
       <h1>🔺 Ram</h1>
-      <button class="logout-btn" onclick="logout()">Salir</button>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span id="sync-status" style="font-size:11px;color:var(--text2)"></span>
+        <button class="logout-btn" onclick="manualSync()" style="color:var(--amber)">↑↓</button>
+        <button class="logout-btn" onclick="logout()">Salir</button>
+      </div>
     </div>
     <div class="objetivos" id="objetivos-header">
       <div class="obj">📱 111K IG</div>
@@ -213,7 +217,6 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 
   <!-- HISTORIAL -->
   <div id="tab-history" style="display:none">
-    <div class="sync-status" id="sync-status"></div>
     <div id="history-list"></div>
     <div class="history-chart-wrap" id="history-chart-wrap" style="display:none">
       <div class="history-chart-title">Evolución semanal</div>
@@ -236,52 +239,73 @@ const USER = 'ram';
 const DAILY_MIN = 10;
 const WEEKLY_MIN = 80;
 
-// --- Supabase REST (no SDK, no external scripts) ---
-const SB_URL = 'https://xgijnvovngfgwamrxgwq.supabase.co';
-const SB_KEY = 'sb_publishable_TXvveMdcTnvFv7n6y95CCg_EjJkLAWU';
-const SB_HEADERS = {'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'resolution=merge-duplicates'};
+// --- Sync via /api/tracker (mismo patrón que gestion.html) ---
+const API_PASS = 'Gratitudeterna'; // misma que GESTION_PASS en Vercel
+let cloudSha = null;
 
 function setSyncStatus(msg){ try{ document.getElementById('sync-status').textContent=msg; }catch(e){} }
 
-async function sbFetch(path, opts={}){
-  const r = await fetch(SB_URL+'/rest/v1/'+path, {headers:SB_HEADERS, ...opts});
-  if(!r.ok) throw new Error(r.status);
-  return r.status===204?null:r.json();
-}
-
 async function syncFromCloud(){
   try{
-    setSyncStatus('↑↓ Sincronizando…');
-    // 1. Upload all local days
-    const localDays=getAllDays().filter(d=>d.done&&d.done.length>0);
-    if(localDays.length>0){
-      const body=localDays.map(d=>({user_id:USER,date:d.date,data:{done:d.done},updated_at:new Date().toISOString()}));
-      await sbFetch('tracker_days',{method:'POST',body:JSON.stringify(body)});
-    }
-    // 2. Download and merge
-    const rows = await sbFetch('tracker_days?select=date,data&user_id=eq.'+USER);
-    let updated=0;
-    (rows||[]).forEach(row=>{
-      const local=getDay(row.date);
-      const cloudPts=calcPts(row.data?.done||[]);
-      const localPts=calcPts(local.done||[]);
-      if(cloudPts>localPts){
-        try{ localStorage.setItem(USER+'_day_'+row.date,JSON.stringify({date:row.date,done:row.data.done})); }catch(e){}
+    setSyncStatus('↑↓ …');
+    // Recoger días locales
+    const localDays = getAllDays().filter(d=>d.done&&d.done.length>0);
+    const daysPayload = {};
+    localDays.forEach(d=>{ daysPayload[d.date]={done:d.done}; });
+
+    // POST: sube local y recibe merged desde GitHub
+    const r = await fetch('/api/tracker?user='+USER, {
+      method:'POST',
+      headers:{'Authorization':'Bearer '+API_PASS,'Content-Type':'application/json'},
+      body: JSON.stringify({days: daysPayload, sha: cloudSha})
+    });
+    if(!r.ok) throw new Error(r.status);
+    const {sha, days} = await r.json();
+    cloudSha = sha;
+
+    // Aplicar días cloud al localStorage
+    let updated = 0;
+    Object.entries(days||{}).forEach(([date, dayData])=>{
+      const local = getDay(date);
+      const cloudDone = Array.isArray(dayData?.done) ? dayData.done : [];
+      const localDone = local.done || [];
+      if(cloudDone.length > localDone.length){
+        try{ localStorage.setItem(USER+'_day_'+date, JSON.stringify({date, done:cloudDone})); }catch(e){}
         updated++;
       }
     });
-    setSyncStatus(`✓ Sincronizado${updated>0?' ('+updated+' días)':''}`);
+
+    setSyncStatus(`✓ sync`);
     setTimeout(()=>setSyncStatus(''),4000);
+    return true;
   }catch(e){
-    setSyncStatus('⚠ Sin conexión (datos locales)');
+    console.error('sync error',e);
+    setSyncStatus('⚠ offline');
     setTimeout(()=>setSyncStatus(''),4000);
+    return false;
   }
 }
 
 async function saveToCloud(data){
   try{
-    await sbFetch('tracker_days',{method:'POST',body:JSON.stringify({user_id:USER,date:data.date,data:{done:data.done},updated_at:new Date().toISOString()})});
-  }catch(e){ /* silent fail */ }
+    const r = await fetch('/api/tracker?user='+USER, {
+      method:'POST',
+      headers:{'Authorization':'Bearer '+API_PASS,'Content-Type':'application/json'},
+      body: JSON.stringify({days:{[data.date]:{done:data.done}}, sha:cloudSha})
+    });
+    if(r.ok){ const j=await r.json(); cloudSha=j.sha; }
+  }catch(e){ console.warn('saveToCloud failed',e); }
+}
+
+async function manualSync(){
+  setSyncStatus('↑↓ …');
+  const ok = await syncFromCloud();
+  if(ok){
+    dayData=getDay(today);
+    renderTasks();
+    if(currentTab==='week') renderWeek();
+    if(currentTab==='history') renderHistory();
+  }
 }
 
 const TASKS = [
