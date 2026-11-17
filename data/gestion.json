@@ -37,7 +37,14 @@
       "splitPct": 100,
       "donacion": "",
       "gastos": "",
-      "asistentes": []
+      "asistentes": [
+        {
+          "id": "1f6lnqv",
+          "nombre": "Dulce",
+          "qty": 2,
+          "estado": "pendiente"
+        }
+      ]
     },
     {
       "id": "mp7ofln",
