@@ -81,6 +81,7 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
 .week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:20px}
 .week-day{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px;background:var(--bg2);border-radius:10px}
 .week-day.today{background:var(--bg3);outline:2px solid var(--amber)}
+.week-day.selected{background:var(--bg3);outline:2px solid var(--sand2)}
 .week-day-label{font-size:10px;color:var(--text2);font-weight:600;text-transform:uppercase}
 .week-day-pts{font-size:14px;font-weight:700;color:var(--sand2)}
 .week-day-pts.hit{color:var(--verde)}
@@ -211,6 +212,13 @@ body{min-height:100vh;padding-top:var(--safe-top);padding-bottom:calc(80px + var
     </div>
     <div class="week-chart-wrap">
       <svg id="week-chart" width="100%" height="90" viewBox="0 0 280 90" preserveAspectRatio="none"></svg>
+    </div>
+    <div id="day-detail" style="display:none;margin-top:12px;background:var(--bg2);border-radius:12px;padding:14px 16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <span id="day-detail-title" style="font-size:13px;font-weight:700;color:var(--sand2)"></span>
+        <span id="day-detail-pts" style="font-size:13px;font-weight:700;color:var(--amber)"></span>
+      </div>
+      <div id="day-detail-tasks" style="display:flex;flex-direction:column;gap:6px;"></div>
     </div>
   </div>
 
@@ -515,6 +523,47 @@ function renderWeekChart(dayPts){
   svg.setAttribute('height','96');
 }
 
+// --- Day detail (week tab) ---
+function showDayDetail(date){
+  const detail=document.getElementById('day-detail');
+  const prevSelected=document.querySelector('.week-day.selected');
+  if(prevSelected&&prevSelected.dataset.date===date){
+    prevSelected.classList.remove('selected');
+    detail.style.display='none';
+    return;
+  }
+  if(prevSelected) prevSelected.classList.remove('selected');
+  const el=document.querySelector(`.week-day[data-date="${date}"]`);
+  if(el) el.classList.add('selected');
+
+  const data=getDay(date);
+  const done=Array.isArray(data.done)?data.done:[];
+  const pts=calcPts(done);
+
+  const dayNames=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  const d=new Date(date+'T12:00:00');
+  const label=`${dayNames[d.getDay()]} ${d.getDate()}/${d.getMonth()+1}`;
+
+  document.getElementById('day-detail-title').textContent=label;
+  document.getElementById('day-detail-pts').textContent=pts+' pts';
+
+  const container=document.getElementById('day-detail-tasks');
+  if(done.length===0){
+    container.innerHTML='<span style="font-size:12px;color:var(--text2)">Sin tareas registradas</span>';
+  } else {
+    container.innerHTML=done.map(id=>{
+      const t=TASKS.find(x=>x.id===id);
+      if(!t) return '';
+      const lvlColor=t.lvl===3?'var(--amber)':t.lvl===2?'var(--sand2)':'var(--text2)';
+      return `<div style="display:flex;justify-content:space-between;align-items:center;padding:4px 8px;background:var(--bg3);border-radius:7px;">
+        <span style="font-size:12px;color:var(--text1)">${t.n}</span>
+        <span style="font-size:11px;font-weight:700;color:${lvlColor}">${t.pts}p</span>
+      </div>`;
+    }).join('');
+  }
+  detail.style.display='block';
+}
+
 // --- Week view ---
 function renderWeek(){
   const ws=weekStart(today);
@@ -534,9 +583,12 @@ function renderWeek(){
     const isToday=d===today;
     const el=document.createElement('div');
     el.className='week-day'+(isToday?' today':'');
+    el.style.cursor='pointer';
+    el.dataset.date=d;
     el.innerHTML=`<span class="week-day-label">${labels[i]}</span>
       <span class="week-day-pts${hit?' hit':''}">${pts}</span>
       <div class="week-day-dot${hit?' hit':(isToday?' today-dot':'')}"></div>`;
+    el.addEventListener('click',()=>showDayDetail(d));
     grid.appendChild(el);
   }
   const wTotal=document.getElementById('week-total-pts');
