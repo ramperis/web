@@ -43,6 +43,12 @@
           "nombre": "Dulce",
           "qty": 2,
           "estado": "pendiente"
+        },
+        {
+          "id": "pn48016",
+          "nombre": "Carolina",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
