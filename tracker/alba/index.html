@@ -346,14 +346,27 @@ async function syncFromCloud(){
 }
 
 async function saveToCloud(data){
+  setSyncStatus('↑ …');
   try{
     const r = await fetch('/api/tracker?user='+USER, {
       method:'POST',
       headers:{'Authorization':'Bearer '+API_PASS,'Content-Type':'application/json'},
       body: JSON.stringify({days:{[data.date]:{done:data.done}}, sha:cloudSha})
     });
-    if(r.ok){ const j=await r.json(); cloudSha=j.sha; }
-  }catch(e){ console.warn('saveToCloud failed',e); }
+    if(r.ok){
+      const j=await r.json();
+      cloudSha=j.sha;
+      setSyncStatus('✓');
+      setTimeout(()=>setSyncStatus(''),3000);
+    } else {
+      setSyncStatus('⚠ '+r.status);
+      setTimeout(()=>setSyncStatus(''),5000);
+    }
+  }catch(e){
+    setSyncStatus('⚠ err');
+    setTimeout(()=>setSyncStatus(''),5000);
+    console.warn('saveToCloud failed',e);
+  }
 }
 
 async function manualSync(){
