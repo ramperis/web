@@ -30,6 +30,12 @@
           "nombre": "Wouter",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "3vxujvx",
+          "nombre": "Claudia",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
