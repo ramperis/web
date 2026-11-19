@@ -36,6 +36,12 @@
           "nombre": "Claudia",
           "qty": 2,
           "estado": "pendiente"
+        },
+        {
+          "id": "hpnmlfz",
+          "nombre": "Andrés",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
