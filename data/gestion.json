@@ -49,6 +49,12 @@
           "nombre": "Carolina",
           "qty": 2,
           "estado": "reserva"
+        },
+        {
+          "id": "q4tv6ug",
+          "nombre": "Cristina",
+          "qty": 1,
+          "estado": "pendiente"
         }
       ]
     },
