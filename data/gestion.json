@@ -42,6 +42,12 @@
           "nombre": "Andrés",
           "qty": 1,
           "estado": "pendiente"
+        },
+        {
+          "id": "1f6lnqv",
+          "nombre": "Dulce",
+          "qty": 2,
+          "estado": "pendiente"
         }
       ]
     },
@@ -57,12 +63,6 @@
       "donacion": "",
       "gastos": "",
       "asistentes": [
-        {
-          "id": "1f6lnqv",
-          "nombre": "Dulce",
-          "qty": 2,
-          "estado": "pendiente"
-        },
         {
           "id": "pn48016",
           "nombre": "Carolina",
