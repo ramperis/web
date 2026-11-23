@@ -15,7 +15,12 @@
     },
     "2026-11-22": {
       "done": [
-        "armonicos"
+        "limpiar",
+        "bailar",
+        "ingles",
+        "leer",
+        "armonicos",
+        "no_tarde"
       ]
     },
     "2026-11-17": {
@@ -73,14 +78,9 @@
         "no_tarde"
       ]
     },
-    "2026-11-22": {
+    "2026-11-23": {
       "done": [
-        "limpiar",
-        "bailar",
-        "ingles",
-        "leer",
-        "armonicos",
-        "no_tarde"
+        "limpiar"
       ]
     }
   }
