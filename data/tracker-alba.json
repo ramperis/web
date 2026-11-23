@@ -92,7 +92,9 @@
         "limpiar",
         "llamada",
         "cantar",
-        "grabar"
+        "grabar",
+        "editar",
+        "guiones"
       ]
     }
   }
