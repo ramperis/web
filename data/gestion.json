@@ -1,6 +1,19 @@
 {
   "sesiones": [
     {
+      "id": "2sj8p1l",
+      "nombre": "nueva sesión",
+      "fecha": "24/11/2026",
+      "tipo": "precio",
+      "tipoEvento": "otro",
+      "precioTotal": "",
+      "precioReserva": "",
+      "splitPct": 50,
+      "donacion": "",
+      "gastos": "",
+      "asistentes": []
+    },
+    {
       "id": "60py0p2",
       "nombre": "Sesion Okisam",
       "fecha": "19/11/2026",
