@@ -110,7 +110,9 @@
     },
     "2026-11-25": {
       "done": [
-        "tronki"
+        "tronki",
+        "limpiar",
+        "llamada"
       ]
     }
   }
