@@ -36,7 +36,7 @@
       "precioReserva": "",
       "splitPct": 100,
       "donacion": "",
-      "gastos": "",
+      "gastos": "50",
       "asistentes": [
         {
           "id": "4h3vlm0",
