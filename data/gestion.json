@@ -54,13 +54,13 @@
           "id": "hpnmlfz",
           "nombre": "Andrés",
           "qty": 1,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "1f6lnqv",
           "nombre": "Dulce",
           "qty": 2,
-          "estado": "pendiente"
+          "estado": "reserva"
         },
         {
           "id": "hk11blz",
