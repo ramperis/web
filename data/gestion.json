@@ -42,31 +42,31 @@
           "id": "4h3vlm0",
           "nombre": "Wouter",
           "qty": 2,
-          "estado": "completo"
+          "estado": "no viene"
         },
         {
           "id": "3vxujvx",
           "nombre": "Claudia",
           "qty": 2,
-          "estado": "completo"
+          "estado": "no viene"
         },
         {
           "id": "hpnmlfz",
           "nombre": "Andrés",
           "qty": 1,
-          "estado": "completo"
+          "estado": "no viene"
         },
         {
           "id": "1f6lnqv",
           "nombre": "Dulce",
           "qty": 2,
-          "estado": "completo"
+          "estado": "no viene"
         },
         {
           "id": "hk11blz",
           "nombre": "Dayan villarga",
           "qty": 1,
-          "estado": "completo"
+          "estado": "no viene"
         }
       ]
     },
