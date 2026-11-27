@@ -60,13 +60,13 @@
           "id": "1f6lnqv",
           "nombre": "Dulce",
           "qty": 2,
-          "estado": "no viene"
+          "estado": "pendiente"
         },
         {
           "id": "hk11blz",
           "nombre": "Dayan villarga",
           "qty": 1,
-          "estado": "no viene"
+          "estado": "reserva"
         }
       ]
     },
