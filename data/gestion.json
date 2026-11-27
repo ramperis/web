@@ -48,13 +48,13 @@
           "id": "3vxujvx",
           "nombre": "Claudia",
           "qty": 2,
-          "estado": "no viene"
+          "estado": "pendiente"
         },
         {
           "id": "hpnmlfz",
           "nombre": "Andrés",
           "qty": 1,
-          "estado": "no viene"
+          "estado": "pendiente"
         },
         {
           "id": "1f6lnqv",
